@@ -1,0 +1,8 @@
+flag,count,fraction
+stable_both,255,0.0255
+rescued_improved,7871,0.7871
+persistent_harmful,6906,0.6906
+regressed,408,0.0408
+fully_rescued,2731,0.2731
+partially_improved_persistent,5140,0.514
+unchanged_harmful,1466,0.1466

@@ -50,3 +50,13 @@ figures. Analysis requires NumPy 1.23.5; plotting uses Matplotlib 3.9.4.
 `audit_phase3b_native_ties.py RAW_EF_DIR DERIVED_EF_DIR` independently checks
 native result-heap semantics. The full protocol and exact commands are in
 `docs/phase3b_fixed_candidate_ranking.md` and `docs/experiment_log.md`.
+# Phase 3C precision transition
+
+`analyze_phase3c_precision_transition.py derive CONFIG RUN DERIVED CONDITION`
+computes precision transitions from the shared candidate/scoring records;
+`summarize CONFIG DERIVED TABLES FIGURES CONDITION` generates outputs.
+Conditions are `exact_pool` and `pq64_pool_control`. `prepare-control CONFIG RUN`
+imports the pre-registered recorded-PQ64 candidate sample only after the
+primary checkpoint exists. Derivation refuses to overwrite per-condition
+outputs. NumPy/Matplotlib versions remain those used in Phase 3B.
+See `docs/phase3c_precision_transition.md` and `docs/experiment_log.md`.

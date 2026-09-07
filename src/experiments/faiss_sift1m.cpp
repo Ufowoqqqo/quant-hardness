@@ -856,10 +856,154 @@ void export_ranking(const std::string &config_path,
             << " status=PASS\n";
 }
 
+// One shared ID column, three score columns. The optional control consumes
+// previously recorded candidate IDs and never runs a quantized traversal.
+void export_precision(const std::string &config_path,
+                      const std::filesystem::path &run_root,
+                      const std::string &condition) {
+  const auto s = read_values(config_path);
+  const Config c = read_config(s.at("phase3a_config"));
+  require(condition == "exact_pool" || condition == "pq64_pool_control",
+          "unknown precision pool");
+  require(std::stoi(s.at("ef_search")) == 64 && std::stoi(s.at("k")) == 10,
+          "unexpected precision operating point");
+  require(std::endian::native == std::endian::little, "little endian required");
+  const auto destination = run_root / condition;
+  require(!std::filesystem::exists(destination), "refusing to overwrite precision export");
+  const auto dataset = load_dataset(c);
+  auto loaded = load_graph(std::filesystem::path(c.cache_directory) / "hnsw_fp32.index");
+  auto pq32 = load_pq(pq_path(c, 32)), pq64 = load_pq(pq_path(c, 64));
+  const auto check_state = [&]() {
+    require(quant_hardness::graph_fingerprint(loaded.graph->hnsw) == s.at("graph_fingerprint"),
+            "precision graph changed");
+    for (const auto &[name, pq] : std::vector<std::pair<std::string,faiss::IndexPQ*>>{
+             {"pq32",pq32.get()}, {"pq64",pq64.get()}}) {
+      require(bytes_hash(pq->pq.centroids)==s.at(name+"_codebook_sha256") &&
+                  bytes_hash(pq->codes)==s.at(name+"_codes_sha256"), "precision PQ changed");
+      require(pq->ntotal==c.base_count && pq->d==c.dimension && pq->pq.nbits==8,
+              "precision PQ dimensions differ");
+    }
+  };
+  check_state();
+  omp_set_num_threads(c.search_threads);
+  quant_hardness::PhaseSeparatedSearchResults recorded;
+  std::vector<faiss::idx_t> query_ids;
+  std::vector<std::vector<faiss::idx_t>> pools;
+  std::string input_hash;
+  if (condition == "exact_pool") {
+    recorded = quant_hardness::search_with_level0_recording(
+        *loaded.graph, *loaded.graph->storage, dataset.queries.data(),
+        c.query_count, c.k, parameters(64), true);
+    pools = std::move(recorded.level0_evaluation_order_ids);
+    query_ids.resize(c.query_count);
+    std::iota(query_ids.begin(),query_ids.end(),0);
+  } else {
+    const auto path = run_root / "control_candidates.bin";
+    input_hash = sha256_file(path.string());
+    std::ifstream input(path,std::ios::binary);
+    std::int32_t qid, n;
+    const int stride=std::stoi(s.at("control_query_stride"));
+    while (input.read(reinterpret_cast<char*>(&qid),4)) {
+      require(static_cast<bool>(input.read(reinterpret_cast<char*>(&n),4)) &&
+                  n>c.k && n<=c.base_count && qid>=0 && qid<c.query_count &&
+                  qid==static_cast<int>(query_ids.size())*stride,
+              "invalid control candidate record");
+      std::vector<faiss::idx_t> ids;
+      for (int i=0;i<n;++i) {
+        std::int32_t id;
+        require(static_cast<bool>(input.read(reinterpret_cast<char*>(&id),4)),
+                "truncated control candidates");
+        ids.push_back(id);
+      }
+      query_ids.push_back(qid); pools.push_back(std::move(ids));
+    }
+    require(query_ids.size()==static_cast<std::size_t>((c.query_count+stride-1)/stride),
+            "wrong control query count");
+  }
+  check_state();
+  std::filesystem::create_directories(destination);
+  std::filesystem::copy_file(config_path,destination/"resolved_config.conf");
+  std::filesystem::copy_file(s.at("phase3a_config"),destination/"phase3a_config.conf");
+  std::ofstream meta(destination/"queries.jsonl"), binary;
+  meta << std::setprecision(17);
+  std::unique_ptr<faiss::DistanceComputer> dc32(pq32->get_distance_computer());
+  std::unique_ptr<faiss::DistanceComputer> dc64(pq64->get_distance_computer());
+  const int chunk_size=std::stoi(s.at("queries_per_chunk"));
+  require(chunk_size>0,"invalid chunk size");
+  std::uint64_t offset=0,total=0;
+  for (std::size_t qi=0;qi<query_ids.size();++qi) {
+    const auto qid=query_ids[qi];
+    const auto &ids=pools[qi];
+    require(std::set<faiss::idx_t>(ids.begin(),ids.end()).size()==ids.size(),
+            "duplicate precision candidate");
+    const auto pool_hash=bytes_hash(ids);
+    const std::string filename="candidate_scores_"+std::to_string(qi/chunk_size)+".bin";
+    if (qi%chunk_size==0) {
+      if (binary.is_open()) binary.close();
+      binary.open(destination/filename,std::ios::binary);offset=0;
+    }
+    const float *query=dataset.queries.data()+qid*c.dimension;
+    dc32->set_query(query);dc64->set_query(query);
+    std::vector<float> scores32,scores64;
+    for (const auto id:ids) {
+      require(id>=0 && id<c.base_count,"invalid precision candidate ID");
+      const std::int32_t stored_id=static_cast<std::int32_t>(id);
+      const float exact=squared_l2(query,dataset.base.data()+id*c.dimension,c.dimension);
+      const float a=(*dc32)(id),b=(*dc64)(id);
+      binary.write(reinterpret_cast<const char*>(&stored_id),4);
+      for (float score:{exact,a,b}) binary.write(reinterpret_cast<const char*>(&score),4);
+      scores32.push_back(a);scores64.push_back(b);
+    }
+    for (const auto &[dc,scores]:std::vector<std::pair<faiss::DistanceComputer*,const std::vector<float>*>>{
+             {dc32.get(),&scores32},{dc64.get(),&scores64}}) {
+      for (std::size_t i=0;i+3<ids.size();i+=4) {
+        float a,b,d,e;
+        dc->distances_batch_4(ids[i],ids[i+1],ids[i+2],ids[i+3],a,b,d,e);
+        require(a==(*scores)[i] && b==(*scores)[i+1] && d==(*scores)[i+2] &&
+                    e==(*scores)[i+3],"precision scalar/batch ADC mismatch");
+      }
+    }
+    require(bytes_hash(ids)==pool_hash,"scoring mutated precision pool");
+    meta << "{\"query_id\":" << qid << ",\"candidate_file\":\"" << filename
+         << "\",\"byte_offset\":" << offset << ",\"candidate_count\":" << ids.size()
+         << ",\"candidate_order_sha256\":\"" << pool_hash << "\",\"ground_truth_ids\":";
+    write_array(meta,std::span(dataset.ground_truth_ids).subspan(qid*dataset.ground_truth_width,c.k));
+    meta << ",\"exact_native_ids\":";
+    if (condition=="exact_pool") write_array(meta,std::span<const faiss::idx_t>(recorded.native.ids).subspan(qid*c.k,c.k));
+    else meta << "null";
+    meta << ",\"exact_native_distances\":";
+    if (condition=="exact_pool") write_array(meta,std::span<const float>(recorded.native.distances).subspan(qid*c.k,c.k));
+    else meta << "null";
+    meta << "}\n";
+    offset+=16*ids.size();total+=ids.size();
+    require(binary.good() && meta.good(),"precision export write failed");
+  }
+  binary.close();meta.close();check_state();
+  std::ofstream manifest(destination/"manifest.json");
+  manifest << std::boolalpha << "{\"git_commit\":\"" << QH_GIT_COMMIT
+           << "\",\"dirty_worktree\":" << QH_GIT_DIRTY
+           << ",\"faiss_commit\":\"" << QH_FAISS_COMMIT
+           << "\",\"hostname\":\"" << hostname() << "\",\"kernel\":\"" << kernel()
+           << "\",\"compiler\":\"" << __VERSION__ << "\",\"condition\":\"" << condition
+           << "\",\"query_count\":" << query_ids.size() << ",\"candidate_count\":" << total
+           << ",\"binary_sha256\":\"" << sha256_file("/proc/self/exe")
+           << "\",\"source_sha256\":\"" << sha256_file("src/experiments/faiss_sift1m.cpp")
+           << "\",\"control_input_sha256\":\"" << input_hash
+           << "\",\"graph_fingerprint\":\"" << s.at("graph_fingerprint")
+           << "\",\"frozen_state_and_pool_identity\":true,\"scalar_batch_adc_identity\":true,"
+              "\"schema\":\"little-endian packed int32 ID, float32 exact squared L2, float32 PQ32 ADC, float32 PQ64 ADC; first unique L0 evaluation order\"}\n";
+  std::cout << "precision_export condition=" << condition << " queries=" << query_ids.size()
+            << " candidates=" << total << " status=PASS\n";
+}
+
 } // namespace
 
 int main(int argc, char **argv) {
   try {
+    if (argc == 5 && std::string(argv[1]) == "precision-export") {
+      export_precision(argv[2], argv[3], argv[4]);
+      return 0;
+    }
     if (argc == 5 && std::string(argv[1]) == "ranking-export") {
       export_ranking(argv[2], argv[3], std::stoi(argv[4]));
       return 0;

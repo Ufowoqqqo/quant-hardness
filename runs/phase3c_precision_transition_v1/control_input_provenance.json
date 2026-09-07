@@ -1,0 +1,32 @@
+{
+  "queries": 1000,
+  "sampling": "query_id modulo control_query_stride equals zero",
+  "source": "runs/phase3b_fixed_candidate_ranking_v1/ef64",
+  "input_sha256": {
+    "runs/phase3b_fixed_candidate_ranking_v1/ef64/candidate_scores_0.bin": "fe9996b4202a8052f15e82790045cd206090a035dd4bc493a43157f6b6a5c906",
+    "runs/phase3b_fixed_candidate_ranking_v1/ef64/candidate_scores_1.bin": "82d8523c95d5ed2af1eb295b7d200d379f0272b9c46aba5714c3696d16eec086",
+    "runs/phase3b_fixed_candidate_ranking_v1/ef64/candidate_scores_10.bin": "1da4967594d967646f0b4b6745d7e317ee3bac994bf08a85447c6ef03ada71a7",
+    "runs/phase3b_fixed_candidate_ranking_v1/ef64/candidate_scores_11.bin": "7a18fab15dfb07d6823fa720d0e83776bf8d04ec5fefb74ace637bb899b48ab1",
+    "runs/phase3b_fixed_candidate_ranking_v1/ef64/candidate_scores_12.bin": "2ce51a9ae58abb366deb8024fa8a59ff566075adbe68b56c1af51cbae67d2d71",
+    "runs/phase3b_fixed_candidate_ranking_v1/ef64/candidate_scores_13.bin": "164933303e624d7579fb36465a1a2a24e28836f51f5b40b63ca81d6f12060419",
+    "runs/phase3b_fixed_candidate_ranking_v1/ef64/candidate_scores_14.bin": "8ef47627b74b23f70682ea5670b27b7632754d64aa6ece2f58ff3e7ae96e1f8a",
+    "runs/phase3b_fixed_candidate_ranking_v1/ef64/candidate_scores_15.bin": "5cf431fd292616d9adcb0c30ea647b6ba896e93226c9e020b2870ae0c1fd030e",
+    "runs/phase3b_fixed_candidate_ranking_v1/ef64/candidate_scores_16.bin": "1e55d33c79eed34d0bbdd0ebb884a8fea72c6a62bdbaa2ecd8db918b4eded039",
+    "runs/phase3b_fixed_candidate_ranking_v1/ef64/candidate_scores_17.bin": "c90c650c8de2c4cf7eebdcf99e30a33abf2e20f9049ab167f60fe9a9c2cb3017",
+    "runs/phase3b_fixed_candidate_ranking_v1/ef64/candidate_scores_18.bin": "8b85fd36db855016f40c068e98e79949d317d5a77abc0e68d98f43184145a46c",
+    "runs/phase3b_fixed_candidate_ranking_v1/ef64/candidate_scores_19.bin": "7bdb77e700751dccb74b9176ccdcff01ab771089664ae02165a3cd9fe84817a7",
+    "runs/phase3b_fixed_candidate_ranking_v1/ef64/candidate_scores_2.bin": "7d75e93d6a3514e46f8cf39ddd3873c8497e53e1217b06b9e22036f0cb82045d",
+    "runs/phase3b_fixed_candidate_ranking_v1/ef64/candidate_scores_3.bin": "d3bccd2aa0678b589f2b53f4123a55748700acaaa647758daf7905452d7d2719",
+    "runs/phase3b_fixed_candidate_ranking_v1/ef64/candidate_scores_4.bin": "cc47d3beb13bccf3d38628a40c146c3bd90a98aafc6dd08a5a55544ef2cfd398",
+    "runs/phase3b_fixed_candidate_ranking_v1/ef64/candidate_scores_5.bin": "5fd6116f00fabd3c778046e96e8dbade49250ba5cb2e3f50391b6531038884cb",
+    "runs/phase3b_fixed_candidate_ranking_v1/ef64/candidate_scores_6.bin": "3493f15d66db4c4f4d1964d2522368e19199bf7826cb5dab593c9e059663fe15",
+    "runs/phase3b_fixed_candidate_ranking_v1/ef64/candidate_scores_7.bin": "ac40ce0e76421b84e74d1f7324460dbe61086e0932dd58dc859ff27ca7d0c1a0",
+    "runs/phase3b_fixed_candidate_ranking_v1/ef64/candidate_scores_8.bin": "9d30c8e876d5bf51174e24168580a995b536b576801262ae38b462499f3c98d2",
+    "runs/phase3b_fixed_candidate_ranking_v1/ef64/candidate_scores_9.bin": "4e7723f5453fefbd1323b3e03498d4358997c6513b0ed6c723b16faaa183bb7c",
+    "runs/phase3b_fixed_candidate_ranking_v1/ef64/manifest.json": "1f8ece3148fdeeb37aff894d2aee9f620f47997e27d2d2ac84336e3c01aa93dc",
+    "runs/phase3b_fixed_candidate_ranking_v1/ef64/phase3a_config.conf": "fbb888f307206d9d5550bd8c84ce765a2d6bc79ce3648d91f1233f47be5edaa0",
+    "runs/phase3b_fixed_candidate_ranking_v1/ef64/queries.jsonl": "23dfe15298f8c56ec6861b8f363b6a7e1b3531b0eb7650210ecf4c635253977c",
+    "runs/phase3b_fixed_candidate_ranking_v1/ef64/resolved_config.conf": "66d1987fd3d2bf48a252d13b0f5b5624b4bc92ed37086a177b4de8200974be7d"
+  },
+  "control_candidates_sha256": "2c048f7d8e350cf4d8aac737de539013056dd85b0b45cea24ba8118d490f241f"
+}

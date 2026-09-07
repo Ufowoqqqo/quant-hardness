@@ -1,0 +1,4 @@
+top_fraction,exact_count_per_set,intersection_count,overlap_fraction,jaccard,cutoff_loss_32,cutoff_loss_64,cutoff_ties_32,cutoff_ties_64,tie_inclusive_count_32,tie_inclusive_count_64,tie_inclusive_jaccard
+0.1,100,39,0.39,0.2422360248447205,0.4,0.2,130,193,186,257,0.254957507082153
+0.2,200,71,0.355,0.21580547112462006,0.3,0.2,270,193,456,257,0.30347349177330896
+0.5,500,305,0.61,0.43884892086330934,0.2,0.1,316,453,772,710,0.6577181208053692

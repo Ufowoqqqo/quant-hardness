@@ -1,0 +1,18 @@
+{
+  "queries": 1000,
+  "candidates": 1044220,
+  "shared_candidate_hashes_identical": true,
+  "phase3a_comparison_passed": true,
+  "exact_native_tied_membership_cases": 0,
+  "control_matches_saved_pq64_pool_and_scores": true,
+  "input_sha256": {
+    "runs/phase3c_precision_transition_v1/pq64_pool_control/manifest.json": "67501149c15e51d37c2842a6ce8e8dc04ad8c2f09949517c9bd9b6f2febeed6c",
+    "runs/phase3c_precision_transition_v1/pq64_pool_control/queries.jsonl": "fbf4ff104b05dddf4c76e1031bb9daf724b3805fe9b7b82c29ddc93489953e5e",
+    "configs/indexes/phase3c_precision_transition.conf": "a2236fce248c0c2356eaa15705e6a986f67e753e63807e186215f16ff33aa475",
+    "runs/phase3c_precision_transition_v1/pq64_pool_control/candidate_scores_0.bin": "59d6d3bcccb874ad007982984ad5d23e582a57cf8820c3731fc0e3f65e597c57",
+    "runs/phase3c_precision_transition_v1/pq64_pool_control/candidate_scores_1.bin": "d216dd286a38b9f9b190a959ba44c390097bf32b1667ba9710ecea8c22cf2395"
+  },
+  "analysis_sha256": "7f79423fb54d1a72903a50fdbedf8d8188be6cdbaea5f20f8679841122aecec4",
+  "metrics_sha256": "4705fb5902e0a4fb9c890d8228c37d984aba414bb638f167b2518a48de7a74e9",
+  "numpy_version": "1.23.5"
+}

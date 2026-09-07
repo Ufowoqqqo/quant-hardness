@@ -1,0 +1,17 @@
+subset,delta_metric,query_count,spearman_with_loss_recovery
+all,global_mae,1000,0.06401858374336954
+all,relative_mae,1000,0.09244317051140832
+all,random_pair_inversion_rate,1000,0.0965217740926578
+all,boundary_window_mae,1000,0.2576890478914048
+all,cross_boundary_inversion_count,1000,0.6079744935878317
+all,cross_boundary_inversion_fraction,1000,0.59643956578514
+all,maximum_violation,1000,0.3825936432891538
+all,displaced_count,1000,0.9268411684479908
+no_exact_boundary_ties,global_mae,984,0.06608917867744461
+no_exact_boundary_ties,relative_mae,984,0.09165757538075697
+no_exact_boundary_ties,random_pair_inversion_rate,984,0.10499410977042649
+no_exact_boundary_ties,boundary_window_mae,984,0.25975868333883834
+no_exact_boundary_ties,cross_boundary_inversion_count,984,0.608843320301751
+no_exact_boundary_ties,cross_boundary_inversion_fraction,984,0.5967744270916425
+no_exact_boundary_ties,maximum_violation,984,0.3843613710738777
+no_exact_boundary_ties,displaced_count,984,0.9267266165790756

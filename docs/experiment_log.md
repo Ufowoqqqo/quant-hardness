@@ -870,3 +870,113 @@ Hold ef64 candidate sets fixed and score them with the already-trained Phase
 3A PQ32x8 and PQ64x8 models, comparing within-query changes in cross-boundary
 inversions and recall loss at identical exact margins and GT. This has not been
 run here and proposes no new quantizer or traversal instrumentation.
+# Phase 3C — fixed exact-candidate-pool precision transition (completed)
+
+**Pre-registration and fixed inputs**
+
+H1–H5 and category/tie/sampling/margin conventions were written before export
+to `docs/phase3c_precision_transition.md`, with a preserved preregistration in
+`runs/phase3c_precision_transition_v1/preregistration.md`.
+
+Config: `configs/indexes/phase3c_precision_transition.conf`, inheriting the
+unchanged Phase 3A dataset paths/checksums, graph construction and PQ seeds.
+SIFT1M: 1,000,000 base vectors, 10,000 queries, 128 dimensions, k=10. One
+exact-FP32-traversal L0 candidate pool per query, efSearch=64. Existing M16,
+efConstruction80 graph, seed 20260907; existing PQ32x8/PQ64x8 models, seed
+30260907. No building, training, encoding or new traversal instrumentation.
+Search remains single-threaded with bounded_queue/check_relative_distance true.
+Random pairs: 512/query, PCG64(seed=60400001+query_id), shared across PQ scores.
+Margins are squared L2; small margin is pre-declared as pair gap/dk<=.05,
+large as >.10, with .01/.05/.10 tables and rank-based controls.
+
+Execution HEAD `170cf03a9f20ba1629dce2ed905e3ab06df15600` (dirty Phase 3C
+implementation), FAISS `20f14b31a6d54e243a3d1de6ae193fc4c3ec18ed`.
+Machine rwcpu8.cse.ust.hk, GCC 11.5.0, Linux 5.14.0-687.24.1.el9_8.x86_64.
+NumPy 1.23.5, Matplotlib 3.9.4 in the existing Phase 3B plotting environment.
+All binary/source/index hashes are recorded with the run.
+
+**Exact commands — primary, then optional control**
+
+```bash
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build --target faiss_sift1m -j2
+python -m unittest discover -s tests -p test_phase3c_metrics.py -v
+mkdir -p runs/phase3c_precision_transition_v1
+cp docs/phase3c_precision_transition.md runs/phase3c_precision_transition_v1/preregistration.md
+./build/faiss_sift1m precision-export configs/indexes/phase3c_precision_transition.conf runs/phase3c_precision_transition_v1 exact_pool
+ctest --test-dir build --output-on-failure
+python scripts/analyze_phase3c_precision_transition.py derive configs/indexes/phase3c_precision_transition.conf runs/phase3c_precision_transition_v1 runs/phase3c_precision_transition_v1/analysis exact_pool
+MPLCONFIGDIR=/tmp/phase3b-mpl /tmp/phase3b-plot-env/bin/python scripts/analyze_phase3c_precision_transition.py summarize configs/indexes/phase3c_precision_transition.conf runs/phase3c_precision_transition_v1/analysis results/tables results/figures exact_pool
+mkdir -p runs/phase3c_precision_transition_v1/primary_checkpoint
+cp results/tables/phase3c_exact_pool_* runs/phase3c_precision_transition_v1/primary_checkpoint/
+cp docs/phase3c_precision_transition.md runs/phase3c_precision_transition_v1/primary_checkpoint/checkpoint.md
+python scripts/analyze_phase3c_precision_transition.py prepare-control configs/indexes/phase3c_precision_transition.conf runs/phase3c_precision_transition_v1
+./build/faiss_sift1m precision-export configs/indexes/phase3c_precision_transition.conf runs/phase3c_precision_transition_v1 pq64_pool_control
+python scripts/analyze_phase3c_precision_transition.py derive configs/indexes/phase3c_precision_transition.conf runs/phase3c_precision_transition_v1 runs/phase3c_precision_transition_v1/analysis pq64_pool_control
+MPLCONFIGDIR=/tmp/phase3b-mpl /tmp/phase3b-plot-env/bin/python scripts/analyze_phase3c_precision_transition.py summarize configs/indexes/phase3c_precision_transition.conf runs/phase3c_precision_transition_v1/analysis results/tables results/figures pq64_pool_control
+```
+
+After the primary result revealed different oracle recall across stability
+groups, an explicitly post-hoc geometry sensitivity table restricted the
+comparison to oracle recall=1. The two summarize commands above were rerun
+after this addition and completion of descriptive change/cutoff tables; no
+per-query metric, threshold, candidate pool or score was changed.
+
+Independent re-derivation used `mktemp -d /tmp/phase3c-reproduce.XXXXXX`, which
+returned `/tmp/phase3c-reproduce.O5YT0s`:
+
+```bash
+python scripts/analyze_phase3c_precision_transition.py derive configs/indexes/phase3c_precision_transition.conf runs/phase3c_precision_transition_v1 /tmp/phase3c-reproduce.O5YT0s/analysis exact_pool
+python scripts/analyze_phase3c_precision_transition.py derive configs/indexes/phase3c_precision_transition.conf runs/phase3c_precision_transition_v1 /tmp/phase3c-reproduce.O5YT0s/analysis pq64_pool_control
+MPLCONFIGDIR=/tmp/phase3b-mpl /tmp/phase3b-plot-env/bin/python scripts/analyze_phase3c_precision_transition.py summarize configs/indexes/phase3c_precision_transition.conf /tmp/phase3c-reproduce.O5YT0s/analysis /tmp/phase3c-reproduce.O5YT0s/tables /tmp/phase3c-reproduce.O5YT0s/figures exact_pool
+MPLCONFIGDIR=/tmp/phase3b-mpl /tmp/phase3b-plot-env/bin/python scripts/analyze_phase3c_precision_transition.py summarize configs/indexes/phase3c_precision_transition.conf /tmp/phase3c-reproduce.O5YT0s/analysis /tmp/phase3c-reproduce.O5YT0s/tables /tmp/phase3c-reproduce.O5YT0s/figures pq64_pool_control
+python -m unittest discover -s tests -p 'test_phase3*_metrics.py' -v
+git diff --check
+/tmp/phase3b-plot-env/bin/python scripts/verify_phase3c_artifacts.py runs/phase3c_precision_transition_v1 /tmp/phase3c-reproduce.O5YT0s results/tables results/figures runs/phase3c_precision_transition_v1/final_verification.json
+```
+
+**Observations**
+
+- Primary: 10,353,047 candidate records. Exact/PQ32/PQ64 mean recall
+  .95315/.70398/.85313. Mean loss .24917 -> .10002; mean critical inversions
+  33.3636 -> 5.5846.
+- 78.71% improve, 27.31% become fully correct, 69.06% remain harmful under
+  both scorers, 4.08% regress. Flags overlap exactly as requested.
+- Change correlation with recall recovery: critical count .6020, global MAE
+  .0503, random inversion rate .0829. All 408 regressions occur despite lower
+  global MAE; 169 occur despite fewer total critical inversions.
+- 310,999 corrected, 22,637 persistent and 33,209 new inversions. Corrected
+  relative margin median .09449; only 19.87% are <=.05 and 46.54% exceed .10.
+  H5 is not supported under its pre-registered interpretation. Persistent
+  and new errors are more concentrated near the exact selection boundary.
+- The 1,000-query recorded-PQ64-pool control gives .952/.7066/.8478 recall,
+  with critical-change correlation .6080 versus global-MAE .0640, and only
+  20.30% small-margin corrected pairs. The same-query exact-pool subset is
+  reported separately to control sampling differences.
+- 13 Python tests (7 Phase 3C, 6 Phase 3B) and all 5 CTests pass. Independent
+  raw-score derivation and table/figure regeneration are byte-identical.
+
+**Anomalies and confounders**
+
+- Stable exact sorting differs from native exact membership in 78 tied cases,
+  with 18 GT-hit gains and 22 losses; mean oracle .95315 versus native .95319.
+  Score vectors are identical. No native substitution or old-metric rewrite.
+- Stable-both group oracle recall .818 versus persistent group .974 is an
+  important geometry-comparison confounder. The added oracle=1 sensitivity
+  retains the local-gap direction but has only 82 stable queries and is
+  explicitly exploratory.
+- Harmful-query persistence is high partly because harmful prevalence is
+  high; it does not establish an intrinsic hard-query class.
+- Critical counts/displaced counts are post-scoring and structurally linked
+  to recall; random pair rates have finite-sampling noise. Separate non-nested
+  codebooks change partition and centroid geometry as well as byte rate.
+- Existing filesystem clock-skew build warnings persisted. Compilation,
+  linking and correctness checks completed. All prior raw data are preserved.
+
+**One smallest next experiment**
+
+Keep the exact candidate pools fixed; train three independent-seed standard
+PQ64x8 codebooks under identical settings and score only these pools. Measure
+harmful-query and residual-inversion persistence with prevalence context and
+the complete-GT stratum. This tests codebook-specific versus repeatable local
+sensitivity; it has not been run and introduces no new algorithm.

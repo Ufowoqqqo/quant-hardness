@@ -1,0 +1,13 @@
+{
+  "schema_version":1,
+  "run_id":"phase3a_sift1m_v1",
+  "git_commit":"4e5137dd71e64df669eeb4c18b9f4af3aee7a556",
+  "dirty_worktree":1,
+  "faiss_commit":"20f14b31a6d54e243a3d1de6ae193fc4c3ec18ed",
+  "dataset":{"base_path":"/rwproject/kdd-db/kluaq/dataset/sift1m/hf_download/sift_base.fvecs","query_path":"/rwproject/kdd-db/kluaq/dataset/sift1m/sift_query.fvecs","ground_truth_path":"/rwproject/kdd-db/kluaq/dataset/sift1m/sift_groundtruth.ivecs","source_url":"https://huggingface.co/datasets/qbo-odp/sift1m","revision":"bd8ccad6c2a0a0a3a7519f6d37c0e5a2d59fe55b","base_sha256":"21f66e2975057b5728ba56de1c825bac4f4d89d596609ae985741c6242631816","query_sha256":"f7fc9be140accdfd64116c2fa2365ecdb69b8f084970c6b0532db5ff79ac8fdc","ground_truth_sha256":"2b71de0a8d5a83e6a84eec3e23fb8b611d8801dd9b3a6cd62f070ab65ea65f4f","base_vectors":1000000,"queries":10000,"dimension":128,"provided_ground_truth_width":100},
+  "graph":{"M":16,"efConstruction":80,"seed":20260907,"fingerprint":"1b3c18f6e2dd3ccec56e74eed30458f60a65f01234bf51478af25d84b5c02d16"},
+  "quantizers":{"pq_m_values":[16,32,64],"nbits":8,"seed":30260907,"training_input_vectors":1000000},
+  "search":{"k":10,"threads":1,"bounded_queue":true,"check_relative_distance":true},
+  "candidate_semantics":"corrected L0-only",
+  "machine":{"hostname":"rwcpu8.cse.ust.hk","kernel":"Linux 5.14.0-687.24.1.el9_8.x86_64 x86_64","hardware_concurrency":24,"compiler":"11.5.0 20240719 (Red Hat 11.5.0-14)"}
+}

@@ -1,0 +1,119 @@
+[
+  {
+    "calibration_type": "exact_ef_sweep",
+    "ef_search": 16,
+    "pq_m": "",
+    "pq_nbits": "",
+    "mean_exact_recall": 0.781639999999988,
+    "mean_pq_recall": "",
+    "mean_delta": ""
+  },
+  {
+    "calibration_type": "exact_ef_sweep",
+    "ef_search": 32,
+    "pq_m": "",
+    "pq_nbits": "",
+    "mean_exact_recall": 0.886289999999977,
+    "mean_pq_recall": "",
+    "mean_delta": ""
+  },
+  {
+    "calibration_type": "exact_ef_sweep",
+    "ef_search": 48,
+    "pq_m": "",
+    "pq_nbits": "",
+    "mean_exact_recall": 0.9297399999999698,
+    "mean_pq_recall": "",
+    "mean_delta": ""
+  },
+  {
+    "calibration_type": "exact_ef_sweep",
+    "ef_search": 64,
+    "pq_m": "",
+    "pq_nbits": "",
+    "mean_exact_recall": 0.9531899999999718,
+    "mean_pq_recall": "",
+    "mean_delta": ""
+  },
+  {
+    "calibration_type": "exact_ef_sweep",
+    "ef_search": 96,
+    "pq_m": "",
+    "pq_nbits": "",
+    "mean_exact_recall": 0.9744199999999775,
+    "mean_pq_recall": "",
+    "mean_delta": ""
+  },
+  {
+    "calibration_type": "exact_ef_sweep",
+    "ef_search": 128,
+    "pq_m": "",
+    "pq_nbits": "",
+    "mean_exact_recall": 0.9837899999999847,
+    "mean_pq_recall": "",
+    "mean_delta": ""
+  },
+  {
+    "calibration_type": "exact_ef_sweep",
+    "ef_search": 192,
+    "pq_m": "",
+    "pq_nbits": "",
+    "mean_exact_recall": 0.9919199999999908,
+    "mean_pq_recall": "",
+    "mean_delta": ""
+  },
+  {
+    "calibration_type": "exact_ef_sweep",
+    "ef_search": 256,
+    "pq_m": "",
+    "pq_nbits": "",
+    "mean_exact_recall": 0.9949099999999936,
+    "mean_pq_recall": "",
+    "mean_delta": ""
+  },
+  {
+    "calibration_type": "exact_ef_sweep",
+    "ef_search": 384,
+    "pq_m": "",
+    "pq_nbits": "",
+    "mean_exact_recall": 0.9974799999999961,
+    "mean_pq_recall": "",
+    "mean_delta": ""
+  },
+  {
+    "calibration_type": "exact_ef_sweep",
+    "ef_search": 512,
+    "pq_m": "",
+    "pq_nbits": "",
+    "mean_exact_recall": 0.9983599999999974,
+    "mean_pq_recall": "",
+    "mean_delta": ""
+  },
+  {
+    "calibration_type": "pq_rate_sweep",
+    "ef_search": 64,
+    "pq_m": 16,
+    "pq_nbits": 8,
+    "mean_exact_recall": 0.9531899999999718,
+    "mean_pq_recall": 0.5426799999999994,
+    "mean_delta": 0.4105099999999724
+  },
+  {
+    "calibration_type": "pq_rate_sweep",
+    "ef_search": 64,
+    "pq_m": 32,
+    "pq_nbits": 8,
+    "mean_exact_recall": 0.9531899999999718,
+    "mean_pq_recall": 0.7002500000000015,
+    "mean_delta": 0.2529399999999703
+  },
+  {
+    "calibration_type": "pq_rate_sweep",
+    "ef_search": 64,
+    "pq_m": 64,
+    "pq_nbits": 8,
+    "mean_exact_recall": 0.9531899999999718,
+    "mean_pq_recall": 0.8524499999999522,
+    "mean_delta": 0.10074000000001959
+  }
+]

@@ -71,7 +71,8 @@ RecordingIndex::RecordingIndex(faiss::Index &wrapped_storage,
     : faiss::Index(wrapped_storage.d, wrapped_storage.metric_type),
       wrapped_storage_(wrapped_storage), query_base_(query_base),
       query_count_(query_count),
-      evaluated_ids_(static_cast<std::size_t>(query_count)) {
+      evaluated_ids_(static_cast<std::size_t>(query_count)),
+      evaluation_order_ids_(static_cast<std::size_t>(query_count)) {
   if (query_base == nullptr || query_count <= 0) {
     throw std::invalid_argument("invalid query array for recording index");
   }
@@ -114,7 +115,8 @@ void RecordingIndex::record(const float *query,
   if (query_id >= static_cast<std::size_t>(query_count_)) {
     throw std::out_of_range("set_query pointer is outside query array");
   }
-  evaluated_ids_[query_id].insert(database_id);
+  if (evaluated_ids_[query_id].insert(database_id).second)
+    evaluation_order_ids_[query_id].push_back(database_id);
 }
 
 std::vector<faiss::idx_t>
@@ -126,6 +128,13 @@ RecordingIndex::sorted_evaluated_ids(faiss::idx_t query_id) const {
   std::vector<faiss::idx_t> sorted(ids.begin(), ids.end());
   std::sort(sorted.begin(), sorted.end());
   return sorted;
+}
+
+std::vector<faiss::idx_t>
+RecordingIndex::evaluated_ids_in_order(faiss::idx_t query_id) const {
+  if (query_id < 0 || query_id >= query_count_)
+    throw std::out_of_range("query ID is outside recorder");
+  return evaluation_order_ids_[static_cast<std::size_t>(query_id)];
 }
 
 std::size_t

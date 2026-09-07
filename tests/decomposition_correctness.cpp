@@ -41,6 +41,14 @@ void test_exact_reranking_and_coverage() {
           "candidate coverage is wrong");
   require(quant_hardness::recall_at_k(reranked.ids, truth, 3) == 1.0,
           "oracle recall differs from candidate coverage");
+
+  const std::vector<float> tied_base{1.0F, -1.0F, 3.0F};
+  const float tied_query = 0.0F;
+  const std::vector<faiss::idx_t> encounter_order{1, 0, 2};
+  const auto stable = quant_hardness::exact_rerank_l2_stable(
+      tied_base.data(), 3, 1, &tied_query, encounter_order, 2);
+  require(stable.ids == std::vector<faiss::idx_t>({1, 0}),
+          "stable exact reranking did not preserve equal-distance order");
 }
 
 std::vector<float> normal_vectors(std::uint32_t seed, std::size_t count) {
@@ -136,11 +144,26 @@ void test_instrumented_search_controls() {
   for (faiss::idx_t query_id = 0; query_id < query_count; ++query_id) {
     const auto exact_ids = exact_recording.sorted_evaluated_ids(query_id);
     const auto pq_ids = pq_recording.sorted_evaluated_ids(query_id);
+    const auto exact_order = exact_recording.evaluated_ids_in_order(query_id);
+    const auto pq_order = pq_recording.evaluated_ids_in_order(query_id);
     require(std::adjacent_find(exact_ids.begin(), exact_ids.end()) ==
                     exact_ids.end() &&
                 std::adjacent_find(pq_ids.begin(), pq_ids.end()) ==
                     pq_ids.end(),
             "recorded evaluated IDs are not unique");
+    require(std::vector<faiss::idx_t>(exact_ids.begin(), exact_ids.end()) ==
+                [&] {
+                  auto values = exact_order;
+                  std::sort(values.begin(), values.end());
+                  return values;
+                }() &&
+                std::vector<faiss::idx_t>(pq_ids.begin(), pq_ids.end()) ==
+                [&] {
+                  auto values = pq_order;
+                  std::sort(values.begin(), values.end());
+                  return values;
+                }(),
+            "evaluation order does not contain the same unique IDs");
     const auto ground_truth = std::span(truth.ids).subspan(query_id * k, k);
     const float *query = queries.data() + query_id * dimension;
     const auto exact_oracle = quant_hardness::exact_rerank_l2(

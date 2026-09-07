@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "reason": "SIFT1M exact-distance boundary ties were discovered by pre-existing correctness guards after preparation and calibration.",
+  "git_commit": "4e5137dd71e64df669eeb4c18b9f4af3aee7a556",
+  "dirty_worktree": true,
+  "faiss_commit": "20f14b31a6d54e243a3d1de6ae193fc4c3ec18ed",
+  "stage_history": {
+    "prepare_and_calibrate": "Executed before the SIFT-only verified boundary-tie handling was added. Graph construction, PQ training/codes, native calibration search, selected operating points, and their files were not changed afterward.",
+    "failed_decomposition_attempts": "Two 93-row partial files are preserved under failed_attempts. They are excluded from analysis.",
+    "completed_decomposition": "Executed only after exact-native results were required to be distance-multiset-equivalent exact reranks of V_L0 and all coverage/oracle mismatches were required to be exact boundary ties. The first three completed files are preserved under superseded_schema and excluded from analysis; a schema-only rerun renamed rerank_recovery_query to rerank_recovery and was verified field-for-field identical otherwise.",
+    "analysis": "Regenerated after the exact-recall-qualified gatekeeper filter was corrected; independently regenerated artifacts were byte-identical."
+  },
+  "completed_decomposition_artifact_sha256": {
+    "build/faiss_sift1m": "858b03e72a1e2a55b282afe1f5f8945c47393a1dc985d1ac7bc44fadb56800df",
+    "configs/indexes/faiss_hnsw_phase3a_sift1m.conf": "fbb888f307206d9d5550bd8c84ce765a2d6bc79ce3648d91f1233f47be5edaa0",
+    "src/experiments/faiss_sift1m.cpp": "163ea85f5d8acb6bea9d30364391c6dd7a692bd8f66348678ebc5467903d0d23",
+    "src/instrumentation/paired_decomposition_l0.cpp": "c57f373cd8c8ff698a9e0d4d1b141570f586fac47c9ea9d4375fcbc43ba88c60",
+    "src/instrumentation/faiss_distance_recorder.cpp": "e933cfb767d4093c6111089f3518ed119719937392d5af914fbfdce24bcd352a",
+    "src/metrics/candidate_oracle.cpp": "9baa882983a7a5b5804774f322830514f5710644173f8c2c0ba2f442f23ea143",
+    "scripts/analyze_phase3a_sift1m.py": "ac36c642fd837f53ecc3d1f489b558900097e16ed762a626cab76800e71d65b2"
+  }
+}

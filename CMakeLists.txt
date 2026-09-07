@@ -72,6 +72,12 @@ find_package(OpenMP REQUIRED)
 find_package(BLAS REQUIRED)
 find_package(LAPACK REQUIRED)
 find_package(OpenSSL REQUIRED)
+add_library(qh_datasets
+    src/datasets/xvecs.cpp)
+target_include_directories(qh_datasets PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/src)
+target_link_libraries(qh_datasets PUBLIC faiss_pinned)
+target_compile_options(qh_datasets PRIVATE -Wall -Wextra -Wpedantic)
 
 add_library(qh_faiss_backend
     src/graph/faiss_shared_hnsw.cpp)
@@ -166,6 +172,16 @@ target_compile_definitions(faiss_clustered_geometry PRIVATE
 target_compile_options(faiss_clustered_geometry PRIVATE
     -Wall -Wextra -Wpedantic)
 
+add_executable(faiss_sift1m
+    src/experiments/faiss_sift1m.cpp)
+target_link_libraries(faiss_sift1m PRIVATE
+    qh_datasets qh_faiss_backend qh_instrumentation qh_metrics)
+target_compile_definitions(faiss_sift1m PRIVATE
+    QH_FAISS_COMMIT="${QH_FAISS_EXPECTED_COMMIT}"
+    QH_GIT_COMMIT="${QH_GIT_COMMIT}"
+    QH_GIT_DIRTY=${QH_GIT_DIRTY})
+target_compile_options(faiss_sift1m PRIVATE -Wall -Wextra -Wpedantic)
+
 add_executable(phase1_correctness
     tests/phase1_correctness.cpp)
 target_link_libraries(phase1_correctness PRIVATE
@@ -187,6 +203,12 @@ target_link_libraries(candidate_semantics_regression PRIVATE
 target_compile_options(candidate_semantics_regression PRIVATE
     -Wall -Wextra -Wpedantic)
 
+add_executable(dataset_loader_correctness
+    tests/dataset_loader_correctness.cpp)
+target_link_libraries(dataset_loader_correctness PRIVATE qh_datasets)
+target_compile_options(dataset_loader_correctness PRIVATE
+    -Wall -Wextra -Wpedantic)
+
 enable_testing()
 add_test(
     NAME faiss_backend_validation
@@ -195,3 +217,4 @@ add_test(
 add_test(NAME phase1_correctness COMMAND phase1_correctness)
 add_test(NAME decomposition_correctness COMMAND decomposition_correctness)
 add_test(NAME candidate_semantics_regression COMMAND candidate_semantics_regression)
+add_test(NAME dataset_loader_correctness COMMAND dataset_loader_correctness)

@@ -26,6 +26,8 @@ public:
   faiss::DistanceComputer *get_distance_computer() const override;
 
   std::vector<faiss::idx_t> sorted_evaluated_ids(faiss::idx_t query_id) const;
+  std::vector<faiss::idx_t> evaluated_ids_in_order(
+      faiss::idx_t query_id) const;
   std::size_t unique_evaluation_count(faiss::idx_t query_id) const;
 
   void record(const float *query, faiss::idx_t database_id) const;
@@ -35,6 +37,7 @@ private:
   const float *query_base_;
   faiss::idx_t query_count_;
   mutable std::vector<std::unordered_set<faiss::idx_t>> evaluated_ids_;
+  mutable std::vector<std::vector<faiss::idx_t>> evaluation_order_ids_;
 };
 
 } // namespace quant_hardness

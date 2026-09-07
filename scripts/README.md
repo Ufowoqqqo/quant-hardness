@@ -34,3 +34,9 @@ Implemented Phase 1 entry point:
 - `analyze_phase2b_clustered_geometry.py`: validates corrected L0 candidate
   sets, PQ-quality samples, and the paired clustered-mixture sweep, then emits
   replicate/aggregate tables, exploratory correlations, and SVG figures.
+- `faiss_sift1m` (built C++ runner): executes Phase 3A as separate `prepare`,
+  `calibrate`, and `decompose` stages so the expensive frozen HNSW/PQ indexes
+  are serialized once and reused. Every stage is non-interactive; preparation
+  refuses to overwrite a run or cache directory.
+- `analyze_phase3a_sift1m.py`: validates all raw SIFT1M rows and regenerates
+  gatekeeper tables and the limited, predeclared SVG figures.

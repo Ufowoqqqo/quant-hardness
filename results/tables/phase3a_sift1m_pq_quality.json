@@ -1,0 +1,41 @@
+[
+  {
+    "pq_m": 16,
+    "pq_nbits": 8,
+    "distance_sample_count": 10000,
+    "order_pair_sample_count": 10000,
+    "mean_absolute_distance_error": 14123.536609375,
+    "median_absolute_distance_error": 11286.140625,
+    "p95_absolute_distance_error": 36432.16874999998,
+    "mean_absolute_relative_distance_error": 0.04894815907174175,
+    "median_absolute_relative_distance_error": 0.04109420068562031,
+    "pairwise_strict_inversion_rate": 0.0574,
+    "pairwise_tie_rate": 0.0
+  },
+  {
+    "pq_m": 32,
+    "pq_nbits": 8,
+    "distance_sample_count": 10000,
+    "order_pair_sample_count": 10000,
+    "mean_absolute_distance_error": 7759.862684375,
+    "median_absolute_distance_error": 6144.0,
+    "p95_absolute_distance_error": 20571.15624999997,
+    "mean_absolute_relative_distance_error": 0.027236616834199003,
+    "median_absolute_relative_distance_error": 0.021993044763803482,
+    "pairwise_strict_inversion_rate": 0.0386,
+    "pairwise_tie_rate": 0.0
+  },
+  {
+    "pq_m": 64,
+    "pq_nbits": 8,
+    "distance_sample_count": 10000,
+    "order_pair_sample_count": 10000,
+    "mean_absolute_distance_error": 2657.21909296875,
+    "median_absolute_distance_error": 2010.0859375,
+    "p95_absolute_distance_error": 7108.92109374999,
+    "mean_absolute_relative_distance_error": 0.009533741205072542,
+    "median_absolute_relative_distance_error": 0.007273298455402255,
+    "pairwise_strict_inversion_rate": 0.0142,
+    "pairwise_tie_rate": 0.0
+  }
+]

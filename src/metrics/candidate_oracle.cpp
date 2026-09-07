@@ -57,6 +57,33 @@ ExactRerankResults exact_rerank_l2(const float *base_vectors,
   return output;
 }
 
+ExactRerankResults exact_rerank_l2_stable(
+    const float *base_vectors, faiss::idx_t base_count, int dimension,
+    const float *query, std::span<const faiss::idx_t> candidate_ids,
+    std::size_t k) {
+  if (base_vectors == nullptr || query == nullptr || base_count <= 0 ||
+      dimension <= 0 || k == 0 || candidate_ids.size() < k)
+    throw std::invalid_argument("invalid stable exact-reranking input");
+  require_unique_valid(candidate_ids, base_count);
+  std::vector<std::pair<float, faiss::idx_t>> ranked;
+  ranked.reserve(candidate_ids.size());
+  for (const faiss::idx_t id : candidate_ids)
+    ranked.emplace_back(squared_l2(query, base_vectors + id * dimension,
+                                   dimension), id);
+  std::stable_sort(ranked.begin(), ranked.end(), [](const auto &left,
+                                                     const auto &right) {
+    return left.first < right.first;
+  });
+  ExactRerankResults output;
+  output.distances.reserve(k);
+  output.ids.reserve(k);
+  for (std::size_t i = 0; i < k; ++i) {
+    output.distances.push_back(ranked[i].first);
+    output.ids.push_back(ranked[i].second);
+  }
+  return output;
+}
+
 double candidate_coverage_at_k(std::span<const faiss::idx_t> candidate_ids,
                                std::span<const faiss::idx_t> ground_truth_ids,
                                std::size_t k) {

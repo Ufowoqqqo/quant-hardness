@@ -16,6 +16,7 @@ struct PhaseSeparatedSearchResults {
   SearchResults native;
   std::vector<std::vector<faiss::idx_t>> upper_only_evaluated_ids;
   std::vector<std::vector<faiss::idx_t>> level0_evaluated_ids;
+  std::vector<std::vector<faiss::idx_t>> level0_evaluation_order_ids;
 };
 
 PhaseSeparatedSearchResults search_with_level0_recording(

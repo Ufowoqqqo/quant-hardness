@@ -115,6 +115,7 @@ PhaseSeparatedSearchResults search_with_level0_recording(
 
   output.upper_only_evaluated_ids.reserve(query_count);
   output.level0_evaluated_ids.reserve(query_count);
+  output.level0_evaluation_order_ids.reserve(query_count);
   for (faiss::idx_t query_id = 0; query_id < query_count; ++query_id) {
     std::vector<faiss::idx_t> level0 =
         level0_recording.sorted_evaluated_ids(query_id);
@@ -122,6 +123,8 @@ PhaseSeparatedSearchResults search_with_level0_recording(
         upper_recording.sorted_evaluated_ids(query_id);
     output.upper_only_evaluated_ids.push_back(set_difference(upper, level0));
     output.level0_evaluated_ids.push_back(std::move(level0));
+    output.level0_evaluation_order_ids.push_back(
+        level0_recording.evaluated_ids_in_order(query_id));
   }
   return output;
 }

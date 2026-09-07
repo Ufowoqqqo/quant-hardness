@@ -21,6 +21,8 @@ struct QueryDecompositionL0 {
   double delta_discovery;
   double delta_ranking;
   double delta_exact_control;
+  bool exact_oracle_coverage_tie_mismatch;
+  bool pq_oracle_coverage_tie_mismatch;
   std::size_t evaluated_l0_intersection_size;
   double evaluated_l0_jaccard;
   std::vector<faiss::idx_t> ground_truth_ids;
@@ -41,6 +43,8 @@ std::vector<QueryDecompositionL0> measure_paired_decomposition_l0(
     int dimension, faiss::idx_t k,
     const std::vector<faiss::idx_t> &ground_truth_ids,
     const faiss::SearchParametersHNSW &parameters,
-    bool validate_native_identity = true);
+    bool validate_native_identity = true,
+    bool allow_verified_boundary_ties = false,
+    bool stable_evaluation_order_ties = false);
 
 } // namespace quant_hardness

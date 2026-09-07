@@ -656,3 +656,98 @@ ctest --test-dir /tmp/quant-hardness-build-v5 --output-on-failure
 Run one SIFT1M fixed-topology L0 decomposition at calibrated high exact recall,
 with PQ32x8 and the same exact-rerank and PQ-quality controls. Do not add full
 trajectory logging unless a reproducible discovery signal appears.
+
+---
+
+## 2026-09-07 — Phase 3A SIFT1M real-data gatekeeper
+
+**Pre-registration and configuration**
+
+The grids, selection rule, and gatekeeper thresholds were written to
+`configs/indexes/faiss_hnsw_phase3a_sift1m.conf` and
+`docs/phase3a_sift1m.md` before decomposition. The actual primary PQ choice was
+made from native calibration only.
+
+- Standard SIFT1M: 1,000,000 base, 10,000 query, dimension 128, 100 provided
+  GT neighbors; all queries used
+- Data revision: Hugging Face `qbo-odp/sift1m` commit
+  `bd8ccad6c2a0a0a3a7519f6d37c0e5a2d59fe55b`
+- HNSW: `M=16`, `efConstruction=80`, seed 20260907; one FP32 graph
+- Exact efSearch grid: `{16,32,48,64,96,128,192,256,384,512}`
+- PQ grid: `{16,32,64} x 8` bits, seed 30260907, trained with the full database
+  as input; primary selected as PQ64x8
+- Selected decomposition efSearch: 32, 64, 128; `k=10`, bounded queue,
+  relative-distance check, one search thread
+- Candidate semantics: corrected L0-only; first 100 candidate sets retained
+- Git HEAD embedded by the binary:
+  `4e5137dd71e64df669eeb4c18b9f4af3aee7a556`, dirty worktree; FAISS
+  `20f14b31a6d54e243a3d1de6ae193fc4c3ec18ed`
+- Machine: `rwcpu8.cse.ust.hk`, Linux 5.14.0-687.24.1.el9_8.x86_64, GCC
+  11.5.0, 24 hardware threads
+
+**Exact commands**
+
+```bash
+# Data acquisition used the fixed repository revision shown above.
+HF_HOME=/tmp/qh_hf_cache HF_XET_CACHE=/tmp/qh_hf_cache/xet \
+  /tmp/qh_hf_download/bin/hf download qbo-odp/sift1m sift_base.fvecs \
+  --repo-type dataset \
+  --revision bd8ccad6c2a0a0a3a7519f6d37c0e5a2d59fe55b \
+  --local-dir /rwproject/kdd-db/kluaq/dataset/sift1m/hf_download \
+  --max-workers 8
+
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build --target faiss_sift1m dataset_loader_correctness decomposition_correctness candidate_semantics_regression faiss_backend_validation phase1_correctness -j4
+ctest --test-dir build --output-on-failure
+
+./build/faiss_sift1m prepare \
+  configs/indexes/faiss_hnsw_phase3a_sift1m.conf \
+  runs/phase3a_sift1m_v1
+./build/faiss_sift1m calibrate \
+  configs/indexes/faiss_hnsw_phase3a_sift1m.conf \
+  runs/phase3a_sift1m_v1
+./build/faiss_sift1m decompose \
+  configs/indexes/faiss_hnsw_phase3a_sift1m.conf \
+  runs/phase3a_sift1m_v1
+python scripts/analyze_phase3a_sift1m.py \
+  runs/phase3a_sift1m_v1 results/tables results/figures
+```
+
+**Observed results**
+
+- A fixed 100-query GT sample matched exhaustive FP32 top-10 exactly.
+- Exact recall was 0.88629, 0.95319, and 0.98379 at selected efSearch 32, 64,
+  and 128.
+- PQ64 native recall was 0.80964, 0.85245, and 0.86867. Exact reranking of
+  `V_L0_pq` produced 0.88402, 0.95200, and 0.98287.
+- Mean discovery delta was 0.00227, 0.00119, and 0.00092; mean ranking delta
+  was 0.07438, 0.09955, and 0.11420.
+- Rerank recovery was 0.97038, 0.98819, and 0.99201.
+- At the exact-recall-qualified points, the no-real-data-discovery-signal
+  criterion passed; emerging and strong criteria failed.
+
+**Anomalies and possible confounders**
+
+- efSearch 32 was selected by the pre-registered closest-target rule but exact
+  recall was 0.88629; it is excluded from criteria requiring at least 0.90.
+- Exact distance ties at the top-10 boundary invalidated the synthetic-only
+  equality between provided-GT coverage and ID-based oracle recall. The raw
+  metrics remain separate. Every mismatch was verified as an exact boundary
+  tie, and exact-native was independently verified as a valid exact rerank of
+  `V_L0`. Two 93-row failed-guard files were retained, not overwritten. Three
+  completed files with the superseded per-query field name
+  `rerank_recovery_query` were retained under `superseded_schema/` and excluded
+  from analysis; replacement files use `rerank_recovery`. The run-level
+  metadata amendment records the stage history and completed binary/source
+  hashes.
+- One dataset and one frozen graph/PQ seed do not establish broad real-data
+  external validity. Random-pair PQ diagnostics underweight local errors.
+- Build tooling reported NFS/host clock skew of up to about four minutes;
+  clean compilation and all five tests passed.
+
+**Single next experiment**
+
+Pivot to a reference-only SIFT1M ranking/selection analysis on fixed recorded
+PQ candidate sets, relating exact-versus-PQ selection errors to local distance
+margins and PQ distance errors. Do not add trajectory instrumentation or a new
+algorithm.

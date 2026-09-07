@@ -1,0 +1,7 @@
+stage,seconds
+load_and_checksum_dataset,1.352712294
+validate_provided_ground_truth,0.36864330200000001
+build_fp32_hnsw,33.695849330999998
+train_and_encode_pq_m16,37.322134331999997
+train_and_encode_pq_m32,49.096236896000001
+train_and_encode_pq_m64,74.314775878000006

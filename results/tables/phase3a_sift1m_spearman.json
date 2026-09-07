@@ -1,0 +1,218 @@
+[
+  {
+    "ef_search": 32,
+    "descriptor": "query_l2_norm",
+    "outcome": "delta_discovery",
+    "spearman": 0.0009042817058221872
+  },
+  {
+    "ef_search": 32,
+    "descriptor": "query_l2_norm",
+    "outcome": "delta_ranking",
+    "spearman": 0.1349210463431367
+  },
+  {
+    "ef_search": 32,
+    "descriptor": "exact_1nn_distance",
+    "outcome": "delta_discovery",
+    "spearman": 0.0026532847875307347
+  },
+  {
+    "ef_search": 32,
+    "descriptor": "exact_1nn_distance",
+    "outcome": "delta_ranking",
+    "spearman": -0.19603320204430272
+  },
+  {
+    "ef_search": 32,
+    "descriptor": "exact_10nn_distance",
+    "outcome": "delta_discovery",
+    "spearman": -0.0014656976359442835
+  },
+  {
+    "ef_search": 32,
+    "descriptor": "exact_10nn_distance",
+    "outcome": "delta_ranking",
+    "spearman": -0.21805161347479238
+  },
+  {
+    "ef_search": 32,
+    "descriptor": "nn_margin",
+    "outcome": "delta_discovery",
+    "spearman": -0.015169519645095298
+  },
+  {
+    "ef_search": 32,
+    "descriptor": "nn_margin",
+    "outcome": "delta_ranking",
+    "spearman": -0.015572141456601797
+  },
+  {
+    "ef_search": 32,
+    "descriptor": "normalized_nn_margin",
+    "outcome": "delta_discovery",
+    "spearman": -0.013071233401910977
+  },
+  {
+    "ef_search": 32,
+    "descriptor": "normalized_nn_margin",
+    "outcome": "delta_ranking",
+    "spearman": 0.07074279954504073
+  },
+  {
+    "ef_search": 32,
+    "descriptor": "local_distance_concentration",
+    "outcome": "delta_discovery",
+    "spearman": -0.013071233401910977
+  },
+  {
+    "ef_search": 32,
+    "descriptor": "local_distance_concentration",
+    "outcome": "delta_ranking",
+    "spearman": 0.07074279954504073
+  },
+  {
+    "ef_search": 64,
+    "descriptor": "query_l2_norm",
+    "outcome": "delta_discovery",
+    "spearman": 0.007786468889053866
+  },
+  {
+    "ef_search": 64,
+    "descriptor": "query_l2_norm",
+    "outcome": "delta_ranking",
+    "spearman": 0.07487903249643257
+  },
+  {
+    "ef_search": 64,
+    "descriptor": "exact_1nn_distance",
+    "outcome": "delta_discovery",
+    "spearman": 0.007972296407225342
+  },
+  {
+    "ef_search": 64,
+    "descriptor": "exact_1nn_distance",
+    "outcome": "delta_ranking",
+    "spearman": -0.0661008325373378
+  },
+  {
+    "ef_search": 64,
+    "descriptor": "exact_10nn_distance",
+    "outcome": "delta_discovery",
+    "spearman": 0.005434876754662966
+  },
+  {
+    "ef_search": 64,
+    "descriptor": "exact_10nn_distance",
+    "outcome": "delta_ranking",
+    "spearman": -0.11343356333709956
+  },
+  {
+    "ef_search": 64,
+    "descriptor": "nn_margin",
+    "outcome": "delta_discovery",
+    "spearman": -0.00539379612424585
+  },
+  {
+    "ef_search": 64,
+    "descriptor": "nn_margin",
+    "outcome": "delta_ranking",
+    "spearman": -0.09713475144361655
+  },
+  {
+    "ef_search": 64,
+    "descriptor": "normalized_nn_margin",
+    "outcome": "delta_discovery",
+    "spearman": -0.0062641358472530625
+  },
+  {
+    "ef_search": 64,
+    "descriptor": "normalized_nn_margin",
+    "outcome": "delta_ranking",
+    "spearman": -0.046530082319439205
+  },
+  {
+    "ef_search": 64,
+    "descriptor": "local_distance_concentration",
+    "outcome": "delta_discovery",
+    "spearman": -0.0062641358472530625
+  },
+  {
+    "ef_search": 64,
+    "descriptor": "local_distance_concentration",
+    "outcome": "delta_ranking",
+    "spearman": -0.046530082319439205
+  },
+  {
+    "ef_search": 128,
+    "descriptor": "query_l2_norm",
+    "outcome": "delta_discovery",
+    "spearman": -0.0011303135224577836
+  },
+  {
+    "ef_search": 128,
+    "descriptor": "query_l2_norm",
+    "outcome": "delta_ranking",
+    "spearman": 0.024947867594167446
+  },
+  {
+    "ef_search": 128,
+    "descriptor": "exact_1nn_distance",
+    "outcome": "delta_discovery",
+    "spearman": 0.020087892314753254
+  },
+  {
+    "ef_search": 128,
+    "descriptor": "exact_1nn_distance",
+    "outcome": "delta_ranking",
+    "spearman": 0.023227045236438648
+  },
+  {
+    "ef_search": 128,
+    "descriptor": "exact_10nn_distance",
+    "outcome": "delta_discovery",
+    "spearman": 0.021385985488576342
+  },
+  {
+    "ef_search": 128,
+    "descriptor": "exact_10nn_distance",
+    "outcome": "delta_ranking",
+    "spearman": -0.03333748663806762
+  },
+  {
+    "ef_search": 128,
+    "descriptor": "nn_margin",
+    "outcome": "delta_discovery",
+    "spearman": 0.0007211046826387813
+  },
+  {
+    "ef_search": 128,
+    "descriptor": "nn_margin",
+    "outcome": "delta_ranking",
+    "spearman": -0.13613895683436728
+  },
+  {
+    "ef_search": 128,
+    "descriptor": "normalized_nn_margin",
+    "outcome": "delta_discovery",
+    "spearman": -0.00508850817551527
+  },
+  {
+    "ef_search": 128,
+    "descriptor": "normalized_nn_margin",
+    "outcome": "delta_ranking",
+    "spearman": -0.11176123615841584
+  },
+  {
+    "ef_search": 128,
+    "descriptor": "local_distance_concentration",
+    "outcome": "delta_discovery",
+    "spearman": -0.00508850817551527
+  },
+  {
+    "ef_search": 128,
+    "descriptor": "local_distance_concentration",
+    "outcome": "delta_ranking",
+    "spearman": -0.11176123615841584
+  }
+]

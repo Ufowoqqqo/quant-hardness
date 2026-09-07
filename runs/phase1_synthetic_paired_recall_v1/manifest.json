@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "run_id": "phase1_synthetic_paired_recall_v1",
+  "created_at_utc": "2026-09-07T03:08:07Z",
+  "git_commit": "aa860b6ec42e8695daccdabb9114eaa6fc130fec",
+  "dirty_worktree": 1,
+  "faiss_commit": "20f14b31a6d54e243a3d1de6ae193fc4c3ec18ed",
+  "graph_fingerprint_schema": "faiss-hnsw-struct-v1",
+  "graph_fingerprint": "5eeca90445dd29413ba0ba7bceb4be18258ef5580174050fbaf087e2f57791e7",
+  "dataset": {
+    "distribution": "independent standard normal FP32",
+    "base_vectors": 20000,
+    "queries": 500,
+    "dimension": 64,
+    "database_seed": 1729,
+    "query_seed": 2718
+  },
+  "graph": {
+    "construction_distance": "FP32 squared L2",
+    "construction_count": 1,
+    "seed": 31415,
+    "M": 16,
+    "ef_construction": 80
+  },
+  "search": {
+    "k": 10,
+    "ef_search": 16,
+    "bounded_queue": true,
+    "check_relative_distance": true,
+    "threads": 1,
+    "query_order": "ascending query_id, identical for both modes",
+    "result_ranking": "native traversal-distance ranking"
+  },
+  "pq": {
+    "implementation": "FAISS IndexPQ asymmetric distance",
+    "seed": 16180,
+    "M": 8,
+    "nbits": 4,
+    "training_data": "all synthetic database vectors"
+  },
+  "ground_truth": "exhaustive FP32 squared L2 top-10",
+  "unresolved_confounder": "PQ results combine traversal-decision and approximate final-ranking effects",
+  "machine": {
+    "hostname": "rwcpu8.cse.ust.hk",
+    "kernel": "Linux 5.14.0-687.24.1.el9_8.x86_64 x86_64",
+    "hardware_concurrency": 24,
+    "compiler": "11.5.0 20240719 (Red Hat 11.5.0-14)"
+  }
+}

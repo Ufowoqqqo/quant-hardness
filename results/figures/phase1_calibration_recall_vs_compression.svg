@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="500" viewBox="0 0 820 500">
+<rect width="100%" height="100%" fill="white"/>
+<text x="410" y="24" text-anchor="middle" font-family="sans-serif" font-size="17">Recall@10 versus PQ code size</text>
+<line x1="76" y1="436" x2="796" y2="436" stroke="black"/>
+<line x1="76" y1="42" x2="76" y2="436" stroke="black"/>
+<text x="436.0" y="486" text-anchor="middle" font-family="sans-serif" font-size="13">PQ code bytes per vector</text>
+<text x="18" y="239.0" text-anchor="middle" transform="rotate(-90 18 239.0)" font-family="sans-serif" font-size="13">mean Recall@10</text>
+<text x="76.00" y="456" text-anchor="middle" font-family="sans-serif" font-size="11">4</text>
+<text x="68" y="440.00" text-anchor="end" font-family="sans-serif" font-size="11">0.00</text>
+<text x="220.00" y="456" text-anchor="middle" font-family="sans-serif" font-size="11">9.6</text>
+<text x="68" y="361.20" text-anchor="end" font-family="sans-serif" font-size="11">0.20</text>
+<text x="364.00" y="456" text-anchor="middle" font-family="sans-serif" font-size="11">15.2</text>
+<text x="68" y="282.40" text-anchor="end" font-family="sans-serif" font-size="11">0.40</text>
+<text x="508.00" y="456" text-anchor="middle" font-family="sans-serif" font-size="11">20.8</text>
+<text x="68" y="203.60" text-anchor="end" font-family="sans-serif" font-size="11">0.60</text>
+<text x="652.00" y="456" text-anchor="middle" font-family="sans-serif" font-size="11">26.4</text>
+<text x="68" y="124.80" text-anchor="end" font-family="sans-serif" font-size="11">0.80</text>
+<text x="796.00" y="456" text-anchor="middle" font-family="sans-serif" font-size="11">32</text>
+<text x="68" y="46.00" text-anchor="end" font-family="sans-serif" font-size="11">1.00</text>
+<polyline points="76.00,405.82 178.86,337.26 384.57,237.90 796.00,118.04" fill="none" stroke="#4c78a8" stroke-width="2"/>
+<circle cx="76.00" cy="405.82" r="3" fill="#4c78a8"/>
+<circle cx="178.86" cy="337.26" r="3" fill="#4c78a8"/>
+<circle cx="384.57" cy="237.90" r="3" fill="#4c78a8"/>
+<circle cx="796.00" cy="118.04" r="3" fill="#4c78a8"/>
+<line x1="580" y1="52" x2="605" y2="52" stroke="#4c78a8" stroke-width="2"/>
+<text x="611" y="56" font-family="sans-serif" font-size="11">PQ, ef=160</text>
+<polyline points="76.00,73.28 796.00,73.28" fill="none" stroke="#4c78a8" stroke-width="2" stroke-dasharray="6 4"/>
+<circle cx="76.00" cy="73.28" r="3" fill="#4c78a8"/>
+<circle cx="796.00" cy="73.28" r="3" fill="#4c78a8"/>
+<line x1="580" y1="106" x2="605" y2="106" stroke="#4c78a8" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="611" y="110" font-family="sans-serif" font-size="11">exact, ef=160</text>
+<polyline points="76.00,407.71 178.86,340.57 384.57,236.24 796.00,112.05" fill="none" stroke="#f58518" stroke-width="2"/>
+<circle cx="76.00" cy="407.71" r="3" fill="#f58518"/>
+<circle cx="178.86" cy="340.57" r="3" fill="#f58518"/>
+<circle cx="384.57" cy="236.24" r="3" fill="#f58518"/>
+<circle cx="796.00" cy="112.05" r="3" fill="#f58518"/>
+<line x1="580" y1="70" x2="605" y2="70" stroke="#f58518" stroke-width="2"/>
+<text x="611" y="74" font-family="sans-serif" font-size="11">PQ, ef=256</text>
+<polyline points="76.00,58.86 796.00,58.86" fill="none" stroke="#f58518" stroke-width="2" stroke-dasharray="6 4"/>
+<circle cx="76.00" cy="58.86" r="3" fill="#f58518"/>
+<circle cx="796.00" cy="58.86" r="3" fill="#f58518"/>
+<line x1="580" y1="124" x2="605" y2="124" stroke="#f58518" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="611" y="128" font-family="sans-serif" font-size="11">exact, ef=256</text>
+<polyline points="76.00,409.05 178.86,343.88 384.57,236.08 796.00,107.88" fill="none" stroke="#54a24b" stroke-width="2"/>
+<circle cx="76.00" cy="409.05" r="3" fill="#54a24b"/>
+<circle cx="178.86" cy="343.88" r="3" fill="#54a24b"/>
+<circle cx="384.57" cy="236.08" r="3" fill="#54a24b"/>
+<circle cx="796.00" cy="107.88" r="3" fill="#54a24b"/>
+<line x1="580" y1="88" x2="605" y2="88" stroke="#54a24b" stroke-width="2"/>
+<text x="611" y="92" font-family="sans-serif" font-size="11">PQ, ef=384</text>
+<polyline points="76.00,50.51 796.00,50.51" fill="none" stroke="#54a24b" stroke-width="2" stroke-dasharray="6 4"/>
+<circle cx="76.00" cy="50.51" r="3" fill="#54a24b"/>
+<circle cx="796.00" cy="50.51" r="3" fill="#54a24b"/>
+<line x1="580" y1="142" x2="605" y2="142" stroke="#54a24b" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="611" y="146" font-family="sans-serif" font-size="11">exact, ef=384</text>
+</svg>

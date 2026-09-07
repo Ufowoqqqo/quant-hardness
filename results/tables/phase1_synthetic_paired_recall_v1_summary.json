@@ -1,0 +1,28 @@
+{
+  "delta_definition": "recall_exact_at_10 - recall_pq_at_10",
+  "delta_recall_at_10": {
+    "fraction_equal_zero": 0.026,
+    "fraction_greater_than_zero": 0.966,
+    "fraction_less_than_zero": 0.008,
+    "max": 0.9,
+    "mean": 0.4064,
+    "median": 0.4,
+    "min": -0.2,
+    "p90": 0.6000000000000001,
+    "p95": 0.7,
+    "p99": 0.8
+  },
+  "percentile_definition": "empirical nearest-rank",
+  "positive_recall_loss": {
+    "query_count": 483,
+    "query_count_for_50_percent": 168,
+    "query_count_for_80_percent": 309,
+    "query_count_for_90_percent": 374,
+    "query_fraction_for_50_percent": 0.34782608695652173,
+    "query_fraction_for_80_percent": 0.639751552795031,
+    "query_fraction_for_90_percent": 0.7743271221532091,
+    "total": 203.8000000000001
+  },
+  "query_count": 500,
+  "schema_version": 1
+}

@@ -1,19 +1,32 @@
 # Phase 1 plan: paired HNSW traversal baseline
 
-## Status and prerequisite gap
+## Status as of 2026-09-07
 
-Repository inspection found no existing ANN implementation. The
-`third_party/faiss/` and `third_party/diskann/` directories contain only
-placeholders; there is no HNSW source, dependency revision, build system,
-dataset configuration, ground-truth implementation, or search runner to
-inspect. Consequently, this plan identifies insertion points by responsibility,
-not by source file or line number.
+The synthetic shared-topology proof of concept and the first paired Recall@10
+experiment are complete. The operating-regime calibration is also complete;
+it selected PQ32×8 at `efSearch` 160, 256, and 384 without using concentration
+as a selection criterion. Raw per-query results and observations are documented
+in `docs/phase1_paired_recall.md` and `docs/phase1_calibration.md`. Trajectory,
+visited-node, distance-count, and latency instrumentation remain intentionally
+deferred. The next minimal measurement is exact reranking of the unchanged
+retained PQ candidate set to separate candidate discovery from final
+approximate ranking.
 
-Before implementation, select one HNSW implementation and pin its exact Git
-revision. The selected implementation must expose, or permit a minimal patch
-that exposes, a single search loop whose traversal distance evaluator can be
-substituted without rebuilding or copying the graph. The following also need to
-be specified before the baseline is executable:
+## Selected backend and inspected revision
+
+Phase 1 uses Meta FAISS CPU at tag `v1.15.0`, pinned to full commit:
+
+```text
+20f14b31a6d54e243a3d1de6ae193fc4c3ec18ed
+```
+
+The tag and commit were inspected before implementation. The dependency is
+recorded as a Git submodule, and the superproject must pin the submodule gitlink
+to this commit rather than a branch.
+
+The following experiment inputs still need to be specified before a real
+baseline is executable; the synthetic proof-of-concept fixes small local values
+explicitly in its test configuration:
 
 - dataset, vector dimension, distance metric, and preprocessing;
 - query set and exact FP32 ground-truth top-10 IDs;
@@ -23,11 +36,114 @@ be specified before the baseline is executable:
   quantized;
 - final-result policy: traversal-distance ranking or exact FP32 reranking.
 
-The final-result policy is scientifically material. The minimal experiment
-should log both the traversal-ranked top-10 and an exact-FP32-reranked top-10
+The final-result policy is scientifically material. A later baseline should
+log both the traversal-ranked top-10 and an exact-FP32-reranked top-10
 from the retained candidate set. The former measures the end-to-end mode; the
 latter helps separate candidate-discovery damage from final ranking error.
 Neither should silently replace the other as the primary metric.
+
+## Concrete FAISS source map
+
+The relevant code at the pinned revision is:
+
+- `faiss/IndexHNSW.h`
+  - `IndexHNSW` owns the `HNSW hnsw` topology and an independent `Index*
+    storage`.
+  - `IndexHNSWFlat` constructs that storage as `IndexFlatL2` for L2.
+  - `IndexHNSWPQ` constructs an independent HNSW over `IndexPQ`; it is not used
+    for the paired experiment because its graph would be built independently.
+- `faiss/IndexHNSW.cpp`
+  - `IndexHNSW::add()` calls `storage->add()` and then
+    `hnsw_add_vertices()`; during construction, `hnsw_add_vertices()` obtains a
+    distance computer from the FP32 storage. This is the only graph-construction
+    path used by Phase 1.
+  - `storage_distance_computer()` delegates to
+    `storage->get_distance_computer()`.
+  - the internal `hnsw_search()` obtains that distance computer, calls
+    `set_query()`, and invokes the shared `HNSW::search()`.
+  - `IndexHNSW::search()` selects L2 ordering and uses the same internal search
+    path regardless of storage representation.
+- `faiss/impl/HNSW.h` and `faiss/impl/HNSW.cpp`
+  - `HNSW::search()` accepts a `DistanceComputer&` and performs upper-layer
+    greedy descent plus base-layer search.
+  - `search_impl()`, `greedy_update_nearest_impl()`, and
+    `search_from_candidates_dispatch()` consume that same distance-computer
+    abstraction without owning vector storage.
+  - `HNSW` stores `entry_point`, `max_level`, `levels`, `offsets`,
+    `neighbors`, and `cum_nneighbor_per_level`, which define the search
+    topology.
+- `faiss/impl/DistanceComputer.h`
+  - `DistanceComputer::set_query()`, `operator()`, and
+    `distances_batch_4()` are the query-to-node distance seam already used by
+    HNSW traversal.
+- `faiss/IndexFlat.cpp`
+  - `FlatL2Dis`, returned by the flat storage distance-computer factory,
+    computes exact squared FP32 L2 distances.
+- `faiss/IndexPQ.cpp` and
+  `faiss/impl/pq_code_distance/PQDistanceComputer_impl.h`
+  - `IndexPQ::get_FlatCodesDistanceComputer()` returns FAISS's existing PQ
+    distance computer.
+  - `PQDistanceComputer::set_query()` builds the query lookup table and
+    `distance_to_code()`/`distance_to_code_batch_4()` perform asymmetric L2
+    distance computation against stored PQ codes.
+
+## Concrete shared-topology design
+
+The proof-of-concept uses three objects:
+
+1. one `IndexFlatL2` storage holding the FP32 base vectors;
+2. one `IndexHNSW` owning the sole HNSW topology and initially pointing to the
+   flat storage;
+3. one trained `IndexPQ` holding PQ codes for the same base vectors in exactly
+   the same insertion/ID order, but no HNSW topology.
+
+`IndexHNSW::add()` is called exactly once while its storage is the
+`IndexFlatL2`. Exact search uses the normal `IndexHNSW::search()` path. For PQ
+search, a repository-owned, single-threaded RAII guard temporarily changes only
+the public `IndexHNSW::storage` pointer to the ID-aligned `IndexPQ`, invokes the
+same `IndexHNSW::search()` function, and restores the original pointer even if
+search throws. Before switching, it requires equal dimension, metric, and
+`ntotal` and a frozen graph fingerprint. It does not call `add()`, `train()`,
+`reset()`, link-reordering, or any HNSW mutator.
+
+This is preferable to constructing `IndexHNSWPQ`, which would violate graph
+identity. It also avoids copying the HNSW algorithm or patching upstream FAISS.
+The guard is deliberately research-only and not thread-safe; concurrent search
+on the guarded `IndexHNSW` is forbidden. If later experiments require
+concurrency, the smallest upstream patch should instead add a const search entry
+point accepting an explicit traversal `Index` or `DistanceComputer` factory.
+
+The only intended query-time difference is therefore:
+
+```text
+IndexFlatL2::get_distance_computer()  versus
+IndexPQ::get_distance_computer()
+```
+
+Both feed the identical `IndexHNSW::search()` and `HNSW::search()` code path.
+
+## Graph fingerprint design
+
+Define a versioned fingerprint over a canonical byte encoding named
+`faiss-hnsw-struct-v1`. Encode field names, lengths, and integer values in a
+fixed byte order, then hash the resulting bytes. Include:
+
+- `entry_point` and `max_level`;
+- the complete `levels` vector;
+- the complete `offsets` vector;
+- the complete `neighbors` vector, including unused `-1` slots;
+- the complete `cum_nneighbor_per_level` vector.
+
+These are the structural fields used to locate every node's neighbor range at
+every HNSW level. Construction RNG state and `assign_probas` are not part of the
+query topology; query parameters such as `efSearch`, bounded-queue mode, and
+relative-distance checks are recorded and compared separately.
+
+Compute the fingerprint immediately after FP32 construction, before and after
+each exact search, while PQ storage is selected, after each PQ search, and after
+the FP32 storage is restored. Every value must be byte-for-byte identical. The
+POC also checks that a deliberate mutation of a copied structural field changes
+the fingerprint, guarding against a constant or incomplete implementation.
 
 ## Experimental invariant
 
@@ -313,19 +429,26 @@ dataset supplement but do not replace these tests.
 - **Multiple simultaneous changes:** do not change topology, graph construction,
   query representation, quantizer, and search policy in one comparison.
 
-## Execution sequence after prerequisites are selected
+## Execution sequence
 
-1. Pin the HNSW dependency and inspect its actual search loop; replace the
-   responsibility-level insertion points above with exact files/functions.
-2. Freeze metric, preprocessing, graph, query order, counter definitions, and
+1. Pin the HNSW dependency and inspect its actual search loop. **Completed for
+   FAISS v1.15.0 at the commit recorded above.**
+2. Validate exact and PQ distance computers on a shared synthetic topology,
+   including the graph fingerprint invariant. **Completed by the initial POC;
+   see `docs/faiss_backend_validation.md`.**
+3. Freeze metric, preprocessing, graph, query order, counter definitions, and
    final-result policy in a versioned configuration.
-3. Implement and test scalar FP32 distance and recall@10 references.
-4. Add the common distance-oracle seam and no-op observer; prove FP32 behavior
+4. Implement and test scalar FP32 distance and recall@10 references.
+5. Add the common distance-oracle seam and no-op observer; prove FP32 behavior
    matches the unmodified upstream implementation.
-5. Add the quantized reference oracle and validate it before optimization.
-6. Run deterministic tiny-graph fairness tests.
-7. Run one small paired smoke experiment, preserve all per-query records, and
+6. Validate FAISS's PQ distance computer against a simple decode/reference path
+   before any optimization or performance claim.
+7. Run deterministic tiny-graph fairness tests. The initial POC includes an
+   identity-distance control through an ID-aligned alternate FP32 storage;
+   additional hand-constructed counter tests remain pending.
+8. Run one small paired smoke experiment, preserve all per-query records, and
    append its exact command/configuration to `docs/experiment_log.md`.
 
-The smallest next decision is the HNSW implementation and pinned revision. No
-search or instrumentation implementation should begin before that choice.
+The smallest next experiment is the synthetic paired recall@10 test described
+in `docs/faiss_backend_validation.md`. It must precede SIFT1M and trajectory
+instrumentation.

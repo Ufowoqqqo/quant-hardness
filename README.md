@@ -27,6 +27,19 @@ combining their implementations with the measurement layer.
 
 ## Current status
 
-The repository is in the phenomenon-validation phase. No baseline result or
-claim has been established yet.
+The repository is in the phenomenon-validation phase. Meta FAISS CPU v1.15.0
+is pinned as the Phase 1 backend. A synthetic proof-of-concept validates that
+exact FP32 and PQ ADC traversal can share one FP32-built HNSW topology; no
+baseline result or scientific claim has been established yet.
 
+## Build the backend validation
+
+```bash
+git submodule update --init
+cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
+cmake --build build --target faiss_backend_validation
+ctest --test-dir build --output-on-failure
+```
+
+The build is CPU-only and checks that the FAISS submodule is at the pinned
+commit before compiling.

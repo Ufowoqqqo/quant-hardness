@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500">
+<rect width="100%" height="100%" fill="white"/>
+<text x="450" y="24" text-anchor="middle" font-family="sans-serif" font-size="17">Rerank recovery across seed replicates</text>
+<line x1="78" y1="422" x2="876" y2="422" stroke="black"/>
+<line x1="78" y1="42" x2="78" y2="422" stroke="black"/>
+<text x="18" y="232.0" text-anchor="middle" transform="rotate(-90 18 232.0)" font-family="sans-serif" font-size="13">rerank recovery</text>
+<text x="70" y="426.00" text-anchor="end" font-family="sans-serif" font-size="11">0.966</text>
+<text x="70" y="350.00" text-anchor="end" font-family="sans-serif" font-size="11">0.977</text>
+<text x="70" y="274.00" text-anchor="end" font-family="sans-serif" font-size="11">0.988</text>
+<text x="70" y="198.00" text-anchor="end" font-family="sans-serif" font-size="11">0.999</text>
+<text x="70" y="122.00" text-anchor="end" font-family="sans-serif" font-size="11">1.01</text>
+<text x="70" y="46.00" text-anchor="end" font-family="sans-serif" font-size="11">1.02</text>
+<line x1="477.00" y1="387.82" x2="477.00" y2="76.18" stroke="#54a24b"/>
+<line x1="466.33" y1="387.82" x2="487.67" y2="387.82" stroke="#54a24b"/>
+<line x1="466.33" y1="76.18" x2="487.67" y2="76.18" stroke="#54a24b"/>
+<rect x="461.00" y="134.87" width="32.00" height="168.02" fill="#54a24b" fill-opacity="0.3" stroke="#54a24b"/>
+<line x1="461.00" y1="191.98" x2="493.00" y2="191.98" stroke="#54a24b" stroke-width="2"/>
+<text x="477.00" y="444" text-anchor="middle" font-family="sans-serif" font-size="10" transform="rotate(30 477.00 444)">recovery</text>
+</svg>

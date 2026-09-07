@@ -10,8 +10,10 @@ in `docs/phase1_paired_recall.md` and `docs/phase1_calibration.md`. Trajectory,
 visited-node trajectory and latency instrumentation remain intentionally
 deferred. The evaluated-node-set decomposition is complete and is documented
 in `docs/phase1_decomposition.md`; it found ranking/selection dominance for the
-current synthetic PQ32×8 regime. The next minimal measurement is a seed
-replication at the central `efSearch=256` point before changing distributions.
+current synthetic PQ32×8 regime. The eight-seed central-point robustness check
+also passed its pre-registered 7/8 criterion and is documented in
+`docs/phase1_seed_robustness.md`. The next phase is the prepared but unexecuted
+distribution comparison in `docs/phase2_distribution_plan.md`.
 
 ## Selected backend and inspected revision
 

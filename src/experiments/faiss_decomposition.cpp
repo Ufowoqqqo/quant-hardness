@@ -46,6 +46,7 @@ struct Config {
   int pq_m;
   int pq_nbits;
   std::string expected_graph_fingerprint;
+  std::string run_id;
 };
 
 void require(bool condition, const std::string &message) {
@@ -107,18 +108,23 @@ Config read_config(const std::string &path) {
                 {},
                 static_cast<int>(positive("pq_m")),
                 static_cast<int>(positive("pq_nbits")),
-                get("expected_graph_fingerprint")};
+                get("expected_graph_fingerprint"),
+                values.contains("run_id") ? get("run_id")
+                                          : "phase1_decomposition_v1"};
   for (const std::string &item : split(get("ef_search_values"), ',')) {
     config.ef_search_values.push_back(std::stoi(item));
   }
-  require(values.size() == 14, "config contains unknown keys");
+  require(values.size() == 14 || values.size() == 15,
+          "config contains unknown keys");
   require(config.k == 10, "decomposition is fixed to Recall@10");
   require(config.dimension % config.pq_m == 0,
           "dimension must be divisible by pq_m");
-  require(config.pq_m == 32 && config.pq_nbits == 8,
-          "primary decomposition requires PQ32x8");
-  require(config.ef_search_values == std::vector<int>({160, 256, 384}),
-          "primary decomposition requires efSearch 160,256,384");
+  require(config.pq_nbits > 0 && config.pq_nbits <= 8,
+          "PQ bits must be in [1, 8]");
+  require(!config.ef_search_values.empty(), "efSearch list is empty");
+  for (const int ef_search : config.ef_search_values) {
+    require(ef_search >= config.k, "efSearch must be at least k");
+  }
   return config;
 }
 
@@ -190,7 +196,7 @@ void write_manifest(const std::filesystem::path &path, const Config &config,
   require(output.good(), "cannot create manifest");
   output << "{\n"
          << "  \"schema_version\": 1,\n"
-         << "  \"run_id\": \"phase1_decomposition_v1\",\n"
+         << "  \"run_id\": \"" << config.run_id << "\",\n"
          << "  \"created_at_utc\": \"" << utc_now() << "\",\n"
          << "  \"git_commit\": \"" << QH_GIT_COMMIT << "\",\n"
          << "  \"dirty_worktree\": " << QH_GIT_DIRTY << ",\n"
@@ -208,8 +214,11 @@ void write_manifest(const std::filesystem::path &path, const Config &config,
             "\"construction_distance\": \"FP32 squared L2\", \"seed\": "
          << config.graph_seed << ", \"M\": " << config.hnsw_m
          << ", \"ef_construction\": " << config.ef_construction << "},\n"
-         << "  \"search\": {\"k\": 10, \"ef_search_values\": "
-            "[160,256,384], \"threads\": 1, \"bounded_queue\": true, "
+         << "  \"search\": {\"k\": 10, \"ef_search_values\": [";
+  for (std::size_t i = 0; i < config.ef_search_values.size(); ++i) {
+    output << (i == 0 ? "" : ",") << config.ef_search_values[i];
+  }
+  output << "], \"threads\": 1, \"bounded_queue\": true, "
             "\"check_relative_distance\": true, \"query_order\": "
             "\"ascending query_id\"},\n"
          << "  \"pq\": {\"M\": " << config.pq_m
@@ -257,8 +266,10 @@ int main(int argc, char **argv) {
     graph.add(config.base_vectors, base.data());
     const std::string fingerprint =
         quant_hardness::graph_fingerprint(graph.hnsw);
-    require(fingerprint == config.expected_graph_fingerprint,
-            "graph fingerprint differs from calibration");
+    if (config.expected_graph_fingerprint != "auto") {
+      require(fingerprint == config.expected_graph_fingerprint,
+              "graph fingerprint differs from expected value");
+    }
 
     faiss::IndexPQ pq_storage(config.dimension, config.pq_m, config.pq_nbits,
                               faiss::METRIC_L2);
@@ -285,6 +296,13 @@ int main(int argc, char **argv) {
       parameters.bounded_queue = true;
       parameters.check_relative_distance = true;
 
+      const auto exact_uninstrumented = quant_hardness::search_with_storage(
+          graph, exact_storage, queries.data(), config.queries, config.k,
+          parameters);
+      const auto pq_uninstrumented = quant_hardness::search_with_storage(
+          graph, pq_storage, queries.data(), config.queries, config.k,
+          parameters);
+
       quant_hardness::RecordingIndex exact_recording(
           exact_storage, queries.data(), config.queries);
       const auto exact_native = quant_hardness::search_with_storage(
@@ -295,6 +313,12 @@ int main(int argc, char **argv) {
       const auto pq_native = quant_hardness::search_with_storage(
           graph, pq_recording, queries.data(), config.queries, config.k,
           parameters);
+      require(exact_uninstrumented.ids == exact_native.ids &&
+                  exact_uninstrumented.distances == exact_native.distances,
+              "instrumentation changed exact native results");
+      require(pq_uninstrumented.ids == pq_native.ids &&
+                  pq_uninstrumented.distances == pq_native.distances,
+              "instrumentation changed PQ native results");
       require(quant_hardness::graph_fingerprint(graph.hnsw) == fingerprint,
               "instrumented search changed graph");
 

@@ -22,3 +22,8 @@ Implemented Phase 1 entry point:
 - `analyze_decomposition.py`: validates recorded distance-evaluation sets,
   recomputes every recall/coverage/delta, checks native IDs against calibration,
   and emits the Phase 1 discovery-versus-ranking tables and figures.
+- `run_seed_robustness.py`: executes eight pre-registered seed tuples through
+  the shared decomposition binary, preserving each replicate separately.
+- `analyze_seed_robustness.py`: validates each replicate, evaluates the
+  pre-registered stability criterion, aggregates across seeds, and emits only
+  the requested summary table and boxplots.

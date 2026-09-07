@@ -399,3 +399,91 @@ At `efSearch=256`, repeat the identical PQ32×8 decomposition for several
 independent database/query/graph/PQ seed tuples to test whether near-zero mean
 discovery delta and ranking dominance are seed-stable before changing the data
 distribution.
+
+---
+
+## 2026-09-07 — IID-Gaussian decomposition seed robustness
+
+**Objective**
+
+Test the pre-registered stability of near-zero mean discovery degradation and
+at least 90% exact-rerank recovery over eight independent Gaussian seed tuples.
+
+**Pre-registered criterion**
+
+At least 7/8 replicates must simultaneously satisfy
+`abs(mean delta_discovery) <= 0.01` and `rerank recovery >= 0.90`. This was
+recorded in `configs/indexes/faiss_hnsw_seed_robustness.conf` before execution.
+
+**Provenance**
+
+- Execution-time Git HEAD: `04e4f134cb9d7459e0ee94b4a8e84690e540cab5`,
+  with a dirty worktree containing the robustness runner and outputs. The
+  reused CMake cache embeds its earlier configure-time base commit
+  `776bc6aab58856cfe346364674116c2fa6309cbb`; replicate manifests record that
+  value together with `dirty_worktree=1`.
+- Eight seed tuples: database/query/graph/PQ values fully recorded in the
+  resolved config and root run manifest
+- Dataset per replicate: 20,000 base vectors, 500 separate queries, dimension
+  64, independent isotropic standard-normal FP32, no preprocessing
+- Machine: `rwcpu8.cse.ust.hk`; Linux
+  5.14.0-687.24.1.el9_8.x86_64; Intel Core i9-10920X; 24 hardware threads;
+  GCC 11.5.0
+- Meta FAISS `v1.15.0`, commit
+  `20f14b31a6d54e243a3d1de6ae193fc4c3ec18ed`
+
+**Parameters**
+
+- HNSW: `M=16`, `efConstruction=80`, exact FP32 construction, one graph per
+  replicate
+- Search: `efSearch=256`, `k=10`, bounded queue, relative-distance check, one
+  thread, ascending query IDs
+- Quantizer: FAISS PQ32×8, trained on all 20,000 replicate database vectors
+- Ground truth: exhaustive FP32 squared-L2 top-10
+- Instrumentation and decomposition definitions unchanged from
+  `docs/phase1_decomposition.md`
+
+**Exact commands**
+
+```bash
+cmake --build /tmp/quant-hardness-build-v5 --target faiss_decomposition decomposition_correctness -j 8
+ctest --test-dir /tmp/quant-hardness-build-v5 --output-on-failure
+python scripts/run_seed_robustness.py configs/indexes/faiss_hnsw_seed_robustness.conf /tmp/quant-hardness-build-v5/faiss_decomposition runs/phase1_seed_robustness_v1
+python scripts/analyze_seed_robustness.py runs/phase1_seed_robustness_v1 results/tables results/figures
+```
+
+**Raw outputs**
+
+- Root: `runs/phase1_seed_robustness_v1/`
+- Eight replicate directories, each preserving 500 per-query rows and all
+  evaluated candidate ID sets
+- Replicate/aggregate tables: `results/tables/phase1_seed_robustness.*`
+
+**Observed results**
+
+- Pre-registered criterion: **PASS, 8/8 replicates**.
+- Mean discovery delta across replicates: mean 0.000625, sample SD 0.002251,
+  range [-0.0022, 0.0042].
+- Rerank recovery: mean 0.995752, sample SD 0.016055, range
+  [0.970629, 1.016224].
+- Mean ranking delta: mean 0.137000, sample SD 0.002894, range
+  [0.1340, 0.1416].
+- Exact-control discrepancy was zero for all 4,000 queries. All eight graph
+  fingerprints were distinct.
+
+**Anomalies and possible confounders**
+
+- Recovery exceeds one in four replicates because mean PQ candidate coverage
+  slightly exceeds exact candidate coverage; negative discovery deltas are
+  preserved.
+- This check covers only IID isotropic Gaussian data and is not
+  publication-quality evidence of generality.
+- Standard-normal reproducibility remains tied to the recorded C++ standard
+  library implementation.
+
+**Smallest distinguishing next experiment**
+
+Do not tune the IID baseline further. Execute the separately prepared,
+currently unrun `docs/phase2_distribution_plan.md` comparison to determine
+whether structured, anisotropic, or OOD query distributions produce candidate-
+discovery degradation.

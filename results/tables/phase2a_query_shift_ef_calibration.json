@@ -1,0 +1,247 @@
+[
+  {
+    "condition_id": "radial_sigma_2p00",
+    "ef_search": 256,
+    "mean_exact_recall": 0.8405999999999992,
+    "replicate_id": 0,
+    "selected_matched_ef": 1024
+  },
+  {
+    "condition_id": "radial_sigma_2p00",
+    "ef_search": 384,
+    "mean_exact_recall": 0.8877999999999987,
+    "replicate_id": 0,
+    "selected_matched_ef": 1024
+  },
+  {
+    "condition_id": "radial_sigma_2p00",
+    "ef_search": 512,
+    "mean_exact_recall": 0.9201999999999988,
+    "replicate_id": 0,
+    "selected_matched_ef": 1024
+  },
+  {
+    "condition_id": "radial_sigma_2p00",
+    "ef_search": 768,
+    "mean_exact_recall": 0.9471999999999982,
+    "replicate_id": 0,
+    "selected_matched_ef": 1024
+  },
+  {
+    "condition_id": "radial_sigma_2p00",
+    "ef_search": 1024,
+    "mean_exact_recall": 0.9601999999999979,
+    "replicate_id": 0,
+    "selected_matched_ef": 1024
+  },
+  {
+    "condition_id": "radial_sigma_2p00",
+    "ef_search": 256,
+    "mean_exact_recall": 0.839599999999999,
+    "replicate_id": 1,
+    "selected_matched_ef": 1024
+  },
+  {
+    "condition_id": "radial_sigma_2p00",
+    "ef_search": 384,
+    "mean_exact_recall": 0.8923999999999982,
+    "replicate_id": 1,
+    "selected_matched_ef": 1024
+  },
+  {
+    "condition_id": "radial_sigma_2p00",
+    "ef_search": 512,
+    "mean_exact_recall": 0.9203999999999974,
+    "replicate_id": 1,
+    "selected_matched_ef": 1024
+  },
+  {
+    "condition_id": "radial_sigma_2p00",
+    "ef_search": 768,
+    "mean_exact_recall": 0.9469999999999978,
+    "replicate_id": 1,
+    "selected_matched_ef": 1024
+  },
+  {
+    "condition_id": "radial_sigma_2p00",
+    "ef_search": 1024,
+    "mean_exact_recall": 0.9635999999999979,
+    "replicate_id": 1,
+    "selected_matched_ef": 1024
+  },
+  {
+    "condition_id": "radial_sigma_1p50",
+    "ef_search": 256,
+    "mean_exact_recall": 0.8915999999999987,
+    "replicate_id": 2,
+    "selected_matched_ef": 512
+  },
+  {
+    "condition_id": "radial_sigma_1p50",
+    "ef_search": 384,
+    "mean_exact_recall": 0.9303999999999969,
+    "replicate_id": 2,
+    "selected_matched_ef": 512
+  },
+  {
+    "condition_id": "radial_sigma_1p50",
+    "ef_search": 512,
+    "mean_exact_recall": 0.9503999999999974,
+    "replicate_id": 2,
+    "selected_matched_ef": 512
+  },
+  {
+    "condition_id": "radial_sigma_1p50",
+    "ef_search": 768,
+    "mean_exact_recall": 0.9707999999999981,
+    "replicate_id": 2,
+    "selected_matched_ef": 512
+  },
+  {
+    "condition_id": "radial_sigma_1p50",
+    "ef_search": 1024,
+    "mean_exact_recall": 0.9803999999999986,
+    "replicate_id": 2,
+    "selected_matched_ef": 512
+  },
+  {
+    "condition_id": "radial_sigma_2p00",
+    "ef_search": 256,
+    "mean_exact_recall": 0.8339999999999995,
+    "replicate_id": 2,
+    "selected_matched_ef": 1024
+  },
+  {
+    "condition_id": "radial_sigma_2p00",
+    "ef_search": 384,
+    "mean_exact_recall": 0.8817999999999983,
+    "replicate_id": 2,
+    "selected_matched_ef": 1024
+  },
+  {
+    "condition_id": "radial_sigma_2p00",
+    "ef_search": 512,
+    "mean_exact_recall": 0.9125999999999979,
+    "replicate_id": 2,
+    "selected_matched_ef": 1024
+  },
+  {
+    "condition_id": "radial_sigma_2p00",
+    "ef_search": 768,
+    "mean_exact_recall": 0.9441999999999977,
+    "replicate_id": 2,
+    "selected_matched_ef": 1024
+  },
+  {
+    "condition_id": "radial_sigma_2p00",
+    "ef_search": 1024,
+    "mean_exact_recall": 0.9603999999999979,
+    "replicate_id": 2,
+    "selected_matched_ef": 1024
+  },
+  {
+    "condition_id": "mean_alpha_1p00",
+    "ef_search": 256,
+    "mean_exact_recall": 0.8979999999999979,
+    "replicate_id": 3,
+    "selected_matched_ef": 512
+  },
+  {
+    "condition_id": "mean_alpha_1p00",
+    "ef_search": 384,
+    "mean_exact_recall": 0.9371999999999973,
+    "replicate_id": 3,
+    "selected_matched_ef": 512
+  },
+  {
+    "condition_id": "mean_alpha_1p00",
+    "ef_search": 512,
+    "mean_exact_recall": 0.9549999999999974,
+    "replicate_id": 3,
+    "selected_matched_ef": 512
+  },
+  {
+    "condition_id": "mean_alpha_1p00",
+    "ef_search": 768,
+    "mean_exact_recall": 0.973399999999998,
+    "replicate_id": 3,
+    "selected_matched_ef": 512
+  },
+  {
+    "condition_id": "mean_alpha_1p00",
+    "ef_search": 1024,
+    "mean_exact_recall": 0.981199999999999,
+    "replicate_id": 3,
+    "selected_matched_ef": 512
+  },
+  {
+    "condition_id": "radial_sigma_1p50",
+    "ef_search": 256,
+    "mean_exact_recall": 0.893999999999998,
+    "replicate_id": 3,
+    "selected_matched_ef": 512
+  },
+  {
+    "condition_id": "radial_sigma_1p50",
+    "ef_search": 384,
+    "mean_exact_recall": 0.9321999999999983,
+    "replicate_id": 3,
+    "selected_matched_ef": 512
+  },
+  {
+    "condition_id": "radial_sigma_1p50",
+    "ef_search": 512,
+    "mean_exact_recall": 0.9523999999999986,
+    "replicate_id": 3,
+    "selected_matched_ef": 512
+  },
+  {
+    "condition_id": "radial_sigma_1p50",
+    "ef_search": 768,
+    "mean_exact_recall": 0.9707999999999986,
+    "replicate_id": 3,
+    "selected_matched_ef": 512
+  },
+  {
+    "condition_id": "radial_sigma_1p50",
+    "ef_search": 1024,
+    "mean_exact_recall": 0.9787999999999989,
+    "replicate_id": 3,
+    "selected_matched_ef": 512
+  },
+  {
+    "condition_id": "radial_sigma_2p00",
+    "ef_search": 256,
+    "mean_exact_recall": 0.8269999999999991,
+    "replicate_id": 3,
+    "selected_matched_ef": 1024
+  },
+  {
+    "condition_id": "radial_sigma_2p00",
+    "ef_search": 384,
+    "mean_exact_recall": 0.8803999999999992,
+    "replicate_id": 3,
+    "selected_matched_ef": 1024
+  },
+  {
+    "condition_id": "radial_sigma_2p00",
+    "ef_search": 512,
+    "mean_exact_recall": 0.9109999999999979,
+    "replicate_id": 3,
+    "selected_matched_ef": 1024
+  },
+  {
+    "condition_id": "radial_sigma_2p00",
+    "ef_search": 768,
+    "mean_exact_recall": 0.9401999999999985,
+    "replicate_id": 3,
+    "selected_matched_ef": 1024
+  },
+  {
+    "condition_id": "radial_sigma_2p00",
+    "ef_search": 1024,
+    "mean_exact_recall": 0.9573999999999984,
+    "replicate_id": 3,
+    "selected_matched_ef": 1024
+  }
+]

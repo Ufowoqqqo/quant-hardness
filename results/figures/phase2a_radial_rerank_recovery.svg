@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="500" viewBox="0 0 840 500">
+<rect width="100%" height="100%" fill="white"/>
+<text x="420.0" y="25" text-anchor="middle" font-family="sans-serif" font-size="17">Radial shift: Rerank recovery</text>
+<line x1="82" y1="434" x2="812" y2="434" stroke="black"/>
+<line x1="82" y1="48" x2="82" y2="434" stroke="black"/>
+<text x="74" y="438.00" text-anchor="end" font-family="sans-serif" font-size="11">0.958</text>
+<text x="74" y="360.80" text-anchor="end" font-family="sans-serif" font-size="11">0.975</text>
+<text x="74" y="283.60" text-anchor="end" font-family="sans-serif" font-size="11">0.992</text>
+<text x="74" y="206.40" text-anchor="end" font-family="sans-serif" font-size="11">1.008</text>
+<text x="74" y="129.20" text-anchor="end" font-family="sans-serif" font-size="11">1.025</text>
+<text x="74" y="52.00" text-anchor="end" font-family="sans-serif" font-size="11">1.041</text>
+<text x="82.00" y="454" text-anchor="middle" font-family="sans-serif" font-size="11">1</text>
+<text x="264.50" y="454" text-anchor="middle" font-family="sans-serif" font-size="11">1.25</text>
+<text x="447.00" y="454" text-anchor="middle" font-family="sans-serif" font-size="11">1.5</text>
+<text x="812.00" y="454" text-anchor="middle" font-family="sans-serif" font-size="11">2</text>
+<text x="420.0" y="488" text-anchor="middle" font-family="sans-serif" font-size="13">sigma</text>
+<text x="18" y="241.0" text-anchor="middle" transform="rotate(-90 18 241.0)" font-family="sans-serif" font-size="13">Rerank recovery</text>
+<polyline points="82.00,377.02 264.50,248.48 447.00,210.57 812.00,376.02" fill="none" stroke="#9ecae1" stroke-width="2"/>
+<circle cx="82.00" cy="377.02" r="3" fill="#9ecae1"/>
+<circle cx="264.50" cy="248.48" r="3" fill="#9ecae1"/>
+<circle cx="447.00" cy="210.57" r="3" fill="#9ecae1"/>
+<circle cx="812.00" cy="376.02" r="3" fill="#9ecae1"/>
+<text x="92" y="64" font-family="sans-serif" font-size="11" fill="#9ecae1">replicate 0</text>
+<polyline points="82.00,330.53 264.50,271.45 447.00,396.65 812.00,85.35" fill="none" stroke="#fdae6b" stroke-width="2"/>
+<circle cx="82.00" cy="330.53" r="3" fill="#fdae6b"/>
+<circle cx="264.50" cy="271.45" r="3" fill="#fdae6b"/>
+<circle cx="447.00" cy="396.65" r="3" fill="#fdae6b"/>
+<circle cx="812.00" cy="85.35" r="3" fill="#fdae6b"/>
+<text x="92" y="81" font-family="sans-serif" font-size="11" fill="#fdae6b">replicate 1</text>
+<polyline points="82.00,315.33 264.50,248.60 447.00,177.93 812.00,344.01" fill="none" stroke="#a1d99b" stroke-width="2"/>
+<circle cx="82.00" cy="315.33" r="3" fill="#a1d99b"/>
+<circle cx="264.50" cy="248.60" r="3" fill="#a1d99b"/>
+<circle cx="447.00" cy="177.93" r="3" fill="#a1d99b"/>
+<circle cx="812.00" cy="344.01" r="3" fill="#a1d99b"/>
+<text x="92" y="98" font-family="sans-serif" font-size="11" fill="#a1d99b">replicate 2</text>
+<polyline points="82.00,198.71 264.50,327.79 447.00,281.60 812.00,269.67" fill="none" stroke="#bcbddc" stroke-width="2"/>
+<circle cx="82.00" cy="198.71" r="3" fill="#bcbddc"/>
+<circle cx="264.50" cy="327.79" r="3" fill="#bcbddc"/>
+<circle cx="447.00" cy="281.60" r="3" fill="#bcbddc"/>
+<circle cx="812.00" cy="269.67" r="3" fill="#bcbddc"/>
+<text x="92" y="115" font-family="sans-serif" font-size="11" fill="#bcbddc">replicate 3</text>
+</svg>

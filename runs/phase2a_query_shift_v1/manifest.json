@@ -1,0 +1,14 @@
+{
+  "schema_version":1,
+  "run_id":"phase2a_query_shift_v1",
+  "git_commit":"f56bdcbf462193b1f9d3e733e35a9b5d05401b0e",
+  "dirty_worktree":1,
+  "faiss_commit":"20f14b31a6d54e243a3d1de6ae193fc4c3ec18ed",
+  "replicate_count":4,
+  "database_distribution":"N(0,I_64), unchanged across query conditions within replicate",
+  "query_coupling":"one latent z per query reused across all alpha and sigma severities; IID is shared alpha=0/sigma=1 control",
+  "fixed_parameters":{"base_vectors":20000,"queries":500,"dimension":64,"hnsw_m":16,"ef_construction":80,"fixed_ef_search":256,"pq_m":32,"pq_nbits":8,"k":10},
+  "pre_registered_thresholds":{"exact_recall_calibration_trigger":0.90,"matched_exact_recall_target":0.95,"no_evidence_max_abs_mean_delta_discovery":0.01,"no_evidence_min_rerank_recovery":0.90,"emerging_min_mean_delta_discovery":0.03,"emerging_max_rerank_recovery":0.80,"emerging_required_replicates":3},
+  "candidate_set_storage":"all scalar metrics for every query; sorted V_E/V_P only for query IDs 0 through 24 per condition",
+  "machine":{"hostname":"rwcpu8.cse.ust.hk","kernel":"Linux 5.14.0-687.24.1.el9_8.x86_64 x86_64","hardware_concurrency":24,"compiler":"11.5.0 20240719 (Red Hat 11.5.0-14)"}
+}

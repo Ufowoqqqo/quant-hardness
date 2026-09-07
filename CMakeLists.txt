@@ -93,7 +93,8 @@ target_link_libraries(qh_metrics PUBLIC faiss_pinned)
 target_compile_options(qh_metrics PRIVATE -Wall -Wextra -Wpedantic)
 
 add_library(qh_instrumentation
-    src/instrumentation/faiss_distance_recorder.cpp)
+    src/instrumentation/faiss_distance_recorder.cpp
+    src/instrumentation/paired_decomposition.cpp)
 target_include_directories(qh_instrumentation PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/src)
 target_link_libraries(qh_instrumentation PUBLIC faiss_pinned)
@@ -139,6 +140,17 @@ target_compile_definitions(faiss_decomposition PRIVATE
     QH_GIT_COMMIT="${QH_GIT_COMMIT}"
     QH_GIT_DIRTY=${QH_GIT_DIRTY})
 target_compile_options(faiss_decomposition PRIVATE
+    -Wall -Wextra -Wpedantic)
+
+add_executable(faiss_query_shift
+    src/experiments/faiss_query_shift.cpp)
+target_link_libraries(faiss_query_shift PRIVATE
+    qh_faiss_backend qh_instrumentation qh_metrics)
+target_compile_definitions(faiss_query_shift PRIVATE
+    QH_FAISS_COMMIT="${QH_FAISS_EXPECTED_COMMIT}"
+    QH_GIT_COMMIT="${QH_GIT_COMMIT}"
+    QH_GIT_DIRTY=${QH_GIT_DIRTY})
+target_compile_options(faiss_query_shift PRIVATE
     -Wall -Wextra -Wpedantic)
 
 add_executable(phase1_correctness

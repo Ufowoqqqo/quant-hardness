@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "amendment_scope": "run-level parameter metadata only; no raw measurement row or original manifest was modified",
+  "reason": "The original manifest recorded the main numeric parameters but did not spell out queue, relative-distance, training-size, and ground-truth details.",
+  "graph_parameters": {
+    "distance": "FP32 squared L2",
+    "M": 16,
+    "efConstruction": 80,
+    "construction_count_per_replicate": 1
+  },
+  "search_parameters": {
+    "k": 10,
+    "fixed_efSearch": 256,
+    "bounded_queue": true,
+    "check_relative_distance": true,
+    "threads": 1,
+    "query_order": "ascending query_id"
+  },
+  "quantizer_parameters": {
+    "type": "FAISS PQ asymmetric distance computation",
+    "M": 32,
+    "nbits": 8,
+    "training_vectors": 20000,
+    "encoded_vectors": 20000,
+    "training_source": "the frozen database of the same replicate"
+  },
+  "ground_truth": "exhaustive FP32 squared-L2 top-10, recomputed independently for every query condition",
+  "original_manifest": "manifest.json",
+  "resolved_configuration": "resolved_config.conf"
+}

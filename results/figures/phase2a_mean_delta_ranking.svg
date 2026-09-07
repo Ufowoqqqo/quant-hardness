@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="500" viewBox="0 0 840 500">
+<rect width="100%" height="100%" fill="white"/>
+<text x="420.0" y="25" text-anchor="middle" font-family="sans-serif" font-size="17">Mean shift: Mean ranking delta</text>
+<line x1="82" y1="434" x2="812" y2="434" stroke="black"/>
+<line x1="82" y1="48" x2="82" y2="434" stroke="black"/>
+<text x="74" y="438.00" text-anchor="end" font-family="sans-serif" font-size="11">0.090</text>
+<text x="74" y="360.80" text-anchor="end" font-family="sans-serif" font-size="11">0.102</text>
+<text x="74" y="283.60" text-anchor="end" font-family="sans-serif" font-size="11">0.113</text>
+<text x="74" y="206.40" text-anchor="end" font-family="sans-serif" font-size="11">0.125</text>
+<text x="74" y="129.20" text-anchor="end" font-family="sans-serif" font-size="11">0.136</text>
+<text x="74" y="52.00" text-anchor="end" font-family="sans-serif" font-size="11">0.148</text>
+<text x="82.00" y="454" text-anchor="middle" font-family="sans-serif" font-size="11">0</text>
+<text x="264.50" y="454" text-anchor="middle" font-family="sans-serif" font-size="11">0.25</text>
+<text x="447.00" y="454" text-anchor="middle" font-family="sans-serif" font-size="11">0.5</text>
+<text x="629.50" y="454" text-anchor="middle" font-family="sans-serif" font-size="11">0.75</text>
+<text x="812.00" y="454" text-anchor="middle" font-family="sans-serif" font-size="11">1</text>
+<text x="420.0" y="488" text-anchor="middle" font-family="sans-serif" font-size="13">alpha</text>
+<text x="18" y="241.0" text-anchor="middle" transform="rotate(-90 18 241.0)" font-family="sans-serif" font-size="13">Mean ranking delta</text>
+<polyline points="82.00,108.07 264.50,132.12 447.00,164.18 629.50,292.44 812.00,320.49" fill="none" stroke="#9ecae1" stroke-width="2"/>
+<circle cx="82.00" cy="108.07" r="3" fill="#9ecae1"/>
+<circle cx="264.50" cy="132.12" r="3" fill="#9ecae1"/>
+<circle cx="447.00" cy="164.18" r="3" fill="#9ecae1"/>
+<circle cx="629.50" cy="292.44" r="3" fill="#9ecae1"/>
+<circle cx="812.00" cy="320.49" r="3" fill="#9ecae1"/>
+<text x="92" y="64" font-family="sans-serif" font-size="11" fill="#9ecae1">replicate 0</text>
+<polyline points="82.00,89.36 264.50,116.08 447.00,173.53 629.50,264.38 812.00,327.17" fill="none" stroke="#fdae6b" stroke-width="2"/>
+<circle cx="82.00" cy="89.36" r="3" fill="#fdae6b"/>
+<circle cx="264.50" cy="116.08" r="3" fill="#fdae6b"/>
+<circle cx="447.00" cy="173.53" r="3" fill="#fdae6b"/>
+<circle cx="629.50" cy="264.38" r="3" fill="#fdae6b"/>
+<circle cx="812.00" cy="327.17" r="3" fill="#fdae6b"/>
+<text x="92" y="81" font-family="sans-serif" font-size="11" fill="#fdae6b">replicate 1</text>
+<polyline points="82.00,138.80 264.50,154.83 447.00,153.49 629.50,291.10 812.00,396.65" fill="none" stroke="#a1d99b" stroke-width="2"/>
+<circle cx="82.00" cy="138.80" r="3" fill="#a1d99b"/>
+<circle cx="264.50" cy="154.83" r="3" fill="#a1d99b"/>
+<circle cx="447.00" cy="153.49" r="3" fill="#a1d99b"/>
+<circle cx="629.50" cy="291.10" r="3" fill="#a1d99b"/>
+<circle cx="812.00" cy="396.65" r="3" fill="#a1d99b"/>
+<text x="92" y="98" font-family="sans-serif" font-size="11" fill="#a1d99b">replicate 2</text>
+<polyline points="82.00,126.77 264.50,85.35 447.00,189.56 629.50,239.00 812.00,368.59" fill="none" stroke="#bcbddc" stroke-width="2"/>
+<circle cx="82.00" cy="126.77" r="3" fill="#bcbddc"/>
+<circle cx="264.50" cy="85.35" r="3" fill="#bcbddc"/>
+<circle cx="447.00" cy="189.56" r="3" fill="#bcbddc"/>
+<circle cx="629.50" cy="239.00" r="3" fill="#bcbddc"/>
+<circle cx="812.00" cy="368.59" r="3" fill="#bcbddc"/>
+<text x="92" y="115" font-family="sans-serif" font-size="11" fill="#bcbddc">replicate 3</text>
+</svg>

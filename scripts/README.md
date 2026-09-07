@@ -27,3 +27,7 @@ Implemented Phase 1 entry point:
 - `analyze_seed_robustness.py`: validates each replicate, evaluates the
   pre-registered stability criterion, aggregates across seeds, and emits only
   the requested summary table and boxplots.
+- `analyze_phase2a_query_shift.py`: validates the frozen-index query-shift
+  run, checks exact Phase 1 IID reproduction, evaluates the pre-registered
+  mechanism criteria, and emits fixed-ef/matched-recall tables, correlations,
+  and SVG figures.

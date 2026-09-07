@@ -487,3 +487,82 @@ Do not tune the IID baseline further. Execute the separately prepared,
 currently unrun `docs/phase2_distribution_plan.md` comparison to determine
 whether structured, anisotropic, or OOD query distributions produce candidate-
 discovery degradation.
+
+---
+
+## 2026-09-07 — Phase 2A controlled query-distribution shift
+
+**Objective and pre-registration**
+
+Hold each Gaussian database, exact-FP32 HNSW graph, and PQ32x8 model fixed
+while changing only the query mean or radial scale. Before running, the config
+recorded criteria A/B/C, including no-evidence thresholds
+`abs(mean delta_discovery) <= 0.01` and rerank recovery `>= 0.90`, and emerging
+thresholds mean discovery delta `>= 0.03` and recovery `<= 0.80` in at least
+3/4 replicates with exact Recall@10 `>= 0.90`.
+
+**Configuration and provenance**
+
+- Git HEAD recorded by the binary:
+  `f56bdcbf462193b1f9d3e733e35a9b5d05401b0e`, with the Phase 2A worktree
+  dirty; FAISS commit
+  `20f14b31a6d54e243a3d1de6ae193fc4c3ec18ed`
+- Four seed tuples for database/query/graph/PQ/direction are in
+  `configs/indexes/faiss_hnsw_phase2a_query_shift.conf`
+- Per replicate: 20,000 database vectors from `N(0,I_64)`, 500 paired latent
+  query vectors, dimension 64, no preprocessing
+- Mean shift: alpha `{0,.25,.50,.75,1}` along one fixed random unit direction;
+  radial shift: sigma `{1,1.25,1.5,2}`
+- HNSW: exact construction, `M=16`, `efConstruction=80`; fixed search
+  `efSearch=256`, `k=10`, bounded queue, relative-distance check, one thread
+- Exact calibration grid, used only when fixed-ef mean exact recall was below
+  0.90: `{256,384,512,768,1024}`; first ef reaching 0.95 selected
+- PQ: 32 subquantizers, 8 bits, trained on and encoding all 20,000 database
+  vectors once per replicate
+- Machine: `rwcpu8.cse.ust.hk`; Linux
+  5.14.0-687.24.1.el9_8.x86_64; GCC 11.5.0; 24 hardware threads
+
+**Exact commands**
+
+```bash
+cmake -S . -B /tmp/quant-hardness-build-v5 -DCMAKE_BUILD_TYPE=Release
+cmake --build /tmp/quant-hardness-build-v5 --target faiss_query_shift decomposition_correctness -j 8
+ctest --test-dir /tmp/quant-hardness-build-v5 --output-on-failure
+/tmp/quant-hardness-build-v5/faiss_query_shift configs/indexes/faiss_hnsw_phase2a_query_shift.conf runs/phase2a_query_shift_v1
+python -m py_compile scripts/analyze_phase2a_query_shift.py
+python scripts/analyze_phase2a_query_shift.py runs/phase2a_query_shift_v1 results/tables results/figures
+```
+
+**Observed results**
+
+- Criterion A held for all 21 fixed-ef shifted replicate/condition rows with
+  exact recall at least 0.90. No condition met criterion B or C.
+- Across conditions, mean discovery delta was -0.0002 to 0.0020 and mean
+  rerank recovery was 0.9860 to 1.0022.
+- At fixed ef, exact recall declined to 0.9070 at alpha=1 and 0.8353 at
+  sigma=2, averaged across replicates. The seven triggered calibrations all
+  restored exact recall to at least 0.95 using ef512 or ef1024.
+- At matched points, discovery delta was -0.0018 to 0.0026 and recovery was
+  0.9779 to 1.0158.
+- IID raw outputs exactly reproduced Phase 1 robustness replicates 0--3 for
+  ground truth, native/oracle results, recalls, discovery delta, and Jaccard.
+
+**Anomalies and possible confounders**
+
+- `delta_exact_control` was +0.1 for 2 of 16,000 fixed rows and zero otherwise
+  (overall mean 0.0000125). The all-level distance recorder includes upper
+  greedy evaluations not necessarily retained by the level-0 result heap.
+  These raw observations are preserved and the tiny positive oracle bias is
+  not silently corrected.
+- Positive and negative discovery deltas both became more frequent with OOD
+  severity, while their mean stayed near zero.
+- More severe fixed-ef shifts made exact HNSW harder; only separately reported
+  matched-recall results support mechanism comparisons there.
+- The experiment changes queries around an isotropic Gaussian database and
+  does not address structured database geometry.
+
+**Single next experiment**
+
+Run a four-replicate Phase 2B clustered/mixture database experiment with IID
+queries and the same decomposition plus matched-exact-recall control. Do not
+add trajectories unless a reproducible discovery signal first emerges.

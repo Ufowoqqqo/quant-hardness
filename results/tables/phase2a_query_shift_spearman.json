@@ -1,0 +1,478 @@
+[
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.0,
+    "spearman_rho": 0.008972485632365117
+  },
+  {
+    "descriptor": "distance_to_database_centroid",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.0,
+    "spearman_rho": 0.009017161995699978
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.0,
+    "spearman_rho": -0.018300807936756827
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.0,
+    "spearman_rho": 0.00690318816578898
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.0,
+    "spearman_rho": 0.03812094513330156
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.0,
+    "spearman_rho": 0.0386718301436522
+  },
+  {
+    "descriptor": "nearest_to_10th_distance_ratio",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.0,
+    "spearman_rho": -0.0386718301436522
+  },
+  {
+    "descriptor": "projection_onto_mean_shift_direction",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.0,
+    "spearman_rho": -0.024033203807768858
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.25,
+    "spearman_rho": -0.01633555396297134
+  },
+  {
+    "descriptor": "distance_to_database_centroid",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.25,
+    "spearman_rho": -0.01596536649741221
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.25,
+    "spearman_rho": -0.01639369789479693
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.25,
+    "spearman_rho": -0.016663740741277553
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.25,
+    "spearman_rho": -0.013030151833870587
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.25,
+    "spearman_rho": -0.004746973031410529
+  },
+  {
+    "descriptor": "nearest_to_10th_distance_ratio",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.25,
+    "spearman_rho": 0.004746973031410529
+  },
+  {
+    "descriptor": "projection_onto_mean_shift_direction",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.25,
+    "spearman_rho": -0.013296528525964099
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.5,
+    "spearman_rho": 0.014814626235997814
+  },
+  {
+    "descriptor": "distance_to_database_centroid",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.5,
+    "spearman_rho": 0.014557367437082783
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.5,
+    "spearman_rho": 0.00222019346206847
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.5,
+    "spearman_rho": 0.016879161883589632
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.5,
+    "spearman_rho": 0.02195092771558637
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.5,
+    "spearman_rho": 0.020786057223868858
+  },
+  {
+    "descriptor": "nearest_to_10th_distance_ratio",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.5,
+    "spearman_rho": -0.020786057223868858
+  },
+  {
+    "descriptor": "projection_onto_mean_shift_direction",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.5,
+    "spearman_rho": 0.022068908322853725
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.75,
+    "spearman_rho": 0.019246446907437022
+  },
+  {
+    "descriptor": "distance_to_database_centroid",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.75,
+    "spearman_rho": 0.019254155654497885
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.75,
+    "spearman_rho": 0.012064836647980231
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.75,
+    "spearman_rho": 0.02081662716531861
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.75,
+    "spearman_rho": 0.026791320509305397
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.75,
+    "spearman_rho": 0.018481519674565804
+  },
+  {
+    "descriptor": "nearest_to_10th_distance_ratio",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.75,
+    "spearman_rho": -0.018481519674565804
+  },
+  {
+    "descriptor": "projection_onto_mean_shift_direction",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 0.75,
+    "spearman_rho": 0.01646195028736346
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 1,
+    "spearman_rho": -0.0042685607641912765
+  },
+  {
+    "descriptor": "distance_to_database_centroid",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 1,
+    "spearman_rho": -0.004046288897576406
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 1,
+    "spearman_rho": -0.00336315739799624
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 1,
+    "spearman_rho": -0.0014056801077547158
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 1,
+    "spearman_rho": 0.005142418868912539
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 1,
+    "spearman_rho": 0.004261266701464024
+  },
+  {
+    "descriptor": "nearest_to_10th_distance_ratio",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 1,
+    "spearman_rho": -0.004261266701464024
+  },
+  {
+    "descriptor": "projection_onto_mean_shift_direction",
+    "query_count": 2000,
+    "shift_family": "mean",
+    "shift_severity": 1,
+    "spearman_rho": -0.004659512284403624
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 2000,
+    "shift_family": "radial",
+    "shift_severity": 1.0,
+    "spearman_rho": 0.008972485632365117
+  },
+  {
+    "descriptor": "distance_to_database_centroid",
+    "query_count": 2000,
+    "shift_family": "radial",
+    "shift_severity": 1.0,
+    "spearman_rho": 0.009017161995699978
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 2000,
+    "shift_family": "radial",
+    "shift_severity": 1.0,
+    "spearman_rho": -0.018300807936756827
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 2000,
+    "shift_family": "radial",
+    "shift_severity": 1.0,
+    "spearman_rho": 0.00690318816578898
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 2000,
+    "shift_family": "radial",
+    "shift_severity": 1.0,
+    "spearman_rho": 0.03812094513330156
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 2000,
+    "shift_family": "radial",
+    "shift_severity": 1.0,
+    "spearman_rho": 0.0386718301436522
+  },
+  {
+    "descriptor": "nearest_to_10th_distance_ratio",
+    "query_count": 2000,
+    "shift_family": "radial",
+    "shift_severity": 1.0,
+    "spearman_rho": -0.0386718301436522
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 2000,
+    "shift_family": "radial",
+    "shift_severity": 1.25,
+    "spearman_rho": -0.030505898872351844
+  },
+  {
+    "descriptor": "distance_to_database_centroid",
+    "query_count": 2000,
+    "shift_family": "radial",
+    "shift_severity": 1.25,
+    "spearman_rho": -0.030415874548440955
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 2000,
+    "shift_family": "radial",
+    "shift_severity": 1.25,
+    "spearman_rho": -0.022096314810312996
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 2000,
+    "shift_family": "radial",
+    "shift_severity": 1.25,
+    "spearman_rho": -0.02815904439219457
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 2000,
+    "shift_family": "radial",
+    "shift_severity": 1.25,
+    "spearman_rho": -0.027211972605476666
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 2000,
+    "shift_family": "radial",
+    "shift_severity": 1.25,
+    "spearman_rho": -0.014333095953270586
+  },
+  {
+    "descriptor": "nearest_to_10th_distance_ratio",
+    "query_count": 2000,
+    "shift_family": "radial",
+    "shift_severity": 1.25,
+    "spearman_rho": 0.014333095953270586
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 2000,
+    "shift_family": "radial",
+    "shift_severity": 1.5,
+    "spearman_rho": 0.023527946985523733
+  },
+  {
+    "descriptor": "distance_to_database_centroid",
+    "query_count": 2000,
+    "shift_family": "radial",
+    "shift_severity": 1.5,
+    "spearman_rho": 0.02374101500393807
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 2000,
+    "shift_family": "radial",
+    "shift_severity": 1.5,
+    "spearman_rho": 0.026321146246236316
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 2000,
+    "shift_family": "radial",
+    "shift_severity": 1.5,
+    "spearman_rho": 0.024729248519283462
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 2000,
+    "shift_family": "radial",
+    "shift_severity": 1.5,
+    "spearman_rho": -0.008724773457128588
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 2000,
+    "shift_family": "radial",
+    "shift_severity": 1.5,
+    "spearman_rho": -0.018055353942524142
+  },
+  {
+    "descriptor": "nearest_to_10th_distance_ratio",
+    "query_count": 2000,
+    "shift_family": "radial",
+    "shift_severity": 1.5,
+    "spearman_rho": 0.018055353942524142
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 2000,
+    "shift_family": "radial",
+    "shift_severity": 2,
+    "spearman_rho": 0.015811819140457133
+  },
+  {
+    "descriptor": "distance_to_database_centroid",
+    "query_count": 2000,
+    "shift_family": "radial",
+    "shift_severity": 2,
+    "spearman_rho": 0.01582740162245517
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 2000,
+    "shift_family": "radial",
+    "shift_severity": 2,
+    "spearman_rho": 0.018890226908893127
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 2000,
+    "shift_family": "radial",
+    "shift_severity": 2,
+    "spearman_rho": 0.016178687888189495
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 2000,
+    "shift_family": "radial",
+    "shift_severity": 2,
+    "spearman_rho": -0.013728509090523667
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 2000,
+    "shift_family": "radial",
+    "shift_severity": 2,
+    "spearman_rho": -0.020224101503953
+  },
+  {
+    "descriptor": "nearest_to_10th_distance_ratio",
+    "query_count": 2000,
+    "shift_family": "radial",
+    "shift_severity": 2,
+    "spearman_rho": 0.020224101503953
+  }
+]

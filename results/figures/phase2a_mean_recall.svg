@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="500" viewBox="0 0 840 500">
+<rect width="100%" height="100%" fill="white"/>
+<text x="420.0" y="25" text-anchor="middle" font-family="sans-serif" font-size="17">Mean shift: mean recall@10</text>
+<line x1="82" y1="434" x2="812" y2="434" stroke="black"/>
+<line x1="82" y1="48" x2="82" y2="434" stroke="black"/>
+<text x="74" y="438.00" text-anchor="end" font-family="sans-serif" font-size="11">0.786</text>
+<text x="74" y="360.80" text-anchor="end" font-family="sans-serif" font-size="11">0.826</text>
+<text x="74" y="283.60" text-anchor="end" font-family="sans-serif" font-size="11">0.865</text>
+<text x="74" y="206.40" text-anchor="end" font-family="sans-serif" font-size="11">0.905</text>
+<text x="74" y="129.20" text-anchor="end" font-family="sans-serif" font-size="11">0.944</text>
+<text x="74" y="52.00" text-anchor="end" font-family="sans-serif" font-size="11">0.984</text>
+<text x="82.00" y="454" text-anchor="middle" font-family="sans-serif" font-size="11">0</text>
+<text x="264.50" y="454" text-anchor="middle" font-family="sans-serif" font-size="11">0.25</text>
+<text x="447.00" y="454" text-anchor="middle" font-family="sans-serif" font-size="11">0.5</text>
+<text x="629.50" y="454" text-anchor="middle" font-family="sans-serif" font-size="11">0.75</text>
+<text x="812.00" y="454" text-anchor="middle" font-family="sans-serif" font-size="11">1</text>
+<text x="420.0" y="488" text-anchor="middle" font-family="sans-serif" font-size="13">alpha</text>
+<text x="18" y="241.0" text-anchor="middle" transform="rotate(-90 18 241.0)" font-family="sans-serif" font-size="13">Mean recall@10</text>
+<polyline points="82.00,85.35 264.50,93.44 447.00,119.74 629.50,153.83 812.00,198.24" fill="none" stroke="#4c78a8" stroke-width="2"/>
+<circle cx="82.00" cy="85.35" r="3" fill="#4c78a8"/>
+<circle cx="264.50" cy="93.44" r="3" fill="#4c78a8"/>
+<circle cx="447.00" cy="119.74" r="3" fill="#4c78a8"/>
+<circle cx="629.50" cy="153.83" r="3" fill="#4c78a8"/>
+<circle cx="812.00" cy="198.24" r="3" fill="#4c78a8"/>
+<text x="92" y="64" font-family="sans-serif" font-size="11" fill="#4c78a8">exact native</text>
+<polyline points="82.00,357.39 264.50,361.78 447.00,373.85 629.50,378.53 812.00,396.65" fill="none" stroke="#f58518" stroke-width="2"/>
+<circle cx="82.00" cy="357.39" r="3" fill="#f58518"/>
+<circle cx="264.50" cy="361.78" r="3" fill="#f58518"/>
+<circle cx="447.00" cy="373.85" r="3" fill="#f58518"/>
+<circle cx="629.50" cy="378.53" r="3" fill="#f58518"/>
+<circle cx="812.00" cy="396.65" r="3" fill="#f58518"/>
+<text x="92" y="81" font-family="sans-serif" font-size="11" fill="#f58518">PQ native</text>
+<polyline points="82.00,89.25 264.50,95.48 447.00,121.59 629.50,155.87 812.00,197.75" fill="none" stroke="#54a24b" stroke-width="2"/>
+<circle cx="82.00" cy="89.25" r="3" fill="#54a24b"/>
+<circle cx="264.50" cy="95.48" r="3" fill="#54a24b"/>
+<circle cx="447.00" cy="121.59" r="3" fill="#54a24b"/>
+<circle cx="629.50" cy="155.87" r="3" fill="#54a24b"/>
+<circle cx="812.00" cy="197.75" r="3" fill="#54a24b"/>
+<text x="92" y="98" font-family="sans-serif" font-size="11" fill="#54a24b">PQ exact-rerank</text>
+</svg>

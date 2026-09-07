@@ -1,0 +1,362 @@
+[
+  {
+    "model_a": "A1",
+    "model_b": "A2",
+    "relation": "within",
+    "harmful_jaccard": 0.667656491269747,
+    "loss_spearman": 0.4216159736054222,
+    "inversion_spearman": 0.4477076272259524,
+    "homogeneous_independent_jaccard": 0.5408259448223425,
+    "inversion_pair_jaccard": 0.1632766407830069
+  },
+  {
+    "model_a": "A1",
+    "model_b": "A3",
+    "relation": "within",
+    "harmful_jaccard": 0.6613931523022432,
+    "loss_spearman": 0.40794034759263126,
+    "inversion_spearman": 0.44596702942137656,
+    "homogeneous_independent_jaccard": 0.5427130057514405,
+    "inversion_pair_jaccard": 0.16182961359093936
+  },
+  {
+    "model_a": "A1",
+    "model_b": "B1",
+    "relation": "between",
+    "harmful_jaccard": 0.6535664007508212,
+    "loss_spearman": 0.38329376735571197,
+    "inversion_spearman": 0.4093296000934217,
+    "homogeneous_independent_jaccard": 0.5440668800162866,
+    "inversion_pair_jaccard": 0.14300279085095208
+  },
+  {
+    "model_a": "A1",
+    "model_b": "B2",
+    "relation": "between",
+    "harmful_jaccard": 0.6591526023840434,
+    "loss_spearman": 0.401130464327089,
+    "inversion_spearman": 0.41238400474638076,
+    "homogeneous_independent_jaccard": 0.5418879054073596,
+    "inversion_pair_jaccard": 0.14357776739841197
+  },
+  {
+    "model_a": "A1",
+    "model_b": "B3",
+    "relation": "between",
+    "harmful_jaccard": 0.6540680560461557,
+    "loss_spearman": 0.38753180351917765,
+    "inversion_spearman": 0.4173031574174454,
+    "homogeneous_independent_jaccard": 0.5412980826056557,
+    "inversion_pair_jaccard": 0.14432979031390877
+  },
+  {
+    "model_a": "A1",
+    "model_b": "C1",
+    "relation": "between",
+    "harmful_jaccard": 0.6528857479387514,
+    "loss_spearman": 0.38572941429329294,
+    "inversion_spearman": 0.41423562820096027,
+    "homogeneous_independent_jaccard": 0.5404126202615159,
+    "inversion_pair_jaccard": 0.14215731488598515
+  },
+  {
+    "model_a": "A1",
+    "model_b": "C2",
+    "relation": "between",
+    "harmful_jaccard": 0.6594690265486726,
+    "loss_spearman": 0.3842977830842595,
+    "inversion_spearman": 0.4139616706451837,
+    "homogeneous_independent_jaccard": 0.5422416128741732,
+    "inversion_pair_jaccard": 0.14060797895299365
+  },
+  {
+    "model_a": "A1",
+    "model_b": "C3",
+    "relation": "between",
+    "harmful_jaccard": 0.6604618284637135,
+    "loss_spearman": 0.392189274622567,
+    "inversion_spearman": 0.4178605469326539,
+    "homogeneous_independent_jaccard": 0.5440080584644227,
+    "inversion_pair_jaccard": 0.14201662583667318
+  },
+  {
+    "model_a": "A2",
+    "model_b": "A3",
+    "relation": "within",
+    "harmful_jaccard": 0.6676515778276799,
+    "loss_spearman": 0.42142573544608714,
+    "inversion_spearman": 0.45381386566993553,
+    "homogeneous_independent_jaccard": 0.544993737957521,
+    "inversion_pair_jaccard": 0.16266750091245633
+  },
+  {
+    "model_a": "A2",
+    "model_b": "B1",
+    "relation": "between",
+    "harmful_jaccard": 0.6617283950617284,
+    "loss_spearman": 0.39385852029850293,
+    "inversion_spearman": 0.4165328373634095,
+    "homogeneous_independent_jaccard": 0.5463590296633744,
+    "inversion_pair_jaccard": 0.14650741947158885
+  },
+  {
+    "model_a": "A2",
+    "model_b": "B2",
+    "relation": "between",
+    "harmful_jaccard": 0.664816345813157,
+    "loss_spearman": 0.40321557405031133,
+    "inversion_spearman": 0.4322617164686063,
+    "homogeneous_independent_jaccard": 0.5441616934476002,
+    "inversion_pair_jaccard": 0.147124424155254
+  },
+  {
+    "model_a": "A2",
+    "model_b": "B3",
+    "relation": "between",
+    "harmful_jaccard": 0.6679692125518059,
+    "loss_spearman": 0.41768682988302525,
+    "inversion_spearman": 0.4333257647323671,
+    "homogeneous_independent_jaccard": 0.5435669131270877,
+    "inversion_pair_jaccard": 0.1494770331247011
+  },
+  {
+    "model_a": "A2",
+    "model_b": "C1",
+    "relation": "between",
+    "harmful_jaccard": 0.6612750885478158,
+    "loss_spearman": 0.38623606665538407,
+    "inversion_spearman": 0.41179288662688796,
+    "homogeneous_independent_jaccard": 0.5426740185847981,
+    "inversion_pair_jaccard": 0.14130769073052712
+  },
+  {
+    "model_a": "A2",
+    "model_b": "C2",
+    "relation": "between",
+    "harmful_jaccard": 0.6604262333686566,
+    "loss_spearman": 0.39419624325069297,
+    "inversion_spearman": 0.41794044589687834,
+    "homogeneous_independent_jaccard": 0.5445183764665079,
+    "inversion_pair_jaccard": 0.14424892925331545
+  },
+  {
+    "model_a": "A2",
+    "model_b": "C3",
+    "relation": "between",
+    "harmful_jaccard": 0.6672958942897593,
+    "loss_spearman": 0.3934553329595626,
+    "inversion_spearman": 0.4200515531711261,
+    "homogeneous_independent_jaccard": 0.5462997114649819,
+    "inversion_pair_jaccard": 0.14743754961493655
+  },
+  {
+    "model_a": "A3",
+    "model_b": "B1",
+    "relation": "between",
+    "harmful_jaccard": 0.660804314691054,
+    "loss_spearman": 0.39862693919893744,
+    "inversion_spearman": 0.42032239691466183,
+    "homogeneous_independent_jaccard": 0.5482849691664485,
+    "inversion_pair_jaccard": 0.14598967863971873
+  },
+  {
+    "model_a": "A3",
+    "model_b": "B2",
+    "relation": "between",
+    "harmful_jaccard": 0.6617266525523406,
+    "loss_spearman": 0.39312971022155235,
+    "inversion_spearman": 0.4135102851937648,
+    "homogeneous_independent_jaccard": 0.5460721456050651,
+    "inversion_pair_jaccard": 0.14432254128449853
+  },
+  {
+    "model_a": "A3",
+    "model_b": "B3",
+    "relation": "between",
+    "harmful_jaccard": 0.6580152671755726,
+    "loss_spearman": 0.4013933597567782,
+    "inversion_spearman": 0.42120002816341545,
+    "homogeneous_independent_jaccard": 0.5454731839220477,
+    "inversion_pair_jaccard": 0.14258549270729476
+  },
+  {
+    "model_a": "A3",
+    "model_b": "C1",
+    "relation": "between",
+    "harmful_jaccard": 0.6605439773931473,
+    "loss_spearman": 0.39971860538713744,
+    "inversion_spearman": 0.41775193402041566,
+    "homogeneous_independent_jaccard": 0.5445740208760959,
+    "inversion_pair_jaccard": 0.14260631673506052
+  },
+  {
+    "model_a": "A3",
+    "model_b": "C2",
+    "relation": "between",
+    "harmful_jaccard": 0.658336266572803,
+    "loss_spearman": 0.38048203275800246,
+    "inversion_spearman": 0.41277132580159365,
+    "homogeneous_independent_jaccard": 0.546431338344636,
+    "inversion_pair_jaccard": 0.14031731742995388
+  },
+  {
+    "model_a": "A3",
+    "model_b": "C3",
+    "relation": "between",
+    "harmful_jaccard": 0.6694955209806694,
+    "loss_spearman": 0.40167267277946755,
+    "inversion_spearman": 0.4237160347150152,
+    "homogeneous_independent_jaccard": 0.548225232055341,
+    "inversion_pair_jaccard": 0.14372738608720537
+  },
+  {
+    "model_a": "B1",
+    "model_b": "B2",
+    "relation": "within",
+    "harmful_jaccard": 0.6683565196887526,
+    "loss_spearman": 0.4156206499447702,
+    "inversion_spearman": 0.44846176161239487,
+    "homogeneous_independent_jaccard": 0.5474428525997423,
+    "inversion_pair_jaccard": 0.1584205318230625
+  },
+  {
+    "model_a": "B1",
+    "model_b": "B3",
+    "relation": "within",
+    "harmful_jaccard": 0.6723036896877956,
+    "loss_spearman": 0.4128246561257608,
+    "inversion_spearman": 0.46124370698344375,
+    "homogeneous_independent_jaccard": 0.5468408818679774,
+    "inversion_pair_jaccard": 0.16296685954760654
+  },
+  {
+    "model_a": "B1",
+    "model_b": "C1",
+    "relation": "between",
+    "harmful_jaccard": 0.6607100869974136,
+    "loss_spearman": 0.387888794982567,
+    "inversion_spearman": 0.4167374212359595,
+    "homogeneous_independent_jaccard": 0.5459372078522315,
+    "inversion_pair_jaccard": 0.14229565395864333
+  },
+  {
+    "model_a": "B1",
+    "model_b": "C2",
+    "relation": "between",
+    "harmful_jaccard": 0.6633768064857244,
+    "loss_spearman": 0.3878679283906899,
+    "inversion_spearman": 0.413711595637687,
+    "homogeneous_independent_jaccard": 0.547803851432784,
+    "inversion_pair_jaccard": 0.14151992585727524
+  },
+  {
+    "model_a": "B1",
+    "model_b": "C3",
+    "relation": "between",
+    "harmful_jaccard": 0.6610467158412364,
+    "loss_spearman": 0.3859062849353212,
+    "inversion_spearman": 0.4305178872673747,
+    "homogeneous_independent_jaccard": 0.5496067830462468,
+    "inversion_pair_jaccard": 0.14263564299503018
+  },
+  {
+    "model_a": "B2",
+    "model_b": "B3",
+    "relation": "within",
+    "harmful_jaccard": 0.6774500475737393,
+    "loss_spearman": 0.42906666163071805,
+    "inversion_spearman": 0.4476211415016833,
+    "homogeneous_independent_jaccard": 0.5446396759428317,
+    "inversion_pair_jaccard": 0.15845650337837838
+  },
+  {
+    "model_a": "B2",
+    "model_b": "C1",
+    "relation": "between",
+    "harmful_jaccard": 0.6604596346493813,
+    "loss_spearman": 0.39326829741607944,
+    "inversion_spearman": 0.4091784106109836,
+    "homogeneous_independent_jaccard": 0.5437432564639989,
+    "inversion_pair_jaccard": 0.1407158120761028
+  },
+  {
+    "model_a": "B2",
+    "model_b": "C2",
+    "relation": "between",
+    "harmful_jaccard": 0.6623498940428538,
+    "loss_spearman": 0.3971531965766966,
+    "inversion_spearman": 0.41274757269831175,
+    "homogeneous_independent_jaccard": 0.5455949018311349,
+    "inversion_pair_jaccard": 0.14444687113246596
+  },
+  {
+    "model_a": "B2",
+    "model_b": "C3",
+    "relation": "between",
+    "harmful_jaccard": 0.6658817989168825,
+    "loss_spearman": 0.4006746239334215,
+    "inversion_spearman": 0.4326181544615297,
+    "homogeneous_independent_jaccard": 0.547383298839444,
+    "inversion_pair_jaccard": 0.14423624706089513
+  },
+  {
+    "model_a": "B3",
+    "model_b": "C1",
+    "relation": "between",
+    "harmful_jaccard": 0.6551845755936986,
+    "loss_spearman": 0.38143227200798024,
+    "inversion_spearman": 0.40921832172067335,
+    "homogeneous_independent_jaccard": 0.5431493900137289,
+    "inversion_pair_jaccard": 0.14131038312048863
+  },
+  {
+    "model_a": "B3",
+    "model_b": "C2",
+    "relation": "between",
+    "harmful_jaccard": 0.6572703782006107,
+    "loss_spearman": 0.3835094319591758,
+    "inversion_spearman": 0.40763507669495314,
+    "homogeneous_independent_jaccard": 0.5449969860514147,
+    "inversion_pair_jaccard": 0.1418728371468416
+  },
+  {
+    "model_a": "B3",
+    "model_b": "C3",
+    "relation": "between",
+    "harmful_jaccard": 0.6605989430416911,
+    "loss_spearman": 0.38742010924914383,
+    "inversion_spearman": 0.41806779202367067,
+    "homogeneous_independent_jaccard": 0.5467814589997514,
+    "inversion_pair_jaccard": 0.14087576981997266
+  },
+  {
+    "model_a": "C1",
+    "model_b": "C2",
+    "relation": "within",
+    "harmful_jaccard": 0.665878737737856,
+    "loss_spearman": 0.40532781637256776,
+    "inversion_spearman": 0.4413377921193602,
+    "homogeneous_independent_jaccard": 0.544099390966448,
+    "inversion_pair_jaccard": 0.15870669553630912
+  },
+  {
+    "model_a": "C1",
+    "model_b": "C3",
+    "relation": "within",
+    "harmful_jaccard": 0.6686355581807443,
+    "loss_spearman": 0.4036581006170208,
+    "inversion_spearman": 0.44763601522495283,
+    "homogeneous_independent_jaccard": 0.5458779812079024,
+    "inversion_pair_jaccard": 0.15434522087689573
+  },
+  {
+    "model_a": "C2",
+    "model_b": "C3",
+    "relation": "within",
+    "harmful_jaccard": 0.6770524819334202,
+    "loss_spearman": 0.40947528262354266,
+    "inversion_spearman": 0.4438224508410756,
+    "homogeneous_independent_jaccard": 0.5477442191081009,
+    "inversion_pair_jaccard": 0.15655563061892636
+  }
+]

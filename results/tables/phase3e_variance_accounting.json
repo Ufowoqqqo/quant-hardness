@@ -1,0 +1,14 @@
+{
+  "mean_initialization_variability": 0.0027245925925925923,
+  "mean_observed_subset_mean_variability": 0.0010177777777777778,
+  "mean_total_model_variability": 0.0037423703703703707,
+  "within_share_of_observed_model_variance": 0.7280392700209808,
+  "between_share_of_observed_model_variance": 0.27196072997901904,
+  "mean_W_sample": 0.00408688888888889,
+  "mean_B_sample": 0.0015266666666666668,
+  "mean_signed_subset_contrast": 0.00016437037037037039,
+  "negative_contrast_queries": 4522,
+  "zero_model_variance_queries": 430,
+  "between_query_mean_loss_variance_not_causal_geometry": 0.003351109480246914,
+  "all_query_model_variance": 0.007093479850617284
+}

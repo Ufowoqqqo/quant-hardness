@@ -1096,3 +1096,138 @@ everything else fixed; compare cross-subset harmful-frequency/severity
 stability and oracle=1 local-gap associations. This separates vulnerability
 that generalizes across training samples from sample-specific shared bias.
 No new algorithm, graph change, selective reranking or trajectory logging.
+
+## Phase 3E — balanced training sample x initialization stability
+
+**Registered before new training/results**
+
+Execution base Git `913d7eddbe5f6f6e7b83efa7f2244de1bc2bb246` with dirty
+source/config hashes; pinned FAISS `20f14b31a6d54e243a3d1de6ae193fc4c3ec18ed`.
+Config: `configs/indexes/phase3e_training_sample_stability.conf`;
+pre-registration: `runs/phase3e_training_sample_stability_v1/preregistration.md`.
+Same all-query SIFT1M/ef64/k10 exact L0 candidate pools, exact scores/GT,
+graph and PQ64x8 architecture. Nine new models, three independent65,536-ID
+samples A/B/C with seeds80400011/80400037/80400059, three independent initial
+seeds per sample exactly as in config. Original five O models enter separate
+secondary aggregate/stability tables only. No new graph traversal.
+
+Pre-registered W_pop+B_pop=T_pop decomposition uses population denominators;
+observed B_pop includes finite3-init mean noise. Also record W_sample,
+B_sample and signed B_sample-W_sample/3, without random-effects inference.
+No H1–H5 threshold is invented after results. Diagnostic compositions fixed
+before results: A1/A2/A3 and A1/B1/C1, after primary checkpoint only.
+
+**Preparation/model-generation commands**
+
+```bash
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build --target faiss_sample_stability -j2
+/tmp/phase3b-plot-env/bin/python scripts/analyze_phase3e_training_sample_stability.py prepare
+ctest --test-dir build --output-on-failure
+set -euo pipefail
+for model in 0 1 2 3 4 5 6 7 8; do
+  OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=24 ./build/faiss_sample_stability sample-scores configs/indexes/phase3e_training_sample_stability.conf runs/phase3e_training_sample_stability_v1 "$model" 2>&1 | tee "runs/phase3e_training_sample_stability_v1/model_${model}_execution.log"
+done
+/tmp/phase3b-plot-env/bin/python -m unittest discover -s tests -p 'test_phase3*_metrics.py' -v
+```
+
+All35 Python tests (12 new Phase 3E references, 23 previous) and all5 CTests
+pass. Centered variance evaluation ensures exactly constant losses have
+zero variance without clipping real negative signed contrasts. The existing
+filesystem clock-skew warning recurs at build; the separate executable
+compiled and linked, preserving historical Phase 3C/3D binaries.
+
+**Primary, checkpoint and diagnostic commands**
+
+```bash
+set -o pipefail
+/tmp/phase3b-plot-env/bin/python scripts/analyze_phase3e_training_sample_stability.py derive 2>&1 | tee runs/phase3e_training_sample_stability_v1/derive_execution.log
+MPLCONFIGDIR=/tmp/phase3b-mpl /tmp/phase3b-plot-env/bin/python scripts/analyze_phase3e_training_sample_stability.py summarize 2>&1 | tee runs/phase3e_training_sample_stability_v1/summary_execution.log
+/tmp/phase3b-plot-env/bin/python scripts/analyze_phase3e_training_sample_stability.py checkpoint
+MPLCONFIGDIR=/tmp/phase3b-mpl /tmp/phase3b-plot-env/bin/python scripts/analyze_phase3e_training_sample_stability.py ensemble 2>&1 | tee runs/phase3e_training_sample_stability_v1/ensemble_execution.log
+```
+
+Independent re-derivation used `mktemp -d /tmp/phase3e-reproduce.XXXXXX`,
+which returned `/tmp/phase3e-reproduce.XQaTuu`:
+
+```bash
+set -euo pipefail
+/tmp/phase3b-plot-env/bin/python scripts/analyze_phase3e_training_sample_stability.py derive --derived /tmp/phase3e-reproduce.XQaTuu/analysis
+MPLCONFIGDIR=/tmp/phase3b-mpl /tmp/phase3b-plot-env/bin/python scripts/analyze_phase3e_training_sample_stability.py summarize --derived /tmp/phase3e-reproduce.XQaTuu/analysis --tables /tmp/phase3e-reproduce.XQaTuu/tables --figures /tmp/phase3e-reproduce.XQaTuu/figures
+MPLCONFIGDIR=/tmp/phase3b-mpl /tmp/phase3b-plot-env/bin/python scripts/analyze_phase3e_training_sample_stability.py ensemble --derived /tmp/phase3e-reproduce.XQaTuu/ensemble --tables /tmp/phase3e-reproduce.XQaTuu/tables --figures /tmp/phase3e-reproduce.XQaTuu/figures
+/tmp/phase3b-plot-env/bin/python scripts/verify_phase3e_artifacts.py runs/phase3e_training_sample_stability_v1 /tmp/phase3e-reproduce.XQaTuu --output /tmp/phase3e-reproduce.XQaTuu/preverification.json
+git diff --check
+/tmp/phase3b-plot-env/bin/python scripts/verify_phase3e_artifacts.py runs/phase3e_training_sample_stability_v1 /tmp/phase3e-reproduce.XQaTuu --output runs/phase3e_training_sample_stability_v1/final_verification.json
+```
+
+**Observations**
+
+- All9 independent PQ models score the same10,353,047 candidates for10,000
+  queries. Sample hashes match within groups;9 codebook hashes differ.
+  A/B, A/C, B/C ID intersections4206/4288/4356 are near the independent
+  draw expectation4294.97; no enforced disjointness or altered preprocessing.
+- Nine-model recall mean .8527178, SD .00059947, range .85154–.85364;
+  ranking loss mean .1004322, critical inversions5.5486. Recall subset means
+  A/B/C=.8529033/.8529100/.8523400. All model quality measures remain raw.
+- Within/between harmful Jaccard medians .66836/.66060; loss Spearman
+  .41282/.39313; inversion-count Spearman .44764/.41674. Direction supports
+  an additional shared-sample component, with a modest query-level drop.
+- Mean W_pop .00272459, observed B_pop .00101778, total .00374237:72.80%
+  within and27.20% between subset means. The signed noise-floor contrast
+  is .00016437 versus W_sample .00408689;27.20% is NOT a pure sample-effect
+  estimate.4522 negative contrasts retained;430 zero-variance queries.
+- Categories robust/model-specific/usual/universal:
+  1103/1953/4503/2441 queries; signed-loss shares1.33/10.17/47.62/40.89%.
+  Subset-persistent5676 (56.76%) carry77.59% of total loss. Within oracle=1,
+  4851/7136 (67.98%) are subset-persistent and carry82.62% of that loss.
+- Pair union243,988:50.63% unique to one model,58.03% confined to one
+  subset,41.97% recurring across>=2 subsets,14.21% across all3. Only371
+  pairs persist across all9 models; pair Jaccard .15871 within/.14264 between.
+- Oracle=1 d12-d9 correlations: harmful frequency−.55815, mean loss−.66865,
+  versus average single-model realized-loss correlation−.43060. Local-gap
+  association survives conditioning; no predictor or causality claim.
+- Post-primary fixed score diagnostics: A1/A2/A3 recall .88588, loss .06727,
+  inversions2.8399,32.90% member-average loss recovery. A1/B1/C1 recall
+  .89097, loss .06218, inversions2.5363,37.87% recovery. Their respective
+  member-average recalls .8529033/.8530733 prevent hiding baseline differences.
+- O1..O5 are only secondary: O-within/O-to-ABC Jaccard .67116/.66149 and
+  loss Spearman .41848/.39418, consistent with the primary direction.
+- All35 Python and5 C++ tests pass. Independent regeneration reproduces61
+  files byte-for-byte, including8 SVG figures;174 artifact hashes audited.
+  Historical sources, graph and all old runs remain unchanged.
+
+**Anomalies/confounders and interpretation limits**
+
+- There are171 exact-boundary-tied queries and149–187 PQ-boundary ties/model.
+  Exact-tie exclusion retains within/between loss Spearman .41237/.39148.
+  No negative net query/model loss occurred, but signed losses and all tied
+  replacements are preserved. No new exact/candidate control anomaly.
+- Population within/between shares depend on averaging only3 initializations
+  per sample; they are not formal random-effects components. B_sample minus
+  W_sample/3 is a signed descriptive contrast only, not a clipped variance.
+  Between-query mean-loss variance likewise is not an identified geometry share.
+- Robust means<=2/9 here, not0/5 as in3D;9/9 persistence is stricter than5/5.
+  Oracle recall differs substantially across categories; the complete-GT
+  stratum and all descriptors/targets are reported, not only favorable ones.
+- Pairwise comparisons share models/queries. Sample draws may overlap;
+  training subset includes order. Fixed SIFT realization/PQ subspace layout
+  and just3 sample draws limit inference. The two diagnostics are fixed
+  triplets sharing A1, not performance methods or all-composition estimates.
+- Matplotlib3.9.4 warns that boxplot(labels=...) is deprecated; numeric
+  outputs and reproducible figures complete. Existing clock-skew warnings
+  do not prevent compilation/linking or tests.
+- Case C is the conservative supported interpretation: repeatable local-
+  geometry susceptibility plus substantial codebook realization noise and
+  a smaller sample-linked effect. Case A has descriptive features but causal
+  geometry dominance is unproven; Case B's training-sample dominance is not
+  supported. No navigability, heavy-tail, novelty or algorithm claim.
+
+**Exactly one next experiment (not run)**
+
+Use one fixed non-learned random orthogonal-coordinate control on the same
+candidate pools, ABC sample IDs and init seeds, with standard PQ64x8 scoring
+only. Validate preservation of exact L2 geometry/GT numerically, retain the
+original exact reference, and compare harmful-frequency persistence/local-gap
+associations while reporting PQ approximation quality without tuning. This
+separates Euclidean local-margin susceptibility from shared alignment with
+PQ subspaces. No optimized rotation, new quantizer or algorithm is proposed.

@@ -1,0 +1,842 @@
+[
+  {
+    "scope": "all",
+    "descriptor": "d1",
+    "target": "harmful_frequency_all",
+    "queries": 10000,
+    "spearman": -0.14903013639628734
+  },
+  {
+    "scope": "all",
+    "descriptor": "d1",
+    "target": "harmful_subset_frequency",
+    "queries": 10000,
+    "spearman": -0.14714499202000358
+  },
+  {
+    "scope": "all",
+    "descriptor": "d1",
+    "target": "overall_mean_loss",
+    "queries": 10000,
+    "spearman": -0.13183976096974812
+  },
+  {
+    "scope": "all",
+    "descriptor": "d1",
+    "target": "between_subset_variability",
+    "queries": 10000,
+    "spearman": -0.02645968679684433
+  },
+  {
+    "scope": "all",
+    "descriptor": "d1",
+    "target": "within_subset_variability",
+    "queries": 10000,
+    "spearman": -0.03736397214681624
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk",
+    "target": "harmful_frequency_all",
+    "queries": 10000,
+    "spearman": -0.2110241784724716
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk",
+    "target": "harmful_subset_frequency",
+    "queries": 10000,
+    "spearman": -0.20259110141077186
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk",
+    "target": "overall_mean_loss",
+    "queries": 10000,
+    "spearman": -0.21182049717831972
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk",
+    "target": "between_subset_variability",
+    "queries": 10000,
+    "spearman": -0.06417612812662618
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk",
+    "target": "within_subset_variability",
+    "queries": 10000,
+    "spearman": -0.094701770479388
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk_plus_1",
+    "target": "harmful_frequency_all",
+    "queries": 10000,
+    "spearman": -0.2207380416114468
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk_plus_1",
+    "target": "harmful_subset_frequency",
+    "queries": 10000,
+    "spearman": -0.2117762718913482
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk_plus_1",
+    "target": "overall_mean_loss",
+    "queries": 10000,
+    "spearman": -0.22205001526947601
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk_plus_1",
+    "target": "between_subset_variability",
+    "queries": 10000,
+    "spearman": -0.06777807980934179
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk_plus_1",
+    "target": "within_subset_variability",
+    "queries": 10000,
+    "spearman": -0.10030394008626348
+  },
+  {
+    "scope": "all",
+    "descriptor": "d20",
+    "target": "harmful_frequency_all",
+    "queries": 10000,
+    "spearman": -0.22897048483628904
+  },
+  {
+    "scope": "all",
+    "descriptor": "d20",
+    "target": "harmful_subset_frequency",
+    "queries": 10000,
+    "spearman": -0.2189347071228551
+  },
+  {
+    "scope": "all",
+    "descriptor": "d20",
+    "target": "overall_mean_loss",
+    "queries": 10000,
+    "spearman": -0.23486071116502977
+  },
+  {
+    "scope": "all",
+    "descriptor": "d20",
+    "target": "between_subset_variability",
+    "queries": 10000,
+    "spearman": -0.07382636356713204
+  },
+  {
+    "scope": "all",
+    "descriptor": "d20",
+    "target": "within_subset_variability",
+    "queries": 10000,
+    "spearman": -0.11147138728131577
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_margin",
+    "target": "harmful_frequency_all",
+    "queries": 10000,
+    "spearman": -0.32448194715755524
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_margin",
+    "target": "harmful_subset_frequency",
+    "queries": 10000,
+    "spearman": -0.28527790633397937
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_margin",
+    "target": "overall_mean_loss",
+    "queries": 10000,
+    "spearman": -0.34975914799915914
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_margin",
+    "target": "between_subset_variability",
+    "queries": 10000,
+    "spearman": -0.09329102627255262
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_margin",
+    "target": "within_subset_variability",
+    "queries": 10000,
+    "spearman": -0.15634126050551597
+  },
+  {
+    "scope": "all",
+    "descriptor": "relative_boundary_margin",
+    "target": "harmful_frequency_all",
+    "queries": 10000,
+    "spearman": -0.2523854013369658
+  },
+  {
+    "scope": "all",
+    "descriptor": "relative_boundary_margin",
+    "target": "harmful_subset_frequency",
+    "queries": 10000,
+    "spearman": -0.21775214592983202
+  },
+  {
+    "scope": "all",
+    "descriptor": "relative_boundary_margin",
+    "target": "overall_mean_loss",
+    "queries": 10000,
+    "spearman": -0.2763411758044594
+  },
+  {
+    "scope": "all",
+    "descriptor": "relative_boundary_margin",
+    "target": "between_subset_variability",
+    "queries": 10000,
+    "spearman": -0.07274128986191417
+  },
+  {
+    "scope": "all",
+    "descriptor": "relative_boundary_margin",
+    "target": "within_subset_variability",
+    "queries": 10000,
+    "spearman": -0.12263630511954633
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r1",
+    "target": "harmful_frequency_all",
+    "queries": 10000,
+    "spearman": -0.32448194715755524
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r1",
+    "target": "harmful_subset_frequency",
+    "queries": 10000,
+    "spearman": -0.28527790633397937
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r1",
+    "target": "overall_mean_loss",
+    "queries": 10000,
+    "spearman": -0.34975914799915914
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r1",
+    "target": "between_subset_variability",
+    "queries": 10000,
+    "spearman": -0.09329102627255262
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r1",
+    "target": "within_subset_variability",
+    "queries": 10000,
+    "spearman": -0.15634126050551597
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r2",
+    "target": "harmful_frequency_all",
+    "queries": 10000,
+    "spearman": -0.44699468818775817
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r2",
+    "target": "harmful_subset_frequency",
+    "queries": 10000,
+    "spearman": -0.3932343853859123
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r2",
+    "target": "overall_mean_loss",
+    "queries": 10000,
+    "spearman": -0.5300569052843609
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r2",
+    "target": "between_subset_variability",
+    "queries": 10000,
+    "spearman": -0.18112904102529473
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r2",
+    "target": "within_subset_variability",
+    "queries": 10000,
+    "spearman": -0.30955199148284557
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r5",
+    "target": "harmful_frequency_all",
+    "queries": 10000,
+    "spearman": -0.38406592860566735
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r5",
+    "target": "harmful_subset_frequency",
+    "queries": 10000,
+    "spearman": -0.3409575196723284
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r5",
+    "target": "overall_mean_loss",
+    "queries": 10000,
+    "spearman": -0.47965725948626375
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r5",
+    "target": "between_subset_variability",
+    "queries": 10000,
+    "spearman": -0.20300277977857437
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r5",
+    "target": "within_subset_variability",
+    "queries": 10000,
+    "spearman": -0.3213991485550668
+  },
+  {
+    "scope": "all",
+    "descriptor": "local_distance_concentration",
+    "target": "harmful_frequency_all",
+    "queries": 10000,
+    "spearman": -0.037577442778828005
+  },
+  {
+    "scope": "all",
+    "descriptor": "local_distance_concentration",
+    "target": "harmful_subset_frequency",
+    "queries": 10000,
+    "spearman": -0.022869407417902478
+  },
+  {
+    "scope": "all",
+    "descriptor": "local_distance_concentration",
+    "target": "overall_mean_loss",
+    "queries": 10000,
+    "spearman": -0.08766210791012065
+  },
+  {
+    "scope": "all",
+    "descriptor": "local_distance_concentration",
+    "target": "between_subset_variability",
+    "queries": 10000,
+    "spearman": -0.053145117958681556
+  },
+  {
+    "scope": "all",
+    "descriptor": "local_distance_concentration",
+    "target": "within_subset_variability",
+    "queries": 10000,
+    "spearman": -0.09516276380516034
+  },
+  {
+    "scope": "all",
+    "descriptor": "candidate_count",
+    "target": "harmful_frequency_all",
+    "queries": 10000,
+    "spearman": -0.17125868989021928
+  },
+  {
+    "scope": "all",
+    "descriptor": "candidate_count",
+    "target": "harmful_subset_frequency",
+    "queries": 10000,
+    "spearman": -0.15057523692733274
+  },
+  {
+    "scope": "all",
+    "descriptor": "candidate_count",
+    "target": "overall_mean_loss",
+    "queries": 10000,
+    "spearman": -0.14809965765659136
+  },
+  {
+    "scope": "all",
+    "descriptor": "candidate_count",
+    "target": "between_subset_variability",
+    "queries": 10000,
+    "spearman": -0.012299281423117678
+  },
+  {
+    "scope": "all",
+    "descriptor": "candidate_count",
+    "target": "within_subset_variability",
+    "queries": 10000,
+    "spearman": -0.013445860809810436
+  },
+  {
+    "scope": "all",
+    "descriptor": "oracle_recall",
+    "target": "harmful_frequency_all",
+    "queries": 10000,
+    "spearman": 0.4715920981341843
+  },
+  {
+    "scope": "all",
+    "descriptor": "oracle_recall",
+    "target": "harmful_subset_frequency",
+    "queries": 10000,
+    "spearman": 0.44625888409528564
+  },
+  {
+    "scope": "all",
+    "descriptor": "oracle_recall",
+    "target": "overall_mean_loss",
+    "queries": 10000,
+    "spearman": 0.4469885073804816
+  },
+  {
+    "scope": "all",
+    "descriptor": "oracle_recall",
+    "target": "between_subset_variability",
+    "queries": 10000,
+    "spearman": 0.13599761881155656
+  },
+  {
+    "scope": "all",
+    "descriptor": "oracle_recall",
+    "target": "within_subset_variability",
+    "queries": 10000,
+    "spearman": 0.1669907807144225
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d1",
+    "target": "harmful_frequency_all",
+    "queries": 7136,
+    "spearman": 0.05879995505654556
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d1",
+    "target": "harmful_subset_frequency",
+    "queries": 7136,
+    "spearman": 0.056404405911188824
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d1",
+    "target": "overall_mean_loss",
+    "queries": 7136,
+    "spearman": 0.0695155077987943
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d1",
+    "target": "between_subset_variability",
+    "queries": 7136,
+    "spearman": 0.047277034642429466
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d1",
+    "target": "within_subset_variability",
+    "queries": 7136,
+    "spearman": 0.05432873057911063
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk",
+    "target": "harmful_frequency_all",
+    "queries": 7136,
+    "spearman": -0.035325278555378974
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk",
+    "target": "harmful_subset_frequency",
+    "queries": 7136,
+    "spearman": -0.026353838050516186
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk",
+    "target": "overall_mean_loss",
+    "queries": 7136,
+    "spearman": -0.048621572067508105
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk",
+    "target": "between_subset_variability",
+    "queries": 7136,
+    "spearman": 0.006446605607663019
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk",
+    "target": "within_subset_variability",
+    "queries": 7136,
+    "spearman": -0.0124721319005681
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk_plus_1",
+    "target": "harmful_frequency_all",
+    "queries": 7136,
+    "spearman": -0.050020904820558265
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk_plus_1",
+    "target": "harmful_subset_frequency",
+    "queries": 7136,
+    "spearman": -0.04106650351823734
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk_plus_1",
+    "target": "overall_mean_loss",
+    "queries": 7136,
+    "spearman": -0.06361753021381424
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk_plus_1",
+    "target": "between_subset_variability",
+    "queries": 7136,
+    "spearman": 0.0019073258541987793
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk_plus_1",
+    "target": "within_subset_variability",
+    "queries": 7136,
+    "spearman": -0.019390663178439158
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d20",
+    "target": "harmful_frequency_all",
+    "queries": 7136,
+    "spearman": -0.07347492610767832
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d20",
+    "target": "harmful_subset_frequency",
+    "queries": 7136,
+    "spearman": -0.06309019151065637
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d20",
+    "target": "overall_mean_loss",
+    "queries": 7136,
+    "spearman": -0.09275557195591011
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d20",
+    "target": "between_subset_variability",
+    "queries": 7136,
+    "spearman": -0.00875625989735351
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d20",
+    "target": "within_subset_variability",
+    "queries": 7136,
+    "spearman": -0.037291020382824204
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_margin",
+    "target": "harmful_frequency_all",
+    "queries": 7136,
+    "spearman": -0.4583209392039819
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_margin",
+    "target": "harmful_subset_frequency",
+    "queries": 7136,
+    "spearman": -0.41380340786448194
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_margin",
+    "target": "overall_mean_loss",
+    "queries": 7136,
+    "spearman": -0.48094044089065446
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_margin",
+    "target": "between_subset_variability",
+    "queries": 7136,
+    "spearman": -0.09889615377101912
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_margin",
+    "target": "within_subset_variability",
+    "queries": 7136,
+    "spearman": -0.16452524225253268
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "relative_boundary_margin",
+    "target": "harmful_frequency_all",
+    "queries": 7136,
+    "spearman": -0.44620352428505483
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "relative_boundary_margin",
+    "target": "harmful_subset_frequency",
+    "queries": 7136,
+    "spearman": -0.4069011029825663
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "relative_boundary_margin",
+    "target": "overall_mean_loss",
+    "queries": 7136,
+    "spearman": -0.4637737098160642
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "relative_boundary_margin",
+    "target": "between_subset_variability",
+    "queries": 7136,
+    "spearman": -0.10199892060386151
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "relative_boundary_margin",
+    "target": "within_subset_variability",
+    "queries": 7136,
+    "spearman": -0.158449028979796
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r1",
+    "target": "harmful_frequency_all",
+    "queries": 7136,
+    "spearman": -0.4583209392039819
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r1",
+    "target": "harmful_subset_frequency",
+    "queries": 7136,
+    "spearman": -0.41380340786448194
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r1",
+    "target": "overall_mean_loss",
+    "queries": 7136,
+    "spearman": -0.48094044089065446
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r1",
+    "target": "between_subset_variability",
+    "queries": 7136,
+    "spearman": -0.09889615377101912
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r1",
+    "target": "within_subset_variability",
+    "queries": 7136,
+    "spearman": -0.16452524225253268
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r2",
+    "target": "harmful_frequency_all",
+    "queries": 7136,
+    "spearman": -0.5581535422286723
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r2",
+    "target": "harmful_subset_frequency",
+    "queries": 7136,
+    "spearman": -0.4901253854190798
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r2",
+    "target": "overall_mean_loss",
+    "queries": 7136,
+    "spearman": -0.6686495981238113
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r2",
+    "target": "between_subset_variability",
+    "queries": 7136,
+    "spearman": -0.1818518198011361
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r2",
+    "target": "within_subset_variability",
+    "queries": 7136,
+    "spearman": -0.3236615142455979
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r5",
+    "target": "harmful_frequency_all",
+    "queries": 7136,
+    "spearman": -0.45521988916159717
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r5",
+    "target": "harmful_subset_frequency",
+    "queries": 7136,
+    "spearman": -0.39470348299569635
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r5",
+    "target": "overall_mean_loss",
+    "queries": 7136,
+    "spearman": -0.5773565871069304
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r5",
+    "target": "between_subset_variability",
+    "queries": 7136,
+    "spearman": -0.18857742579506054
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r5",
+    "target": "within_subset_variability",
+    "queries": 7136,
+    "spearman": -0.315448419849579
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "local_distance_concentration",
+    "target": "harmful_frequency_all",
+    "queries": 7136,
+    "spearman": -0.22968580043924183
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "local_distance_concentration",
+    "target": "harmful_subset_frequency",
+    "queries": 7136,
+    "spearman": -0.201669178054923
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "local_distance_concentration",
+    "target": "overall_mean_loss",
+    "queries": 7136,
+    "spearman": -0.2890440602484307
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "local_distance_concentration",
+    "target": "between_subset_variability",
+    "queries": 7136,
+    "spearman": -0.10877341753942223
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "local_distance_concentration",
+    "target": "within_subset_variability",
+    "queries": 7136,
+    "spearman": -0.17106355404011322
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "candidate_count",
+    "target": "harmful_frequency_all",
+    "queries": 7136,
+    "spearman": 0.004350480219439991
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "candidate_count",
+    "target": "harmful_subset_frequency",
+    "queries": 7136,
+    "spearman": 0.032729962004117395
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "candidate_count",
+    "target": "overall_mean_loss",
+    "queries": 7136,
+    "spearman": 0.02543576439054108
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "candidate_count",
+    "target": "between_subset_variability",
+    "queries": 7136,
+    "spearman": 0.05377942512426965
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "candidate_count",
+    "target": "within_subset_variability",
+    "queries": 7136,
+    "spearman": 0.0715051003113818
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "oracle_recall",
+    "target": "harmful_frequency_all",
+    "queries": 7136,
+    "spearman": null
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "oracle_recall",
+    "target": "harmful_subset_frequency",
+    "queries": 7136,
+    "spearman": null
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "oracle_recall",
+    "target": "overall_mean_loss",
+    "queries": 7136,
+    "spearman": null
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "oracle_recall",
+    "target": "between_subset_variability",
+    "queries": 7136,
+    "spearman": null
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "oracle_recall",
+    "target": "within_subset_variability",
+    "queries": 7136,
+    "spearman": null
+  }
+]

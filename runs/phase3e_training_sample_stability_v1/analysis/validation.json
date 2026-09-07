@@ -1,0 +1,37 @@
+{
+  "queries": 10000,
+  "candidates": 10353047,
+  "balanced_models": [
+    "A1",
+    "A2",
+    "A3",
+    "B1",
+    "B2",
+    "B3",
+    "C1",
+    "C2",
+    "C3"
+  ],
+  "shared_exact_pool_gt_geometry_identity": true,
+  "variance_identity_all_queries": true,
+  "old_O_score_audit_queries_per_model": 100,
+  "random_pair_identity": true,
+  "old_sources_unchanged": true,
+  "training_sample_identity_within_subset": true,
+  "distinct_training_subsets": 3,
+  "distinct_codebooks": 9,
+  "analysis_sha256": "d9f6ddfd904620dbd50caa6b2998df37add33d7ec767baf148146d9e6b0173c7",
+  "metrics_sha256": "42f1d2b52eb48aea04a8235937bd0a11aa42eee47222229e3dfbd5cf9cd4382d",
+  "model_manifests_sha256": {
+    "A1": "9fe0f866387dd81bc8fc75c347c1d877f884e620037b543d0452bd8db1ab96e1",
+    "A2": "bf4edec0a7ee8e8270195dc4f22c8fa4d4933ce55c33ab9cc0567fddad88b30f",
+    "A3": "eb6d5eb261a5f1a45e8e02b312efa03f5913d74f5310183cf8cc3bad176d923a",
+    "B1": "e7beb7c13a7a0eeb87cb23a3aa5c00a160d9668164b2bcd5bd40ba07c15390ba",
+    "B2": "d939c282a6f85729f80bb4de1d67eb788ba8d65b808c269e26401f77c676c843",
+    "B3": "04c184057ad4e2812f5494ee06effaad21b57c29f01062c3c0a9812bb4024fa3",
+    "C1": "46f4905dd3aee3e94fc71f454edb05a43aa0feac91788bf3ebe964312ad18a2c",
+    "C2": "257477de35fbd56517eae59b6a3c606031e970feb6a7272582d32ba7731e3360",
+    "C3": "4fc7d8e43f305113bd789e44dde6c9a6f91bac1ca0d45b80442ead9ed118684b"
+  },
+  "numpy": "1.23.5"
+}

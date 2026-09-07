@@ -1,0 +1,142 @@
+[
+  {
+    "model": "A1",
+    "subset": "A",
+    "fixed_candidate_recall": 0.8536400000000002,
+    "ranking_recall_loss": 0.09951,
+    "cross_boundary_inversion_count": 5.5562,
+    "global_mae": 1309.7091247814656,
+    "random_pair_inversion_rate": 0.0344392578125,
+    "topk_agreement": 0.8797300000000001
+  },
+  {
+    "model": "A2",
+    "subset": "A",
+    "fixed_candidate_recall": 0.8527300000000001,
+    "ranking_recall_loss": 0.10042000000000001,
+    "cross_boundary_inversion_count": 5.5446,
+    "global_mae": 1318.9454297960872,
+    "random_pair_inversion_rate": 0.03456015625,
+    "topk_agreement": 0.8792600000000003
+  },
+  {
+    "model": "A3",
+    "subset": "A",
+    "fixed_candidate_recall": 0.8523400000000001,
+    "ranking_recall_loss": 0.10081000000000001,
+    "cross_boundary_inversion_count": 5.6048,
+    "global_mae": 1309.0620972611136,
+    "random_pair_inversion_rate": 0.0345095703125,
+    "topk_agreement": 0.8787200000000001
+  },
+  {
+    "model": "B1",
+    "subset": "B",
+    "fixed_candidate_recall": 0.8525500000000001,
+    "ranking_recall_loss": 0.10060000000000001,
+    "cross_boundary_inversion_count": 5.5427,
+    "global_mae": 1309.6489095609738,
+    "random_pair_inversion_rate": 0.0343337890625,
+    "topk_agreement": 0.8789100000000002
+  },
+  {
+    "model": "B2",
+    "subset": "B",
+    "fixed_candidate_recall": 0.8531900000000001,
+    "ranking_recall_loss": 0.09996000000000001,
+    "cross_boundary_inversion_count": 5.4616,
+    "global_mae": 1310.0042390902336,
+    "random_pair_inversion_rate": 0.0344228515625,
+    "topk_agreement": 0.8802200000000001
+  },
+  {
+    "model": "B3",
+    "subset": "B",
+    "fixed_candidate_recall": 0.8529900000000001,
+    "ranking_recall_loss": 0.10016000000000001,
+    "cross_boundary_inversion_count": 5.5113,
+    "global_mae": 1313.713506055931,
+    "random_pair_inversion_rate": 0.0344212890625,
+    "topk_agreement": 0.8799000000000001
+  },
+  {
+    "model": "C1",
+    "subset": "C",
+    "fixed_candidate_recall": 0.8530300000000001,
+    "ranking_recall_loss": 0.10012,
+    "cross_boundary_inversion_count": 5.5884,
+    "global_mae": 1314.9597694697518,
+    "random_pair_inversion_rate": 0.03456484375,
+    "topk_agreement": 0.8794300000000003
+  },
+  {
+    "model": "C2",
+    "subset": "C",
+    "fixed_candidate_recall": 0.8524500000000002,
+    "ranking_recall_loss": 0.10070000000000001,
+    "cross_boundary_inversion_count": 5.5426,
+    "global_mae": 1314.6111613762534,
+    "random_pair_inversion_rate": 0.034282421875,
+    "topk_agreement": 0.8790500000000002
+  },
+  {
+    "model": "C3",
+    "subset": "C",
+    "fixed_candidate_recall": 0.8515400000000002,
+    "ranking_recall_loss": 0.10161,
+    "cross_boundary_inversion_count": 5.5852,
+    "global_mae": 1313.6297331268318,
+    "random_pair_inversion_rate": 0.0345080078125,
+    "topk_agreement": 0.87787
+  },
+  {
+    "model": "O1",
+    "subset": "O",
+    "fixed_candidate_recall": 0.85313,
+    "ranking_recall_loss": 0.10002,
+    "cross_boundary_inversion_count": 5.5846,
+    "global_mae": 1315.331578362415,
+    "random_pair_inversion_rate": 0.034375,
+    "topk_agreement": 0.87982
+  },
+  {
+    "model": "O2",
+    "subset": "O",
+    "fixed_candidate_recall": 0.85331,
+    "ranking_recall_loss": 0.09984000000000001,
+    "cross_boundary_inversion_count": 5.5208,
+    "global_mae": 1310.4156808295734,
+    "random_pair_inversion_rate": 0.0343578125,
+    "topk_agreement": 0.8795500000000002
+  },
+  {
+    "model": "O3",
+    "subset": "O",
+    "fixed_candidate_recall": 0.8526600000000001,
+    "ranking_recall_loss": 0.10049000000000001,
+    "cross_boundary_inversion_count": 5.511,
+    "global_mae": 1315.118885672992,
+    "random_pair_inversion_rate": 0.0344609375,
+    "topk_agreement": 0.8795800000000001
+  },
+  {
+    "model": "O4",
+    "subset": "O",
+    "fixed_candidate_recall": 0.8530400000000001,
+    "ranking_recall_loss": 0.10011,
+    "cross_boundary_inversion_count": 5.5048,
+    "global_mae": 1315.448500503584,
+    "random_pair_inversion_rate": 0.0344513671875,
+    "topk_agreement": 0.8795100000000002
+  },
+  {
+    "model": "O5",
+    "subset": "O",
+    "fixed_candidate_recall": 0.8531200000000001,
+    "ranking_recall_loss": 0.10003000000000001,
+    "cross_boundary_inversion_count": 5.5914,
+    "global_mae": 1316.0343279537965,
+    "random_pair_inversion_rate": 0.034430078125,
+    "topk_agreement": 0.8789800000000003
+  }
+]

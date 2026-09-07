@@ -79,3 +79,20 @@ Matplotlib 3.9.4 for byte-identical figures. `verify_phase3d_artifacts.py`
 checks models, frozen sources and independent regeneration, recording a
 new verification artifact without replacing old results. Exact commands,
 tie rules and scientific limitations are documented in the Phase 3D report.
+
+# Phase 3E training-sample stability
+
+`analyze_phase3e_training_sample_stability.py` supports `prepare`, `derive`,
+`summarize`, `checkpoint`, and post-primary `ensemble`. Defaults point to the
+Phase 3E config/run; independent regeneration uses `--derived`, `--tables`,
+and `--figures`. The new `faiss_sample_stability sample-scores CONFIG RUN M`
+executable (M=0..8 => A1..C3) reuses the validated score-only training/export
+path, with independent sample seeds and fixed IDs within each subset. No
+graph traversal occurs. Historical binaries and all old runs are preserved.
+
+Primary metrics use only balanced ABC3x3; eligible Phase 3D O1..O5 appear in
+separate secondary tables. `phase3e_metrics.py` supplies tested descriptive
+variance identities and nine-model pair masks. Training-subset mean variance
+is not a formal random-effect estimate. `verify_phase3e_artifacts.py` checks
+old input integrity, all9 models and byte-identical independent regeneration.
+See the Phase 3E pre-registration, report and experiment log for exact commands.

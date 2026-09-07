@@ -1,0 +1,1730 @@
+[
+  {
+    "scope": "all",
+    "descriptor": "d1",
+    "model": "A1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.09165428066714837,
+    "mean_loss_spearman": -0.13183976096974812
+  },
+  {
+    "scope": "all",
+    "descriptor": "d1",
+    "model": "A2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.09179407167838023,
+    "mean_loss_spearman": -0.13183976096974812
+  },
+  {
+    "scope": "all",
+    "descriptor": "d1",
+    "model": "A3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.09417372818635002,
+    "mean_loss_spearman": -0.13183976096974812
+  },
+  {
+    "scope": "all",
+    "descriptor": "d1",
+    "model": "B1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.0844943715014331,
+    "mean_loss_spearman": -0.13183976096974812
+  },
+  {
+    "scope": "all",
+    "descriptor": "d1",
+    "model": "B2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.09207730375819421,
+    "mean_loss_spearman": -0.13183976096974812
+  },
+  {
+    "scope": "all",
+    "descriptor": "d1",
+    "model": "B3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.07874677528634096,
+    "mean_loss_spearman": -0.13183976096974812
+  },
+  {
+    "scope": "all",
+    "descriptor": "d1",
+    "model": "C1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.11826424866747194,
+    "mean_loss_spearman": -0.13183976096974812
+  },
+  {
+    "scope": "all",
+    "descriptor": "d1",
+    "model": "C2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.09476830266824472,
+    "mean_loss_spearman": -0.13183976096974812
+  },
+  {
+    "scope": "all",
+    "descriptor": "d1",
+    "model": "C3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.11293662297642167,
+    "mean_loss_spearman": -0.13183976096974812
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk",
+    "model": "A1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.1417641093788784,
+    "mean_loss_spearman": -0.21182049717831972
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk",
+    "model": "A2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.1384475150175964,
+    "mean_loss_spearman": -0.21182049717831972
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk",
+    "model": "A3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.15165946640718614,
+    "mean_loss_spearman": -0.21182049717831972
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk",
+    "model": "B1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.1426859205465573,
+    "mean_loss_spearman": -0.21182049717831972
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk",
+    "model": "B2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.14656576132536256,
+    "mean_loss_spearman": -0.21182049717831972
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk",
+    "model": "B3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.13203449120581878,
+    "mean_loss_spearman": -0.21182049717831972
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk",
+    "model": "C1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.16962655866325732,
+    "mean_loss_spearman": -0.21182049717831972
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk",
+    "model": "C2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.15117053502165045,
+    "mean_loss_spearman": -0.21182049717831972
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk",
+    "model": "C3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.16819305311888263,
+    "mean_loss_spearman": -0.21182049717831972
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk_plus_1",
+    "model": "A1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.14855721307190722,
+    "mean_loss_spearman": -0.22205001526947601
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk_plus_1",
+    "model": "A2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.14539069430075977,
+    "mean_loss_spearman": -0.22205001526947601
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk_plus_1",
+    "model": "A3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.15879689558111862,
+    "mean_loss_spearman": -0.22205001526947601
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk_plus_1",
+    "model": "B1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.14975290012633447,
+    "mean_loss_spearman": -0.22205001526947601
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk_plus_1",
+    "model": "B2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.15354296746442167,
+    "mean_loss_spearman": -0.22205001526947601
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk_plus_1",
+    "model": "B3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.1390713938351829,
+    "mean_loss_spearman": -0.22205001526947601
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk_plus_1",
+    "model": "C1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.17650200124804857,
+    "mean_loss_spearman": -0.22205001526947601
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk_plus_1",
+    "model": "C2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.1581210022408731,
+    "mean_loss_spearman": -0.22205001526947601
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk_plus_1",
+    "model": "C3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.1753535550078099,
+    "mean_loss_spearman": -0.22205001526947601
+  },
+  {
+    "scope": "all",
+    "descriptor": "d20",
+    "model": "A1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.15723846890971666,
+    "mean_loss_spearman": -0.23486071116502977
+  },
+  {
+    "scope": "all",
+    "descriptor": "d20",
+    "model": "A2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.1529260935880773,
+    "mean_loss_spearman": -0.23486071116502977
+  },
+  {
+    "scope": "all",
+    "descriptor": "d20",
+    "model": "A3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.16636427578458124,
+    "mean_loss_spearman": -0.23486071116502977
+  },
+  {
+    "scope": "all",
+    "descriptor": "d20",
+    "model": "B1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.1578555268670409,
+    "mean_loss_spearman": -0.23486071116502977
+  },
+  {
+    "scope": "all",
+    "descriptor": "d20",
+    "model": "B2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.16236222711823636,
+    "mean_loss_spearman": -0.23486071116502977
+  },
+  {
+    "scope": "all",
+    "descriptor": "d20",
+    "model": "B3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.14707276745621495,
+    "mean_loss_spearman": -0.23486071116502977
+  },
+  {
+    "scope": "all",
+    "descriptor": "d20",
+    "model": "C1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.1851806118919432,
+    "mean_loss_spearman": -0.23486071116502977
+  },
+  {
+    "scope": "all",
+    "descriptor": "d20",
+    "model": "C2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.16729145240132678,
+    "mean_loss_spearman": -0.23486071116502977
+  },
+  {
+    "scope": "all",
+    "descriptor": "d20",
+    "model": "C3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.18368329031945207,
+    "mean_loss_spearman": -0.23486071116502977
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_margin",
+    "model": "A1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.23915630306419783,
+    "mean_loss_spearman": -0.34975914799915914
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_margin",
+    "model": "A2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.23248515513852352,
+    "mean_loss_spearman": -0.34975914799915914
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_margin",
+    "model": "A3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.2490311304524491,
+    "mean_loss_spearman": -0.34975914799915914
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_margin",
+    "model": "B1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.2457014613162341,
+    "mean_loss_spearman": -0.34975914799915914
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_margin",
+    "model": "B2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.23081227679055313,
+    "mean_loss_spearman": -0.34975914799915914
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_margin",
+    "model": "B3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.24153749143732814,
+    "mean_loss_spearman": -0.34975914799915914
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_margin",
+    "model": "C1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.2264592662518776,
+    "mean_loss_spearman": -0.34975914799915914
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_margin",
+    "model": "C2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.2344607457889464,
+    "mean_loss_spearman": -0.34975914799915914
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_margin",
+    "model": "C3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.23831077338034895,
+    "mean_loss_spearman": -0.34975914799915914
+  },
+  {
+    "scope": "all",
+    "descriptor": "relative_boundary_margin",
+    "model": "A1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.18968449758486647,
+    "mean_loss_spearman": -0.2763411758044594
+  },
+  {
+    "scope": "all",
+    "descriptor": "relative_boundary_margin",
+    "model": "A2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.18559822524196387,
+    "mean_loss_spearman": -0.2763411758044594
+  },
+  {
+    "scope": "all",
+    "descriptor": "relative_boundary_margin",
+    "model": "A3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.1962955110731706,
+    "mean_loss_spearman": -0.2763411758044594
+  },
+  {
+    "scope": "all",
+    "descriptor": "relative_boundary_margin",
+    "model": "B1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.19590515373330877,
+    "mean_loss_spearman": -0.2763411758044594
+  },
+  {
+    "scope": "all",
+    "descriptor": "relative_boundary_margin",
+    "model": "B2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.1794783341518134,
+    "mean_loss_spearman": -0.2763411758044594
+  },
+  {
+    "scope": "all",
+    "descriptor": "relative_boundary_margin",
+    "model": "B3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.19349991445741657,
+    "mean_loss_spearman": -0.2763411758044594
+  },
+  {
+    "scope": "all",
+    "descriptor": "relative_boundary_margin",
+    "model": "C1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.16841593784728384,
+    "mean_loss_spearman": -0.2763411758044594
+  },
+  {
+    "scope": "all",
+    "descriptor": "relative_boundary_margin",
+    "model": "C2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.18309893617404957,
+    "mean_loss_spearman": -0.2763411758044594
+  },
+  {
+    "scope": "all",
+    "descriptor": "relative_boundary_margin",
+    "model": "C3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.17677173889369935,
+    "mean_loss_spearman": -0.2763411758044594
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r1",
+    "model": "A1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.23915630306419783,
+    "mean_loss_spearman": -0.34975914799915914
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r1",
+    "model": "A2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.23248515513852352,
+    "mean_loss_spearman": -0.34975914799915914
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r1",
+    "model": "A3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.2490311304524491,
+    "mean_loss_spearman": -0.34975914799915914
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r1",
+    "model": "B1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.2457014613162341,
+    "mean_loss_spearman": -0.34975914799915914
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r1",
+    "model": "B2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.23081227679055313,
+    "mean_loss_spearman": -0.34975914799915914
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r1",
+    "model": "B3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.24153749143732814,
+    "mean_loss_spearman": -0.34975914799915914
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r1",
+    "model": "C1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.2264592662518776,
+    "mean_loss_spearman": -0.34975914799915914
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r1",
+    "model": "C2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.2344607457889464,
+    "mean_loss_spearman": -0.34975914799915914
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r1",
+    "model": "C3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.23831077338034895,
+    "mean_loss_spearman": -0.34975914799915914
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r2",
+    "model": "A1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.3560533330091463,
+    "mean_loss_spearman": -0.5300569052843609
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r2",
+    "model": "A2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.35110756292075085,
+    "mean_loss_spearman": -0.5300569052843609
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r2",
+    "model": "A3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.35468464483186546,
+    "mean_loss_spearman": -0.5300569052843609
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r2",
+    "model": "B1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.36019232522407446,
+    "mean_loss_spearman": -0.5300569052843609
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r2",
+    "model": "B2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.36286580595294515,
+    "mean_loss_spearman": -0.5300569052843609
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r2",
+    "model": "B3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.3567768783164271,
+    "mean_loss_spearman": -0.5300569052843609
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r2",
+    "model": "C1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.35671304854991354,
+    "mean_loss_spearman": -0.5300569052843609
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r2",
+    "model": "C2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.3522028872993264,
+    "mean_loss_spearman": -0.5300569052843609
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r2",
+    "model": "C3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.363406160337307,
+    "mean_loss_spearman": -0.5300569052843609
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r5",
+    "model": "A1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.3138884479381819,
+    "mean_loss_spearman": -0.47965725948626375
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r5",
+    "model": "A2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.3157767634240487,
+    "mean_loss_spearman": -0.47965725948626375
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r5",
+    "model": "A3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.3220040230176755,
+    "mean_loss_spearman": -0.47965725948626375
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r5",
+    "model": "B1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.32427297888470247,
+    "mean_loss_spearman": -0.47965725948626375
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r5",
+    "model": "B2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.32783779671430435,
+    "mean_loss_spearman": -0.47965725948626375
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r5",
+    "model": "B3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.31790708672504264,
+    "mean_loss_spearman": -0.47965725948626375
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r5",
+    "model": "C1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.3380265408053332,
+    "mean_loss_spearman": -0.47965725948626375
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r5",
+    "model": "C2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.32904207207816494,
+    "mean_loss_spearman": -0.47965725948626375
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r5",
+    "model": "C3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.33560226961620476,
+    "mean_loss_spearman": -0.47965725948626375
+  },
+  {
+    "scope": "all",
+    "descriptor": "local_distance_concentration",
+    "model": "A1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.04753721365449927,
+    "mean_loss_spearman": -0.08766210791012065
+  },
+  {
+    "scope": "all",
+    "descriptor": "local_distance_concentration",
+    "model": "A2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.052331207506883526,
+    "mean_loss_spearman": -0.08766210791012065
+  },
+  {
+    "scope": "all",
+    "descriptor": "local_distance_concentration",
+    "model": "A3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.05572767270125799,
+    "mean_loss_spearman": -0.08766210791012065
+  },
+  {
+    "scope": "all",
+    "descriptor": "local_distance_concentration",
+    "model": "B1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.06556329785809464,
+    "mean_loss_spearman": -0.08766210791012065
+  },
+  {
+    "scope": "all",
+    "descriptor": "local_distance_concentration",
+    "model": "B2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.055549114780354035,
+    "mean_loss_spearman": -0.08766210791012065
+  },
+  {
+    "scope": "all",
+    "descriptor": "local_distance_concentration",
+    "model": "B3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.07047818751961064,
+    "mean_loss_spearman": -0.08766210791012065
+  },
+  {
+    "scope": "all",
+    "descriptor": "local_distance_concentration",
+    "model": "C1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.05110067864253368,
+    "mean_loss_spearman": -0.08766210791012065
+  },
+  {
+    "scope": "all",
+    "descriptor": "local_distance_concentration",
+    "model": "C2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.059204028979616484,
+    "mean_loss_spearman": -0.08766210791012065
+  },
+  {
+    "scope": "all",
+    "descriptor": "local_distance_concentration",
+    "model": "C3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.04293542845671939,
+    "mean_loss_spearman": -0.08766210791012065
+  },
+  {
+    "scope": "all",
+    "descriptor": "candidate_count",
+    "model": "A1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.09742579465507097,
+    "mean_loss_spearman": -0.14809965765659136
+  },
+  {
+    "scope": "all",
+    "descriptor": "candidate_count",
+    "model": "A2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.09211017811887312,
+    "mean_loss_spearman": -0.14809965765659136
+  },
+  {
+    "scope": "all",
+    "descriptor": "candidate_count",
+    "model": "A3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.1131409746955127,
+    "mean_loss_spearman": -0.14809965765659136
+  },
+  {
+    "scope": "all",
+    "descriptor": "candidate_count",
+    "model": "B1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.11658486499010312,
+    "mean_loss_spearman": -0.14809965765659136
+  },
+  {
+    "scope": "all",
+    "descriptor": "candidate_count",
+    "model": "B2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.10211973848983391,
+    "mean_loss_spearman": -0.14809965765659136
+  },
+  {
+    "scope": "all",
+    "descriptor": "candidate_count",
+    "model": "B3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.08998929923848005,
+    "mean_loss_spearman": -0.14809965765659136
+  },
+  {
+    "scope": "all",
+    "descriptor": "candidate_count",
+    "model": "C1",
+    "queries": 10000,
+    "realized_loss_spearman": -0.12964644367895592,
+    "mean_loss_spearman": -0.14809965765659136
+  },
+  {
+    "scope": "all",
+    "descriptor": "candidate_count",
+    "model": "C2",
+    "queries": 10000,
+    "realized_loss_spearman": -0.10823078151999803,
+    "mean_loss_spearman": -0.14809965765659136
+  },
+  {
+    "scope": "all",
+    "descriptor": "candidate_count",
+    "model": "C3",
+    "queries": 10000,
+    "realized_loss_spearman": -0.12499655647731184,
+    "mean_loss_spearman": -0.14809965765659136
+  },
+  {
+    "scope": "all",
+    "descriptor": "oracle_recall",
+    "model": "A1",
+    "queries": 10000,
+    "realized_loss_spearman": 0.3084972665376439,
+    "mean_loss_spearman": 0.4469885073804816
+  },
+  {
+    "scope": "all",
+    "descriptor": "oracle_recall",
+    "model": "A2",
+    "queries": 10000,
+    "realized_loss_spearman": 0.31223954160065454,
+    "mean_loss_spearman": 0.4469885073804816
+  },
+  {
+    "scope": "all",
+    "descriptor": "oracle_recall",
+    "model": "A3",
+    "queries": 10000,
+    "realized_loss_spearman": 0.314046858034203,
+    "mean_loss_spearman": 0.4469885073804816
+  },
+  {
+    "scope": "all",
+    "descriptor": "oracle_recall",
+    "model": "B1",
+    "queries": 10000,
+    "realized_loss_spearman": 0.30068158045826604,
+    "mean_loss_spearman": 0.4469885073804816
+  },
+  {
+    "scope": "all",
+    "descriptor": "oracle_recall",
+    "model": "B2",
+    "queries": 10000,
+    "realized_loss_spearman": 0.31431045326781026,
+    "mean_loss_spearman": 0.4469885073804816
+  },
+  {
+    "scope": "all",
+    "descriptor": "oracle_recall",
+    "model": "B3",
+    "queries": 10000,
+    "realized_loss_spearman": 0.3025238697679835,
+    "mean_loss_spearman": 0.4469885073804816
+  },
+  {
+    "scope": "all",
+    "descriptor": "oracle_recall",
+    "model": "C1",
+    "queries": 10000,
+    "realized_loss_spearman": 0.3194021123729404,
+    "mean_loss_spearman": 0.4469885073804816
+  },
+  {
+    "scope": "all",
+    "descriptor": "oracle_recall",
+    "model": "C2",
+    "queries": 10000,
+    "realized_loss_spearman": 0.3151573680957548,
+    "mean_loss_spearman": 0.4469885073804816
+  },
+  {
+    "scope": "all",
+    "descriptor": "oracle_recall",
+    "model": "C3",
+    "queries": 10000,
+    "realized_loss_spearman": 0.3199629418625944,
+    "mean_loss_spearman": 0.4469885073804816
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d1",
+    "model": "A1",
+    "queries": 7136,
+    "realized_loss_spearman": 0.04423635261505341,
+    "mean_loss_spearman": 0.0695155077987943
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d1",
+    "model": "A2",
+    "queries": 7136,
+    "realized_loss_spearman": 0.050900637331588325,
+    "mean_loss_spearman": 0.0695155077987943
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d1",
+    "model": "A3",
+    "queries": 7136,
+    "realized_loss_spearman": 0.039666287078124224,
+    "mean_loss_spearman": 0.0695155077987943
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d1",
+    "model": "B1",
+    "queries": 7136,
+    "realized_loss_spearman": 0.04954016780783571,
+    "mean_loss_spearman": 0.0695155077987943
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d1",
+    "model": "B2",
+    "queries": 7136,
+    "realized_loss_spearman": 0.05413273527678009,
+    "mean_loss_spearman": 0.0695155077987943
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d1",
+    "model": "B3",
+    "queries": 7136,
+    "realized_loss_spearman": 0.07297027604616527,
+    "mean_loss_spearman": 0.0695155077987943
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d1",
+    "model": "C1",
+    "queries": 7136,
+    "realized_loss_spearman": 0.020142595928491953,
+    "mean_loss_spearman": 0.0695155077987943
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d1",
+    "model": "C2",
+    "queries": 7136,
+    "realized_loss_spearman": 0.04844212287176126,
+    "mean_loss_spearman": 0.0695155077987943
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d1",
+    "model": "C3",
+    "queries": 7136,
+    "realized_loss_spearman": 0.022432746783495487,
+    "mean_loss_spearman": 0.0695155077987943
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk",
+    "model": "A1",
+    "queries": 7136,
+    "realized_loss_spearman": -0.030016630507295975,
+    "mean_loss_spearman": -0.048621572067508105
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk",
+    "model": "A2",
+    "queries": 7136,
+    "realized_loss_spearman": -0.019075944189011144,
+    "mean_loss_spearman": -0.048621572067508105
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk",
+    "model": "A3",
+    "queries": 7136,
+    "realized_loss_spearman": -0.038500001368932404,
+    "mean_loss_spearman": -0.048621572067508105
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk",
+    "model": "B1",
+    "queries": 7136,
+    "realized_loss_spearman": -0.024232567203551162,
+    "mean_loss_spearman": -0.048621572067508105
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk",
+    "model": "B2",
+    "queries": 7136,
+    "realized_loss_spearman": -0.025100196668872678,
+    "mean_loss_spearman": -0.048621572067508105
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk",
+    "model": "B3",
+    "queries": 7136,
+    "realized_loss_spearman": 0.0005341358685885924,
+    "mean_loss_spearman": -0.048621572067508105
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk",
+    "model": "C1",
+    "queries": 7136,
+    "realized_loss_spearman": -0.05133096221781058,
+    "mean_loss_spearman": -0.048621572067508105
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk",
+    "model": "C2",
+    "queries": 7136,
+    "realized_loss_spearman": -0.03135112890819199,
+    "mean_loss_spearman": -0.048621572067508105
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk",
+    "model": "C3",
+    "queries": 7136,
+    "realized_loss_spearman": -0.05919403101760378,
+    "mean_loss_spearman": -0.048621572067508105
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk_plus_1",
+    "model": "A1",
+    "queries": 7136,
+    "realized_loss_spearman": -0.03994875816491419,
+    "mean_loss_spearman": -0.06361753021381424
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk_plus_1",
+    "model": "A2",
+    "queries": 7136,
+    "realized_loss_spearman": -0.029287802269121376,
+    "mean_loss_spearman": -0.06361753021381424
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk_plus_1",
+    "model": "A3",
+    "queries": 7136,
+    "realized_loss_spearman": -0.04889319288613212,
+    "mean_loss_spearman": -0.06361753021381424
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk_plus_1",
+    "model": "B1",
+    "queries": 7136,
+    "realized_loss_spearman": -0.03440403504041526,
+    "mean_loss_spearman": -0.06361753021381424
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk_plus_1",
+    "model": "B2",
+    "queries": 7136,
+    "realized_loss_spearman": -0.03543697577252158,
+    "mean_loss_spearman": -0.06361753021381424
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk_plus_1",
+    "model": "B3",
+    "queries": 7136,
+    "realized_loss_spearman": -0.009869847412712194,
+    "mean_loss_spearman": -0.06361753021381424
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk_plus_1",
+    "model": "C1",
+    "queries": 7136,
+    "realized_loss_spearman": -0.06138915072004187,
+    "mean_loss_spearman": -0.06361753021381424
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk_plus_1",
+    "model": "C2",
+    "queries": 7136,
+    "realized_loss_spearman": -0.041470609523641615,
+    "mean_loss_spearman": -0.06361753021381424
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk_plus_1",
+    "model": "C3",
+    "queries": 7136,
+    "realized_loss_spearman": -0.06969008712847874,
+    "mean_loss_spearman": -0.06361753021381424
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d20",
+    "model": "A1",
+    "queries": 7136,
+    "realized_loss_spearman": -0.05979758747321851,
+    "mean_loss_spearman": -0.09275557195591011
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d20",
+    "model": "A2",
+    "queries": 7136,
+    "realized_loss_spearman": -0.047840905275449014,
+    "mean_loss_spearman": -0.09275557195591011
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d20",
+    "model": "A3",
+    "queries": 7136,
+    "realized_loss_spearman": -0.06687058570247058,
+    "mean_loss_spearman": -0.09275557195591011
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d20",
+    "model": "B1",
+    "queries": 7136,
+    "realized_loss_spearman": -0.05279481561772589,
+    "mean_loss_spearman": -0.09275557195591011
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d20",
+    "model": "B2",
+    "queries": 7136,
+    "realized_loss_spearman": -0.054686624704489706,
+    "mean_loss_spearman": -0.09275557195591011
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d20",
+    "model": "B3",
+    "queries": 7136,
+    "realized_loss_spearman": -0.02843520605286607,
+    "mean_loss_spearman": -0.09275557195591011
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d20",
+    "model": "C1",
+    "queries": 7136,
+    "realized_loss_spearman": -0.08036319535157276,
+    "mean_loss_spearman": -0.09275557195591011
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d20",
+    "model": "C2",
+    "queries": 7136,
+    "realized_loss_spearman": -0.06194619581227743,
+    "mean_loss_spearman": -0.09275557195591011
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d20",
+    "model": "C3",
+    "queries": 7136,
+    "realized_loss_spearman": -0.08854111091002334,
+    "mean_loss_spearman": -0.09275557195591011
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_margin",
+    "model": "A1",
+    "queries": 7136,
+    "realized_loss_spearman": -0.3149413520472811,
+    "mean_loss_spearman": -0.48094044089065446
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_margin",
+    "model": "A2",
+    "queries": 7136,
+    "realized_loss_spearman": -0.3096990444717787,
+    "mean_loss_spearman": -0.48094044089065446
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_margin",
+    "model": "A3",
+    "queries": 7136,
+    "realized_loss_spearman": -0.33377857080950346,
+    "mean_loss_spearman": -0.48094044089065446
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_margin",
+    "model": "B1",
+    "queries": 7136,
+    "realized_loss_spearman": -0.3227672466493788,
+    "mean_loss_spearman": -0.48094044089065446
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_margin",
+    "model": "B2",
+    "queries": 7136,
+    "realized_loss_spearman": -0.30909703733792177,
+    "mean_loss_spearman": -0.48094044089065446
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_margin",
+    "model": "B3",
+    "queries": 7136,
+    "realized_loss_spearman": -0.32049691733229624,
+    "mean_loss_spearman": -0.48094044089065446
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_margin",
+    "model": "C1",
+    "queries": 7136,
+    "realized_loss_spearman": -0.3025518936614495,
+    "mean_loss_spearman": -0.48094044089065446
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_margin",
+    "model": "C2",
+    "queries": 7136,
+    "realized_loss_spearman": -0.31210194421984755,
+    "mean_loss_spearman": -0.48094044089065446
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_margin",
+    "model": "C3",
+    "queries": 7136,
+    "realized_loss_spearman": -0.32013713710227293,
+    "mean_loss_spearman": -0.48094044089065446
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "relative_boundary_margin",
+    "model": "A1",
+    "queries": 7136,
+    "realized_loss_spearman": -0.3030539231187418,
+    "mean_loss_spearman": -0.4637737098160642
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "relative_boundary_margin",
+    "model": "A2",
+    "queries": 7136,
+    "realized_loss_spearman": -0.3041819758920946,
+    "mean_loss_spearman": -0.4637737098160642
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "relative_boundary_margin",
+    "model": "A3",
+    "queries": 7136,
+    "realized_loss_spearman": -0.31977630682418046,
+    "mean_loss_spearman": -0.4637737098160642
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "relative_boundary_margin",
+    "model": "B1",
+    "queries": 7136,
+    "realized_loss_spearman": -0.31477270614898306,
+    "mean_loss_spearman": -0.4637737098160642
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "relative_boundary_margin",
+    "model": "B2",
+    "queries": 7136,
+    "realized_loss_spearman": -0.29883929240014057,
+    "mean_loss_spearman": -0.4637737098160642
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "relative_boundary_margin",
+    "model": "B3",
+    "queries": 7136,
+    "realized_loss_spearman": -0.31546773427394265,
+    "mean_loss_spearman": -0.4637737098160642
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "relative_boundary_margin",
+    "model": "C1",
+    "queries": 7136,
+    "realized_loss_spearman": -0.2834249251415405,
+    "mean_loss_spearman": -0.4637737098160642
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "relative_boundary_margin",
+    "model": "C2",
+    "queries": 7136,
+    "realized_loss_spearman": -0.3018681888036807,
+    "mean_loss_spearman": -0.4637737098160642
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "relative_boundary_margin",
+    "model": "C3",
+    "queries": 7136,
+    "realized_loss_spearman": -0.2955601927866352,
+    "mean_loss_spearman": -0.4637737098160642
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r1",
+    "model": "A1",
+    "queries": 7136,
+    "realized_loss_spearman": -0.3149413520472811,
+    "mean_loss_spearman": -0.48094044089065446
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r1",
+    "model": "A2",
+    "queries": 7136,
+    "realized_loss_spearman": -0.3096990444717787,
+    "mean_loss_spearman": -0.48094044089065446
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r1",
+    "model": "A3",
+    "queries": 7136,
+    "realized_loss_spearman": -0.33377857080950346,
+    "mean_loss_spearman": -0.48094044089065446
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r1",
+    "model": "B1",
+    "queries": 7136,
+    "realized_loss_spearman": -0.3227672466493788,
+    "mean_loss_spearman": -0.48094044089065446
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r1",
+    "model": "B2",
+    "queries": 7136,
+    "realized_loss_spearman": -0.30909703733792177,
+    "mean_loss_spearman": -0.48094044089065446
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r1",
+    "model": "B3",
+    "queries": 7136,
+    "realized_loss_spearman": -0.32049691733229624,
+    "mean_loss_spearman": -0.48094044089065446
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r1",
+    "model": "C1",
+    "queries": 7136,
+    "realized_loss_spearman": -0.3025518936614495,
+    "mean_loss_spearman": -0.48094044089065446
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r1",
+    "model": "C2",
+    "queries": 7136,
+    "realized_loss_spearman": -0.31210194421984755,
+    "mean_loss_spearman": -0.48094044089065446
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r1",
+    "model": "C3",
+    "queries": 7136,
+    "realized_loss_spearman": -0.32013713710227293,
+    "mean_loss_spearman": -0.48094044089065446
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r2",
+    "model": "A1",
+    "queries": 7136,
+    "realized_loss_spearman": -0.42430487863109106,
+    "mean_loss_spearman": -0.6686495981238113
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r2",
+    "model": "A2",
+    "queries": 7136,
+    "realized_loss_spearman": -0.42150029849428533,
+    "mean_loss_spearman": -0.6686495981238113
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r2",
+    "model": "A3",
+    "queries": 7136,
+    "realized_loss_spearman": -0.4306754141210799,
+    "mean_loss_spearman": -0.6686495981238113
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r2",
+    "model": "B1",
+    "queries": 7136,
+    "realized_loss_spearman": -0.42861465662558024,
+    "mean_loss_spearman": -0.6686495981238113
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r2",
+    "model": "B2",
+    "queries": 7136,
+    "realized_loss_spearman": -0.435012641806861,
+    "mean_loss_spearman": -0.6686495981238113
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r2",
+    "model": "B3",
+    "queries": 7136,
+    "realized_loss_spearman": -0.42488673007794436,
+    "mean_loss_spearman": -0.6686495981238113
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r2",
+    "model": "C1",
+    "queries": 7136,
+    "realized_loss_spearman": -0.4311928294303258,
+    "mean_loss_spearman": -0.6686495981238113
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r2",
+    "model": "C2",
+    "queries": 7136,
+    "realized_loss_spearman": -0.43106003954812594,
+    "mean_loss_spearman": -0.6686495981238113
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r2",
+    "model": "C3",
+    "queries": 7136,
+    "realized_loss_spearman": -0.44816163713066676,
+    "mean_loss_spearman": -0.6686495981238113
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r5",
+    "model": "A1",
+    "queries": 7136,
+    "realized_loss_spearman": -0.3645793251797571,
+    "mean_loss_spearman": -0.5773565871069304
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r5",
+    "model": "A2",
+    "queries": 7136,
+    "realized_loss_spearman": -0.36017614149229404,
+    "mean_loss_spearman": -0.5773565871069304
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r5",
+    "model": "A3",
+    "queries": 7136,
+    "realized_loss_spearman": -0.37438451861797023,
+    "mean_loss_spearman": -0.5773565871069304
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r5",
+    "model": "B1",
+    "queries": 7136,
+    "realized_loss_spearman": -0.36816929134971693,
+    "mean_loss_spearman": -0.5773565871069304
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r5",
+    "model": "B2",
+    "queries": 7136,
+    "realized_loss_spearman": -0.37562999154927407,
+    "mean_loss_spearman": -0.5773565871069304
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r5",
+    "model": "B3",
+    "queries": 7136,
+    "realized_loss_spearman": -0.36140992280287343,
+    "mean_loss_spearman": -0.5773565871069304
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r5",
+    "model": "C1",
+    "queries": 7136,
+    "realized_loss_spearman": -0.38293736239031334,
+    "mean_loss_spearman": -0.5773565871069304
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r5",
+    "model": "C2",
+    "queries": 7136,
+    "realized_loss_spearman": -0.37858089673005463,
+    "mean_loss_spearman": -0.5773565871069304
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r5",
+    "model": "C3",
+    "queries": 7136,
+    "realized_loss_spearman": -0.39082320384103475,
+    "mean_loss_spearman": -0.5773565871069304
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "local_distance_concentration",
+    "model": "A1",
+    "queries": 7136,
+    "realized_loss_spearman": -0.17793697648648193,
+    "mean_loss_spearman": -0.2890440602484307
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "local_distance_concentration",
+    "model": "A2",
+    "queries": 7136,
+    "realized_loss_spearman": -0.19167810173057345,
+    "mean_loss_spearman": -0.2890440602484307
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "local_distance_concentration",
+    "model": "A3",
+    "queries": 7136,
+    "realized_loss_spearman": -0.18817535400299437,
+    "mean_loss_spearman": -0.2890440602484307
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "local_distance_concentration",
+    "model": "B1",
+    "queries": 7136,
+    "realized_loss_spearman": -0.18412566053891002,
+    "mean_loss_spearman": -0.2890440602484307
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "local_distance_concentration",
+    "model": "B2",
+    "queries": 7136,
+    "realized_loss_spearman": -0.19228238824904217,
+    "mean_loss_spearman": -0.2890440602484307
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "local_distance_concentration",
+    "model": "B3",
+    "queries": 7136,
+    "realized_loss_spearman": -0.2047048027454007,
+    "mean_loss_spearman": -0.2890440602484307
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "local_distance_concentration",
+    "model": "C1",
+    "queries": 7136,
+    "realized_loss_spearman": -0.1787169629585839,
+    "mean_loss_spearman": -0.2890440602484307
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "local_distance_concentration",
+    "model": "C2",
+    "queries": 7136,
+    "realized_loss_spearman": -0.19371471038490048,
+    "mean_loss_spearman": -0.2890440602484307
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "local_distance_concentration",
+    "model": "C3",
+    "queries": 7136,
+    "realized_loss_spearman": -0.17537056855246866,
+    "mean_loss_spearman": -0.2890440602484307
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "candidate_count",
+    "model": "A1",
+    "queries": 7136,
+    "realized_loss_spearman": 0.02385205344546484,
+    "mean_loss_spearman": 0.02543576439054108
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "candidate_count",
+    "model": "A2",
+    "queries": 7136,
+    "realized_loss_spearman": 0.02999440673076325,
+    "mean_loss_spearman": 0.02543576439054108
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "candidate_count",
+    "model": "A3",
+    "queries": 7136,
+    "realized_loss_spearman": 0.0006485275984698408,
+    "mean_loss_spearman": 0.02543576439054108
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "candidate_count",
+    "model": "B1",
+    "queries": 7136,
+    "realized_loss_spearman": 0.008986013113469124,
+    "mean_loss_spearman": 0.02543576439054108
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "candidate_count",
+    "model": "B2",
+    "queries": 7136,
+    "realized_loss_spearman": 0.022110475038898608,
+    "mean_loss_spearman": 0.02543576439054108
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "candidate_count",
+    "model": "B3",
+    "queries": 7136,
+    "realized_loss_spearman": 0.03512399498691772,
+    "mean_loss_spearman": 0.02543576439054108
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "candidate_count",
+    "model": "C1",
+    "queries": 7136,
+    "realized_loss_spearman": -0.005676214374757183,
+    "mean_loss_spearman": 0.02543576439054108
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "candidate_count",
+    "model": "C2",
+    "queries": 7136,
+    "realized_loss_spearman": 0.009977020431573497,
+    "mean_loss_spearman": 0.02543576439054108
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "candidate_count",
+    "model": "C3",
+    "queries": 7136,
+    "realized_loss_spearman": -0.013585777526203798,
+    "mean_loss_spearman": 0.02543576439054108
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "oracle_recall",
+    "model": "A1",
+    "queries": 7136,
+    "realized_loss_spearman": null,
+    "mean_loss_spearman": null
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "oracle_recall",
+    "model": "A2",
+    "queries": 7136,
+    "realized_loss_spearman": null,
+    "mean_loss_spearman": null
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "oracle_recall",
+    "model": "A3",
+    "queries": 7136,
+    "realized_loss_spearman": null,
+    "mean_loss_spearman": null
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "oracle_recall",
+    "model": "B1",
+    "queries": 7136,
+    "realized_loss_spearman": null,
+    "mean_loss_spearman": null
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "oracle_recall",
+    "model": "B2",
+    "queries": 7136,
+    "realized_loss_spearman": null,
+    "mean_loss_spearman": null
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "oracle_recall",
+    "model": "B3",
+    "queries": 7136,
+    "realized_loss_spearman": null,
+    "mean_loss_spearman": null
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "oracle_recall",
+    "model": "C1",
+    "queries": 7136,
+    "realized_loss_spearman": null,
+    "mean_loss_spearman": null
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "oracle_recall",
+    "model": "C2",
+    "queries": 7136,
+    "realized_loss_spearman": null,
+    "mean_loss_spearman": null
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "oracle_recall",
+    "model": "C3",
+    "queries": 7136,
+    "realized_loss_spearman": null,
+    "mean_loss_spearman": null
+  }
+]

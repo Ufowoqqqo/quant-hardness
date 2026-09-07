@@ -1,0 +1,218 @@
+[
+  {
+    "subset": "A",
+    "metric": "fixed_candidate_recall",
+    "mean": 0.8529033333333335,
+    "std": 0.0006671081871281383,
+    "min": 0.8523400000000001,
+    "max": 0.8536400000000002,
+    "coefficient_of_variation": 0.0007821615428807542
+  },
+  {
+    "subset": "A",
+    "metric": "ranking_recall_loss",
+    "mean": 0.10024666666666666,
+    "std": 0.0006671081871280999,
+    "min": 0.09951,
+    "max": 0.10081000000000001,
+    "coefficient_of_variation": 0.006654667025950322
+  },
+  {
+    "subset": "A",
+    "metric": "cross_boundary_inversion_count",
+    "mean": 5.568533333333334,
+    "std": 0.031938900001930864,
+    "min": 5.5446,
+    "max": 5.6048,
+    "coefficient_of_variation": 0.00573560363026725
+  },
+  {
+    "subset": "A",
+    "metric": "global_mae",
+    "mean": 1312.5722172795554,
+    "std": 5.52883708284849,
+    "min": 1309.0620972611136,
+    "max": 1318.9454297960872,
+    "coefficient_of_variation": 0.004212215533791801
+  },
+  {
+    "subset": "A",
+    "metric": "random_pair_inversion_rate",
+    "mean": 0.034502994791666665,
+    "std": 6.071685229948705e-05,
+    "min": 0.0344392578125,
+    "max": 0.03456015625,
+    "coefficient_of_variation": 0.001759756005706255
+  },
+  {
+    "subset": "A",
+    "metric": "topk_agreement",
+    "mean": 0.8792366666666668,
+    "std": 0.0005054041287260828,
+    "min": 0.8787200000000001,
+    "max": 0.8797300000000001,
+    "coefficient_of_variation": 0.0005748214876458172
+  },
+  {
+    "subset": "B",
+    "metric": "fixed_candidate_recall",
+    "mean": 0.8529100000000002,
+    "std": 0.00032741411087488636,
+    "min": 0.8525500000000001,
+    "max": 0.8531900000000001,
+    "coefficient_of_variation": 0.0003838788510802855
+  },
+  {
+    "subset": "B",
+    "metric": "ranking_recall_loss",
+    "mean": 0.10024000000000001,
+    "std": 0.00032741411087489823,
+    "min": 0.09996000000000001,
+    "max": 0.10060000000000001,
+    "coefficient_of_variation": 0.003266301983987412
+  },
+  {
+    "subset": "B",
+    "metric": "cross_boundary_inversion_count",
+    "mean": 5.505199999999999,
+    "std": 0.04089266437883462,
+    "min": 5.4616,
+    "max": 5.5427,
+    "coefficient_of_variation": 0.007428007044037387
+  },
+  {
+    "subset": "B",
+    "metric": "global_mae",
+    "mean": 1311.122218235713,
+    "std": 2.2511428639691946,
+    "min": 1309.6489095609738,
+    "max": 1313.713506055931,
+    "coefficient_of_variation": 0.001716958825545953
+  },
+  {
+    "subset": "B",
+    "metric": "random_pair_inversion_rate",
+    "mean": 0.034392643229166665,
+    "std": 5.097519055465388e-05,
+    "min": 0.0343337890625,
+    "max": 0.0344228515625,
+    "coefficient_of_variation": 0.0014821539075956917
+  },
+  {
+    "subset": "B",
+    "metric": "topk_agreement",
+    "mean": 0.8796766666666668,
+    "std": 0.000682959247198013,
+    "min": 0.8789100000000002,
+    "max": 0.8802200000000001,
+    "coefficient_of_variation": 0.000776375312745228
+  },
+  {
+    "subset": "C",
+    "metric": "fixed_candidate_recall",
+    "mean": 0.8523400000000002,
+    "std": 0.0007510659092249585,
+    "min": 0.8515400000000002,
+    "max": 0.8530300000000001,
+    "coefficient_of_variation": 0.00088118111226149
+  },
+  {
+    "subset": "C",
+    "metric": "ranking_recall_loss",
+    "mean": 0.10081,
+    "std": 0.0007510659092250181,
+    "min": 0.10012,
+    "max": 0.10161,
+    "coefficient_of_variation": 0.007450311568544967
+  },
+  {
+    "subset": "C",
+    "metric": "cross_boundary_inversion_count",
+    "mean": 5.572066666666667,
+    "std": 0.025568991637006988,
+    "min": 5.5426,
+    "max": 5.5884,
+    "coefficient_of_variation": 0.004588780638603328
+  },
+  {
+    "subset": "C",
+    "metric": "global_mae",
+    "mean": 1314.400221324279,
+    "std": 0.689652773152741,
+    "min": 1313.6297331268318,
+    "max": 1314.9597694697518,
+    "coefficient_of_variation": 0.0005246900920770576
+  },
+  {
+    "subset": "C",
+    "metric": "random_pair_inversion_rate",
+    "mean": 0.034451757812500004,
+    "std": 0.00014937729326985387,
+    "min": 0.034282421875,
+    "max": 0.03456484375,
+    "coefficient_of_variation": 0.004335839526181037
+  },
+  {
+    "subset": "C",
+    "metric": "topk_agreement",
+    "mean": 0.8787833333333336,
+    "std": 0.000813469933884178,
+    "min": 0.87787,
+    "max": 0.8794300000000003,
+    "coefficient_of_variation": 0.0009256774713723646
+  },
+  {
+    "subset": "O",
+    "metric": "fixed_candidate_recall",
+    "mean": 0.8530520000000001,
+    "std": 0.0002403539057306743,
+    "min": 0.8526600000000001,
+    "max": 0.85331,
+    "coefficient_of_variation": 0.00028175762524520695
+  },
+  {
+    "subset": "O",
+    "metric": "ranking_recall_loss",
+    "mean": 0.10009800000000002,
+    "std": 0.00024035390573069586,
+    "min": 0.09984000000000001,
+    "max": 0.10049000000000001,
+    "coefficient_of_variation": 0.002401185895129731
+  },
+  {
+    "subset": "O",
+    "metric": "cross_boundary_inversion_count",
+    "mean": 5.54252,
+    "std": 0.0419763266615838,
+    "min": 5.5048,
+    "max": 5.5914,
+    "coefficient_of_variation": 0.00757350928126264
+  },
+  {
+    "subset": "O",
+    "metric": "global_mae",
+    "mean": 1314.4697946644724,
+    "std": 2.29158563000681,
+    "min": 1310.4156808295734,
+    "max": 1316.0343279537965,
+    "coefficient_of_variation": 0.0017433535858401015
+  },
+  {
+    "subset": "O",
+    "metric": "random_pair_inversion_rate",
+    "mean": 0.0344150390625,
+    "std": 4.618056575357335e-05,
+    "min": 0.0343578125,
+    "max": 0.0344609375,
+    "coefficient_of_variation": 0.0013418716645855428
+  },
+  {
+    "subset": "O",
+    "metric": "topk_agreement",
+    "mean": 0.8794880000000003,
+    "std": 0.00030865838721787784,
+    "min": 0.8789800000000003,
+    "max": 0.87982,
+    "coefficient_of_variation": 0.0003509523577557371
+  }
+]

@@ -1,0 +1,191 @@
+[
+  {
+    "model_count": 1,
+    "model_frequency": 0.1111111111111111,
+    "subset_frequency": 1,
+    "pairs": 123538,
+    "fraction_union": 0.5063281800744299
+  },
+  {
+    "model_count": 1,
+    "model_frequency": 0.1111111111111111,
+    "subset_frequency": 2,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 1,
+    "model_frequency": 0.1111111111111111,
+    "subset_frequency": 3,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 2,
+    "model_frequency": 0.2222222222222222,
+    "subset_frequency": 1,
+    "pairs": 16310,
+    "fraction_union": 0.06684754987950227
+  },
+  {
+    "model_count": 2,
+    "model_frequency": 0.2222222222222222,
+    "subset_frequency": 2,
+    "pairs": 38050,
+    "fraction_union": 0.1559502926373428
+  },
+  {
+    "model_count": 2,
+    "model_frequency": 0.2222222222222222,
+    "subset_frequency": 3,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 3,
+    "model_frequency": 0.3333333333333333,
+    "subset_frequency": 1,
+    "pairs": 1745,
+    "fraction_union": 0.0071519910815286
+  },
+  {
+    "model_count": 3,
+    "model_frequency": 0.3333333333333333,
+    "subset_frequency": 2,
+    "pairs": 20114,
+    "fraction_union": 0.08243848058101218
+  },
+  {
+    "model_count": 3,
+    "model_frequency": 0.3333333333333333,
+    "subset_frequency": 3,
+    "pairs": 8065,
+    "fraction_union": 0.033054904339557684
+  },
+  {
+    "model_count": 4,
+    "model_frequency": 0.4444444444444444,
+    "subset_frequency": 1,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 4,
+    "model_frequency": 0.4444444444444444,
+    "subset_frequency": 2,
+    "pairs": 7421,
+    "fraction_union": 0.030415430267062313
+  },
+  {
+    "model_count": 4,
+    "model_frequency": 0.4444444444444444,
+    "subset_frequency": 3,
+    "pairs": 10120,
+    "fraction_union": 0.041477449710641504
+  },
+  {
+    "model_count": 5,
+    "model_frequency": 0.5555555555555556,
+    "subset_frequency": 1,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 5,
+    "model_frequency": 0.5555555555555556,
+    "subset_frequency": 2,
+    "pairs": 1838,
+    "fraction_union": 0.007533157368395167
+  },
+  {
+    "model_count": 5,
+    "model_frequency": 0.5555555555555556,
+    "subset_frequency": 3,
+    "pairs": 8050,
+    "fraction_union": 0.03299342590619211
+  },
+  {
+    "model_count": 6,
+    "model_frequency": 0.6666666666666666,
+    "subset_frequency": 1,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 6,
+    "model_frequency": 0.6666666666666666,
+    "subset_frequency": 2,
+    "pairs": 290,
+    "fraction_union": 0.0011885830450677902
+  },
+  {
+    "model_count": 6,
+    "model_frequency": 0.6666666666666666,
+    "subset_frequency": 3,
+    "pairs": 4772,
+    "fraction_union": 0.019558338934701706
+  },
+  {
+    "model_count": 7,
+    "model_frequency": 0.7777777777777778,
+    "subset_frequency": 1,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 7,
+    "model_frequency": 0.7777777777777778,
+    "subset_frequency": 2,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 7,
+    "model_frequency": 0.7777777777777778,
+    "subset_frequency": 3,
+    "pairs": 2403,
+    "fraction_union": 0.009848845025165172
+  },
+  {
+    "model_count": 8,
+    "model_frequency": 0.8888888888888888,
+    "subset_frequency": 1,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 8,
+    "model_frequency": 0.8888888888888888,
+    "subset_frequency": 2,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 8,
+    "model_frequency": 0.8888888888888888,
+    "subset_frequency": 3,
+    "pairs": 901,
+    "fraction_union": 0.0036928045641588933
+  },
+  {
+    "model_count": 9,
+    "model_frequency": 1.0,
+    "subset_frequency": 1,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 9,
+    "model_frequency": 1.0,
+    "subset_frequency": 2,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 9,
+    "model_frequency": 1.0,
+    "subset_frequency": 3,
+    "pairs": 371,
+    "fraction_union": 0.0015205665852418971
+  }
+]

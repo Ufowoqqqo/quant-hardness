@@ -191,6 +191,15 @@ target_compile_definitions(faiss_seed_stability PRIVATE
     QH_GIT_COMMIT="${QH_GIT_COMMIT}" QH_GIT_DIRTY=${QH_GIT_DIRTY})
 target_compile_options(faiss_seed_stability PRIVATE -Wall -Wextra -Wpedantic)
 
+# Preserve both historical export binaries while using the same score-only path.
+add_executable(faiss_sample_stability src/experiments/faiss_sift1m.cpp)
+target_link_libraries(faiss_sample_stability PRIVATE
+    qh_datasets qh_faiss_backend qh_instrumentation qh_metrics)
+target_compile_definitions(faiss_sample_stability PRIVATE
+    QH_FAISS_COMMIT="${QH_FAISS_EXPECTED_COMMIT}"
+    QH_GIT_COMMIT="${QH_GIT_COMMIT}" QH_GIT_DIRTY=${QH_GIT_DIRTY})
+target_compile_options(faiss_sample_stability PRIVATE -Wall -Wextra -Wpedantic)
+
 add_executable(phase1_correctness
     tests/phase1_correctness.cpp)
 target_link_libraries(phase1_correctness PRIVATE

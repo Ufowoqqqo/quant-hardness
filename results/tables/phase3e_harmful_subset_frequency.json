@@ -1,0 +1,22 @@
+[
+  {
+    "harmful_subset_count": 0,
+    "harmful_subset_frequency": 0.0,
+    "queries": 1141
+  },
+  {
+    "harmful_subset_count": 1,
+    "harmful_subset_frequency": 0.3333333333333333,
+    "queries": 1151
+  },
+  {
+    "harmful_subset_count": 2,
+    "harmful_subset_frequency": 0.6666666666666666,
+    "queries": 2032
+  },
+  {
+    "harmful_subset_count": 3,
+    "harmful_subset_frequency": 1.0,
+    "queries": 5676
+  }
+]

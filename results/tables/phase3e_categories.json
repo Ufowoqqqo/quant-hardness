@@ -1,0 +1,122 @@
+[
+  {
+    "scope": "all",
+    "category": "Robust",
+    "queries": 1103,
+    "fraction": 0.1103,
+    "signed_loss_sum": 119.79999999999997,
+    "positive_loss_sum": 119.79999999999767,
+    "fraction_scope_signed_loss": 0.013253825133589211,
+    "mean_oracle_recall": 0.8314596554850409
+  },
+  {
+    "scope": "all",
+    "category": "Model-specific",
+    "queries": 1953,
+    "fraction": 0.1953,
+    "signed_loss_sum": 919.199999999991,
+    "positive_loss_sum": 919.2000000001241,
+    "fraction_scope_signed_loss": 0.10169379017358168,
+    "mean_oracle_recall": 0.9261648745519714
+  },
+  {
+    "scope": "all",
+    "category": "Usually harmful",
+    "queries": 4503,
+    "fraction": 0.4503,
+    "signed_loss_sum": 4303.899999999988,
+    "positive_loss_sum": 4303.899999998479,
+    "fraction_scope_signed_loss": 0.476153071723326,
+    "mean_oracle_recall": 0.9735287586053742
+  },
+  {
+    "scope": "all",
+    "category": "Universally harmful",
+    "queries": 2441,
+    "fraction": 0.2441,
+    "signed_loss_sum": 3695.9999999999973,
+    "positive_loss_sum": 3695.9999999989686,
+    "fraction_scope_signed_loss": 0.40889931296949666,
+    "mean_oracle_recall": 0.992134371159361
+  },
+  {
+    "scope": "all",
+    "category": "subset-persistent",
+    "queries": 5676,
+    "fraction": 0.5676,
+    "signed_loss_sum": 7013.099999999992,
+    "positive_loss_sum": 7013.100000001464,
+    "fraction_scope_signed_loss": 0.7758798083837597,
+    "mean_oracle_recall": 0.9827519379844962
+  },
+  {
+    "scope": "all",
+    "category": "not-subset-persistent",
+    "queries": 4324,
+    "fraction": 0.4324,
+    "signed_loss_sum": 2025.7999999999904,
+    "positive_loss_sum": 2025.7999999995277,
+    "fraction_scope_signed_loss": 0.2241201916162346,
+    "mean_oracle_recall": 0.9142923219241444
+  },
+  {
+    "scope": "oracle1",
+    "category": "Robust",
+    "queries": 306,
+    "fraction": 0.04288116591928251,
+    "signed_loss_sum": 39.500000000000114,
+    "positive_loss_sum": 39.50000000000028,
+    "fraction_scope_signed_loss": 0.005338559264765507,
+    "mean_oracle_recall": 1.0
+  },
+  {
+    "scope": "oracle1",
+    "category": "Model-specific",
+    "queries": 1014,
+    "fraction": 0.14209641255605382,
+    "signed_loss_sum": 490.100000000001,
+    "positive_loss_sum": 490.1000000000315,
+    "fraction_scope_signed_loss": 0.06623868090282461,
+    "mean_oracle_recall": 1.0
+  },
+  {
+    "scope": "oracle1",
+    "category": "Usually harmful",
+    "queries": 3547,
+    "fraction": 0.49705717488789236,
+    "signed_loss_sum": 3427.3000000000015,
+    "positive_loss_sum": 3427.2999999986373,
+    "fraction_scope_signed_loss": 0.46321124476280445,
+    "mean_oracle_recall": 1.0
+  },
+  {
+    "scope": "oracle1",
+    "category": "Universally harmful",
+    "queries": 2269,
+    "fraction": 0.3179652466367713,
+    "signed_loss_sum": 3442.0999999999967,
+    "positive_loss_sum": 3442.099999999114,
+    "fraction_scope_signed_loss": 0.465211515069602,
+    "mean_oracle_recall": 1.0
+  },
+  {
+    "scope": "oracle1",
+    "category": "subset-persistent",
+    "queries": 4851,
+    "fraction": 0.679792600896861,
+    "signed_loss_sum": 6113.4000000000115,
+    "positive_loss_sum": 6113.400000000489,
+    "fraction_scope_signed_loss": 0.82624679010677,
+    "mean_oracle_recall": 1.0
+  },
+  {
+    "scope": "oracle1",
+    "category": "not-subset-persistent",
+    "queries": 2285,
+    "fraction": 0.320207399103139,
+    "signed_loss_sum": 1285.6000000000017,
+    "positive_loss_sum": 1285.5999999999815,
+    "fraction_scope_signed_loss": 0.17375320989322848,
+    "mean_oracle_recall": 1.0
+  }
+]

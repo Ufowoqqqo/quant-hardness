@@ -1,0 +1,44 @@
+[
+  {
+    "subset_a": "A",
+    "subset_b": "B",
+    "intersection": 4206,
+    "jaccard": 0.033153090662588876,
+    "expected_independent_intersection": 4294.967296
+  },
+  {
+    "subset_a": "A",
+    "subset_b": "C",
+    "intersection": 4288,
+    "jaccard": 0.03382130237253912,
+    "expected_independent_intersection": 4294.967296
+  },
+  {
+    "subset_a": "A",
+    "subset_b": "O",
+    "intersection": 4328,
+    "jaccard": 0.0341475730606577,
+    "expected_independent_intersection": 4294.967296
+  },
+  {
+    "subset_a": "B",
+    "subset_b": "C",
+    "intersection": 4356,
+    "jaccard": 0.034376085103696455,
+    "expected_independent_intersection": 4294.967296
+  },
+  {
+    "subset_a": "B",
+    "subset_b": "O",
+    "intersection": 4230,
+    "jaccard": 0.033348575393008624,
+    "expected_independent_intersection": 4294.967296
+  },
+  {
+    "subset_a": "C",
+    "subset_b": "O",
+    "intersection": 4424,
+    "jaccard": 0.034931463584107134,
+    "expected_independent_intersection": 4294.967296
+  }
+]

@@ -999,23 +999,36 @@ void export_precision(const std::string &config_path,
 
 // Phase 3D is score-only: consume saved IDs, never invoke HNSW search.
 void export_seed_scores(const std::string &config_path,
-                        const std::filesystem::path &run, int model) {
+                        const std::filesystem::path &run, int model,
+                        bool sample_design = false) {
   const auto s=read_values(config_path);
   const auto frozen=read_values(s.at("phase3c_config"));
   const Config c=read_config(s.at("phase3a_config"));
   const auto seeds=split(s.at("training_seeds"), ',');
-  require(model>=0 && model<5 && seeds.size()==5, "invalid model index");
+  const int model_count=sample_design?9:5;
+  require(model>=0 && model<model_count && seeds.size()==static_cast<std::size_t>(model_count), "invalid model index");
+  std::string subset="O",model_name="seed_"+std::to_string(model);
+  int sample_seed;
+  if (sample_design) {
+    require(s.at("design")=="phase3e_3x3","invalid sample design");
+    const auto names=split(s.at("subset_names"),','),sample_seeds=split(s.at("subset_sampling_seeds"),',');
+    require(names==std::vector<std::string>({"A","B","C"}) && sample_seeds.size()==3,
+            "unexpected training subsets");
+    subset=names[model/3];model_name=subset+std::to_string(model%3+1);
+    sample_seed=std::stoi(sample_seeds[model/3]);
+  } else sample_seed=std::stoi(s.at("training_sample_seed"));
+  const bool reproduce_original=!sample_design && model==0;
   require(s.at("pq_m")=="64" && s.at("pq_nbits")=="8" &&
           s.at("ef_search")=="64" && s.at("k")=="10", "seed experiment changed");
   require(std::endian::native==std::endian::little, "little endian required");
-  const auto destination=run/("seed_"+std::to_string(model));
+  const auto destination=run/model_name;
   require(!std::filesystem::exists(destination), "refusing to overwrite seed output");
   const auto dataset=load_dataset(c);
   auto graph=load_graph(std::filesystem::path(c.cache_directory)/"hnsw_fp32.index");
   const auto fingerprint=quant_hardness::graph_fingerprint(graph.graph->hnsw);
   require(fingerprint==frozen.at("graph_fingerprint"),"frozen graph differs");
   std::vector<int> permutation(c.base_count);
-  faiss::rand_perm(permutation.data(),c.base_count,std::stoi(s.at("training_sample_seed")));
+  faiss::rand_perm(permutation.data(),c.base_count,sample_seed);
   const int training_count=std::stoi(s.at("training_count"));
   require(training_count==65536,"unexpected training count");
   permutation.resize(training_count);
@@ -1037,7 +1050,7 @@ void export_seed_scores(const std::string &config_path,
   pq.train(training_count,training.data());
   pq.add(c.base_count,dataset.base.data());
   const auto book_hash=bytes_hash(pq.pq.centroids),codes_hash=bytes_hash(pq.codes);
-  if (model==0) require(book_hash==frozen.at("pq64_codebook_sha256") &&
+  if (reproduce_original) require(book_hash==frozen.at("pq64_codebook_sha256") &&
                          codes_hash==frozen.at("pq64_codes_sha256"),
                        "STOP: original PQ64 training not reproduced");
   // Validate ID alignment at 1001 deterministic positions, including endpoints.
@@ -1050,7 +1063,7 @@ void export_seed_scores(const std::string &config_path,
   }
   faiss::write_index(&pq,(destination/"pq64.index").c_str());
   std::cout << "model=" << model << " training_encoding=PASS original_identity="
-            << (model==0) << std::endl;
+            << reproduce_original << std::endl;
   omp_set_num_threads(std::stoi(s.at("scoring_threads")));
   std::unique_ptr<faiss::DistanceComputer> dc(pq.get_distance_computer());
   std::ifstream requests(run/"candidate_requests.tsv");
@@ -1072,7 +1085,7 @@ void export_seed_scores(const std::string &config_path,
       require(r.id>=0 && r.id<c.base_count,"candidate ID out of range");
       ids.push_back(r.id);const float score=(*dc)(r.id);scores.push_back(score);
       require(std::isfinite(score),"nonfinite seed score");
-      if (model==0) require(score==r.pq64,"original PQ64 candidate score differs");
+      if (reproduce_original) require(score==r.pq64,"original PQ64 candidate score differs");
     }
     require(bytes_hash(ids)==pool_hash && std::set<faiss::idx_t>(ids.begin(),ids.end()).size()==ids.size(),
             "candidate order/uniqueness differs");
@@ -1096,7 +1109,9 @@ void export_seed_scores(const std::string &config_path,
        << ",\"faiss_commit\":\"" << QH_FAISS_COMMIT
        << "\",\"hostname\":\"" << hostname() << "\",\"kernel\":\"" << kernel()
        << "\",\"compiler\":\"" << __VERSION__ << "\",\"model\":" << model
-       << ",\"seed\":" << pq.pq.cp.seed << ",\"training_sample_seed\":" << s.at("training_sample_seed")
+       << ",\"model_name\":\"" << model_name << "\",\"training_subset\":\"" << subset
+       << "\",\"initialization_index\":" << (sample_design?model%3+1:model+1)
+       << ",\"seed\":" << pq.pq.cp.seed << ",\"training_sample_seed\":" << sample_seed
        << ",\"training_count\":" << training_count << ",\"training_ids_sha256\":\"" << bytes_hash(permutation)
        << "\",\"training_vectors_sha256\":\"" << bytes_hash(training)
        << "\",\"training_threads\":" << s.at("training_threads")
@@ -1111,7 +1126,7 @@ void export_seed_scores(const std::string &config_path,
        << "\",\"source_sha256\":\"" << sha256_file("src/experiments/faiss_sift1m.cpp")
        << "\",\"config_sha256\":\"" << sha256_file(config_path)
        << "\",\"queries\":" << queries << ",\"candidates\":" << total
-       << ",\"original_model_reproduced\":" << (model==0)
+       << ",\"original_model_reproduced\":" << reproduce_original
        << ",\"id_alignment_checked\":1001,\"scalar_batch4_identity\":true,\"frozen_state_identity\":true}\n";
   require(meta.good(),"failed manifest write");
   std::cout << "model=" << model << " queries=" << queries << " candidates=" << total << " status=PASS\n";
@@ -1121,6 +1136,9 @@ void export_seed_scores(const std::string &config_path,
 
 int main(int argc, char **argv) {
   try {
+    if (argc == 5 && std::string(argv[1]) == "sample-scores") {
+      export_seed_scores(argv[2],argv[3],std::stoi(argv[4]),true);return 0;
+    }
     if (argc == 5 && std::string(argv[1]) == "seed-scores") {
       export_seed_scores(argv[2],argv[3],std::stoi(argv[4]));return 0;
     }

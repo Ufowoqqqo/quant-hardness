@@ -1,0 +1,3 @@
+diagnostic,members,queries,fixed_candidate_recall,member_mean_fixed_candidate_recall,ranking_recall_loss,member_mean_ranking_recall_loss,cross_boundary_inversion_count,member_mean_cross_boundary_inversion_count,fraction_member_mean_loss_recovered
+initialization_ensemble,"A1,A2,A3",10000,0.8858800000000001,0.8529033333333335,0.06727000000000001,0.10024666666666666,2.8399,5.568533333333334,0.32895524373212726
+cross_subset_ensemble,"A1,B1,C1",10000,0.89097,0.8530733333333335,0.06217999999999999,0.10007666666666666,2.5363,5.562433333333334,0.37867634813309803

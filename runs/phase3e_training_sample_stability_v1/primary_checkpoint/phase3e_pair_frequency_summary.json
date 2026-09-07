@@ -1,0 +1,11 @@
+{
+  "union_pairs": 243988,
+  "one_model_pairs": 123538,
+  "one_model_fraction": 0.5063281800744299,
+  "one_subset_pairs": 141593,
+  "one_subset_fraction": 0.5803277210354607,
+  "at_least_two_subsets_fraction": 0.41967227896453924,
+  "all_three_subsets_fraction": 0.14214633506565896,
+  "all9_models_pairs": 371,
+  "repeated_within_any_subset_fraction": 0.3046666229486696
+}

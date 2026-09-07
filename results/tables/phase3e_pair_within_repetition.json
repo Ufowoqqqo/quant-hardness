@@ -1,0 +1,98 @@
+[
+  {
+    "subsets_with_init_majority": 0,
+    "subsets_with_all_inits": 0,
+    "pairs": 169653,
+    "fraction_union": 0.6953333770513304
+  },
+  {
+    "subsets_with_init_majority": 0,
+    "subsets_with_all_inits": 1,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "subsets_with_init_majority": 0,
+    "subsets_with_all_inits": 2,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "subsets_with_init_majority": 0,
+    "subsets_with_all_inits": 3,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "subsets_with_init_majority": 1,
+    "subsets_with_all_inits": 0,
+    "pairs": 46544,
+    "fraction_union": 0.19076348017115596
+  },
+  {
+    "subsets_with_init_majority": 1,
+    "subsets_with_all_inits": 1,
+    "pairs": 7344,
+    "fraction_union": 0.030099840975785695
+  },
+  {
+    "subsets_with_init_majority": 1,
+    "subsets_with_all_inits": 2,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "subsets_with_init_majority": 1,
+    "subsets_with_all_inits": 3,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "subsets_with_init_majority": 2,
+    "subsets_with_all_inits": 0,
+    "pairs": 9872,
+    "fraction_union": 0.040461006278997326
+  },
+  {
+    "subsets_with_init_majority": 2,
+    "subsets_with_all_inits": 1,
+    "pairs": 5248,
+    "fraction_union": 0.02150925455350263
+  },
+  {
+    "subsets_with_init_majority": 2,
+    "subsets_with_all_inits": 2,
+    "pairs": 1014,
+    "fraction_union": 0.004155942095512894
+  },
+  {
+    "subsets_with_init_majority": 2,
+    "subsets_with_all_inits": 3,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "subsets_with_init_majority": 3,
+    "subsets_with_all_inits": 0,
+    "pairs": 1362,
+    "fraction_union": 0.0055822417495942425
+  },
+  {
+    "subsets_with_init_majority": 3,
+    "subsets_with_all_inits": 1,
+    "pairs": 1679,
+    "fraction_union": 0.006881485974720068
+  },
+  {
+    "subsets_with_init_majority": 3,
+    "subsets_with_all_inits": 2,
+    "pairs": 901,
+    "fraction_union": 0.0036928045641588933
+  },
+  {
+    "subsets_with_init_majority": 3,
+    "subsets_with_all_inits": 3,
+    "pairs": 371,
+    "fraction_union": 0.0015205665852418971
+  }
+]

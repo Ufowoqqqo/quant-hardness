@@ -40,3 +40,13 @@ Implemented Phase 1 entry point:
   refuses to overwrite a run or cache directory.
 - `analyze_phase3a_sift1m.py`: validates all raw SIFT1M rows and regenerates
   gatekeeper tables and the limited, predeclared SVG figures.
+# Phase 3B fixed-candidate ranking
+
+`analyze_phase3b_fixed_candidate_ranking.py derive CONFIG RAW_ROOT OUTPUT_ROOT EF`
+derives all query metrics and harmful replacement pairs from saved candidate
+scores. It refuses to overwrite an existing per-ef output directory.
+`summarize CONFIG OUTPUT_ROOT TABLES FIGURES` generates tables and Matplotlib
+figures. Analysis requires NumPy 1.23.5; plotting uses Matplotlib 3.9.4.
+`audit_phase3b_native_ties.py RAW_EF_DIR DERIVED_EF_DIR` independently checks
+native result-heap semantics. The full protocol and exact commands are in
+`docs/phase3b_fixed_candidate_ranking.md` and `docs/experiment_log.md`.

@@ -1,0 +1,3 @@
+ef_search,pair_count,min_exact_margin,median_exact_margin,p95_exact_margin,max_exact_margin,min_error_difference,median_error_difference,p95_error_difference,max_error_difference,min_violation,median_violation,p95_violation,max_violation,strict_inversion_count,nonpositive_violation_count
+64,19903,0.0,1160.0,3514.899999999998,12790.0,51.11376953125,2557.859375,5528.093359375,16927.296875,0.01171875,1131.181640625,3453.749218749999,10413.296875,19902,0
+128,21790,0.0,1160.0,3514.5499999999993,12790.0,42.2734375,2575.802734375,5579.198437499998,16927.296875,0.01171875,1141.796875,3499.584375,10413.296875,21789,0

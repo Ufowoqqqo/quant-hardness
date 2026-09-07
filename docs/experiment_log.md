@@ -751,3 +751,122 @@ Pivot to a reference-only SIFT1M ranking/selection analysis on fixed recorded
 PQ candidate sets, relating exact-versus-PQ selection errors to local distance
 margins and PQ distance errors. Do not add trajectory instrumentation or a new
 algorithm.
+# Phase 3B — SIFT1M fixed-candidate ranking (completed)
+
+**Objective and pre-registration**
+
+Test native/global PQ selection equivalence first, then characterize fixed-
+candidate score errors. H1–H4 and tie/bin/sampling conventions were written to
+`docs/phase3b_fixed_candidate_ranking.md` before results and preserved as
+`runs/phase3b_fixed_candidate_ranking_v1/preregistration.md`. Full ef64 analysis
+and heap audit preceded ef128; the checkpoint is retained in `primary_analysis/`.
+
+**Exact configuration**
+
+- `configs/indexes/phase3b_fixed_candidate_ranking.conf`, inheriting dataset,
+  graph and PQ provenance from `configs/indexes/faiss_hnsw_phase3a_sift1m.conf`.
+- SIFT1M: 1M database, 10k queries, d=128, provided top-10 GT; unchanged files
+  with SHA-256 verification on both exports. All scores use FP32 squared L2.
+- Existing frozen M16/efConstruction80 HNSW, graph seed 20260907, PQ64x8 seed
+  30260907. No rebuilding/training/encoding. efSearch=64 primary, then 128.
+- k=10, one search thread, bounded_queue=true, check_relative_distance=true.
+- 512 distinct-item candidate pairs/query, PCG64 seed=60300001+query_id;
+  ten quantile bins, ties unsplit; zero-margin ratios in a separate bin.
+- Git HEAD during execution: `9a42b60540f90a90aaacacc71232f13569e9d8b1`, dirty
+  Phase 3B sources. FAISS `20f14b31a6d54e243a3d1de6ae193fc4c3ec18ed`.
+- Host rwcpu8.cse.ust.hk, GCC 11.5.0, Linux 5.14.0-687.24.1.el9_8.x86_64.
+  Per-export manifests record machine and executable/source/frozen-index hashes.
+
+**Exact commands, in execution order**
+
+```bash
+python -m venv --system-site-packages /tmp/phase3b-plot-env
+/tmp/phase3b-plot-env/bin/python -m pip install matplotlib==3.9.4
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build --target faiss_sift1m -j2
+python -m unittest discover -s tests -p test_phase3b_metrics.py -v
+ctest --test-dir build --output-on-failure
+./build/faiss_sift1m ranking-export configs/indexes/phase3b_fixed_candidate_ranking.conf runs/phase3b_fixed_candidate_ranking_v1 64
+cp docs/phase3b_fixed_candidate_ranking.md runs/phase3b_fixed_candidate_ranking_v1/preregistration.md
+python scripts/analyze_phase3b_fixed_candidate_ranking.py derive configs/indexes/phase3b_fixed_candidate_ranking.conf runs/phase3b_fixed_candidate_ranking_v1 runs/phase3b_fixed_candidate_ranking_v1/analysis 64
+```
+
+The first derivation stopped on a non-JSON-serializable NumPy Boolean in the
+harmful-pair output. After casting that value to a Python bool and adding a
+serialization regression assertion, execution continued with:
+
+```bash
+mv runs/phase3b_fixed_candidate_ranking_v1/analysis/ef64 runs/phase3b_fixed_candidate_ranking_v1/analysis/failed_ef64_numpy_bool
+python -m unittest discover -s tests -p test_phase3b_metrics.py -v
+python scripts/analyze_phase3b_fixed_candidate_ranking.py derive configs/indexes/phase3b_fixed_candidate_ranking.conf runs/phase3b_fixed_candidate_ranking_v1 runs/phase3b_fixed_candidate_ranking_v1/analysis 64
+MPLCONFIGDIR=/tmp/phase3b-mpl /tmp/phase3b-plot-env/bin/python scripts/analyze_phase3b_fixed_candidate_ranking.py summarize configs/indexes/phase3b_fixed_candidate_ranking.conf runs/phase3b_fixed_candidate_ranking_v1/analysis results/tables results/figures
+python scripts/audit_phase3b_native_ties.py runs/phase3b_fixed_candidate_ranking_v1/ef64 runs/phase3b_fixed_candidate_ranking_v1/analysis/ef64
+mkdir -p runs/phase3b_fixed_candidate_ranking_v1/primary_analysis
+cp results/tables/phase3b_*.csv results/tables/phase3b_*.json runs/phase3b_fixed_candidate_ranking_v1/primary_analysis/
+cp docs/phase3b_fixed_candidate_ranking.md runs/phase3b_fixed_candidate_ranking_v1/primary_analysis/checkpoint.md
+./build/faiss_sift1m ranking-export configs/indexes/phase3b_fixed_candidate_ranking.conf runs/phase3b_fixed_candidate_ranking_v1 128
+python scripts/analyze_phase3b_fixed_candidate_ranking.py derive configs/indexes/phase3b_fixed_candidate_ranking.conf runs/phase3b_fixed_candidate_ranking_v1 runs/phase3b_fixed_candidate_ranking_v1/analysis 128
+python scripts/audit_phase3b_native_ties.py runs/phase3b_fixed_candidate_ranking_v1/ef128 runs/phase3b_fixed_candidate_ranking_v1/analysis/ef128
+MPLCONFIGDIR=/tmp/phase3b-mpl /tmp/phase3b-plot-env/bin/python scripts/analyze_phase3b_fixed_candidate_ranking.py summarize configs/indexes/phase3b_fixed_candidate_ranking.conf runs/phase3b_fixed_candidate_ranking_v1/analysis results/tables results/figures
+```
+
+Independent re-derivation used the directory returned by
+`mktemp -d /tmp/phase3b-reproduce.XXXXXX`:
+
+```bash
+python scripts/analyze_phase3b_fixed_candidate_ranking.py derive configs/indexes/phase3b_fixed_candidate_ranking.conf runs/phase3b_fixed_candidate_ranking_v1 /tmp/phase3b-reproduce.Jd3t79/analysis 64
+python scripts/analyze_phase3b_fixed_candidate_ranking.py derive configs/indexes/phase3b_fixed_candidate_ranking.conf runs/phase3b_fixed_candidate_ranking_v1 /tmp/phase3b-reproduce.Jd3t79/analysis 128
+MPLCONFIGDIR=/tmp/phase3b-mpl /tmp/phase3b-plot-env/bin/python scripts/analyze_phase3b_fixed_candidate_ranking.py summarize configs/indexes/phase3b_fixed_candidate_ranking.conf /tmp/phase3b-reproduce.Jd3t79/analysis /tmp/phase3b-reproduce.Jd3t79/tables /tmp/phase3b-reproduce.Jd3t79/figures
+```
+
+Final summary generation was repeated after adding GT-exchange counts and a
+threshold-curve figure; these additions did not change any query metric.
+Comparison of all query JSONL, harmful-pair JSONL, random-pair binary, table and
+figure files was byte-identical. Reproduction commands require new derivation
+directories; existing raw or derived per-ef outputs are not overwritten.
+
+```bash
+python -m unittest discover -s tests -p test_phase3b_metrics.py -v
+git diff --check
+/tmp/phase3b-plot-env/bin/python scripts/verify_phase3b_artifacts.py runs/phase3b_fixed_candidate_ranking_v1 /tmp/phase3b-reproduce.Jd3t79 results/tables results/figures runs/phase3b_fixed_candidate_ranking_v1/final_verification.json
+```
+
+`final_verification.json` records checked raw input hashes, final code/report/
+result hashes, Python package versions, and independently reproduced files.
+
+**Observations**
+
+- 10,343,205 / 18,520,015 candidate records at ef64/128.
+- Native/global PQ membership differs in 74/75 queries; ordered lists differ
+  in 697/677. All are exact PQ ties. Independent result-heap reference matches
+  every native list, including all tied cases.
+- Oracle/global-PQ recall: .95200/.85246 at ef64, .98287/.86869 at ef128.
+- Stable/Benign/Harmful/Lucky: 19.33/10.52/70.15/0% at ef64,
+  18.47/3.89/77.64/0% at ef128.
+- Mean ranking loss .09954/.11418; disagreement .12018/.12259.
+- Spearman with loss: candidate MAE -.0700/-.0550; relative boundary margin
+  -.1970/-.2579; local error/margin .2851/.3287; cross-boundary inversion count
+  .6998/.7981; random candidate-pair inversions .0617/.0653.
+- All native/oracle IDs, counts and retained candidate sets reproduce Phase
+  3A. Frozen graph/PQ hashes and scalar/batch ADC checks pass. Five CTests and
+  six Python reference tests pass.
+
+**Anomalies and confounders**
+
+- Tie-dependent IDs are retained with separate set/list/modulo-tie metrics.
+  Native versus global-PQ recall differs by .00001/.00002 due to ties.
+- Adjacent k/k+1 overtake holds for fewer than half of harmful queries.
+  Boundary-locality should not be reduced to that single adjacent pair.
+- Critical inversions are post-scoring and structurally related to the outcome;
+  their strong correlation does not establish independent predictive ability.
+- Random pair rates use 512 samples/query and have sampling noise. One dataset,
+  graph and PQ model do not establish external validity.
+- The excluded partial serialization-failure output and all prior experiments
+  are preserved. Existing filesystem clock-skew warnings occurred during build.
+
+**One smallest next experiment**
+
+Hold ef64 candidate sets fixed and score them with the already-trained Phase
+3A PQ32x8 and PQ64x8 models, comparing within-query changes in cross-boundary
+inversions and recall loss at identical exact margins and GT. This has not been
+run here and proposes no new quantizer or traversal instrumentation.

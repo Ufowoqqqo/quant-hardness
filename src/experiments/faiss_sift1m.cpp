@@ -1,6 +1,7 @@
 #include "datasets/xvecs.h"
 #include "graph/faiss_shared_hnsw.h"
 #include "instrumentation/paired_decomposition_l0.h"
+#include "instrumentation/faiss_level0_recorder.h"
 #include "metrics/ground_truth.h"
 #include "metrics/recall.h"
 
@@ -15,6 +16,7 @@
 
 #include <algorithm>
 #include <array>
+#include <bit>
 #include <chrono>
 #include <cmath>
 #include <cstdint>
@@ -733,10 +735,135 @@ void decompose(const Config &c, const std::filesystem::path &run_root) {
   std::cout << "status=PASS\n";
 }
 
+// Export observations only: all candidate-level analysis is independent of
+// FAISS in scripts/analyze_phase3b_fixed_candidate_ranking.py.
+void export_ranking(const std::string &config_path,
+                    const std::filesystem::path &run_root, int ef) {
+  const auto settings = read_values(config_path);
+  const Config c = read_config(settings.at("phase3a_config"));
+  require(ef == std::stoi(settings.at("primary_ef")) ||
+              ef == std::stoi(settings.at("replication_ef")), "unregistered ef");
+  require(std::stoi(settings.at("pq_m")) == 64 &&
+              std::stoi(settings.at("pq_nbits")) == 8 &&
+              std::stoi(settings.at("k")) == c.k, "wrong ranking configuration");
+  require(std::endian::native == std::endian::little,
+          "candidate binary schema requires little endian");
+  const auto destination = run_root / ("ef" + std::to_string(ef));
+  require(!std::filesystem::exists(destination), "refusing to overwrite export");
+  const int chunk_size = std::stoi(settings.at("queries_per_chunk"));
+  require(chunk_size > 0, "invalid chunk size");
+  auto dataset = load_dataset(c);
+  auto loaded = load_graph(std::filesystem::path(c.cache_directory) /
+                           "hnsw_fp32.index");
+  auto pq = load_pq(pq_path(c, 64));
+  const auto check_state = [&]() {
+    require(quant_hardness::graph_fingerprint(loaded.graph->hnsw) ==
+                settings.at("graph_fingerprint"), "graph identity changed");
+    require(bytes_hash(pq->pq.centroids) == settings.at("codebook_sha256") &&
+                bytes_hash(pq->codes) == settings.at("codes_sha256"),
+            "PQ model/codes changed");
+    require(pq->ntotal == c.base_count && pq->pq.M == 64 && pq->pq.nbits == 8,
+            "PQ shape differs from frozen index");
+  };
+  check_state();
+  omp_set_num_threads(c.search_threads);
+  const auto recorded = quant_hardness::search_with_level0_recording(
+      *loaded.graph, *pq, dataset.queries.data(), c.query_count, c.k,
+      parameters(ef), true);
+  check_state();
+  std::filesystem::create_directories(destination);
+  std::filesystem::copy_file(config_path, destination / "resolved_config.conf");
+  std::filesystem::copy_file(settings.at("phase3a_config"),
+                             destination / "phase3a_config.conf");
+  std::ofstream metadata(destination / "queries.jsonl");
+  metadata << std::setprecision(17);
+  std::ofstream candidates;
+  std::uint64_t offset = 0, total_candidates = 0;
+  std::unique_ptr<faiss::DistanceComputer> computer(pq->get_distance_computer());
+  for (faiss::idx_t q = 0; q < c.query_count; ++q) {
+    const int chunk = static_cast<int>(q / chunk_size);
+    const std::string filename = "candidate_scores_" + std::to_string(chunk) + ".bin";
+    if (q % chunk_size == 0) {
+      if (candidates.is_open()) candidates.close();
+      candidates.open(destination / filename, std::ios::binary);
+      require(candidates.good(), "cannot open candidate chunk");
+      offset = 0;
+    }
+    const float *query = dataset.queries.data() + q * c.dimension;
+    computer->set_query(query);
+    const auto &ids = recorded.level0_evaluation_order_ids[q];
+    require(std::set<faiss::idx_t>(ids.begin(), ids.end()).size() == ids.size(),
+            "candidate IDs not unique");
+    std::vector<float> scores;
+    for (const faiss::idx_t id : ids) {
+      const std::int32_t stored_id = static_cast<std::int32_t>(id);
+      const float exact = squared_l2(query, dataset.base.data() + id * c.dimension,
+                                      c.dimension);
+      const float approximate = (*computer)(id);
+      scores.push_back(approximate);
+      candidates.write(reinterpret_cast<const char *>(&stored_id), 4);
+      candidates.write(reinterpret_cast<const char *>(&exact), 4);
+      candidates.write(reinterpret_cast<const char *>(&approximate), 4);
+    }
+    // Native HNSW uses scalar and batch-4 ADC. Confirm post-hoc scalar scores
+    // equal batch scores for every candidate (not just returned neighbors).
+    for (std::size_t i = 0; i + 3 < ids.size(); i += 4) {
+      float a, b, d, e;
+      computer->distances_batch_4(ids[i], ids[i+1], ids[i+2], ids[i+3], a,b,d,e);
+      require(a == scores[i] && b == scores[i+1] && d == scores[i+2] &&
+                  e == scores[i+3], "scalar/batch ADC differ");
+    }
+    for (faiss::idx_t j = 0; j < c.k; ++j)
+      require((*computer)(recorded.native.ids[q*c.k+j]) ==
+                  recorded.native.distances[q*c.k+j], "native ADC mismatch");
+    metadata << "{\"query_id\":" << q << ",\"ef_search\":" << ef
+             << ",\"candidate_file\":\"" << filename
+             << "\",\"byte_offset\":" << offset << ",\"candidate_count\":"
+             << ids.size() << ",\"native_ids\":";
+    write_array(metadata, std::span(recorded.native.ids).subspan(q*c.k,c.k));
+    metadata << ",\"native_pq_distances\":";
+    write_array(metadata, std::span(recorded.native.distances).subspan(q*c.k,c.k));
+    metadata << ",\"ground_truth_ids\":";
+    write_array(metadata, std::span<const faiss::idx_t>(dataset.ground_truth_ids).subspan(
+                              q*dataset.ground_truth_width,c.k));
+    metadata << "}\n";
+    offset += ids.size() * 12;
+    total_candidates += ids.size();
+    require(candidates.good() && metadata.good(), "failed to write raw scores");
+  }
+  candidates.close();
+  metadata.close();
+  check_state();
+  std::ofstream manifest(destination / "manifest.json");
+  manifest << std::boolalpha << "{\"git_commit\":\"" << QH_GIT_COMMIT
+           << "\",\"dirty_worktree\":" << QH_GIT_DIRTY
+           << ",\"faiss_commit\":\"" << QH_FAISS_COMMIT
+           << "\",\"hostname\":\"" << hostname() << "\",\"kernel\":\""
+           << kernel() << "\",\"compiler\":\"" << __VERSION__
+           << "\",\"search_threads\":" << c.search_threads
+           << ",\"graph_fingerprint\":\"" << settings.at("graph_fingerprint")
+           << "\",\"codebook_sha256\":\"" << settings.at("codebook_sha256")
+           << "\",\"codes_sha256\":\"" << settings.at("codes_sha256")
+           << "\",\"binary_sha256\":\"" << sha256_file("/proc/self/exe")
+           << "\",\"export_source_sha256\":\""
+           << sha256_file("src/experiments/faiss_sift1m.cpp")
+           << "\",\"config_sha256\":\"" << sha256_file(config_path)
+           << "\",\"total_candidates\":" << total_candidates
+           << ",\"schema\":\"packed little-endian int32 ID, float32 exact squared L2, float32 PQ ADC; unique first L0 evaluation order\""
+           << ",\"native_replay_identity\":true,\"scalar_batch_adc_identity\":true"
+           << ",\"frozen_state_before_after\":true}\n";
+  std::cout << "ranking_export ef=" << ef << " candidates=" << total_candidates
+            << " status=PASS\n";
+}
+
 } // namespace
 
 int main(int argc, char **argv) {
   try {
+    if (argc == 5 && std::string(argv[1]) == "ranking-export") {
+      export_ranking(argv[2], argv[3], std::stoi(argv[4]));
+      return 0;
+    }
     require(argc == 4,
             "usage: faiss_sift1m prepare|calibrate|decompose CONFIG RUN_DIR");
     const Config config = read_config(argv[2]);

@@ -1,0 +1,842 @@
+[
+  {
+    "ef_search": 64,
+    "feature": "candidate_mae",
+    "direction": "ge",
+    "threshold": 955.3465203003806,
+    "query_fraction": 0.9,
+    "count": 9000,
+    "mean_loss": 0.09733333333333333,
+    "harmful_fraction": 0.6935555555555556
+  },
+  {
+    "ef_search": 64,
+    "feature": "candidate_mae",
+    "direction": "ge",
+    "threshold": 1084.7713283333173,
+    "query_fraction": 0.8,
+    "count": 8000,
+    "mean_loss": 0.09620000000000002,
+    "harmful_fraction": 0.687
+  },
+  {
+    "ef_search": 64,
+    "feature": "candidate_mae",
+    "direction": "ge",
+    "threshold": 1174.146712444803,
+    "query_fraction": 0.7,
+    "count": 7000,
+    "mean_loss": 0.09544285714285715,
+    "harmful_fraction": 0.6812857142857143
+  },
+  {
+    "ef_search": 64,
+    "feature": "candidate_mae",
+    "direction": "ge",
+    "threshold": 1248.9661525055672,
+    "query_fraction": 0.6,
+    "count": 6000,
+    "mean_loss": 0.09613333333333332,
+    "harmful_fraction": 0.6821666666666667
+  },
+  {
+    "ef_search": 64,
+    "feature": "candidate_mae",
+    "direction": "ge",
+    "threshold": 1321.786506370298,
+    "query_fraction": 0.5,
+    "count": 5000,
+    "mean_loss": 0.0952,
+    "harmful_fraction": 0.677
+  },
+  {
+    "ef_search": 64,
+    "feature": "candidate_mae",
+    "direction": "ge",
+    "threshold": 1391.9354091233424,
+    "query_fraction": 0.4,
+    "count": 4000,
+    "mean_loss": 0.09515000000000001,
+    "harmful_fraction": 0.681
+  },
+  {
+    "ef_search": 64,
+    "feature": "candidate_mae",
+    "direction": "ge",
+    "threshold": 1467.1784613242403,
+    "query_fraction": 0.3,
+    "count": 3000,
+    "mean_loss": 0.0948,
+    "harmful_fraction": 0.681
+  },
+  {
+    "ef_search": 64,
+    "feature": "candidate_mae",
+    "direction": "ge",
+    "threshold": 1552.46375095585,
+    "query_fraction": 0.2,
+    "count": 2000,
+    "mean_loss": 0.0946,
+    "harmful_fraction": 0.6805
+  },
+  {
+    "ef_search": 64,
+    "feature": "candidate_mae",
+    "direction": "ge",
+    "threshold": 1674.1306386903395,
+    "query_fraction": 0.1,
+    "count": 1000,
+    "mean_loss": 0.0936,
+    "harmful_fraction": 0.674
+  },
+  {
+    "ef_search": 64,
+    "feature": "relative_boundary_margin",
+    "direction": "le",
+    "threshold": 0.0008929271836246592,
+    "query_fraction": 0.1,
+    "count": 1000,
+    "mean_loss": 0.1139,
+    "harmful_fraction": 0.752
+  },
+  {
+    "ef_search": 64,
+    "feature": "relative_boundary_margin",
+    "direction": "le",
+    "threshold": 0.0020383617209052693,
+    "query_fraction": 0.2,
+    "count": 2000,
+    "mean_loss": 0.11625000000000002,
+    "harmful_fraction": 0.758
+  },
+  {
+    "ef_search": 64,
+    "feature": "relative_boundary_margin",
+    "direction": "le",
+    "threshold": 0.0032955729240701087,
+    "query_fraction": 0.3,
+    "count": 3000,
+    "mean_loss": 0.11620000000000001,
+    "harmful_fraction": 0.7606666666666667
+  },
+  {
+    "ef_search": 64,
+    "feature": "relative_boundary_margin",
+    "direction": "le",
+    "threshold": 0.004853187517515357,
+    "query_fraction": 0.4,
+    "count": 4000,
+    "mean_loss": 0.11567500000000001,
+    "harmful_fraction": 0.762
+  },
+  {
+    "ef_search": 64,
+    "feature": "relative_boundary_margin",
+    "direction": "le",
+    "threshold": 0.006827796750348967,
+    "query_fraction": 0.5,
+    "count": 5000,
+    "mean_loss": 0.11404,
+    "harmful_fraction": 0.7564
+  },
+  {
+    "ef_search": 64,
+    "feature": "relative_boundary_margin",
+    "direction": "le",
+    "threshold": 0.008994235737445505,
+    "query_fraction": 0.6,
+    "count": 6000,
+    "mean_loss": 0.11158333333333334,
+    "harmful_fraction": 0.7495
+  },
+  {
+    "ef_search": 64,
+    "feature": "relative_boundary_margin",
+    "direction": "le",
+    "threshold": 0.011790323799551255,
+    "query_fraction": 0.7,
+    "count": 7000,
+    "mean_loss": 0.10937142857142859,
+    "harmful_fraction": 0.7428571428571429
+  },
+  {
+    "ef_search": 64,
+    "feature": "relative_boundary_margin",
+    "direction": "le",
+    "threshold": 0.016068650737703985,
+    "query_fraction": 0.8,
+    "count": 8000,
+    "mean_loss": 0.10726250000000001,
+    "harmful_fraction": 0.737375
+  },
+  {
+    "ef_search": 64,
+    "feature": "relative_boundary_margin",
+    "direction": "le",
+    "threshold": 0.023586729830887467,
+    "query_fraction": 0.9,
+    "count": 9000,
+    "mean_loss": 0.10461111111111113,
+    "harmful_fraction": 0.7285555555555555
+  },
+  {
+    "ef_search": 64,
+    "feature": "boundary_local_mae",
+    "direction": "ge",
+    "threshold": 565.4828125,
+    "query_fraction": 0.9,
+    "count": 9000,
+    "mean_loss": 0.0999,
+    "harmful_fraction": 0.7024444444444444
+  },
+  {
+    "ef_search": 64,
+    "feature": "boundary_local_mae",
+    "direction": "ge",
+    "threshold": 686.7753551136364,
+    "query_fraction": 0.8,
+    "count": 8000,
+    "mean_loss": 0.10078750000000002,
+    "harmful_fraction": 0.705875
+  },
+  {
+    "ef_search": 64,
+    "feature": "boundary_local_mae",
+    "direction": "ge",
+    "threshold": 780.7844105113636,
+    "query_fraction": 0.7,
+    "count": 7000,
+    "mean_loss": 0.10212857142857144,
+    "harmful_fraction": 0.7085714285714285
+  },
+  {
+    "ef_search": 64,
+    "feature": "boundary_local_mae",
+    "direction": "ge",
+    "threshold": 869.404403409091,
+    "query_fraction": 0.6,
+    "count": 6000,
+    "mean_loss": 0.10328333333333334,
+    "harmful_fraction": 0.7111666666666666
+  },
+  {
+    "ef_search": 64,
+    "feature": "boundary_local_mae",
+    "direction": "ge",
+    "threshold": 953.9714133522727,
+    "query_fraction": 0.5,
+    "count": 5000,
+    "mean_loss": 0.10505999999999999,
+    "harmful_fraction": 0.7156
+  },
+  {
+    "ef_search": 64,
+    "feature": "boundary_local_mae",
+    "direction": "ge",
+    "threshold": 1043.816690340909,
+    "query_fraction": 0.4,
+    "count": 4000,
+    "mean_loss": 0.10702500000000002,
+    "harmful_fraction": 0.72325
+  },
+  {
+    "ef_search": 64,
+    "feature": "boundary_local_mae",
+    "direction": "ge",
+    "threshold": 1145.9433948863636,
+    "query_fraction": 0.3,
+    "count": 3000,
+    "mean_loss": 0.10963333333333333,
+    "harmful_fraction": 0.736
+  },
+  {
+    "ef_search": 64,
+    "feature": "boundary_local_mae",
+    "direction": "ge",
+    "threshold": 1274.1401988636364,
+    "query_fraction": 0.2,
+    "count": 2000,
+    "mean_loss": 0.11165,
+    "harmful_fraction": 0.7475
+  },
+  {
+    "ef_search": 64,
+    "feature": "boundary_local_mae",
+    "direction": "ge",
+    "threshold": 1462.7386896306818,
+    "query_fraction": 0.1,
+    "count": 1000,
+    "mean_loss": 0.11900000000000001,
+    "harmful_fraction": 0.774
+  },
+  {
+    "ef_search": 64,
+    "feature": "error_scale_over_boundary_margin",
+    "direction": "ge",
+    "threshold": 0.8189734142325366,
+    "query_fraction": 0.8863,
+    "count": 8863,
+    "mean_loss": 0.10631840234683515,
+    "harmful_fraction": 0.738801760126368
+  },
+  {
+    "ef_search": 64,
+    "feature": "error_scale_over_boundary_margin",
+    "direction": "ge",
+    "threshold": 1.223755644870428,
+    "query_fraction": 0.7878,
+    "count": 7878,
+    "mean_loss": 0.11067529829906068,
+    "harmful_fraction": 0.756029449098756
+  },
+  {
+    "ef_search": 64,
+    "feature": "error_scale_over_boundary_margin",
+    "direction": "ge",
+    "threshold": 1.6366598631950575,
+    "query_fraction": 0.6893,
+    "count": 6893,
+    "mean_loss": 0.1136225155955317,
+    "harmful_fraction": 0.7642535905991585
+  },
+  {
+    "ef_search": 64,
+    "feature": "error_scale_over_boundary_margin",
+    "direction": "ge",
+    "threshold": 2.156927904292039,
+    "query_fraction": 0.5909,
+    "count": 5909,
+    "mean_loss": 0.11695718395667629,
+    "harmful_fraction": 0.7737349805381621
+  },
+  {
+    "ef_search": 64,
+    "feature": "error_scale_over_boundary_margin",
+    "direction": "ge",
+    "threshold": 2.875256879081284,
+    "query_fraction": 0.4924,
+    "count": 4924,
+    "mean_loss": 0.119821283509342,
+    "harmful_fraction": 0.7804630381803412
+  },
+  {
+    "ef_search": 64,
+    "feature": "error_scale_over_boundary_margin",
+    "direction": "ge",
+    "threshold": 3.9019715245788738,
+    "query_fraction": 0.3939,
+    "count": 3939,
+    "mean_loss": 0.12274689007362277,
+    "harmful_fraction": 0.7852246763137852
+  },
+  {
+    "ef_search": 64,
+    "feature": "error_scale_over_boundary_margin",
+    "direction": "ge",
+    "threshold": 5.705430747183462,
+    "query_fraction": 0.2955,
+    "count": 2955,
+    "mean_loss": 0.12514382402707275,
+    "harmful_fraction": 0.7939086294416243
+  },
+  {
+    "ef_search": 64,
+    "feature": "error_scale_over_boundary_margin",
+    "direction": "ge",
+    "threshold": 9.204037403009249,
+    "query_fraction": 0.197,
+    "count": 1970,
+    "mean_loss": 0.12720812182741117,
+    "harmful_fraction": 0.799492385786802
+  },
+  {
+    "ef_search": 64,
+    "feature": "error_scale_over_boundary_margin",
+    "direction": "ge",
+    "threshold": 19.284311342592606,
+    "query_fraction": 0.0985,
+    "count": 985,
+    "mean_loss": 0.12791878172588833,
+    "harmful_fraction": 0.8060913705583757
+  },
+  {
+    "ef_search": 64,
+    "feature": "cross_boundary_inversion_count",
+    "direction": "ge",
+    "threshold": 0.0,
+    "query_fraction": 1.0,
+    "count": 10000,
+    "mean_loss": 0.09954,
+    "harmful_fraction": 0.7015
+  },
+  {
+    "ef_search": 64,
+    "feature": "cross_boundary_inversion_count",
+    "direction": "ge",
+    "threshold": 1.0,
+    "query_fraction": 0.8067,
+    "count": 8067,
+    "mean_loss": 0.12339159538862034,
+    "harmful_fraction": 0.8695921656129912
+  },
+  {
+    "ef_search": 64,
+    "feature": "cross_boundary_inversion_count",
+    "direction": "ge",
+    "threshold": 2.0,
+    "query_fraction": 0.7114,
+    "count": 7114,
+    "mean_loss": 0.1286758504357605,
+    "harmful_fraction": 0.8736294630306438
+  },
+  {
+    "ef_search": 64,
+    "feature": "cross_boundary_inversion_count",
+    "direction": "ge",
+    "threshold": 3.0,
+    "query_fraction": 0.607,
+    "count": 6070,
+    "mean_loss": 0.13626029654036245,
+    "harmful_fraction": 0.8784184514003295
+  },
+  {
+    "ef_search": 64,
+    "feature": "cross_boundary_inversion_count",
+    "direction": "ge",
+    "threshold": 4.0,
+    "query_fraction": 0.5177,
+    "count": 5177,
+    "mean_loss": 0.14518060652887774,
+    "harmful_fraction": 0.8841027622175005
+  },
+  {
+    "ef_search": 64,
+    "feature": "cross_boundary_inversion_count",
+    "direction": "ge",
+    "threshold": 5.0,
+    "query_fraction": 0.441,
+    "count": 4410,
+    "mean_loss": 0.1527437641723356,
+    "harmful_fraction": 0.8891156462585034
+  },
+  {
+    "ef_search": 64,
+    "feature": "cross_boundary_inversion_count",
+    "direction": "ge",
+    "threshold": 7.0,
+    "query_fraction": 0.3145,
+    "count": 3145,
+    "mean_loss": 0.16731319554848967,
+    "harmful_fraction": 0.8988871224165342
+  },
+  {
+    "ef_search": 64,
+    "feature": "cross_boundary_inversion_count",
+    "direction": "ge",
+    "threshold": 9.0,
+    "query_fraction": 0.2264,
+    "count": 2264,
+    "mean_loss": 0.1811837455830389,
+    "harmful_fraction": 0.9015017667844523
+  },
+  {
+    "ef_search": 64,
+    "feature": "cross_boundary_inversion_count",
+    "direction": "ge",
+    "threshold": 13.0,
+    "query_fraction": 0.1162,
+    "count": 1162,
+    "mean_loss": 0.20421686746987952,
+    "harmful_fraction": 0.9122203098106713
+  },
+  {
+    "ef_search": 64,
+    "feature": "cross_boundary_inversion_fraction",
+    "direction": "ge",
+    "threshold": 0.0,
+    "query_fraction": 1.0,
+    "count": 10000,
+    "mean_loss": 0.09954,
+    "harmful_fraction": 0.7015
+  },
+  {
+    "ef_search": 64,
+    "feature": "cross_boundary_inversion_fraction",
+    "direction": "ge",
+    "threshold": 7.772430193514452e-05,
+    "query_fraction": 0.8,
+    "count": 8000,
+    "mean_loss": 0.12382500000000002,
+    "harmful_fraction": 0.870875
+  },
+  {
+    "ef_search": 64,
+    "feature": "cross_boundary_inversion_fraction",
+    "direction": "ge",
+    "threshold": 0.00016420361247947455,
+    "query_fraction": 0.7002,
+    "count": 7002,
+    "mean_loss": 0.12999143101970867,
+    "harmful_fraction": 0.8801770922593545
+  },
+  {
+    "ef_search": 64,
+    "feature": "cross_boundary_inversion_fraction",
+    "direction": "ge",
+    "threshold": 0.0002538071065989848,
+    "query_fraction": 0.6003,
+    "count": 6003,
+    "mean_loss": 0.13773113443278362,
+    "harmful_fraction": 0.8877228052640347
+  },
+  {
+    "ef_search": 64,
+    "feature": "cross_boundary_inversion_fraction",
+    "direction": "ge",
+    "threshold": 0.00036850510321401994,
+    "query_fraction": 0.5,
+    "count": 5000,
+    "mean_loss": 0.14724,
+    "harmful_fraction": 0.8946
+  },
+  {
+    "ef_search": 64,
+    "feature": "cross_boundary_inversion_fraction",
+    "direction": "ge",
+    "threshold": 0.0005073567588210305,
+    "query_fraction": 0.4,
+    "count": 4000,
+    "mean_loss": 0.15822500000000003,
+    "harmful_fraction": 0.90775
+  },
+  {
+    "ef_search": 64,
+    "feature": "cross_boundary_inversion_fraction",
+    "direction": "ge",
+    "threshold": 0.0006736276623917082,
+    "query_fraction": 0.3,
+    "count": 3000,
+    "mean_loss": 0.17076666666666665,
+    "harmful_fraction": 0.916
+  },
+  {
+    "ef_search": 64,
+    "feature": "cross_boundary_inversion_fraction",
+    "direction": "ge",
+    "threshold": 0.000924539938488845,
+    "query_fraction": 0.2,
+    "count": 2000,
+    "mean_loss": 0.1885,
+    "harmful_fraction": 0.929
+  },
+  {
+    "ef_search": 64,
+    "feature": "cross_boundary_inversion_fraction",
+    "direction": "ge",
+    "threshold": 0.001365223563828262,
+    "query_fraction": 0.1,
+    "count": 1000,
+    "mean_loss": 0.215,
+    "harmful_fraction": 0.944
+  },
+  {
+    "ef_search": 64,
+    "feature": "maximum_violation",
+    "direction": "ge",
+    "threshold": -562.1945312499998,
+    "query_fraction": 0.9,
+    "count": 9000,
+    "mean_loss": 0.11060000000000002,
+    "harmful_fraction": 0.7794444444444445
+  },
+  {
+    "ef_search": 64,
+    "feature": "maximum_violation",
+    "direction": "ge",
+    "threshold": 29.054492187500088,
+    "query_fraction": 0.8,
+    "count": 8000,
+    "mean_loss": 0.12371250000000002,
+    "harmful_fraction": 0.86975
+  },
+  {
+    "ef_search": 64,
+    "feature": "maximum_violation",
+    "direction": "ge",
+    "threshold": 433.1925781250002,
+    "query_fraction": 0.7,
+    "count": 7000,
+    "mean_loss": 0.12805714285714287,
+    "harmful_fraction": 0.8691428571428571
+  },
+  {
+    "ef_search": 64,
+    "feature": "maximum_violation",
+    "direction": "ge",
+    "threshold": 783.0703125000001,
+    "query_fraction": 0.6,
+    "count": 6000,
+    "mean_loss": 0.13235,
+    "harmful_fraction": 0.8696666666666667
+  },
+  {
+    "ef_search": 64,
+    "feature": "maximum_violation",
+    "direction": "ge",
+    "threshold": 1108.46533203125,
+    "query_fraction": 0.5,
+    "count": 5000,
+    "mean_loss": 0.13554000000000002,
+    "harmful_fraction": 0.8682
+  },
+  {
+    "ef_search": 64,
+    "feature": "maximum_violation",
+    "direction": "ge",
+    "threshold": 1449.3515625,
+    "query_fraction": 0.4,
+    "count": 4000,
+    "mean_loss": 0.13782500000000003,
+    "harmful_fraction": 0.86575
+  },
+  {
+    "ef_search": 64,
+    "feature": "maximum_violation",
+    "direction": "ge",
+    "threshold": 1854.8870117187503,
+    "query_fraction": 0.3,
+    "count": 3000,
+    "mean_loss": 0.1419,
+    "harmful_fraction": 0.8653333333333333
+  },
+  {
+    "ef_search": 64,
+    "feature": "maximum_violation",
+    "direction": "ge",
+    "threshold": 2353.6296875000003,
+    "query_fraction": 0.2,
+    "count": 2000,
+    "mean_loss": 0.14610000000000004,
+    "harmful_fraction": 0.8615
+  },
+  {
+    "ef_search": 64,
+    "feature": "maximum_violation",
+    "direction": "ge",
+    "threshold": 3129.3933593750003,
+    "query_fraction": 0.1,
+    "count": 1000,
+    "mean_loss": 0.14930000000000002,
+    "harmful_fraction": 0.87
+  },
+  {
+    "ef_search": 64,
+    "feature": "topk_agreement",
+    "direction": "le",
+    "threshold": 0.8,
+    "query_fraction": 0.3141,
+    "count": 3141,
+    "mean_loss": 0.18697866921362624,
+    "harmful_fraction": 0.9340974212034384
+  },
+  {
+    "ef_search": 64,
+    "feature": "topk_agreement",
+    "direction": "le",
+    "threshold": 0.9,
+    "query_fraction": 0.8067,
+    "count": 8067,
+    "mean_loss": 0.12339159538862034,
+    "harmful_fraction": 0.8695921656129912
+  },
+  {
+    "ef_search": 64,
+    "feature": "topk_agreement",
+    "direction": "le",
+    "threshold": 1.0,
+    "query_fraction": 1.0,
+    "count": 10000,
+    "mean_loss": 0.09954,
+    "harmful_fraction": 0.7015
+  },
+  {
+    "ef_search": 64,
+    "feature": "random_inversion_rate",
+    "direction": "ge",
+    "threshold": 0.0234375,
+    "query_fraction": 0.9275,
+    "count": 9275,
+    "mean_loss": 0.09965498652291106,
+    "harmful_fraction": 0.7005929919137466
+  },
+  {
+    "ef_search": 64,
+    "feature": "random_inversion_rate",
+    "direction": "ge",
+    "threshold": 0.02734375,
+    "query_fraction": 0.8233,
+    "count": 8233,
+    "mean_loss": 0.10052228835175515,
+    "harmful_fraction": 0.7029029515364994
+  },
+  {
+    "ef_search": 64,
+    "feature": "random_inversion_rate",
+    "direction": "ge",
+    "threshold": 0.029296875,
+    "query_fraction": 0.7515,
+    "count": 7515,
+    "mean_loss": 0.10142381902860946,
+    "harmful_fraction": 0.7053892215568862
+  },
+  {
+    "ef_search": 64,
+    "feature": "random_inversion_rate",
+    "direction": "ge",
+    "threshold": 0.03125,
+    "query_fraction": 0.6723,
+    "count": 6723,
+    "mean_loss": 0.102216272497397,
+    "harmful_fraction": 0.7066785661163171
+  },
+  {
+    "ef_search": 64,
+    "feature": "random_inversion_rate",
+    "direction": "ge",
+    "threshold": 0.03515625,
+    "query_fraction": 0.5001,
+    "count": 5001,
+    "mean_loss": 0.10445910817836432,
+    "harmful_fraction": 0.714257148570286
+  },
+  {
+    "ef_search": 64,
+    "feature": "random_inversion_rate",
+    "direction": "ge",
+    "threshold": 0.037109375,
+    "query_fraction": 0.4143,
+    "count": 4143,
+    "mean_loss": 0.10535843591600291,
+    "harmful_fraction": 0.7154236060825488
+  },
+  {
+    "ef_search": 64,
+    "feature": "random_inversion_rate",
+    "direction": "ge",
+    "threshold": 0.0390625,
+    "query_fraction": 0.3284,
+    "count": 3284,
+    "mean_loss": 0.10666869671132766,
+    "harmful_fraction": 0.7232034104750305
+  },
+  {
+    "ef_search": 64,
+    "feature": "random_inversion_rate",
+    "direction": "ge",
+    "threshold": 0.041015625,
+    "query_fraction": 0.2565,
+    "count": 2565,
+    "mean_loss": 0.10877192982456141,
+    "harmful_fraction": 0.7309941520467836
+  },
+  {
+    "ef_search": 64,
+    "feature": "random_inversion_rate",
+    "direction": "ge",
+    "threshold": 0.046875,
+    "query_fraction": 0.1024,
+    "count": 1024,
+    "mean_loss": 0.11718750000000001,
+    "harmful_fraction": 0.7734375
+  },
+  {
+    "ef_search": 64,
+    "feature": "candidate_count",
+    "direction": "ge",
+    "threshold": 697.9000000000001,
+    "query_fraction": 0.9,
+    "count": 9000,
+    "mean_loss": 0.09794444444444445,
+    "harmful_fraction": 0.6938888888888889
+  },
+  {
+    "ef_search": 64,
+    "feature": "candidate_count",
+    "direction": "ge",
+    "threshold": 855.0,
+    "query_fraction": 0.8003,
+    "count": 8003,
+    "mean_loss": 0.09673872297888292,
+    "harmful_fraction": 0.6853679870048732
+  },
+  {
+    "ef_search": 64,
+    "feature": "candidate_count",
+    "direction": "ge",
+    "threshold": 949.0,
+    "query_fraction": 0.7009,
+    "count": 7009,
+    "mean_loss": 0.09547724354401485,
+    "harmful_fraction": 0.676844057640177
+  },
+  {
+    "ef_search": 64,
+    "feature": "candidate_count",
+    "direction": "ge",
+    "threshold": 1021.0,
+    "query_fraction": 0.6005,
+    "count": 6005,
+    "mean_loss": 0.09337218984179851,
+    "harmful_fraction": 0.6679433805162365
+  },
+  {
+    "ef_search": 64,
+    "feature": "candidate_count",
+    "direction": "ge",
+    "threshold": 1077.0,
+    "query_fraction": 0.5002,
+    "count": 5002,
+    "mean_loss": 0.09226309476209517,
+    "harmful_fraction": 0.6605357856857257
+  },
+  {
+    "ef_search": 64,
+    "feature": "candidate_count",
+    "direction": "ge",
+    "threshold": 1126.0,
+    "query_fraction": 0.4012,
+    "count": 4012,
+    "mean_loss": 0.09127617148554339,
+    "harmful_fraction": 0.6493020937188435
+  },
+  {
+    "ef_search": 64,
+    "feature": "candidate_count",
+    "direction": "ge",
+    "threshold": 1173.0,
+    "query_fraction": 0.3007,
+    "count": 3007,
+    "mean_loss": 0.08945793149318257,
+    "harmful_fraction": 0.6385101429996675
+  },
+  {
+    "ef_search": 64,
+    "feature": "candidate_count",
+    "direction": "ge",
+    "threshold": 1223.0,
+    "query_fraction": 0.2011,
+    "count": 2011,
+    "mean_loss": 0.08717056190949776,
+    "harmful_fraction": 0.625559423172551
+  },
+  {
+    "ef_search": 64,
+    "feature": "candidate_count",
+    "direction": "ge",
+    "threshold": 1283.0,
+    "query_fraction": 0.1014,
+    "count": 1014,
+    "mean_loss": 0.08579881656804733,
+    "harmful_fraction": 0.6045364891518737
+  }
+]

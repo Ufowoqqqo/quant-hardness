@@ -1,0 +1,8 @@
+{
+  "queries": 10000,
+  "heap_reference_list_mismatches": 0,
+  "native_global_set_mismatches": 75,
+  "mean_native_minus_global_recall_due_to_ties": -2e-05,
+  "audit_source_sha256": "a05f26dfcac4a22aba2b3f702efe24af0095e7d33d322a3e80b385019c8b859e",
+  "semantics": "strict distance-only admission; worst (distance,ID) evicted; output ordered by (distance,ID). No traversal replay or native substitution."
+}

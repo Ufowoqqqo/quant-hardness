@@ -1,0 +1,38 @@
+[
+  {
+    "ef_search": 64,
+    "pair_count": 19903,
+    "min_exact_margin": 0.0,
+    "median_exact_margin": 1160.0,
+    "p95_exact_margin": 3514.899999999998,
+    "max_exact_margin": 12790.0,
+    "min_error_difference": 51.11376953125,
+    "median_error_difference": 2557.859375,
+    "p95_error_difference": 5528.093359375,
+    "max_error_difference": 16927.296875,
+    "min_violation": 0.01171875,
+    "median_violation": 1131.181640625,
+    "p95_violation": 3453.749218749999,
+    "max_violation": 10413.296875,
+    "strict_inversion_count": 19902,
+    "nonpositive_violation_count": 0
+  },
+  {
+    "ef_search": 128,
+    "pair_count": 21790,
+    "min_exact_margin": 0.0,
+    "median_exact_margin": 1160.0,
+    "p95_exact_margin": 3514.5499999999993,
+    "max_exact_margin": 12790.0,
+    "min_error_difference": 42.2734375,
+    "median_error_difference": 2575.802734375,
+    "p95_error_difference": 5579.198437499998,
+    "max_error_difference": 16927.296875,
+    "min_violation": 0.01171875,
+    "median_violation": 1141.796875,
+    "p95_violation": 3499.584375,
+    "max_violation": 10413.296875,
+    "strict_inversion_count": 21789,
+    "nonpositive_violation_count": 0
+  }
+]

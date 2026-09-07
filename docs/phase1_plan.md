@@ -7,10 +7,11 @@ experiment are complete. The operating-regime calibration is also complete;
 it selected PQ32×8 at `efSearch` 160, 256, and 384 without using concentration
 as a selection criterion. Raw per-query results and observations are documented
 in `docs/phase1_paired_recall.md` and `docs/phase1_calibration.md`. Trajectory,
-visited-node, distance-count, and latency instrumentation remain intentionally
-deferred. The next minimal measurement is exact reranking of the unchanged
-retained PQ candidate set to separate candidate discovery from final
-approximate ranking.
+visited-node trajectory and latency instrumentation remain intentionally
+deferred. The evaluated-node-set decomposition is complete and is documented
+in `docs/phase1_decomposition.md`; it found ranking/selection dominance for the
+current synthetic PQ32×8 regime. The next minimal measurement is a seed
+replication at the central `efSearch=256` point before changing distributions.
 
 ## Selected backend and inspected revision
 

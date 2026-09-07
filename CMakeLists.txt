@@ -85,11 +85,20 @@ target_link_libraries(qh_faiss_backend PUBLIC
 target_compile_options(qh_faiss_backend PRIVATE -Wall -Wextra -Wpedantic)
 
 add_library(qh_metrics
+    src/metrics/candidate_oracle.cpp
     src/metrics/ground_truth.cpp
     src/metrics/recall.cpp)
 target_include_directories(qh_metrics PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
 target_link_libraries(qh_metrics PUBLIC faiss_pinned)
 target_compile_options(qh_metrics PRIVATE -Wall -Wextra -Wpedantic)
+
+add_library(qh_instrumentation
+    src/instrumentation/faiss_distance_recorder.cpp)
+target_include_directories(qh_instrumentation PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/src)
+target_link_libraries(qh_instrumentation PUBLIC faiss_pinned)
+target_compile_options(qh_instrumentation PRIVATE
+    -Wall -Wextra -Wpedantic)
 
 add_executable(faiss_backend_validation
     tests/faiss_backend_validation.cpp)
@@ -121,11 +130,29 @@ target_compile_definitions(faiss_calibration PRIVATE
 target_compile_options(faiss_calibration PRIVATE
     -Wall -Wextra -Wpedantic)
 
+add_executable(faiss_decomposition
+    src/experiments/faiss_decomposition.cpp)
+target_link_libraries(faiss_decomposition PRIVATE
+    qh_faiss_backend qh_instrumentation qh_metrics)
+target_compile_definitions(faiss_decomposition PRIVATE
+    QH_FAISS_COMMIT="${QH_FAISS_EXPECTED_COMMIT}"
+    QH_GIT_COMMIT="${QH_GIT_COMMIT}"
+    QH_GIT_DIRTY=${QH_GIT_DIRTY})
+target_compile_options(faiss_decomposition PRIVATE
+    -Wall -Wextra -Wpedantic)
+
 add_executable(phase1_correctness
     tests/phase1_correctness.cpp)
 target_link_libraries(phase1_correctness PRIVATE
     qh_faiss_backend qh_metrics)
 target_compile_options(phase1_correctness PRIVATE
+    -Wall -Wextra -Wpedantic)
+
+add_executable(decomposition_correctness
+    tests/decomposition_correctness.cpp)
+target_link_libraries(decomposition_correctness PRIVATE
+    qh_faiss_backend qh_instrumentation qh_metrics)
+target_compile_options(decomposition_correctness PRIVATE
     -Wall -Wextra -Wpedantic)
 
 enable_testing()
@@ -134,3 +161,4 @@ add_test(
     COMMAND faiss_backend_validation
             ${CMAKE_CURRENT_SOURCE_DIR}/configs/indexes/faiss_hnsw_poc.conf)
 add_test(NAME phase1_correctness COMMAND phase1_correctness)
+add_test(NAME decomposition_correctness COMMAND decomposition_correctness)

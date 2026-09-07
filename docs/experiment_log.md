@@ -317,3 +317,85 @@ The complete resolved configuration is preserved at
 At the three selected fixed-graph points, preserve the PQ-retained candidate
 set and exact-rerank that unchanged set to decompose final-ranking loss from
 candidate-discovery loss, without trajectory logging.
+
+---
+
+## 2026-09-07 — PQ32×8 candidate-discovery/ranking decomposition
+
+**Objective**
+
+Determine whether calibrated PQ32×8 Recall@10 loss comes from failure to
+distance-evaluate useful ground-truth nodes or from PQ-based selection/ranking
+after those nodes have been evaluated.
+
+**Provenance**
+
+- Git commit: `776bc6aab58856cfe346364674116c2fa6309cbb`, with a dirty
+  worktree containing this decomposition implementation and outputs
+- Dataset: 20,000 independent standard-normal FP32 base vectors and 500
+  separately generated queries, dimension 64, no preprocessing
+- Seeds: database 1729, query 2718, graph 31415, PQ 16180
+- Machine: `rwcpu8.cse.ust.hk`; Linux
+  5.14.0-687.24.1.el9_8.x86_64; Intel Core i9-10920X; 24 hardware threads;
+  GCC 11.5.0
+- Meta FAISS `v1.15.0`, commit
+  `20f14b31a6d54e243a3d1de6ae193fc4c3ec18ed`
+
+**Parameters**
+
+- Configuration: `configs/indexes/faiss_hnsw_decomposition.conf`
+- Graph: constructed once using FP32 squared L2, `M=16`,
+  `efConstruction=80`; fingerprint
+  `5eeca90445dd29413ba0ba7bceb4be18258ef5580174050fbaf087e2f57791e7`
+- Search: `k=10`, `efSearch` 160/256/384, bounded queue and relative-distance
+  check enabled, one thread, ascending query IDs
+- Quantizer: FAISS PQ32×8, 32 bytes/vector, trained on all 20,000 base vectors
+- Ground truth: exhaustive FP32 squared-L2 top-10
+- Instrumentation: unique IDs supplied to scalar or batch-4 query-to-node
+  distance-computer calls; database-to-database distances excluded
+
+**Exact commands**
+
+```bash
+cmake -S . -B /tmp/quant-hardness-build-v5 -G Ninja -DCMAKE_BUILD_TYPE=Release
+cmake --build /tmp/quant-hardness-build-v5 --target faiss_decomposition decomposition_correctness -j 8
+ctest --test-dir /tmp/quant-hardness-build-v5 --output-on-failure
+/tmp/quant-hardness-build-v5/faiss_decomposition configs/indexes/faiss_hnsw_decomposition.conf runs/phase1_decomposition_v1
+python scripts/analyze_decomposition.py runs/phase1_decomposition_v1 runs/phase1_calibration_v1/paired_queries.jsonl results/tables results/figures
+```
+
+**Raw outputs**
+
+- Run directory: `runs/phase1_decomposition_v1/`
+- Per-query rows and full sorted candidate sets: `queries.jsonl` (1,500 rows)
+- Manifest/config: `manifest.json`, `resolved_config.conf`
+- Graph fingerprint matched calibration at every checkpoint.
+
+**Observed results**
+
+- Correctness tests: 3/3 passed. All 1,500 instrumented native results matched
+  calibration IDs; exact-control discrepancy was zero for every query.
+- Mean exact/PQ-native/PQ-oracle recalls were 0.9206/0.8070/0.9214 at
+  `ef=160`, 0.9572/0.8222/0.9572 at 256, and 0.9784/0.8328/0.9792 at 384.
+- Mean discovery delta was -0.0008/0/-0.0008. Mean ranking delta was
+  0.1144/0.1350/0.1464. Rerank recovery was 1.0070/1.0000/1.0055.
+- PQ candidate coverage exceeded exact coverage for 55, 35, and 21 queries;
+  exact coverage exceeded PQ for 54, 34, and 18 queries.
+- Mean evaluated-set Jaccard increased from 0.8224 to 0.8493 to 0.8710.
+
+**Anomalies and possible confounders**
+
+- Recovery slightly above one reflects negative mean discovery delta, not an
+  exact-control discrepancy.
+- “Ranking” includes PQ-based retention/selection after distance evaluation;
+  it is not limited to a distinct terminal sorting pass.
+- Exact reranking uses every evaluated node (roughly 3,000–5,600 per query), an
+  oracle diagnostic rather than a practical reranking budget.
+- One IID Gaussian dataset and one seed tuple do not establish generality.
+
+**Smallest distinguishing next experiment**
+
+At `efSearch=256`, repeat the identical PQ32×8 decomposition for several
+independent database/query/graph/PQ seed tuples to test whether near-zero mean
+discovery delta and ranking dominance are seed-stable before changing the data
+distribution.

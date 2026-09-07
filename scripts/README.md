@@ -19,3 +19,6 @@ Implemented Phase 1 entry point:
 - `analyze_calibration.py`: validates all exact/PQ calibration rows and sampled
   distance diagnostics, emits complete calibration tables, and plots the
   predeclared efSearch/PQ sweep plus explicitly selected operating points.
+- `analyze_decomposition.py`: validates recorded distance-evaluation sets,
+  recomputes every recall/coverage/delta, checks native IDs against calibration,
+  and emits the Phase 1 discovery-versus-ranking tables and figures.

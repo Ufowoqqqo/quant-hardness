@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+<rect width="100%" height="100%" fill="white"/>
+<text x="400" y="24" text-anchor="middle" font-family="sans-serif" font-size="17">Mean recall versus efSearch</text>
+<line x1="76" y1="436" x2="776" y2="436" stroke="black"/>
+<line x1="76" y1="42" x2="76" y2="436" stroke="black"/>
+<text x="426.0" y="486" text-anchor="middle" font-family="sans-serif" font-size="13">efSearch</text>
+<text x="18" y="239.0" text-anchor="middle" transform="rotate(-90 18 239.0)" font-family="sans-serif" font-size="13">mean Recall@10</text>
+<text x="76.00" y="456" text-anchor="middle" font-family="sans-serif" font-size="11">160</text>
+<text x="68" y="440.00" text-anchor="end" font-family="sans-serif" font-size="11">0.75</text>
+<text x="216.00" y="456" text-anchor="middle" font-family="sans-serif" font-size="11">205</text>
+<text x="68" y="361.20" text-anchor="end" font-family="sans-serif" font-size="11">0.8</text>
+<text x="356.00" y="456" text-anchor="middle" font-family="sans-serif" font-size="11">250</text>
+<text x="68" y="282.40" text-anchor="end" font-family="sans-serif" font-size="11">0.85</text>
+<text x="496.00" y="456" text-anchor="middle" font-family="sans-serif" font-size="11">294</text>
+<text x="68" y="203.60" text-anchor="end" font-family="sans-serif" font-size="11">0.9</text>
+<text x="636.00" y="456" text-anchor="middle" font-family="sans-serif" font-size="11">339</text>
+<text x="68" y="124.80" text-anchor="end" font-family="sans-serif" font-size="11">0.95</text>
+<text x="776.00" y="456" text-anchor="middle" font-family="sans-serif" font-size="11">384</text>
+<text x="68" y="46.00" text-anchor="end" font-family="sans-serif" font-size="11">1</text>
+<polyline points="76.00,167.13 376.00,109.45 776.00,76.04" fill="none" stroke="#4c78a8" stroke-width="2"/>
+<circle cx="76.00" cy="167.13" r="3" fill="#4c78a8"/>
+<circle cx="376.00" cy="109.45" r="3" fill="#4c78a8"/>
+<circle cx="776.00" cy="76.04" r="3" fill="#4c78a8"/>
+<line x1="570" y1="54" x2="595" y2="54" stroke="#4c78a8" stroke-width="2"/>
+<text x="601" y="58" font-family="sans-serif" font-size="11">exact native</text>
+<polyline points="76.00,346.17 376.00,322.21 776.00,305.51" fill="none" stroke="#f58518" stroke-width="2"/>
+<circle cx="76.00" cy="346.17" r="3" fill="#f58518"/>
+<circle cx="376.00" cy="322.21" r="3" fill="#f58518"/>
+<circle cx="776.00" cy="305.51" r="3" fill="#f58518"/>
+<line x1="570" y1="72" x2="595" y2="72" stroke="#f58518" stroke-width="2"/>
+<text x="601" y="76" font-family="sans-serif" font-size="11">PQ native</text>
+<polyline points="76.00,165.87 376.00,109.45 776.00,74.78" fill="none" stroke="#54a24b" stroke-width="2"/>
+<circle cx="76.00" cy="165.87" r="3" fill="#54a24b"/>
+<circle cx="376.00" cy="109.45" r="3" fill="#54a24b"/>
+<circle cx="776.00" cy="74.78" r="3" fill="#54a24b"/>
+<line x1="570" y1="90" x2="595" y2="90" stroke="#54a24b" stroke-width="2"/>
+<text x="601" y="94" font-family="sans-serif" font-size="11">PQ traversal + exact rerank</text>
+</svg>

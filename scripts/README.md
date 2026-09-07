@@ -60,3 +60,22 @@ imports the pre-registered recorded-PQ64 candidate sample only after the
 primary checkpoint exists. Derivation refuses to overwrite per-condition
 outputs. NumPy/Matplotlib versions remain those used in Phase 3B.
 See `docs/phase3c_precision_transition.md` and `docs/experiment_log.md`.
+
+# Phase 3D quantizer-seed stability
+
+`analyze_phase3d_quantizer_seed_stability.py` supports `prepare`, `derive`,
+`summarize`, `checkpoint`, and post-primary `ensemble` stages. Defaults use
+the Phase 3D config/run; `--derived`, `--tables`, and `--figures` allow fully
+independent raw-data regeneration. Preparation hashes the committed Phase 3C
+inputs. The separate `faiss_seed_stability seed-scores CONFIG RUN MODEL`
+executable trains one PQ64 model on the fixed original training subset and
+scores saved IDs only. It never executes graph search. Models and scores
+are preserved under the run, not in the old dataset cache. Seed 0 must
+reproduce all original codebooks/codes/scores exactly.
+
+Primary derivation and ensemble outputs refuse overwrite; summaries may be
+regenerated. `checkpoint` must precede `ensemble`. Use NumPy 1.23.5 and
+Matplotlib 3.9.4 for byte-identical figures. `verify_phase3d_artifacts.py`
+checks models, frozen sources and independent regeneration, recording a
+new verification artifact without replacing old results. Exact commands,
+tie rules and scientific limitations are documented in the Phase 3D report.

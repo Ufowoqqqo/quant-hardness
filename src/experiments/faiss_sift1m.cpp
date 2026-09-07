@@ -8,6 +8,7 @@
 #include <faiss/IndexFlat.h>
 #include <faiss/IndexPQ.h>
 #include <faiss/index_io.h>
+#include <faiss/utils/random.h>
 
 #include <omp.h>
 #include <openssl/evp.h>
@@ -996,10 +997,133 @@ void export_precision(const std::string &config_path,
             << " candidates=" << total << " status=PASS\n";
 }
 
+// Phase 3D is score-only: consume saved IDs, never invoke HNSW search.
+void export_seed_scores(const std::string &config_path,
+                        const std::filesystem::path &run, int model) {
+  const auto s=read_values(config_path);
+  const auto frozen=read_values(s.at("phase3c_config"));
+  const Config c=read_config(s.at("phase3a_config"));
+  const auto seeds=split(s.at("training_seeds"), ',');
+  require(model>=0 && model<5 && seeds.size()==5, "invalid model index");
+  require(s.at("pq_m")=="64" && s.at("pq_nbits")=="8" &&
+          s.at("ef_search")=="64" && s.at("k")=="10", "seed experiment changed");
+  require(std::endian::native==std::endian::little, "little endian required");
+  const auto destination=run/("seed_"+std::to_string(model));
+  require(!std::filesystem::exists(destination), "refusing to overwrite seed output");
+  const auto dataset=load_dataset(c);
+  auto graph=load_graph(std::filesystem::path(c.cache_directory)/"hnsw_fp32.index");
+  const auto fingerprint=quant_hardness::graph_fingerprint(graph.graph->hnsw);
+  require(fingerprint==frozen.at("graph_fingerprint"),"frozen graph differs");
+  std::vector<int> permutation(c.base_count);
+  faiss::rand_perm(permutation.data(),c.base_count,std::stoi(s.at("training_sample_seed")));
+  const int training_count=std::stoi(s.at("training_count"));
+  require(training_count==65536,"unexpected training count");
+  permutation.resize(training_count);
+  std::vector<float> training(training_count*c.dimension);
+  for (int i=0;i<training_count;++i)
+    std::copy_n(dataset.base.data()+permutation[i]*c.dimension,c.dimension,
+                training.data()+i*c.dimension);
+  std::filesystem::create_directories(destination);
+  std::filesystem::copy_file(config_path,destination/"resolved_config.conf");
+  std::ofstream ids_file(destination/"training_ids.i32",std::ios::binary);
+  ids_file.write(reinterpret_cast<const char*>(permutation.data()),permutation.size()*sizeof(int));
+  ids_file.close();
+  omp_set_num_threads(std::stoi(s.at("training_threads")));
+  faiss::IndexPQ pq(c.dimension,64,8,faiss::METRIC_L2);
+  pq.pq.cp.seed=std::stoi(seeds[model]);
+  require(pq.pq.cp.niter==25 && pq.pq.cp.nredo==1 &&
+          pq.pq.cp.max_points_per_centroid==256 && !pq.do_polysemous_training,
+          "unexpected standard PQ training defaults");
+  pq.train(training_count,training.data());
+  pq.add(c.base_count,dataset.base.data());
+  const auto book_hash=bytes_hash(pq.pq.centroids),codes_hash=bytes_hash(pq.codes);
+  if (model==0) require(book_hash==frozen.at("pq64_codebook_sha256") &&
+                         codes_hash==frozen.at("pq64_codes_sha256"),
+                       "STOP: original PQ64 training not reproduced");
+  // Validate ID alignment at 1001 deterministic positions, including endpoints.
+  std::vector<std::uint8_t> encoded(pq.code_size);
+  for (int i=0;i<=1000;++i) {
+    const faiss::idx_t id=static_cast<faiss::idx_t>(i)*(c.base_count-1)/1000;
+    pq.sa_encode(1,dataset.base.data()+id*c.dimension,encoded.data());
+    require(std::equal(encoded.begin(),encoded.end(),pq.codes.begin()+id*pq.code_size),
+            "seed PQ ID alignment failed");
+  }
+  faiss::write_index(&pq,(destination/"pq64.index").c_str());
+  std::cout << "model=" << model << " training_encoding=PASS original_identity="
+            << (model==0) << std::endl;
+  omp_set_num_threads(std::stoi(s.at("scoring_threads")));
+  std::unique_ptr<faiss::DistanceComputer> dc(pq.get_distance_computer());
+  std::ifstream requests(run/"candidate_requests.tsv");
+  require(requests.good(),"missing candidate request index");
+  std::ofstream output(destination/"scores.f32",std::ios::binary);
+  struct Record { std::int32_t id; float exact,pq32,pq64; };
+  static_assert(sizeof(Record)==16);
+  int qid,n,queries=0;std::uint64_t offset,total=0;std::string file,pool_hash;
+  while (requests >> qid >> file >> offset >> n >> pool_hash) {
+    require(qid==queries && n>10 && n<=c.base_count,"invalid candidate request");
+    std::ifstream input(std::filesystem::path(s.at("candidate_source"))/file,std::ios::binary);
+    input.seekg(offset);
+    std::vector<Record> records(n);
+    require(static_cast<bool>(input.read(reinterpret_cast<char*>(records.data()),n*sizeof(Record))),
+            "truncated saved candidate records");
+    std::vector<faiss::idx_t> ids;std::vector<float> scores;
+    dc->set_query(dataset.queries.data()+qid*c.dimension);
+    for (const auto &r:records) {
+      require(r.id>=0 && r.id<c.base_count,"candidate ID out of range");
+      ids.push_back(r.id);const float score=(*dc)(r.id);scores.push_back(score);
+      require(std::isfinite(score),"nonfinite seed score");
+      if (model==0) require(score==r.pq64,"original PQ64 candidate score differs");
+    }
+    require(bytes_hash(ids)==pool_hash && std::set<faiss::idx_t>(ids.begin(),ids.end()).size()==ids.size(),
+            "candidate order/uniqueness differs");
+    for (int i=0;i+3<n;i+=4) {
+      float a,b,d,e;dc->distances_batch_4(ids[i],ids[i+1],ids[i+2],ids[i+3],a,b,d,e);
+      require(a==scores[i] && b==scores[i+1] && d==scores[i+2] && e==scores[i+3],
+              "scalar/batch4 score disagreement");
+    }
+    output.write(reinterpret_cast<const char*>(scores.data()),n*sizeof(float));
+    require(output.good(),"failed score write");
+    total+=n;++queries;
+  }
+  require(queries==c.query_count && requests.eof(),"incomplete candidate requests");
+  output.close();
+  require(fingerprint==quant_hardness::graph_fingerprint(graph.graph->hnsw) &&
+          book_hash==bytes_hash(pq.pq.centroids) && codes_hash==bytes_hash(pq.codes),
+          "scoring mutated frozen state");
+  std::ofstream meta(destination/"manifest.json");
+  meta << std::boolalpha << "{\"git_commit\":\"" << QH_GIT_COMMIT
+       << "\",\"dirty_worktree\":" << QH_GIT_DIRTY
+       << ",\"faiss_commit\":\"" << QH_FAISS_COMMIT
+       << "\",\"hostname\":\"" << hostname() << "\",\"kernel\":\"" << kernel()
+       << "\",\"compiler\":\"" << __VERSION__ << "\",\"model\":" << model
+       << ",\"seed\":" << pq.pq.cp.seed << ",\"training_sample_seed\":" << s.at("training_sample_seed")
+       << ",\"training_count\":" << training_count << ",\"training_ids_sha256\":\"" << bytes_hash(permutation)
+       << "\",\"training_vectors_sha256\":\"" << bytes_hash(training)
+       << "\",\"training_threads\":" << s.at("training_threads")
+       << ",\"scoring_threads\":" << s.at("scoring_threads")
+       << ",\"pq_m\":64,\"pq_nbits\":8,\"niter\":25,\"nredo\":1,\"train_type\":\"Train_default\""
+       << ",\"graph_fingerprint\":\"" << fingerprint
+       << "\",\"codebook_sha256\":\"" << book_hash << "\",\"codes_sha256\":\"" << codes_hash
+       << "\",\"model_file_sha256\":\"" << sha256_file((destination/"pq64.index").string())
+       << "\",\"scores_sha256\":\"" << sha256_file((destination/"scores.f32").string())
+       << "\",\"requests_sha256\":\"" << sha256_file((run/"candidate_requests.tsv").string())
+       << "\",\"binary_sha256\":\"" << sha256_file("/proc/self/exe")
+       << "\",\"source_sha256\":\"" << sha256_file("src/experiments/faiss_sift1m.cpp")
+       << "\",\"config_sha256\":\"" << sha256_file(config_path)
+       << "\",\"queries\":" << queries << ",\"candidates\":" << total
+       << ",\"original_model_reproduced\":" << (model==0)
+       << ",\"id_alignment_checked\":1001,\"scalar_batch4_identity\":true,\"frozen_state_identity\":true}\n";
+  require(meta.good(),"failed manifest write");
+  std::cout << "model=" << model << " queries=" << queries << " candidates=" << total << " status=PASS\n";
+}
+
 } // namespace
 
 int main(int argc, char **argv) {
   try {
+    if (argc == 5 && std::string(argv[1]) == "seed-scores") {
+      export_seed_scores(argv[2],argv[3],std::stoi(argv[4]));return 0;
+    }
     if (argc == 5 && std::string(argv[1]) == "precision-export") {
       export_precision(argv[2], argv[3], argv[4]);
       return 0;

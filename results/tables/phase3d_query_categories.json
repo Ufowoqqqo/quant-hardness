@@ -1,0 +1,34 @@
+[
+  {
+    "category": "Robust",
+    "count": 647,
+    "fraction": 0.0647,
+    "signed_loss_sum": 0.0,
+    "fraction_total_signed_loss": 0.0,
+    "mean_oracle_recall": 0.8097372488408039
+  },
+  {
+    "category": "Occasionally harmful",
+    "count": 1812,
+    "fraction": 0.1812,
+    "signed_loss_sum": 316.0999999999961,
+    "fraction_total_signed_loss": 0.0631581050570433,
+    "mean_oracle_recall": 0.9080573951434879
+  },
+  {
+    "category": "Usually harmful",
+    "count": 3841,
+    "fraction": 0.3841,
+    "signed_loss_sum": 1759.3000000000018,
+    "fraction_total_signed_loss": 0.35151551479550075,
+    "mean_oracle_recall": 0.9659984379067953
+  },
+  {
+    "category": "Persistently harmful",
+    "count": 3700,
+    "fraction": 0.37,
+    "signed_loss_sum": 2929.49999999998,
+    "fraction_total_signed_loss": 0.5853263801474514,
+    "mean_oracle_recall": 0.986972972972973
+  }
+]

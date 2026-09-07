@@ -1,0 +1,14 @@
+[
+  {
+    "has_high_frequency_inversion": false,
+    "query_models": 21785,
+    "mean_loss": 0.05649299977048428,
+    "fraction_signed_loss": 0.24589901896142066
+  },
+  {
+    "has_high_frequency_inversion": true,
+    "query_models": 28215,
+    "mean_loss": 0.13376572744993798,
+    "fraction_signed_loss": 0.7541009810383246
+  }
+]

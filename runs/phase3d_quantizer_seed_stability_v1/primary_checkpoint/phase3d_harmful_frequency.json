@@ -1,0 +1,32 @@
+[
+  {
+    "harmful_count": 0,
+    "frequency": 0.0,
+    "queries": 647
+  },
+  {
+    "harmful_count": 1,
+    "frequency": 0.2,
+    "queries": 736
+  },
+  {
+    "harmful_count": 2,
+    "frequency": 0.4,
+    "queries": 1076
+  },
+  {
+    "harmful_count": 3,
+    "frequency": 0.6,
+    "queries": 1518
+  },
+  {
+    "harmful_count": 4,
+    "frequency": 0.8,
+    "queries": 2323
+  },
+  {
+    "harmful_count": 5,
+    "frequency": 1.0,
+    "queries": 3700
+  }
+]

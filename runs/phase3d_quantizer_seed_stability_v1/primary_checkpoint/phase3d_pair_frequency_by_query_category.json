@@ -1,0 +1,142 @@
+[
+  {
+    "query_category": "Robust",
+    "frequency_count": 1,
+    "queries": 647,
+    "queries_with_pairs": 461,
+    "pair_count": 4372
+  },
+  {
+    "query_category": "Robust",
+    "frequency_count": 2,
+    "queries": 647,
+    "queries_with_pairs": 388,
+    "pair_count": 1610
+  },
+  {
+    "query_category": "Robust",
+    "frequency_count": 3,
+    "queries": 647,
+    "queries_with_pairs": 259,
+    "pair_count": 659
+  },
+  {
+    "query_category": "Robust",
+    "frequency_count": 4,
+    "queries": 647,
+    "queries_with_pairs": 134,
+    "pair_count": 233
+  },
+  {
+    "query_category": "Robust",
+    "frequency_count": 5,
+    "queries": 647,
+    "queries_with_pairs": 47,
+    "pair_count": 75
+  },
+  {
+    "query_category": "Occasionally harmful",
+    "frequency_count": 1,
+    "queries": 1812,
+    "queries_with_pairs": 1776,
+    "pair_count": 13643
+  },
+  {
+    "query_category": "Occasionally harmful",
+    "frequency_count": 2,
+    "queries": 1812,
+    "queries_with_pairs": 1151,
+    "pair_count": 3869
+  },
+  {
+    "query_category": "Occasionally harmful",
+    "frequency_count": 3,
+    "queries": 1812,
+    "queries_with_pairs": 543,
+    "pair_count": 1291
+  },
+  {
+    "query_category": "Occasionally harmful",
+    "frequency_count": 4,
+    "queries": 1812,
+    "queries_with_pairs": 273,
+    "pair_count": 435
+  },
+  {
+    "query_category": "Occasionally harmful",
+    "frequency_count": 5,
+    "queries": 1812,
+    "queries_with_pairs": 95,
+    "pair_count": 124
+  },
+  {
+    "query_category": "Usually harmful",
+    "frequency_count": 1,
+    "queries": 3841,
+    "queries_with_pairs": 3800,
+    "pair_count": 37438
+  },
+  {
+    "query_category": "Usually harmful",
+    "frequency_count": 2,
+    "queries": 3841,
+    "queries_with_pairs": 3423,
+    "pair_count": 12949
+  },
+  {
+    "query_category": "Usually harmful",
+    "frequency_count": 3,
+    "queries": 3841,
+    "queries_with_pairs": 2229,
+    "pair_count": 4863
+  },
+  {
+    "query_category": "Usually harmful",
+    "frequency_count": 4,
+    "queries": 3841,
+    "queries_with_pairs": 844,
+    "pair_count": 1344
+  },
+  {
+    "query_category": "Usually harmful",
+    "frequency_count": 5,
+    "queries": 3841,
+    "queries_with_pairs": 110,
+    "pair_count": 159
+  },
+  {
+    "query_category": "Persistently harmful",
+    "frequency_count": 1,
+    "queries": 3700,
+    "queries_with_pairs": 3687,
+    "pair_count": 52537
+  },
+  {
+    "query_category": "Persistently harmful",
+    "frequency_count": 2,
+    "queries": 3700,
+    "queries_with_pairs": 3602,
+    "pair_count": 21913
+  },
+  {
+    "query_category": "Persistently harmful",
+    "frequency_count": 3,
+    "queries": 3700,
+    "queries_with_pairs": 3187,
+    "pair_count": 10497
+  },
+  {
+    "query_category": "Persistently harmful",
+    "frequency_count": 4,
+    "queries": 3700,
+    "queries_with_pairs": 2222,
+    "pair_count": 4649
+  },
+  {
+    "query_category": "Persistently harmful",
+    "frequency_count": 5,
+    "queries": 3700,
+    "queries_with_pairs": 963,
+    "pair_count": 1618
+  }
+]

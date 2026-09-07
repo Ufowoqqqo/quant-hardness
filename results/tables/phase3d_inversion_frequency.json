@@ -1,0 +1,32 @@
+[
+  {
+    "seed_count": 1,
+    "frequency": 0.2,
+    "pairs": 107990,
+    "fraction_union_pairs": 0.6196421808834162
+  },
+  {
+    "seed_count": 2,
+    "frequency": 0.4,
+    "pairs": 40341,
+    "fraction_union_pairs": 0.23147499971310206
+  },
+  {
+    "seed_count": 3,
+    "frequency": 0.6,
+    "pairs": 17310,
+    "fraction_union_pairs": 0.09932406844237368
+  },
+  {
+    "seed_count": 4,
+    "frequency": 0.8,
+    "pairs": 6661,
+    "fraction_union_pairs": 0.038220544188021434
+  },
+  {
+    "seed_count": 5,
+    "frequency": 1.0,
+    "pairs": 1976,
+    "fraction_union_pairs": 0.011338206773086678
+  }
+]

@@ -1,0 +1,162 @@
+[
+  {
+    "stratum": "oracle1",
+    "queries": 7136,
+    "a": 0,
+    "b": 1,
+    "harmful_jaccard": 0.7310112014730704,
+    "loss_spearman": 0.3667807581182727
+  },
+  {
+    "stratum": "oracle1",
+    "queries": 7136,
+    "a": 0,
+    "b": 2,
+    "harmful_jaccard": 0.7258237547892721,
+    "loss_spearman": 0.3669644146194819
+  },
+  {
+    "stratum": "oracle1",
+    "queries": 7136,
+    "a": 0,
+    "b": 3,
+    "harmful_jaccard": 0.7370199692780338,
+    "loss_spearman": 0.37030296593738954
+  },
+  {
+    "stratum": "oracle1",
+    "queries": 7136,
+    "a": 0,
+    "b": 4,
+    "harmful_jaccard": 0.7224858411143426,
+    "loss_spearman": 0.3640065045878254
+  },
+  {
+    "stratum": "oracle1",
+    "queries": 7136,
+    "a": 1,
+    "b": 2,
+    "harmful_jaccard": 0.7229265312356805,
+    "loss_spearman": 0.3606156796374133
+  },
+  {
+    "stratum": "oracle1",
+    "queries": 7136,
+    "a": 1,
+    "b": 3,
+    "harmful_jaccard": 0.726150563852484,
+    "loss_spearman": 0.35283322715604515
+  },
+  {
+    "stratum": "oracle1",
+    "queries": 7136,
+    "a": 1,
+    "b": 4,
+    "harmful_jaccard": 0.7224938875305623,
+    "loss_spearman": 0.3557435994514964
+  },
+  {
+    "stratum": "oracle1",
+    "queries": 7136,
+    "a": 2,
+    "b": 3,
+    "harmful_jaccard": 0.7310165339865279,
+    "loss_spearman": 0.3702767647875901
+  },
+  {
+    "stratum": "oracle1",
+    "queries": 7136,
+    "a": 2,
+    "b": 4,
+    "harmful_jaccard": 0.7157670021347972,
+    "loss_spearman": 0.34312472026786883
+  },
+  {
+    "stratum": "oracle1",
+    "queries": 7136,
+    "a": 3,
+    "b": 4,
+    "harmful_jaccard": 0.7245115995115995,
+    "loss_spearman": 0.35728898556052896
+  },
+  {
+    "stratum": "no_exact_boundary_ties",
+    "queries": 9829,
+    "a": 0,
+    "b": 1,
+    "harmful_jaccard": 0.6740445089501693,
+    "loss_spearman": 0.4212326534106046
+  },
+  {
+    "stratum": "no_exact_boundary_ties",
+    "queries": 9829,
+    "a": 0,
+    "b": 2,
+    "harmful_jaccard": 0.6759404862707149,
+    "loss_spearman": 0.4263048221325866
+  },
+  {
+    "stratum": "no_exact_boundary_ties",
+    "queries": 9829,
+    "a": 0,
+    "b": 3,
+    "harmful_jaccard": 0.6792566670689031,
+    "loss_spearman": 0.42144808680199547
+  },
+  {
+    "stratum": "no_exact_boundary_ties",
+    "queries": 9829,
+    "a": 0,
+    "b": 4,
+    "harmful_jaccard": 0.667189763399324,
+    "loss_spearman": 0.4193223918645456
+  },
+  {
+    "stratum": "no_exact_boundary_ties",
+    "queries": 9829,
+    "a": 1,
+    "b": 2,
+    "harmful_jaccard": 0.666946812342418,
+    "loss_spearman": 0.4152465438175975
+  },
+  {
+    "stratum": "no_exact_boundary_ties",
+    "queries": 9829,
+    "a": 1,
+    "b": 3,
+    "harmful_jaccard": 0.6730653869226155,
+    "loss_spearman": 0.41290035658872404
+  },
+  {
+    "stratum": "no_exact_boundary_ties",
+    "queries": 9829,
+    "a": 1,
+    "b": 4,
+    "harmful_jaccard": 0.6668673973262677,
+    "loss_spearman": 0.414627164086868
+  },
+  {
+    "stratum": "no_exact_boundary_ties",
+    "queries": 9829,
+    "a": 2,
+    "b": 3,
+    "harmful_jaccard": 0.675750300120048,
+    "loss_spearman": 0.4204561542571792
+  },
+  {
+    "stratum": "no_exact_boundary_ties",
+    "queries": 9829,
+    "a": 2,
+    "b": 4,
+    "harmful_jaccard": 0.6615495322619334,
+    "loss_spearman": 0.4003993998372475
+  },
+  {
+    "stratum": "no_exact_boundary_ties",
+    "queries": 9829,
+    "a": 3,
+    "b": 4,
+    "harmful_jaccard": 0.67046818727491,
+    "loss_spearman": 0.41487457988938237
+  }
+]

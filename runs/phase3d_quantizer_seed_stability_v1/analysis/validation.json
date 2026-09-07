@@ -1,0 +1,13 @@
+{
+  "queries": 10000,
+  "candidates": 10353047,
+  "seed0_scores_metrics_identity": true,
+  "candidate_exact_gt_identity": true,
+  "random_pairs_identity": true,
+  "training_sample_identity": true,
+  "distinct_codebooks": true,
+  "source_unchanged": true,
+  "analysis_sha256": "9440e5c3edb968b33179708d7b5e15edf91227fb6cabd5c47cb5519589eafbcc",
+  "metrics_sha256": "53514a9450473d662e8626b1ffdd1265b3beb888af4006691c4597d205c2624d",
+  "numpy": "1.23.5"
+}

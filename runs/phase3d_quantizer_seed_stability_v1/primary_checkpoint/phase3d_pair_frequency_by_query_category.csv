@@ -1,0 +1,21 @@
+query_category,frequency_count,queries,queries_with_pairs,pair_count
+Robust,1,647,461,4372
+Robust,2,647,388,1610
+Robust,3,647,259,659
+Robust,4,647,134,233
+Robust,5,647,47,75
+Occasionally harmful,1,1812,1776,13643
+Occasionally harmful,2,1812,1151,3869
+Occasionally harmful,3,1812,543,1291
+Occasionally harmful,4,1812,273,435
+Occasionally harmful,5,1812,95,124
+Usually harmful,1,3841,3800,37438
+Usually harmful,2,3841,3423,12949
+Usually harmful,3,3841,2229,4863
+Usually harmful,4,3841,844,1344
+Usually harmful,5,3841,110,159
+Persistently harmful,1,3700,3687,52537
+Persistently harmful,2,3700,3602,21913
+Persistently harmful,3,3700,3187,10497
+Persistently harmful,4,3700,2222,4649
+Persistently harmful,5,3700,963,1618

@@ -1,0 +1,146 @@
+[
+  {
+    "stratum": "all",
+    "descriptor": "d1",
+    "queries": 10000,
+    "spearman_harmful_frequency": -0.13146621514251938
+  },
+  {
+    "stratum": "all",
+    "descriptor": "dk",
+    "queries": 10000,
+    "spearman_harmful_frequency": -0.1905596945290889
+  },
+  {
+    "stratum": "all",
+    "descriptor": "dk_plus_1",
+    "queries": 10000,
+    "spearman_harmful_frequency": -0.19940960378148218
+  },
+  {
+    "stratum": "all",
+    "descriptor": "d20",
+    "queries": 10000,
+    "spearman_harmful_frequency": -0.2070136263299218
+  },
+  {
+    "stratum": "all",
+    "descriptor": "boundary_margin",
+    "queries": 10000,
+    "spearman_harmful_frequency": -0.28241935783810446
+  },
+  {
+    "stratum": "all",
+    "descriptor": "relative_boundary_margin",
+    "queries": 10000,
+    "spearman_harmful_frequency": -0.21862904591955734
+  },
+  {
+    "stratum": "all",
+    "descriptor": "boundary_gap_r1",
+    "queries": 10000,
+    "spearman_harmful_frequency": -0.28241935783810446
+  },
+  {
+    "stratum": "all",
+    "descriptor": "boundary_gap_r2",
+    "queries": 10000,
+    "spearman_harmful_frequency": -0.39683302525142744
+  },
+  {
+    "stratum": "all",
+    "descriptor": "boundary_gap_r5",
+    "queries": 10000,
+    "spearman_harmful_frequency": -0.34618759398427335
+  },
+  {
+    "stratum": "all",
+    "descriptor": "local_distance_concentration",
+    "queries": 10000,
+    "spearman_harmful_frequency": -0.03968054570824731
+  },
+  {
+    "stratum": "all",
+    "descriptor": "candidate_count",
+    "queries": 10000,
+    "spearman_harmful_frequency": -0.14642013612248603
+  },
+  {
+    "stratum": "all",
+    "descriptor": "oracle_recall",
+    "queries": 10000,
+    "spearman_harmful_frequency": 0.43981919990878937
+  },
+  {
+    "stratum": "oracle1",
+    "descriptor": "d1",
+    "queries": 7136,
+    "spearman_harmful_frequency": 0.07252590780476659
+  },
+  {
+    "stratum": "oracle1",
+    "descriptor": "dk",
+    "queries": 7136,
+    "spearman_harmful_frequency": -0.015495707376664336
+  },
+  {
+    "stratum": "oracle1",
+    "descriptor": "dk_plus_1",
+    "queries": 7136,
+    "spearman_harmful_frequency": -0.029032126952754582
+  },
+  {
+    "stratum": "oracle1",
+    "descriptor": "d20",
+    "queries": 7136,
+    "spearman_harmful_frequency": -0.04997850671105831
+  },
+  {
+    "stratum": "oracle1",
+    "descriptor": "boundary_margin",
+    "queries": 7136,
+    "spearman_harmful_frequency": -0.39794896312992917
+  },
+  {
+    "stratum": "oracle1",
+    "descriptor": "relative_boundary_margin",
+    "queries": 7136,
+    "spearman_harmful_frequency": -0.39359636912820845
+  },
+  {
+    "stratum": "oracle1",
+    "descriptor": "boundary_gap_r1",
+    "queries": 7136,
+    "spearman_harmful_frequency": -0.39794896312992917
+  },
+  {
+    "stratum": "oracle1",
+    "descriptor": "boundary_gap_r2",
+    "queries": 7136,
+    "spearman_harmful_frequency": -0.4878082966003286
+  },
+  {
+    "stratum": "oracle1",
+    "descriptor": "boundary_gap_r5",
+    "queries": 7136,
+    "spearman_harmful_frequency": -0.39698423729435295
+  },
+  {
+    "stratum": "oracle1",
+    "descriptor": "local_distance_concentration",
+    "queries": 7136,
+    "spearman_harmful_frequency": -0.21738930154043234
+  },
+  {
+    "stratum": "oracle1",
+    "descriptor": "candidate_count",
+    "queries": 7136,
+    "spearman_harmful_frequency": 0.0238100487354656
+  },
+  {
+    "stratum": "oracle1",
+    "descriptor": "oracle_recall",
+    "queries": 7136,
+    "spearman_harmful_frequency": null
+  }
+]

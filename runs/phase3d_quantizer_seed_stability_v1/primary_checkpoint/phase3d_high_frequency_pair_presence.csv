@@ -1,0 +1,3 @@
+has_high_frequency_inversion,query_models,mean_loss,fraction_signed_loss
+False,21785,0.05649299977048428,0.24589901896142066
+True,28215,0.13376572744993798,0.7541009810383246

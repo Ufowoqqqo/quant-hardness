@@ -980,3 +980,119 @@ PQ64x8 codebooks under identical settings and score only these pools. Measure
 harmful-query and residual-inversion persistence with prevalence context and
 the complete-GT stratum. This tests codebook-specific versus repeatable local
 sensitivity; it has not been run and introduces no new algorithm.
+
+## Phase 3D — frozen-candidate quantizer initialization stability
+
+**Protocol recorded before new results**
+
+Git execution base: `71cb5be96e7cd062127282b48c715841d55d9ff5`, dirty
+implementation sources with binary/source/config hashes. Pinned FAISS:
+`20f14b31a6d54e243a3d1de6ae193fc4c3ec18ed`. Configuration:
+`configs/indexes/phase3d_quantizer_seed_stability.conf`; pre-registration:
+`runs/phase3d_quantizer_seed_stability_v1/preregistration.md`.
+All 10,000 SIFT queries, identical saved FP32 L0 candidate pools, exact
+scores and GT from Phase 3C, ef64/k10 provenance, PQ64x8. Fixed original
+65,536-vector training subset/order (FAISS rand_perm seed30260907), five
+initialization seeds 30260907/70300001/70300019/70300043/70300067. See report
+for exact sampling-source reasoning; seed0 must reproduce the original
+codebook/codes/scores before continuing. No graph search or cache write.
+
+**Commands executed: preparation, model generation, correctness**
+
+```bash
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build --target faiss_seed_stability -j2
+/tmp/phase3b-plot-env/bin/python scripts/analyze_phase3d_quantizer_seed_stability.py prepare
+/tmp/phase3b-plot-env/bin/python -m unittest discover -s tests -p 'test_phase3*_metrics.py' -v
+ctest --test-dir build --output-on-failure
+set -o pipefail
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=24 ./build/faiss_seed_stability seed-scores configs/indexes/phase3d_quantizer_seed_stability.conf runs/phase3d_quantizer_seed_stability_v1 0 2>&1 | tee runs/phase3d_quantizer_seed_stability_v1/seed_0_execution.log
+set -euo pipefail
+for model in 1 2 3 4; do
+  OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=24 ./build/faiss_seed_stability seed-scores configs/indexes/phase3d_quantizer_seed_stability.conf runs/phase3d_quantizer_seed_stability_v1 "$model" 2>&1 | tee "runs/phase3d_quantizer_seed_stability_v1/seed_${model}_execution.log"
+done
+```
+
+The same 23 Python tests (10 Phase 3D, 13 prior) pass after adding a
+random small-set exhaustive reference test. All 5 CTests pass. Seed0
+training, encoding and all 10,353,047 scores are identical to Phase 3C.
+Existing filesystem clock-skew build warnings recur; the separate target
+compiled and linked successfully, without replacing the old Phase 3C binary.
+
+**Commands executed: primary analysis, checkpoint, diagnostic**
+
+```bash
+set -o pipefail
+/tmp/phase3b-plot-env/bin/python scripts/analyze_phase3d_quantizer_seed_stability.py derive 2>&1 | tee runs/phase3d_quantizer_seed_stability_v1/derive_execution.log
+MPLCONFIGDIR=/tmp/phase3b-mpl /tmp/phase3b-plot-env/bin/python scripts/analyze_phase3d_quantizer_seed_stability.py summarize 2>&1 | tee runs/phase3d_quantizer_seed_stability_v1/summary_execution.log
+/tmp/phase3b-plot-env/bin/python scripts/analyze_phase3d_quantizer_seed_stability.py checkpoint
+MPLCONFIGDIR=/tmp/phase3b-mpl /tmp/phase3b-plot-env/bin/python scripts/analyze_phase3d_quantizer_seed_stability.py ensemble 2>&1 | tee runs/phase3d_quantizer_seed_stability_v1/ensemble_execution.log
+```
+
+Independent regeneration used `mktemp -d /tmp/phase3d-reproduce.XXXXXX`,
+which returned `/tmp/phase3d-reproduce.OSza6h`:
+
+```bash
+set -euo pipefail
+/tmp/phase3b-plot-env/bin/python scripts/analyze_phase3d_quantizer_seed_stability.py derive --derived /tmp/phase3d-reproduce.OSza6h/analysis
+MPLCONFIGDIR=/tmp/phase3b-mpl /tmp/phase3b-plot-env/bin/python scripts/analyze_phase3d_quantizer_seed_stability.py summarize --derived /tmp/phase3d-reproduce.OSza6h/analysis --tables /tmp/phase3d-reproduce.OSza6h/tables --figures /tmp/phase3d-reproduce.OSza6h/figures
+MPLCONFIGDIR=/tmp/phase3b-mpl /tmp/phase3b-plot-env/bin/python scripts/analyze_phase3d_quantizer_seed_stability.py ensemble --derived /tmp/phase3d-reproduce.OSza6h/ensemble --tables /tmp/phase3d-reproduce.OSza6h/tables --figures /tmp/phase3d-reproduce.OSza6h/figures
+/tmp/phase3b-plot-env/bin/python scripts/verify_phase3d_artifacts.py runs/phase3d_quantizer_seed_stability_v1 /tmp/phase3d-reproduce.OSza6h --output /tmp/phase3d-reproduce.OSza6h/preverification.json
+/tmp/phase3b-plot-env/bin/python -m unittest discover -s tests -p 'test_phase3*_metrics.py' -v
+git diff --check
+/tmp/phase3b-plot-env/bin/python scripts/verify_phase3d_artifacts.py runs/phase3d_quantizer_seed_stability_v1 /tmp/phase3d-reproduce.OSza6h --output runs/phase3d_quantizer_seed_stability_v1/final_verification.json
+```
+
+**Observations, without causal interpretation**
+
+- Across five models, recall mean .853052, sample SD .00024035, range
+  .85266–.85331; mean ranking loss .100098; mean critical inversions 5.54252.
+- Harmful categories: robust647 (6.47%), occasional1812 (18.12%), usual3841
+  (38.41%), persistent3700 (37%). They contribute 0/6.32/35.15/58.53% of
+  total signed loss. No negative net query-model loss was observed.
+- Median harmful Jaccard .67116, median loss Spearman .41848: **H2 fails**
+  its fixed .60 AND .50 thresholds. Mean loss Spearman .41781. Expected
+  all-five harmful count from homogeneous independent marginals is1737.5,
+  versus3700 observed; this is a descriptive, not significance, baseline.
+- Inversion union174278 pairs: 61.96% one-off, 23.15% two-seed, 1.13%
+  all-five. Median pair Jaccard .15879. Only963/3700 persistent queries
+  contain an all-five inverted pair. Pair identity and query harm differ.
+- Oracle=1 subset7136: robust161 and persistent3283; median relative gap
+  .043743 versus .005288, median d12-d9 gap3891 versus887. Spearman of
+  d12-d9 with harmful frequency is -.48781; relative boundary margin -.39360.
+- Post-primary score average: recall .89577, loss .05738, inversions2.1834;
+  42.68% less loss and60.61% fewer inversions than mean single-model values.
+- All 45 derived/table/figure files independently reproduce byte-for-byte.
+  Original source pools/GT/scores and graph remain unchanged; seed0 matches
+  Phase 3C. Full five trained models and all raw scores/pairs are retained.
+
+**Anomalies and possible confounders**
+
+- Robust/persistent mean oracle .810/.987 differs substantially; report both
+  all-query and pre-registered oracle=1 geometry. H2 also fails in oracle=1
+  (median loss Spearman .36231). Candidate-size and d1 associations change
+  after restriction; do not selectively report only favorable descriptors.
+- 171 exact-boundary tie queries, 145–176 PQ-boundary ties/model. Excluding
+  exact boundary ties leaves median loss Spearman .41728. Query1352 under
+  models0/4 has .1 each of unassigned pair-allocation loss because of exact
+  tied replacements. They remain in results; no candidate/control anomaly.
+- Pair-loss allocation is equal-credit descriptive accounting, not a unique
+  causal decomposition. Explicit GT-intruder credits sum -8.5; all net
+  query-model losses remain nonnegative. No clipping or forced pair inversion.
+- Five initializations share the same training subset, subspace layout,
+  database/query realization and graph. Pair and query Jaccard have different
+  marginal-support baselines. Top-severity overlaps depend on discrete-loss
+  tie breaking; tie-inclusive and independent tie-resolution views are saved.
+- Stable aggregate quality coexists with moderate per-query stability and
+  substantial codebook-dependent pair changes. This is not strong Case A,
+  nor evidence of aggregate instability (Case C); report the mixed result
+  without forcing a pure exchangeable-noise Case B or an intrinsic hard class.
+
+**Exactly one next experiment (not run)**
+
+Repeat this five-initialization, fixed-candidate scoring protocol on one
+new independent but internally fixed 65,536-vector training subset. Keep
+everything else fixed; compare cross-subset harmful-frequency/severity
+stability and oracle=1 local-gap associations. This separates vulnerability
+that generalizes across training samples from sample-specific shared bias.
+No new algorithm, graph change, selective reranking or trajectory logging.

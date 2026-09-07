@@ -1,0 +1,1 @@
+{"fixed_candidate_recall": 0.8957700000000003, "ranking_recall_loss": 0.057379999999999994, "cross_boundary_inversion_count": 2.1834, "queries": 10000, "uniform_weights": [0.2, 0.2, 0.2, 0.2, 0.2], "accumulation": "float64", "primary_checkpoint_sha256": "f8f017e3ff63a7fbe472f91151e897d58887656522a092bf37a2f3aa94aa6bd0"}

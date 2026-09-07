@@ -1,0 +1,32 @@
+[
+  {
+    "bucket": "one-off",
+    "signed_loss_sum": 1638.6566666663864,
+    "fraction_total_signed_loss": 0.3274104710716271
+  },
+  {
+    "bucket": "minority",
+    "signed_loss_sum": 1461.514999999772,
+    "fraction_total_signed_loss": 0.29201682351291175
+  },
+  {
+    "bucket": "majority",
+    "signed_loss_sum": 1666.1349999996978,
+    "fraction_total_signed_loss": 0.33290075725782686
+  },
+  {
+    "bucket": "persistent",
+    "signed_loss_sum": 246.89333333333133,
+    "fraction_total_signed_loss": 0.04933032295017509
+  },
+  {
+    "bucket": "unassigned_tie_or_no_strict_overtake",
+    "signed_loss_sum": 0.2,
+    "fraction_total_signed_loss": 3.9960838378389176e-05
+  },
+  {
+    "bucket": "gt_intruder_credit",
+    "signed_loss_sum": -8.499999999999986,
+    "fraction_total_signed_loss": -0.001698335631081537
+  }
+]

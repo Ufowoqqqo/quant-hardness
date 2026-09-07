@@ -1,0 +1,278 @@
+{
+  "queries": 10000,
+  "models": 5,
+  "oracle_recall": 0.95315,
+  "aggregate": [
+    {
+      "model": 0,
+      "fixed_candidate_recall": 0.85313,
+      "ranking_recall_loss": 0.10002,
+      "cross_boundary_inversion_count": 5.5846,
+      "global_mae": 1315.331578362415,
+      "random_pair_inversion_rate": 0.034375,
+      "topk_agreement": 0.87982,
+      "boundary_window_mae": 990.4994181507457,
+      "candidate_weighted_mae": 1330.3667081334856
+    },
+    {
+      "model": 1,
+      "fixed_candidate_recall": 0.85331,
+      "ranking_recall_loss": 0.09984000000000001,
+      "cross_boundary_inversion_count": 5.5208,
+      "global_mae": 1310.4156808295734,
+      "random_pair_inversion_rate": 0.0343578125,
+      "topk_agreement": 0.8795500000000002,
+      "boundary_window_mae": 987.8443476962004,
+      "candidate_weighted_mae": 1325.3406729942812
+    },
+    {
+      "model": 2,
+      "fixed_candidate_recall": 0.8526600000000001,
+      "ranking_recall_loss": 0.10049000000000001,
+      "cross_boundary_inversion_count": 5.511,
+      "global_mae": 1315.118885672992,
+      "random_pair_inversion_rate": 0.0344609375,
+      "topk_agreement": 0.8795800000000001,
+      "boundary_window_mae": 989.2884192621405,
+      "candidate_weighted_mae": 1329.9601522997034
+    },
+    {
+      "model": 3,
+      "fixed_candidate_recall": 0.8530400000000001,
+      "ranking_recall_loss": 0.10011,
+      "cross_boundary_inversion_count": 5.5048,
+      "global_mae": 1315.448500503584,
+      "random_pair_inversion_rate": 0.0344513671875,
+      "topk_agreement": 0.8795100000000002,
+      "boundary_window_mae": 991.6131539045854,
+      "candidate_weighted_mae": 1331.2386977393228
+    },
+    {
+      "model": 4,
+      "fixed_candidate_recall": 0.8531200000000001,
+      "ranking_recall_loss": 0.10003000000000001,
+      "cross_boundary_inversion_count": 5.5914,
+      "global_mae": 1316.0343279537965,
+      "random_pair_inversion_rate": 0.034430078125,
+      "topk_agreement": 0.8789800000000003,
+      "boundary_window_mae": 990.6976669716574,
+      "candidate_weighted_mae": 1330.7091128249047
+    }
+  ],
+  "categories": [
+    {
+      "category": "Robust",
+      "count": 647,
+      "fraction": 0.0647,
+      "signed_loss_sum": 0.0,
+      "fraction_total_signed_loss": 0.0,
+      "mean_oracle_recall": 0.8097372488408039
+    },
+    {
+      "category": "Occasionally harmful",
+      "count": 1812,
+      "fraction": 0.1812,
+      "signed_loss_sum": 316.0999999999961,
+      "fraction_total_signed_loss": 0.0631581050570433,
+      "mean_oracle_recall": 0.9080573951434879
+    },
+    {
+      "category": "Usually harmful",
+      "count": 3841,
+      "fraction": 0.3841,
+      "signed_loss_sum": 1759.3000000000018,
+      "fraction_total_signed_loss": 0.35151551479550075,
+      "mean_oracle_recall": 0.9659984379067953
+    },
+    {
+      "category": "Persistently harmful",
+      "count": 3700,
+      "fraction": 0.37,
+      "signed_loss_sum": 2929.49999999998,
+      "fraction_total_signed_loss": 0.5853263801474514,
+      "mean_oracle_recall": 0.986972972972973
+    }
+  ],
+  "pairwise": [
+    {
+      "model_a": 0,
+      "model_b": 1,
+      "harmful_jaccard": 0.6730563162281223,
+      "loss_spearman": 0.4217807399948404,
+      "inversion_spearman": 0.44563729845374694,
+      "independent_harmful_jaccard": 0.5415421925100532,
+      "pair_inversion_jaccard": 0.15861076045111683
+    },
+    {
+      "model_a": 0,
+      "model_b": 2,
+      "harmful_jaccard": 0.6758752083829483,
+      "loss_spearman": 0.4273861293993387,
+      "inversion_spearman": 0.45783048965567225,
+      "independent_harmful_jaccard": 0.5428437875598161,
+      "pair_inversion_jaccard": 0.15796284700480068
+    },
+    {
+      "model_a": 0,
+      "model_b": 3,
+      "harmful_jaccard": 0.6781513603421647,
+      "loss_spearman": 0.4222327002908903,
+      "inversion_spearman": 0.45312743712233666,
+      "independent_harmful_jaccard": 0.5458539234691882,
+      "pair_inversion_jaccard": 0.16027036076002343
+    },
+    {
+      "model_a": 0,
+      "model_b": 4,
+      "harmful_jaccard": 0.6662706427468219,
+      "loss_spearman": 0.4205602235054921,
+      "inversion_spearman": 0.439499754222748,
+      "independent_harmful_jaccard": 0.5399422141213394,
+      "pair_inversion_jaccard": 0.1602146853945415
+    },
+    {
+      "model_a": 1,
+      "model_b": 2,
+      "harmful_jaccard": 0.6662333057558208,
+      "loss_spearman": 0.41592990253511136,
+      "inversion_spearman": 0.4538959478553734,
+      "independent_harmful_jaccard": 0.5442802479786776,
+      "pair_inversion_jaccard": 0.16219632961800215
+    },
+    {
+      "model_a": 1,
+      "model_b": 3,
+      "harmful_jaccard": 0.6724586288416076,
+      "loss_spearman": 0.4149782565507443,
+      "inversion_spearman": 0.4479547734186404,
+      "independent_harmful_jaccard": 0.5473063800705451,
+      "pair_inversion_jaccard": 0.15662043933449427
+    },
+    {
+      "model_a": 1,
+      "model_b": 4,
+      "harmful_jaccard": 0.6661527514231499,
+      "loss_spearman": 0.41640834818960226,
+      "inversion_spearman": 0.44709114609483597,
+      "independent_harmful_jaccard": 0.5413633393296086,
+      "pair_inversion_jaccard": 0.15896954526491447
+    },
+    {
+      "model_a": 2,
+      "model_b": 3,
+      "harmful_jaccard": 0.6756533049544756,
+      "loss_spearman": 0.42111719794709096,
+      "inversion_spearman": 0.45952068200149626,
+      "independent_harmful_jaccard": 0.5486358650121946,
+      "pair_inversion_jaccard": 0.15954568899274746
+    },
+    {
+      "model_a": 2,
+      "model_b": 4,
+      "harmful_jaccard": 0.6612750885478158,
+      "loss_spearman": 0.4016642884621606,
+      "inversion_spearman": 0.44653793464045494,
+      "independent_harmful_jaccard": 0.5426640737426537,
+      "pair_inversion_jaccard": 0.15709059832622901
+    },
+    {
+      "model_a": 3,
+      "model_b": 4,
+      "harmful_jaccard": 0.6698592881636514,
+      "loss_spearman": 0.416084115817484,
+      "inversion_spearman": 0.43882448586522216,
+      "independent_harmful_jaccard": 0.5456722113890299,
+      "pair_inversion_jaccard": 0.1576267826776418
+    }
+  ],
+  "median_pairwise_jaccard": 0.6711589585026294,
+  "median_pairwise_loss_spearman": 0.41848428584754715,
+  "mean_pairwise_loss_spearman": 0.41781419026927547,
+  "h2_operational_pass": false,
+  "harmful_prevalence_by_model": [
+    0.7014,
+    0.7038,
+    0.706,
+    0.7111,
+    0.7011
+  ],
+  "independent_expected_all_harmful_queries": 1737.5222346096295,
+  "independent_expected_robust_queries": 22.45409960770218,
+  "signed_loss_sum": 5004.900000000001,
+  "positive_loss_sum": 5004.900000000001,
+  "negative_query_model_losses": 0,
+  "pair_frequency": [
+    {
+      "seed_count": 1,
+      "frequency": 0.2,
+      "pairs": 107990,
+      "fraction_union_pairs": 0.6196421808834162
+    },
+    {
+      "seed_count": 2,
+      "frequency": 0.4,
+      "pairs": 40341,
+      "fraction_union_pairs": 0.23147499971310206
+    },
+    {
+      "seed_count": 3,
+      "frequency": 0.6,
+      "pairs": 17310,
+      "fraction_union_pairs": 0.09932406844237368
+    },
+    {
+      "seed_count": 4,
+      "frequency": 0.8,
+      "pairs": 6661,
+      "fraction_union_pairs": 0.038220544188021434
+    },
+    {
+      "seed_count": 5,
+      "frequency": 1.0,
+      "pairs": 1976,
+      "fraction_union_pairs": 0.011338206773086678
+    }
+  ],
+  "pair_loss_allocation": [
+    {
+      "bucket": "one-off",
+      "signed_loss_sum": 1638.6566666663864,
+      "fraction_total_signed_loss": 0.3274104710716271
+    },
+    {
+      "bucket": "minority",
+      "signed_loss_sum": 1461.514999999772,
+      "fraction_total_signed_loss": 0.29201682351291175
+    },
+    {
+      "bucket": "majority",
+      "signed_loss_sum": 1666.1349999996978,
+      "fraction_total_signed_loss": 0.33290075725782686
+    },
+    {
+      "bucket": "persistent",
+      "signed_loss_sum": 246.89333333333133,
+      "fraction_total_signed_loss": 0.04933032295017509
+    },
+    {
+      "bucket": "unassigned_tie_or_no_strict_overtake",
+      "signed_loss_sum": 0.2,
+      "fraction_total_signed_loss": 3.9960838378389176e-05
+    },
+    {
+      "bucket": "gt_intruder_credit",
+      "signed_loss_sum": -8.499999999999986,
+      "fraction_total_signed_loss": -0.001698335631081537
+    }
+  ],
+  "mean_query_std_ranking_loss": 0.056902340114684966,
+  "oracle1_queries": 7136,
+  "exact_boundary_tie_queries": 171,
+  "pq_boundary_ties_by_model": [
+    152,
+    176,
+    145,
+    168,
+    176
+  ]
+}

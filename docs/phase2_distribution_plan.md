@@ -4,7 +4,8 @@
 
 This was the prepared broad Phase 2 plan. Its controlled query-shift component
 has now been executed as Phase 2A; see `docs/phase2a_query_shift.md`. The
-clustered and anisotropic database-geometry conditions remain unrun.
+clustered component has now been executed as Phase 2B; see
+`docs/phase2b_clustered_geometry.md`. The anisotropic condition remains unrun.
 
 Phase 1 found seed-stable ranking dominance for IID isotropic Gaussian data at
 `efSearch=256`, PQ32×8. Phase 2 will test whether candidate-discovery

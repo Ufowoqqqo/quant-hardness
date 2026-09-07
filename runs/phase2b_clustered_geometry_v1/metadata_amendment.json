@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "amendment_scope": "explicit run-level parameters only; no original raw measurement or manifest was modified",
+  "rho_values": [0.0, 0.1, 0.25, 0.5, 0.75, 0.9],
+  "graph_parameters": {
+    "distance": "FP32 squared L2",
+    "M": 16,
+    "efConstruction": 80,
+    "one_graph_per_replicate_rho_condition": true
+  },
+  "search_parameters": {
+    "k": 10,
+    "fixed_efSearch": 256,
+    "matched_efSearch_grid": [256, 384, 512, 768, 1024],
+    "bounded_queue": true,
+    "check_relative_distance": true,
+    "threads": 1,
+    "query_order": "ascending query_id"
+  },
+  "quantizer_parameters": {
+    "type": "FAISS PQ asymmetric distance computation",
+    "M": 32,
+    "nbits": 8,
+    "training_vectors": 20000,
+    "encoded_vectors": 20000,
+    "training_source": "database from the same replicate and rho condition"
+  },
+  "ground_truth": "exhaustive FP32 squared-L2 top-10 recomputed for every replicate and rho",
+  "candidate_set_storage": "all scalar metrics for every query; sorted L0 and upper-only ID sets for query IDs 0 through 24"
+}

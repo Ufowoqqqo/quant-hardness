@@ -1,0 +1,12 @@
+{
+  "schema_version":1,
+  "replicate_id":1,
+  "rho":0.9,
+  "seeds":{"database_z":2003,"query_z":102003,"centers":502003,"database_labels":602003,"query_labels":702003,"graph":202003,"pq":302003,"samples":802003},
+  "graph_fingerprint":"770cc128a833b993be9ffa172f65f5d4b249e5be34efe7ffa4d7f663ea0226ba",
+  "pq_codebook_sha256":"ce0efb31e8c41a365a7fc162b5511da1b08dff6e15936dc92700ca93941af942",
+  "pq_codes_sha256":"9e4c19f9284052866e1c34325da7d7075146dbe6edeb120fff192af79f52ce1f",
+  "database_vectors_sha256":"80ec81bdeb3215d64eef836b5d699e161dfb32ae65ba4bf27eab806cb5766be3",
+  "query_vectors_sha256":"ce1bd724041db2b61c376089cac0f8ffb69ac1ecf3e4e68d6558b6e4f0dbe117",
+  "cluster_centers_sha256":"8b0a5233593658ee1a3275e6cf476867adbbcc0fb0199470ebaa3e18d7bd9d34"
+}

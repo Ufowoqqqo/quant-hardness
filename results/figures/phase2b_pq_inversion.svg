@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="500" viewBox="0 0 840 500">
+<rect width="100%" height="100%" fill="white"/>
+<text x="420.0" y="25" text-anchor="middle" font-family="sans-serif" font-size="17">PQ strict inversion rate vs clustering strength</text>
+<line x1="82" y1="438" x2="812" y2="438" stroke="black"/>
+<line x1="82" y1="48" x2="82" y2="438" stroke="black"/>
+<text x="420.0" y="490" text-anchor="middle" font-family="sans-serif" font-size="13">rho</text>
+<text x="18" y="243.0" text-anchor="middle" transform="rotate(-90 18 243.0)" font-family="sans-serif" font-size="13">PQ strict inversion rate</text>
+<text x="75" y="442.00" text-anchor="end" font-family="sans-serif" font-size="11">0.024</text>
+<text x="75" y="364.00" text-anchor="end" font-family="sans-serif" font-size="11">0.029</text>
+<text x="75" y="286.00" text-anchor="end" font-family="sans-serif" font-size="11">0.034</text>
+<text x="75" y="208.00" text-anchor="end" font-family="sans-serif" font-size="11">0.038</text>
+<text x="75" y="130.00" text-anchor="end" font-family="sans-serif" font-size="11">0.043</text>
+<text x="75" y="52.00" text-anchor="end" font-family="sans-serif" font-size="11">0.048</text>
+<text x="82.00" y="458" text-anchor="middle" font-family="sans-serif" font-size="11">0</text>
+<text x="163.11" y="458" text-anchor="middle" font-family="sans-serif" font-size="11">0.1</text>
+<text x="284.78" y="458" text-anchor="middle" font-family="sans-serif" font-size="11">0.25</text>
+<text x="487.56" y="458" text-anchor="middle" font-family="sans-serif" font-size="11">0.5</text>
+<text x="690.33" y="458" text-anchor="middle" font-family="sans-serif" font-size="11">0.75</text>
+<text x="812.00" y="458" text-anchor="middle" font-family="sans-serif" font-size="11">0.9</text>
+<polyline points="82.00,168.08 163.11,85.74 284.78,215.83 487.56,215.83 690.33,336.04 812.00,400.26" fill="none" stroke="#9ecae1" stroke-width="2"/>
+<circle cx="82.00" cy="168.08" r="3" fill="#9ecae1"/>
+<circle cx="163.11" cy="85.74" r="3" fill="#9ecae1"/>
+<circle cx="284.78" cy="215.83" r="3" fill="#9ecae1"/>
+<circle cx="487.56" cy="215.83" r="3" fill="#9ecae1"/>
+<circle cx="690.33" cy="336.04" r="3" fill="#9ecae1"/>
+<circle cx="812.00" cy="400.26" r="3" fill="#9ecae1"/>
+<text x="92" y="64" font-family="sans-serif" font-size="11" fill="#9ecae1">replicate 0</text>
+<polyline points="82.00,117.03 163.11,126.91 284.78,192.78 487.56,214.18 690.33,214.18 812.00,289.93" fill="none" stroke="#fdae6b" stroke-width="2"/>
+<circle cx="82.00" cy="117.03" r="3" fill="#fdae6b"/>
+<circle cx="163.11" cy="126.91" r="3" fill="#fdae6b"/>
+<circle cx="284.78" cy="192.78" r="3" fill="#fdae6b"/>
+<circle cx="487.56" cy="214.18" r="3" fill="#fdae6b"/>
+<circle cx="690.33" cy="214.18" r="3" fill="#fdae6b"/>
+<circle cx="812.00" cy="289.93" r="3" fill="#fdae6b"/>
+<text x="92" y="81" font-family="sans-serif" font-size="11" fill="#fdae6b">replicate 1</text>
+<polyline points="82.00,117.03 163.11,121.97 284.78,197.72 487.56,186.19 690.33,235.59 812.00,243.82" fill="none" stroke="#a1d99b" stroke-width="2"/>
+<circle cx="82.00" cy="117.03" r="3" fill="#a1d99b"/>
+<circle cx="163.11" cy="121.97" r="3" fill="#a1d99b"/>
+<circle cx="284.78" cy="197.72" r="3" fill="#a1d99b"/>
+<circle cx="487.56" cy="186.19" r="3" fill="#a1d99b"/>
+<circle cx="690.33" cy="235.59" r="3" fill="#a1d99b"/>
+<circle cx="812.00" cy="243.82" r="3" fill="#a1d99b"/>
+<text x="92" y="98" font-family="sans-serif" font-size="11" fill="#a1d99b">replicate 2</text>
+<polyline points="82.00,140.08 163.11,143.38 284.78,164.78 487.56,194.42 690.33,248.76 812.00,298.16" fill="none" stroke="#bcbddc" stroke-width="2"/>
+<circle cx="82.00" cy="140.08" r="3" fill="#bcbddc"/>
+<circle cx="163.11" cy="143.38" r="3" fill="#bcbddc"/>
+<circle cx="284.78" cy="164.78" r="3" fill="#bcbddc"/>
+<circle cx="487.56" cy="194.42" r="3" fill="#bcbddc"/>
+<circle cx="690.33" cy="248.76" r="3" fill="#bcbddc"/>
+<circle cx="812.00" cy="298.16" r="3" fill="#bcbddc"/>
+<text x="92" y="115" font-family="sans-serif" font-size="11" fill="#bcbddc">replicate 3</text>
+</svg>

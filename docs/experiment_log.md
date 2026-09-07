@@ -566,3 +566,93 @@ python scripts/analyze_phase2a_query_shift.py runs/phase2a_query_shift_v1 result
 Run a four-replicate Phase 2B clustered/mixture database experiment with IID
 queries and the same decomposition plus matched-exact-recall control. Do not
 add trajectories unless a reproducible discovery signal first emerges.
+
+---
+
+## 2026-09-07 — L0 candidate semantics correction and Phase 2B clustered geometry
+
+**Instrumentation correction**
+
+The legacy recorder mixed upper-level greedy evaluations with level-0 search.
+The new phase-separated adapter calls FAISS's existing
+`greedy_update_nearest` and `search_level_0` implementations and defines the
+discovery oracle over `V_L0`. It records `V_upper_only` separately and
+re-evaluates the selected L0 seed solely for phase attribution.
+
+Both known Phase 2A anomalies reproduced all-level
+`delta_exact_control=0.1` and became exactly zero with L0 semantics. Native
+IDs/distances and graph fingerprints were unchanged. Complete 500-query IID
+and alpha=1 regressions yielded mean discovery 0.0042 and approximately zero,
+with recovery 0.970629 and 1.0. The correction did not materially change the
+prior conclusion, so Phase 2B proceeded.
+
+**Phase 2B pre-registration and parameters**
+
+- Four seed tuples, 20,000 database vectors, 500 separate queries, dimension
+  64, 16 uniform mixture components
+- Generator: `sqrt(1-rho) z + sqrt(rho*64) c_j`, using fixed random unit
+  centers and rho `{0,.10,.25,.50,.75,.90}`
+- Query and database distributions identical within every condition; latent
+  vectors, centers, and labels paired across rho
+- One condition-specific FP32 HNSW graph: `M=16`, `efConstruction=80`
+- Search: PQ32x8 versus exact FP32, `efSearch=256`, `k=10`, bounded queue,
+  relative-distance check, one thread, ascending query IDs
+- Prescribed exact-only calibration grid `{256,384,512,768,1024}` if exact
+  mean recall fell below 0.90; no condition triggered it
+- PQ trained on and encoding all 20,000 condition-specific database vectors
+- PQ quality: first 100 queries, 100 sampled distances and 100 sampled pairs
+  per query, using fixed per-replicate sample IDs across rho
+- Thresholds were recorded in
+  `configs/indexes/faiss_hnsw_phase2b_clustered_geometry.conf` before execution
+- Git HEAD embedded by the binary:
+  `cbc944c773ac7d38d1f514d66aa46d87341e3cc9`, dirty worktree; FAISS commit
+  `20f14b31a6d54e243a3d1de6ae193fc4c3ec18ed`
+- Machine: `rwcpu8.cse.ust.hk`, Linux
+  5.14.0-687.24.1.el9_8.x86_64, GCC 11.5.0, 24 hardware threads
+
+**Exact commands**
+
+```bash
+cmake -S . -B /tmp/quant-hardness-build-v5 -DCMAKE_BUILD_TYPE=Release
+cmake --build /tmp/quant-hardness-build-v5 --target decomposition_correctness candidate_semantics_regression faiss_clustered_geometry -j 8
+/tmp/quant-hardness-build-v5/decomposition_correctness
+/tmp/quant-hardness-build-v5/candidate_semantics_regression
+/tmp/quant-hardness-build-v5/faiss_clustered_geometry configs/indexes/faiss_hnsw_phase2b_clustered_geometry.conf runs/phase2b_clustered_geometry_v1
+python -m py_compile scripts/analyze_phase2b_clustered_geometry.py
+python scripts/analyze_phase2b_clustered_geometry.py runs/phase2b_clustered_geometry_v1 results/tables results/figures
+ctest --test-dir /tmp/quant-hardness-build-v5 --output-on-failure
+```
+
+**Observed results**
+
+- All 24 conditions passed the no-discovery-breakdown criterion; none met the
+  emerging or strong geometry criteria.
+- Mean discovery delta stayed between -0.0003 and 0.0020. Rerank recovery was
+  0.9860--1.0018 and converged to approximately one at high rho.
+- Exact recall increased from 0.9649 at rho zero to about 0.9997; no matched
+  run was needed.
+- PQ-native recall fell from 0.8253 to 0.7117, but PQ L0-oracle recall tracked
+  exact recall. Ranking delta, not discovery delta, increased to 0.2881.
+- Random-pair PQ mean absolute error fell from 2.1316 to 1.2939 and strict
+  inversion rate from 0.0425 to 0.0320 as rho increased.
+- `delta_exact_control` was exactly zero for all 12,000 queries. Rho zero
+  exactly reproduced Phase 1 native baselines for replicates 0--3.
+
+**Anomalies and possible confounders**
+
+- At rho at least 0.5, nearly every ground-truth top-10 lies within one
+  generating component. Global random-pair error sampling increasingly
+  measures easy cross-cluster comparisons and may not reflect fine local
+  ranking quality.
+- L0 evaluation counts decrease strongly with rho, but exact and PQ counts
+  remain matched and PQ L0-oracle recall stays near one.
+- Several high-rho per-query Spearman correlations are undefined because
+  discovery delta is constant at zero.
+- Balanced spherical mixtures do not represent every structured or real
+  embedding distribution.
+
+**Single next experiment**
+
+Run one SIFT1M fixed-topology L0 decomposition at calibrated high exact recall,
+with PQ32x8 and the same exact-rerank and PQ-quality controls. Do not add full
+trajectory logging unless a reproducible discovery signal appears.

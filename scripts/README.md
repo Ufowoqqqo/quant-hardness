@@ -31,3 +31,6 @@ Implemented Phase 1 entry point:
   run, checks exact Phase 1 IID reproduction, evaluates the pre-registered
   mechanism criteria, and emits fixed-ef/matched-recall tables, correlations,
   and SVG figures.
+- `analyze_phase2b_clustered_geometry.py`: validates corrected L0 candidate
+  sets, PQ-quality samples, and the paired clustered-mixture sweep, then emits
+  replicate/aggregate tables, exploratory correlations, and SVG figures.

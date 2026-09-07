@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="500" viewBox="0 0 840 500">
+<rect width="100%" height="100%" fill="white"/>
+<text x="420.0" y="25" text-anchor="middle" font-family="sans-serif" font-size="17">Mean ranking delta vs clustering strength</text>
+<line x1="82" y1="438" x2="812" y2="438" stroke="black"/>
+<line x1="82" y1="48" x2="82" y2="438" stroke="black"/>
+<text x="420.0" y="490" text-anchor="middle" font-family="sans-serif" font-size="13">rho</text>
+<text x="18" y="243.0" text-anchor="middle" transform="rotate(-90 18 243.0)" font-family="sans-serif" font-size="13">Mean ranking delta</text>
+<text x="75" y="442.00" text-anchor="end" font-family="sans-serif" font-size="11">0.115</text>
+<text x="75" y="364.00" text-anchor="end" font-family="sans-serif" font-size="11">0.155</text>
+<text x="75" y="286.00" text-anchor="end" font-family="sans-serif" font-size="11">0.194</text>
+<text x="75" y="208.00" text-anchor="end" font-family="sans-serif" font-size="11">0.233</text>
+<text x="75" y="130.00" text-anchor="end" font-family="sans-serif" font-size="11">0.273</text>
+<text x="75" y="52.00" text-anchor="end" font-family="sans-serif" font-size="11">0.312</text>
+<text x="82.00" y="458" text-anchor="middle" font-family="sans-serif" font-size="11">0</text>
+<text x="163.11" y="458" text-anchor="middle" font-family="sans-serif" font-size="11">0.1</text>
+<text x="284.78" y="458" text-anchor="middle" font-family="sans-serif" font-size="11">0.25</text>
+<text x="487.56" y="458" text-anchor="middle" font-family="sans-serif" font-size="11">0.5</text>
+<text x="690.33" y="458" text-anchor="middle" font-family="sans-serif" font-size="11">0.75</text>
+<text x="812.00" y="458" text-anchor="middle" font-family="sans-serif" font-size="11">0.9</text>
+<polyline points="82.00,391.16 163.11,369.40 284.78,357.14 487.56,322.32 690.33,225.00 812.00,99.19" fill="none" stroke="#9ecae1" stroke-width="2"/>
+<circle cx="82.00" cy="391.16" r="3" fill="#9ecae1"/>
+<circle cx="163.11" cy="369.40" r="3" fill="#9ecae1"/>
+<circle cx="284.78" cy="357.14" r="3" fill="#9ecae1"/>
+<circle cx="487.56" cy="322.32" r="3" fill="#9ecae1"/>
+<circle cx="690.33" cy="225.00" r="3" fill="#9ecae1"/>
+<circle cx="812.00" cy="99.19" r="3" fill="#9ecae1"/>
+<text x="92" y="64" font-family="sans-serif" font-size="11" fill="#9ecae1">replicate 0</text>
+<polyline points="82.00,385.62 163.11,384.83 284.78,365.84 487.56,329.84 690.33,228.16 812.00,90.49" fill="none" stroke="#fdae6b" stroke-width="2"/>
+<circle cx="82.00" cy="385.62" r="3" fill="#fdae6b"/>
+<circle cx="163.11" cy="384.83" r="3" fill="#fdae6b"/>
+<circle cx="284.78" cy="365.84" r="3" fill="#fdae6b"/>
+<circle cx="487.56" cy="329.84" r="3" fill="#fdae6b"/>
+<circle cx="690.33" cy="228.16" r="3" fill="#fdae6b"/>
+<circle cx="812.00" cy="90.49" r="3" fill="#fdae6b"/>
+<text x="92" y="81" font-family="sans-serif" font-size="11" fill="#fdae6b">replicate 1</text>
+<polyline points="82.00,400.26 163.11,379.69 284.78,365.84 487.56,322.32 690.33,217.09 812.00,85.74" fill="none" stroke="#a1d99b" stroke-width="2"/>
+<circle cx="82.00" cy="400.26" r="3" fill="#a1d99b"/>
+<circle cx="163.11" cy="379.69" r="3" fill="#a1d99b"/>
+<circle cx="284.78" cy="365.84" r="3" fill="#a1d99b"/>
+<circle cx="487.56" cy="322.32" r="3" fill="#a1d99b"/>
+<circle cx="690.33" cy="217.09" r="3" fill="#a1d99b"/>
+<circle cx="812.00" cy="85.74" r="3" fill="#a1d99b"/>
+<text x="92" y="98" font-family="sans-serif" font-size="11" fill="#a1d99b">replicate 2</text>
+<polyline points="82.00,396.70 163.11,382.46 284.78,357.93 487.56,336.96 690.33,255.07 812.00,108.29" fill="none" stroke="#bcbddc" stroke-width="2"/>
+<circle cx="82.00" cy="396.70" r="3" fill="#bcbddc"/>
+<circle cx="163.11" cy="382.46" r="3" fill="#bcbddc"/>
+<circle cx="284.78" cy="357.93" r="3" fill="#bcbddc"/>
+<circle cx="487.56" cy="336.96" r="3" fill="#bcbddc"/>
+<circle cx="690.33" cy="255.07" r="3" fill="#bcbddc"/>
+<circle cx="812.00" cy="108.29" r="3" fill="#bcbddc"/>
+<text x="92" y="115" font-family="sans-serif" font-size="11" fill="#bcbddc">replicate 3</text>
+</svg>

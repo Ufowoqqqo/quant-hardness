@@ -1,0 +1,16 @@
+{
+  "schema_version":1,
+  "run_id":"phase2b_clustered_geometry_v1",
+  "git_commit":"cbc944c773ac7d38d1f514d66aa46d87341e3cc9",
+  "dirty_worktree":1,
+  "faiss_commit":"20f14b31a6d54e243a3d1de6ae193fc4c3ec18ed",
+  "replicate_count":4,
+  "condition_count_per_replicate":6,
+  "distribution":"balanced 16-component Gaussian mixture; query and database IID conditional on shared centers",
+  "generator":"sqrt(1-rho)*z + sqrt(rho*d)*c_j; unit c_j; uniform j",
+  "fixed_parameters":{"base_vectors":20000,"queries":500,"dimension":64,"clusters":16,"hnsw_m":16,"ef_construction":80,"fixed_ef_search":256,"pq_m":32,"pq_nbits":8,"k":10},
+  "candidate_semantics":"L0-only including the re-evaluated level-0 seed; upper-only sets recorded separately",
+  "pq_quality_sampling":{"queries":100,"distance_pairs_per_query":100,"order_pairs_per_query":100,"relative_error":"absolute error / exact distance","inversion":"strict reversal; ties are not inversions"},
+  "pre_registered_thresholds":{"exact_recall_calibration_trigger":0.90,"matched_exact_recall_target":0.95,"no_evidence_max_abs_mean_delta_discovery":0.01,"no_evidence_min_rerank_recovery":0.90,"emerging_min_mean_delta_discovery":0.03,"emerging_max_rerank_recovery":0.80,"emerging_required_replicates":3},
+  "machine":{"hostname":"rwcpu8.cse.ust.hk","kernel":"Linux 5.14.0-687.24.1.el9_8.x86_64 x86_64","hardware_concurrency":24,"compiler":"11.5.0 20240719 (Red Hat 11.5.0-14)"}
+}

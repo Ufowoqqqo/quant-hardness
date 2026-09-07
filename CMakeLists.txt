@@ -94,7 +94,9 @@ target_compile_options(qh_metrics PRIVATE -Wall -Wextra -Wpedantic)
 
 add_library(qh_instrumentation
     src/instrumentation/faiss_distance_recorder.cpp
-    src/instrumentation/paired_decomposition.cpp)
+    src/instrumentation/faiss_level0_recorder.cpp
+    src/instrumentation/paired_decomposition.cpp
+    src/instrumentation/paired_decomposition_l0.cpp)
 target_include_directories(qh_instrumentation PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/src)
 target_link_libraries(qh_instrumentation PUBLIC faiss_pinned)
@@ -153,6 +155,17 @@ target_compile_definitions(faiss_query_shift PRIVATE
 target_compile_options(faiss_query_shift PRIVATE
     -Wall -Wextra -Wpedantic)
 
+add_executable(faiss_clustered_geometry
+    src/experiments/faiss_clustered_geometry.cpp)
+target_link_libraries(faiss_clustered_geometry PRIVATE
+    qh_faiss_backend qh_instrumentation qh_metrics)
+target_compile_definitions(faiss_clustered_geometry PRIVATE
+    QH_FAISS_COMMIT="${QH_FAISS_EXPECTED_COMMIT}"
+    QH_GIT_COMMIT="${QH_GIT_COMMIT}"
+    QH_GIT_DIRTY=${QH_GIT_DIRTY})
+target_compile_options(faiss_clustered_geometry PRIVATE
+    -Wall -Wextra -Wpedantic)
+
 add_executable(phase1_correctness
     tests/phase1_correctness.cpp)
 target_link_libraries(phase1_correctness PRIVATE
@@ -167,6 +180,13 @@ target_link_libraries(decomposition_correctness PRIVATE
 target_compile_options(decomposition_correctness PRIVATE
     -Wall -Wextra -Wpedantic)
 
+add_executable(candidate_semantics_regression
+    tests/candidate_semantics_regression.cpp)
+target_link_libraries(candidate_semantics_regression PRIVATE
+    qh_faiss_backend qh_instrumentation qh_metrics)
+target_compile_options(candidate_semantics_regression PRIVATE
+    -Wall -Wextra -Wpedantic)
+
 enable_testing()
 add_test(
     NAME faiss_backend_validation
@@ -174,3 +194,4 @@ add_test(
             ${CMAKE_CURRENT_SOURCE_DIR}/configs/indexes/faiss_hnsw_poc.conf)
 add_test(NAME phase1_correctness COMMAND phase1_correctness)
 add_test(NAME decomposition_correctness COMMAND decomposition_correctness)
+add_test(NAME candidate_semantics_regression COMMAND candidate_semantics_regression)

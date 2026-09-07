@@ -1,0 +1,1682 @@
+[
+  {
+    "descriptor": "distance_to_generating_center",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0,
+    "spearman_rho": 0.014972157455893427
+  },
+  {
+    "descriptor": "distance_to_nearest_center",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0,
+    "spearman_rho": 0.014972157455893427
+  },
+  {
+    "descriptor": "distance_to_second_center",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0,
+    "spearman_rho": 0.014972157455893427
+  },
+  {
+    "descriptor": "cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "normalized_cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0,
+    "spearman_rho": -0.007954277128724303
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0,
+    "spearman_rho": 0.029116309365161738
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0,
+    "spearman_rho": 0.03150083136211231
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0,
+    "spearman_rho": 0.02843383311300448
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0,
+    "spearman_rho": 0.014972157455893427
+  },
+  {
+    "descriptor": "distance_to_generating_center",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.1,
+    "spearman_rho": -0.01488235196140101
+  },
+  {
+    "descriptor": "distance_to_nearest_center",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.1,
+    "spearman_rho": -0.023448826133770004
+  },
+  {
+    "descriptor": "distance_to_second_center",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.1,
+    "spearman_rho": -0.025261263686658778
+  },
+  {
+    "descriptor": "cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.1,
+    "spearman_rho": -0.027037448579847218
+  },
+  {
+    "descriptor": "normalized_cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.1,
+    "spearman_rho": -0.023826010140355656
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.1,
+    "spearman_rho": -0.06072066438039308
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.1,
+    "spearman_rho": -0.03442722591094564
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.1,
+    "spearman_rho": 0.04809350145733151
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.1,
+    "spearman_rho": 0.06165189846919133
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.1,
+    "spearman_rho": -0.02859914671281403
+  },
+  {
+    "descriptor": "distance_to_generating_center",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.25,
+    "spearman_rho": -0.06790121331389397
+  },
+  {
+    "descriptor": "distance_to_nearest_center",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.25,
+    "spearman_rho": -0.06790121331389397
+  },
+  {
+    "descriptor": "distance_to_second_center",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.25,
+    "spearman_rho": -0.00017586768019753639
+  },
+  {
+    "descriptor": "cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.25,
+    "spearman_rho": 0.06855709032094036
+  },
+  {
+    "descriptor": "normalized_cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.25,
+    "spearman_rho": 0.07372546221930702
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.25,
+    "spearman_rho": -0.019844033512766594
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.25,
+    "spearman_rho": -0.06407284624366048
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.25,
+    "spearman_rho": -0.09340202694253674
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.25,
+    "spearman_rho": -0.0801035288846475
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.25,
+    "spearman_rho": -0.011233134490880559
+  },
+  {
+    "descriptor": "distance_to_generating_center",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.5,
+    "spearman_rho": -0.07583157529242343
+  },
+  {
+    "descriptor": "distance_to_nearest_center",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.5,
+    "spearman_rho": -0.07583157529242343
+  },
+  {
+    "descriptor": "distance_to_second_center",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.5,
+    "spearman_rho": -0.07459097692363123
+  },
+  {
+    "descriptor": "cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.5,
+    "spearman_rho": -0.0023261219414853814
+  },
+  {
+    "descriptor": "normalized_cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.5,
+    "spearman_rho": 0.043886167296024195
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.5,
+    "spearman_rho": -0.07490112651582928
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.5,
+    "spearman_rho": -0.07521127610802733
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.5,
+    "spearman_rho": 0.024346742987546993
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.5,
+    "spearman_rho": 0.05257035587756962
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.5,
+    "spearman_rho": -0.07335037855483903
+  },
+  {
+    "descriptor": "distance_to_generating_center",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.75,
+    "spearman_rho": 0.01226900982615991
+  },
+  {
+    "descriptor": "distance_to_nearest_center",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.75,
+    "spearman_rho": 0.01226900982615991
+  },
+  {
+    "descriptor": "distance_to_second_center",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.75,
+    "spearman_rho": -0.049733307688183924
+  },
+  {
+    "descriptor": "cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.75,
+    "spearman_rho": -0.030015256181855493
+  },
+  {
+    "descriptor": "normalized_cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.75,
+    "spearman_rho": -0.024976198574682675
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.75,
+    "spearman_rho": -0.0004381789223628539
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.75,
+    "spearman_rho": 0.01161174144261563
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.75,
+    "spearman_rho": 0.01161174144261563
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.75,
+    "spearman_rho": 0.015336262282699888
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.75,
+    "spearman_rho": -0.012926278209704191
+  },
+  {
+    "descriptor": "distance_to_generating_center",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.9,
+    "spearman_rho": -0.04853841117899496
+  },
+  {
+    "descriptor": "distance_to_nearest_center",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.9,
+    "spearman_rho": -0.04853841117899496
+  },
+  {
+    "descriptor": "distance_to_second_center",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.9,
+    "spearman_rho": -0.03241063238469631
+  },
+  {
+    "descriptor": "cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.9,
+    "spearman_rho": 0.002946421125881483
+  },
+  {
+    "descriptor": "normalized_cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.9,
+    "spearman_rho": 0.03396138034568657
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.9,
+    "spearman_rho": -0.02062494788117038
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.9,
+    "spearman_rho": -0.04915871036339106
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.9,
+    "spearman_rho": -0.05815304853713454
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.9,
+    "spearman_rho": -0.0463673640336086
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 500,
+    "replicate_id": 0,
+    "rho": 0.9,
+    "spearman_rho": 0.039544073005251486
+  },
+  {
+    "descriptor": "distance_to_generating_center",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0,
+    "spearman_rho": 0.007061088975665069
+  },
+  {
+    "descriptor": "distance_to_nearest_center",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0,
+    "spearman_rho": 0.007061088975665069
+  },
+  {
+    "descriptor": "distance_to_second_center",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0,
+    "spearman_rho": 0.007061088975665069
+  },
+  {
+    "descriptor": "cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "normalized_cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0,
+    "spearman_rho": -0.039579367249763485
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0,
+    "spearman_rho": -0.002867327127678607
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0,
+    "spearman_rho": 0.048871547276634036
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0,
+    "spearman_rho": 0.05686079241091872
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0,
+    "spearman_rho": 0.007061088975665069
+  },
+  {
+    "descriptor": "distance_to_generating_center",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.1,
+    "spearman_rho": 0.011977451818459174
+  },
+  {
+    "descriptor": "distance_to_nearest_center",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.1,
+    "spearman_rho": 0.01140824239443437
+  },
+  {
+    "descriptor": "distance_to_second_center",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.1,
+    "spearman_rho": -0.008090399211296975
+  },
+  {
+    "descriptor": "cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.1,
+    "spearman_rho": -0.051486254984003416
+  },
+  {
+    "descriptor": "normalized_cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.1,
+    "spearman_rho": -0.051931801340104895
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.1,
+    "spearman_rho": 0.011439083304836554
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.1,
+    "spearman_rho": -0.009721374346837801
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.1,
+    "spearman_rho": -0.06668209214514886
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.1,
+    "spearman_rho": -0.06524988457772962
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.1,
+    "spearman_rho": -0.014986486662488599
+  },
+  {
+    "descriptor": "distance_to_generating_center",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.25,
+    "spearman_rho": -0.009201757369619933
+  },
+  {
+    "descriptor": "distance_to_nearest_center",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.25,
+    "spearman_rho": -0.009201757369619933
+  },
+  {
+    "descriptor": "distance_to_second_center",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.25,
+    "spearman_rho": 0.03768338732320544
+  },
+  {
+    "descriptor": "cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.25,
+    "spearman_rho": 0.04600878684809966
+  },
+  {
+    "descriptor": "normalized_cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.25,
+    "spearman_rho": 0.04688514469282537
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.25,
+    "spearman_rho": 0.054334186372993885
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.25,
+    "spearman_rho": 0.0333015980995769
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.25,
+    "spearman_rho": -0.05104784445527248
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.25,
+    "spearman_rho": -0.06046869128607384
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.25,
+    "spearman_rho": 0.024099840729956967
+  },
+  {
+    "descriptor": "distance_to_generating_center",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.5,
+    "spearman_rho": 0.07707217366121563
+  },
+  {
+    "descriptor": "distance_to_nearest_center",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.5,
+    "spearman_rho": 0.07707217366121563
+  },
+  {
+    "descriptor": "distance_to_second_center",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.5,
+    "spearman_rho": -0.06559663874988776
+  },
+  {
+    "descriptor": "cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.5,
+    "spearman_rho": -0.07738232325341368
+  },
+  {
+    "descriptor": "normalized_cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.5,
+    "spearman_rho": -0.07738232325341368
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.5,
+    "spearman_rho": 0.07707217366121563
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.5,
+    "spearman_rho": 0.07459097692363123
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.5,
+    "spearman_rho": -0.05815304853713454
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.5,
+    "spearman_rho": -0.07210978018604683
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.5,
+    "spearman_rho": 0.027758388501725552
+  },
+  {
+    "descriptor": "distance_to_generating_center",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "distance_to_nearest_center",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "distance_to_second_center",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "normalized_cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "distance_to_generating_center",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.9,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "distance_to_nearest_center",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.9,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "distance_to_second_center",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.9,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.9,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "normalized_cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.9,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.9,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.9,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.9,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.9,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 500,
+    "replicate_id": 1,
+    "rho": 0.9,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "distance_to_generating_center",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0,
+    "spearman_rho": 0.04317737563381987
+  },
+  {
+    "descriptor": "distance_to_nearest_center",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0,
+    "spearman_rho": 0.04317737563381987
+  },
+  {
+    "descriptor": "distance_to_second_center",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0,
+    "spearman_rho": 0.04317737563381987
+  },
+  {
+    "descriptor": "cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "normalized_cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0,
+    "spearman_rho": 0.0041037270367823555
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0,
+    "spearman_rho": 0.03595760396451707
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0,
+    "spearman_rho": 0.09742902723036909
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0,
+    "spearman_rho": 0.0882954783389514
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0,
+    "spearman_rho": 0.04317737563381987
+  },
+  {
+    "descriptor": "distance_to_generating_center",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.1,
+    "spearman_rho": 0.0609348420804526
+  },
+  {
+    "descriptor": "distance_to_nearest_center",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.1,
+    "spearman_rho": 0.06463969573416085
+  },
+  {
+    "descriptor": "distance_to_second_center",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.1,
+    "spearman_rho": 0.085348545320298
+  },
+  {
+    "descriptor": "cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.1,
+    "spearman_rho": 0.03896572304452151
+  },
+  {
+    "descriptor": "normalized_cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.1,
+    "spearman_rho": 0.03380444613597234
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.1,
+    "spearman_rho": 0.0565085795118419
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.1,
+    "spearman_rho": 0.07632643445211572
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.1,
+    "spearman_rho": 0.05448576348404445
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.1,
+    "spearman_rho": 0.030572996995919255
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.1,
+    "spearman_rho": 0.08287053676511408
+  },
+  {
+    "descriptor": "distance_to_generating_center",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.25,
+    "spearman_rho": 0.04160210729295225
+  },
+  {
+    "descriptor": "distance_to_nearest_center",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.25,
+    "spearman_rho": 0.041705490904688655
+  },
+  {
+    "descriptor": "distance_to_second_center",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.25,
+    "spearman_rho": -0.045193854061988004
+  },
+  {
+    "descriptor": "cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.25,
+    "spearman_rho": -0.08591699222047973
+  },
+  {
+    "descriptor": "normalized_cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.25,
+    "spearman_rho": -0.0862252671433792
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.25,
+    "spearman_rho": -0.0325391580552292
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.25,
+    "spearman_rho": 0.039618017373357815
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.25,
+    "spearman_rho": 0.05211117648677848
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.25,
+    "spearman_rho": 0.055569108177719935
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.25,
+    "spearman_rho": -0.043727724374581
+  },
+  {
+    "descriptor": "distance_to_generating_center",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.5,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "distance_to_nearest_center",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.5,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "distance_to_second_center",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.5,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.5,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "normalized_cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.5,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.5,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.5,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.5,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.5,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.5,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "distance_to_generating_center",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "distance_to_nearest_center",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "distance_to_second_center",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "normalized_cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "distance_to_generating_center",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.9,
+    "spearman_rho": 0.03210048279249826
+  },
+  {
+    "descriptor": "distance_to_nearest_center",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.9,
+    "spearman_rho": 0.03210048279249826
+  },
+  {
+    "descriptor": "distance_to_second_center",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.9,
+    "spearman_rho": 0.03458167953008267
+  },
+  {
+    "descriptor": "cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.9,
+    "spearman_rho": 0.014421956037209365
+  },
+  {
+    "descriptor": "normalized_cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.9,
+    "spearman_rho": -0.011630609707426907
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.9,
+    "spearman_rho": -0.03830347463645928
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.9,
+    "spearman_rho": 0.040784671374043686
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.9,
+    "spearman_rho": 0.07490112651582928
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.9,
+    "spearman_rho": 0.07241992977824488
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 500,
+    "replicate_id": 2,
+    "rho": 0.9,
+    "spearman_rho": -0.047918111994598854
+  },
+  {
+    "descriptor": "distance_to_generating_center",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0,
+    "spearman_rho": -0.024340001779654123
+  },
+  {
+    "descriptor": "distance_to_nearest_center",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0,
+    "spearman_rho": -0.024340001779654123
+  },
+  {
+    "descriptor": "distance_to_second_center",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0,
+    "spearman_rho": -0.024340001779654123
+  },
+  {
+    "descriptor": "cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "normalized_cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0,
+    "spearman_rho": -0.018848386062272116
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0,
+    "spearman_rho": -0.031888278682847604
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0,
+    "spearman_rho": -0.03192410832159688
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0,
+    "spearman_rho": -0.02977692490083946
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0,
+    "spearman_rho": -0.024340001779654123
+  },
+  {
+    "descriptor": "distance_to_generating_center",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.1,
+    "spearman_rho": -0.07315041898880416
+  },
+  {
+    "descriptor": "distance_to_nearest_center",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.1,
+    "spearman_rho": -0.06296185318091187
+  },
+  {
+    "descriptor": "distance_to_second_center",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.1,
+    "spearman_rho": -0.04183766367641618
+  },
+  {
+    "descriptor": "cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.1,
+    "spearman_rho": 0.05354456434768104
+  },
+  {
+    "descriptor": "normalized_cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.1,
+    "spearman_rho": 0.06268666381680067
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.1,
+    "spearman_rho": -0.005827313905377645
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.1,
+    "spearman_rho": -0.037762903378122895
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.1,
+    "spearman_rho": -0.09514175268318156
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.1,
+    "spearman_rho": -0.0848200828154203
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.1,
+    "spearman_rho": -0.04885504291768061
+  },
+  {
+    "descriptor": "distance_to_generating_center",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.25,
+    "spearman_rho": 0.03299440424668509
+  },
+  {
+    "descriptor": "distance_to_nearest_center",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.25,
+    "spearman_rho": 0.03299440424668509
+  },
+  {
+    "descriptor": "distance_to_second_center",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.25,
+    "spearman_rho": 0.07004518477498319
+  },
+  {
+    "descriptor": "cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.25,
+    "spearman_rho": 0.022833410048263933
+  },
+  {
+    "descriptor": "normalized_cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.25,
+    "spearman_rho": 0.01729641743095642
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.25,
+    "spearman_rho": 0.02391769134902742
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.25,
+    "spearman_rho": 0.04704967564707775
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.25,
+    "spearman_rho": 0.06861999406961283
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.25,
+    "spearman_rho": 0.058678474226445114
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.25,
+    "spearman_rho": 0.07132944397812227
+  },
+  {
+    "descriptor": "distance_to_generating_center",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.5,
+    "spearman_rho": -0.016903152774793772
+  },
+  {
+    "descriptor": "distance_to_nearest_center",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.5,
+    "spearman_rho": -0.016903152774793772
+  },
+  {
+    "descriptor": "distance_to_second_center",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.5,
+    "spearman_rho": 0.04977900954778716
+  },
+  {
+    "descriptor": "cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.5,
+    "spearman_rho": 0.06001394609032284
+  },
+  {
+    "descriptor": "normalized_cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.5,
+    "spearman_rho": 0.05939364690592674
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.5,
+    "spearman_rho": -0.021245247065566485
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.5,
+    "spearman_rho": -0.03396138034568657
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.5,
+    "spearman_rho": -0.03117003401590411
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.5,
+    "spearman_rho": -0.021245247065566485
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.5,
+    "spearman_rho": 0.044506466480420295
+  },
+  {
+    "descriptor": "distance_to_generating_center",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "distance_to_nearest_center",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "distance_to_second_center",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "normalized_cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.75,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "distance_to_generating_center",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.9,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "distance_to_nearest_center",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.9,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "distance_to_second_center",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.9,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.9,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "normalized_cluster_center_margin",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.9,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "exact_nn_distance_squared",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.9,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "exact_10th_distance_squared",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.9,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "nn_margin_squared",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.9,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "normalized_nn_margin_by_10th",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.9,
+    "spearman_rho": null
+  },
+  {
+    "descriptor": "query_l2_norm",
+    "query_count": 500,
+    "replicate_id": 3,
+    "rho": 0.9,
+    "spearman_rho": null
+  }
+]

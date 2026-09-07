@@ -1,5 +1,7 @@
 #include "graph/faiss_shared_hnsw.h"
 #include "instrumentation/faiss_distance_recorder.h"
+#include "instrumentation/faiss_level0_recorder.h"
+#include "instrumentation/paired_decomposition_l0.h"
 #include "metrics/candidate_oracle.h"
 #include "metrics/ground_truth.h"
 #include "metrics/recall.h"
@@ -99,6 +101,37 @@ void test_instrumented_search_controls() {
           "instrumentation changed PQ native results");
   require(quant_hardness::graph_fingerprint(graph.hnsw) == fingerprint,
           "instrumented exact/PQ search changed graph fingerprint");
+
+  const auto exact_phased = quant_hardness::search_with_level0_recording(
+      graph, exact_storage, queries.data(), query_count, k, parameters);
+  const auto pq_phased = quant_hardness::search_with_level0_recording(
+      graph, pq_storage, queries.data(), query_count, k, parameters);
+  require(exact_phased.native.ids == exact_uninstrumented.ids &&
+              exact_phased.native.distances == exact_uninstrumented.distances,
+          "phase-separated replay changed exact native results");
+  require(pq_phased.native.ids == pq_uninstrumented.ids &&
+              pq_phased.native.distances == pq_uninstrumented.distances,
+          "phase-separated replay changed PQ native results");
+  bool observed_upper_only = false;
+  for (faiss::idx_t query_id = 0; query_id < query_count; ++query_id) {
+    const auto &upper = exact_phased.upper_only_evaluated_ids[query_id];
+    const auto &level0 = exact_phased.level0_evaluated_ids[query_id];
+    observed_upper_only = observed_upper_only || !upper.empty();
+    std::vector<faiss::idx_t> overlap;
+    std::set_intersection(upper.begin(), upper.end(), level0.begin(),
+                          level0.end(), std::back_inserter(overlap));
+    require(overlap.empty(), "upper-level-only node leaked into V_L0");
+  }
+  require(observed_upper_only,
+          "deterministic test did not exercise upper-level-only evaluations");
+
+  const auto l0_rows = quant_hardness::measure_paired_decomposition_l0(
+      graph, exact_storage, pq_storage, base.data(), base_count, queries.data(),
+      query_count, dimension, k, truth.ids, parameters);
+  for (const auto &row : l0_rows) {
+    require(row.delta_exact_control == 0.0,
+            "exact L0 oracle differs from exact native result");
+  }
 
   for (faiss::idx_t query_id = 0; query_id < query_count; ++query_id) {
     const auto exact_ids = exact_recording.sorted_evaluated_ids(query_id);

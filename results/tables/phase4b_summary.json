@@ -1,0 +1,20 @@
+{
+  "queries": 14252,
+  "frozen_threshold": 710.40625,
+  "actual_refined_queries": 3556,
+  "actual_refined_fraction": 0.24950884086444008,
+  "deviation_from_25_percentage_points": -0.04911591355599154,
+  "gap_beats_random_mean": true,
+  "gap_above_random_p975": true,
+  "gap_minus_random_mean_recall": 0.0077165777902517,
+  "gap_loss_spearman": -0.3567374821964861,
+  "exact_eval_saving": 0.7504911591355599,
+  "latency_saving": 0.012042108327720458,
+  "all16_gain_retained": 0.336724313326552,
+  "useful_systems_signal": false,
+  "gap_dominated_by": [],
+  "mean_latency_saving_rep_std": 0.0012971704842737017,
+  "primary_timing": "component clocks OFF, pooled equal-length7 repetitions; on-clock measurements separate",
+  "timed_random_mask": 0,
+  "GT_tie_query_count": 271
+}

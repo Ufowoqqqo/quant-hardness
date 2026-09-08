@@ -1,0 +1,14 @@
+{
+  "secondary_metric": "strict-distance hits plus capped GT boundary ties",
+  "recalls": {
+    "NATIVE": 0.8503438113948921,
+    "GAP": 0.880676396295257,
+    "ALL16": 0.9405346618018524,
+    "ORACLE": 0.9510174010665171,
+    "RANDOM": 0.8726915520628685
+  },
+  "random_mean_recall": 0.8729525680606234,
+  "gap_minus_random_mean": 0.0077238282346335785,
+  "selected_harmful_ID_queries": 0,
+  "selected_harmful_tie_aware_queries": 0
+}

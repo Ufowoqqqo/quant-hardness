@@ -1,0 +1,10 @@
+test_fixed_numeric_inclusive_threshold (test_phase4b_metrics.Phase4BTests) ... ok
+test_id_recall_and_validation (test_phase4b_metrics.Phase4BTests) ... ok
+test_latency_units_and_quantiles (test_phase4b_metrics.Phase4BTests) ... ok
+test_negative_system_savings_not_clipped (test_phase4b_metrics.Phase4BTests) ... ok
+test_random_matches_actual_not_nominal (test_phase4b_metrics.Phase4BTests) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.004s
+
+OK

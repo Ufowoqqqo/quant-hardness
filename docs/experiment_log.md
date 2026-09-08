@@ -1672,3 +1672,103 @@ native results, and exactly L distances per selected query. 27 controls,
 2,856,000 counted FP32 distances, PASS. This validates executable refinement
 semantics and cost counting in addition to offline replay; not a speed test.
 Final audit refreshed to include this additional raw validation/source.
+
+## Phase 4B — frozen streaming systems gatekeeper (2026-09-08)
+
+Execution commit `31e7412687522be5366c75a0eeaba7fcab80fe22` plus recorded
+source/binary hashes; FAISS `20f14b31a6d54e243a3d1de6ae193fc4c3ec18ed`.
+Configuration: `configs/indexes/phase4b_streaming_feasibility.conf`.
+Preregistration and threshold provenance were recorded before outcomes under
+`runs/phase4b_streaming_feasibility_v1/`. Same graph/model as Phase4A, no
+retraining or graph rebuild. Final14252 unused eligible learning vectors,
+ef64/k10/PQ64x8/L16, inclusive frozen threshold710.40625, not a test percentile.
+Seven repeats,512 separate old-query warmups,CPU2/single thread,30 random masks,
+batch32 secondary. Policy-order/random/GT/batch-order seeds respectively
+94100011/94100037/94100059/94100083. All vector IDs/checksums preserved.
+
+Commands executed (all relative to repository root; build revisions completed
+before timing, with no outcome-driven performance changes):
+
+```bash
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release > runs/phase4b_streaming_feasibility_v1/configure.log 2>&1
+cmake --build build --target faiss_phase4b -j 8 > runs/phase4b_streaming_feasibility_v1/build.log 2>&1
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/prepare_phase4b.py > runs/phase4b_streaming_feasibility_v1/prepare.log 2>&1
+cmake --build build --target faiss_phase4b -j 8 > runs/phase4b_streaming_feasibility_v1/build_final.log 2>&1
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 taskset -c 2 ./build/faiss_phase4b reference configs/indexes/phase4b_streaming_feasibility.conf > runs/phase4b_streaming_feasibility_v1/reference.log 2>&1
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python -m unittest discover -s tests -p test_phase4b_metrics.py -v > runs/phase4b_streaming_feasibility_v1/tests.log 2>&1
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=24 ./build/faiss_phase4b gt configs/indexes/phase4b_streaming_feasibility.conf > runs/phase4b_streaming_feasibility_v1/gt.log 2>&1
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 taskset -c 2 ./build/faiss_phase4b export configs/indexes/phase4b_streaming_feasibility.conf > runs/phase4b_streaming_feasibility_v1/export.log 2>&1
+cmake --build build --target faiss_phase4b -j 8 > runs/phase4b_streaming_feasibility_v1/build_stream_timer.log 2>&1
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/validate_phase4b.py > runs/phase4b_streaming_feasibility_v1/validation.log 2>&1
+ctest --test-dir build --output-on-failure > runs/phase4b_streaming_feasibility_v1/ctest.log 2>&1
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/run_phase4b_benchmarks.py > runs/phase4b_streaming_feasibility_v1/runner.log 2>&1
+# Runner launches these sequentially, with environment/process snapshots:
+# taskset -c 2 ./build/faiss_phase4b benchmark configs/indexes/phase4b_streaming_feasibility.conf
+# taskset -c 2 ./build/faiss_phase4b batch configs/indexes/phase4b_streaming_feasibility.conf
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/analyze_phase4b.py > runs/phase4b_streaming_feasibility_v1/analysis.log 2>&1
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python -m unittest discover -s tests -p 'test_phase*_metrics.py' -v > runs/phase4b_streaming_feasibility_v1/regression_tests.log 2>&1
+mktemp -d /tmp/phase4b-reproduce.XXXXXX
+# Returned /tmp/phase4b-reproduce.nGOpEJ
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/analyze_phase4b.py --tables /tmp/phase4b-reproduce.nGOpEJ/tables --figures /tmp/phase4b-reproduce.nGOpEJ/figures --derived /tmp/phase4b-reproduce.nGOpEJ/analysis > runs/phase4b_streaming_feasibility_v1/reproduction.log 2>&1
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/audit_phase4b.py --reproduction /tmp/phase4b-reproduce.nGOpEJ > runs/phase4b_streaming_feasibility_v1/audit.log 2>&1
+```
+
+Machine: i9-10920X,12 physical/24 logical cores,32,273,192 KiB RAM;
+GCC11.5.0; app `-O3 -DNDEBUG -std=c++20 -Wall -Wextra -Wpedantic -fopenmp`,
+FAISS generic CPU `-O3 -DNDEBUG -std=gnu++20 -fPIC -fopenmp`, FINTEGER=int.
+One OpenMP/OpenBLAS thread for timing. Performance governor/turbo enabled,
+unchanged. Frequency snapshots are idle readings, not active frequency locks.
+Read-only host process inspection (`ps -eo pid,comm,pcpu --sort=-pcpu`)
+found no competing heavy job. No unrelated processes or host settings changed.
+Shared-machine limitations, raw snapshots and complete environment are retained.
+
+Observations: selected3556/14252 (24.950884%), exact56896 (3.992141/query),
+threshold drift−0.049116 percentage points. Native/GAP/RANDOM-mask0/ALL16
+recall .850309/.880501/.872523/.939973; offline full candidate oracle .950365.
+RANDOM30 mean .872784, central95% allocation interval [.872184,.873504].
+GAP gain over randommean .007717; gap/loss Spearman−.356737. Selected outcomes:
+2823 improve,733 neutral,0 harmful. Refined/unrefined mean loss .139370/.086986.
+
+Primary mean microseconds native/GAP/random/all16:
+161.650/182.427/171.107/184.651; p95 189.410/215.582/217.673/218.145.
+GAP exact-saving75.0491%, latency-saving1.2042%, ALL16-gain-retained33.6724%.
+Frozen20%/60% targets both fail. Formally GAP is not dominated by these discrete
+points, but its latency saving is small. Clocks-ON components show ALL16
+exact-stage2.166 microseconds; GAP extraction/branch3.056, with retention also
+inside search. This is not a pure subtraction/branch overhead estimate.
+Batch32 scalar/indexed whole-path amortized182.37694/182.37550 microseconds:
+no meaningful acceleration. Batch completion (~6ms) is distinct from per-query
+streaming service latency.
+
+Anomalies/confounders: 271 GT boundary-tie queries; separate tie-aware metrics
+preserve the conclusion and show no selected harmful refinement. Phase4A's
+inclusive threshold tie would select2501 rather than its quota2500, explicitly
+recorded before evaluation. Offline GT uses FAISS direct FP32 exhaustive
+kernel rather than Phase4A's BLAS route;100 FP64 full-base validations pass.
+No new FP32 traversal was run, so no newly measured discoverydelta is claimed.
+Single resident-index machine, fixed query order, turbo/cache variation and
+integration-specific retention overhead limit deployment generality. Small
+negative ON−OFF timing differences reflect measurement drift, not negative
+timestamp overhead. Build NFS clock-skew and matplotlib cache-fallback warnings
+did not prevent successful output; no measured repetition was discarded.
+
+76 Python and5 C++ tests pass. All14252 public-native IDs, top16 full-sort
+references and policy results match; all14,744,891 candidate distances match
+independent FP64. Original graph/model/input hashes remain fixed. Timed
+correctness checks occur after each complete stream. Prior runs preserved.
+Full report: `docs/phase4b_streaming_feasibility.md`; per-query raw/timing data,
+22 tables and7 figures can be regenerated without new graph searches/training.
+
+Interpretation: held-out query risk generalizes but useful systems value is
+not demonstrated; reducing cheap exact distance work barely changes total
+latency. Do not proceed to learned query-risk modeling on this evidence.
+
+Exactly one next experiment: fixed-output ALL-L16 full-materialization versus
+bounded top16 candidate-retention ablation, with identical graph/model/L/ties
+and verified result IDs before timing. Measure end-to-end latency and scratch
+memory to isolate candidate accessibility as the next systems bottleneck.
+
+Final reproduction audit PASS:798112 timed query traces,57008 policy/query
+recall checks,30 exactly regenerated random masks, identical derived query
+rows and29 byte-identical tables/figures. Artifact hashes are preserved in
+`runs/phase4b_streaming_feasibility_v1/final_audit.json`.

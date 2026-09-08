@@ -1,0 +1,42 @@
+[
+  {
+    "policy": "NATIVE",
+    "FP32_vector_accesses": 0,
+    "nominal_FP32_payload_bytes": 0,
+    "nominal_payload_bytes_per_query": 0.0,
+    "additional_FP32_residency_if_PQ_only_baseline": 0,
+    "retention_tags_bytes": 0,
+    "threshold_bytes": 0,
+    "temporary_mean_live_candidate_ID_score_order_bytes": 0
+  },
+  {
+    "policy": "GAP",
+    "FP32_vector_accesses": 56896,
+    "nominal_FP32_payload_bytes": 29130752,
+    "nominal_payload_bytes_per_query": 2043.9764243614932,
+    "additional_FP32_residency_if_PQ_only_baseline": 512000000,
+    "retention_tags_bytes": 4000000,
+    "threshold_bytes": 8,
+    "temporary_mean_live_candidate_ID_score_order_bytes": 12415.007858546167
+  },
+  {
+    "policy": "RANDOM",
+    "FP32_vector_accesses": 56896,
+    "nominal_FP32_payload_bytes": 29130752,
+    "nominal_payload_bytes_per_query": 2043.9764243614932,
+    "additional_FP32_residency_if_PQ_only_baseline": 512000000,
+    "retention_tags_bytes": 4000000,
+    "threshold_bytes": 0,
+    "temporary_mean_live_candidate_ID_score_order_bytes": 12415.007858546167
+  },
+  {
+    "policy": "ALL16",
+    "FP32_vector_accesses": 228032,
+    "nominal_FP32_payload_bytes": 116752384,
+    "nominal_payload_bytes_per_query": 8192.0,
+    "additional_FP32_residency_if_PQ_only_baseline": 512000000,
+    "retention_tags_bytes": 4000000,
+    "threshold_bytes": 0,
+    "temporary_mean_live_candidate_ID_score_order_bytes": 12415.007858546167
+  }
+]

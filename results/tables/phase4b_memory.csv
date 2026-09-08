@@ -1,0 +1,5 @@
+policy,FP32_vector_accesses,nominal_FP32_payload_bytes,nominal_payload_bytes_per_query,additional_FP32_residency_if_PQ_only_baseline,retention_tags_bytes,threshold_bytes,temporary_mean_live_candidate_ID_score_order_bytes
+NATIVE,0,0,0.0,0,0,0,0
+GAP,56896,29130752,2043.9764243614932,512000000,4000000,8,12415.007858546167
+RANDOM,56896,29130752,2043.9764243614932,512000000,4000000,0,12415.007858546167
+ALL16,228032,116752384,8192.0,512000000,4000000,0,12415.007858546167

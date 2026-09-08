@@ -1,0 +1,30 @@
+[
+  {
+    "replicate": 0,
+    "latency_saving": 0.011773718903760555
+  },
+  {
+    "replicate": 1,
+    "latency_saving": 0.012150973853608638
+  },
+  {
+    "replicate": 2,
+    "latency_saving": 0.010925685804735852
+  },
+  {
+    "replicate": 3,
+    "latency_saving": 0.012088723410669577
+  },
+  {
+    "replicate": 4,
+    "latency_saving": 0.01479109435594994
+  },
+  {
+    "replicate": 5,
+    "latency_saving": 0.01114451219395074
+  },
+  {
+    "replicate": 6,
+    "latency_saving": 0.011408969063610552
+  }
+]

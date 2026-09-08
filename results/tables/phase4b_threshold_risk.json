@@ -1,0 +1,18 @@
+[
+  {
+    "group": "refined",
+    "queries": 3556,
+    "mean_ranking_loss": 0.1393700787401575,
+    "harmful_query_fraction": 0.8368953880764904,
+    "native_recall": 0.8067210348706413,
+    "oracle_recall": 0.9460911136107987
+  },
+  {
+    "group": "unrefined",
+    "queries": 10696,
+    "mean_ranking_loss": 0.08698578908002992,
+    "harmful_query_fraction": 0.6556656694091249,
+    "native_recall": 0.8647999252056845,
+    "oracle_recall": 0.9517857142857143
+  }
+]

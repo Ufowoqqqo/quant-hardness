@@ -1,0 +1,68 @@
+{
+  "git_commit": "31e7412687522be5366c75a0eeaba7fcab80fe22",
+  "faiss_commit": "20f14b31a6d54e243a3d1de6ae193fc4c3ec18ed",
+  "config": {
+    "run": "runs/phase4b_streaming_feasibility_v1",
+    "phase4a": "runs/phase4a_gap_guided_refinement_v1",
+    "graph_path": "/rwproject/kdd-db/kluaq/dataset/sift1m/phase3a_cache_v1/hnsw_fp32.index",
+    "base_path": "/rwproject/kdd-db/kluaq/dataset/sift1m/hf_download/sift_base.fvecs",
+    "model_path": "runs/phase4a_gap_guided_refinement_v1/model.index",
+    "graph_fingerprint": "1b3c18f6e2dd3ccec56e74eed30458f60a65f01234bf51478af25d84b5c02d16",
+    "dimension": "128",
+    "base_count": "1000000",
+    "query_count": "14252",
+    "ef_search": "64",
+    "k": "10",
+    "L": "16",
+    "gap_threshold": "710.40625",
+    "threads": "1",
+    "cpu": "2",
+    "warmup_queries": "512",
+    "repetitions": "7",
+    "order_seed": "94100011",
+    "random_seed": "94100037",
+    "random_replicates": "30",
+    "representative_random_replicate": "0",
+    "gt_seed": "94100059",
+    "gt_validation_queries": "100",
+    "offline_gt_threads": "24",
+    "batch_size": "32",
+    "batch_order_seed": "94100083",
+    "epsilon": "1e-12",
+    "target_latency_saving": "0.20",
+    "target_recall_gain_retained": "0.60"
+  },
+  "sha256": {
+    "configs/indexes/phase4b_streaming_feasibility.conf": "341f1ce82d3120193c9e6879c71b165be905a754e2d2ff0e16cfe3fbac084d25",
+    "runs/phase4b_streaming_feasibility_v1/preregistration.md": "8cb79758fa0c10dabc32e50daf8fa852718d8f26bca1f5b5554902d35939b2a0",
+    "runs/phase4b_streaming_feasibility_v1/threshold_provenance.json": "65fdf2eecfa00f54cdbe96698bdeeaaef819a63c88acf88692740afa8e9e797b",
+    "/rwproject/kdd-db/kluaq/dataset/sift1m/phase3a_cache_v1/hnsw_fp32.index": "f1ff815e57dfdd77664e4c1386f9f9db29946f56688718568c4d83fb14a402e4",
+    "runs/phase4a_gap_guided_refinement_v1/model.index": "4e766507d0ba3eedef7d820eada6befe10f2f390616e319beaf26164403703a7",
+    "runs/phase4b_streaming_feasibility_v1/queries.f32": "368a7784e01b427ba8bfa1e2fd869fb48066bb109e9c0b3bcc28525ec55ed820",
+    "runs/phase4b_streaming_feasibility_v1/warmup.f32": "de05cd724d4d78db58154d6d9fa127b76eaa01189367c4c73d4bbc10db5a013e",
+    "runs/phase4b_streaming_feasibility_v1/queries_learn_ids.i64": "4225c998b2223587e6eb2efa993aa366e3d8171ce8a5a6d15a274fd45e02a74d",
+    "runs/phase4b_streaming_feasibility_v1/benchmark_order.i32": "bbf4dc8f845971b57672f961c45e19df65d5fe2fd27b8335a1e909c1ae65575e",
+    "runs/phase4b_streaming_feasibility_v1/batch_order.i32": "6d5bdffad188cb9839b8009dfca809a5706ea3c03fa8eb01fd6ef69498c40150"
+  },
+  "machine": {
+    "system": "Linux",
+    "node": "rwcpu8.cse.ust.hk",
+    "release": "5.14.0-687.24.1.el9_8.x86_64",
+    "version": "#1 SMP PREEMPT_DYNAMIC Thu Jul 9 18:14:06 EDT 2026",
+    "machine": "x86_64"
+  },
+  "lscpu": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           46 bits physical, 48 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  24\nOn-line CPU(s) list:                     0-23\nVendor ID:                               GenuineIntel\nModel name:                              Intel(R) Core(TM) i9-10920X CPU @ 3.50GHz\nCPU family:                              6\nModel:                                   85\nThread(s) per core:                      2\nCore(s) per socket:                      12\nSocket(s):                               1\nStepping:                                7\nCPU(s) scaling MHz:                      42%\nCPU max MHz:                             4800.0000\nCPU min MHz:                             1200.0000\nBogoMIPS:                                6999.82\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts hwp hwp_act_window hwp_epp hwp_pkg_req vnmi avx512_vnni md_clear flush_l1d arch_capabilities\nVirtualization:                          VT-x\nL1d cache:                               384 KiB (12 instances)\nL1i cache:                               384 KiB (12 instances)\nL2 cache:                                12 MiB (12 instances)\nL3 cache:                                19.3 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-23\nVulnerability Gather data sampling:      Mitigation; Microcode\nVulnerability Indirect target selection: Mitigation; Aligned branch/return thunks\nVulnerability Itlb multihit:             KVM: Mitigation: Split huge pages\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Mitigation; Clear CPU buffers; SMT vulnerable\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Mitigation; Enhanced IBRS\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Mitigation; TSX disabled\nVulnerability Vmscape:                   Mitigation; IBPB before exit to userspace\n",
+  "memory": "MemTotal:       32273192 kB\nMemFree:         6258232 kB\nMemAvailable:   28723920 kB\nBuffers:               0 kB\nCached:         20091212 kB\nSwapCached:        19136 kB\nActive:         21076432 kB\nInactive:         227152 kB\nActive(anon):    1402168 kB\nInactive(anon):   136408 kB\nActive(file):   19674264 kB\nInactive(file):    90744 kB\nUnevictable:           0 kB\nMlocked:               0 kB\nSwapTotal:      67108860 kB\nSwapFree:       63594236 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:                28 kB\nWriteback:             0 kB\nAnonPages:       1173760 kB\nMapped:           450028 kB\nShmem:            327368 kB\nKReclaimable:    3178092 kB\nSlab:            3805060 kB\nSReclaimable:    3178092 kB\nSUnreclaim:       626968 kB\nKernelStack:       34096 kB\nPageTables:        33180 kB\nSecPageTables:      4112 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    83245456 kB\nCommitted_AS:   14546352 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:      229664 kB\nVmallocChunk:          0 kB\nPercpu:            21216 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:    358400 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nCmaTotal:              0 kB\nCmaFree:               0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      389980 kB\nDirectMap2M:     5574656 kB\nDirectMap1G:    27262976 kB\n",
+  "compiler": "c++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-14)\nCopyright (C) 2021 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "frequency": {
+    "/sys/devices/system/cpu/cpu2/cpufreq/scaling_governor": "performance",
+    "/sys/devices/system/cpu/intel_pstate/no_turbo": "0"
+  },
+  "disjoint_roles": {
+    "training": 65536,
+    "phase4a_queries": 10000,
+    "phase4b_queries": 14252,
+    "warmup": "Phase4A first512",
+    "content_exclusion_inherited_from_verified_Phase4A": true
+  }
+}

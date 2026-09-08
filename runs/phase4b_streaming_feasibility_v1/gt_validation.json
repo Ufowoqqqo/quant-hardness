@@ -1,0 +1,602 @@
+[
+  {
+    "query_id": 81,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 135,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 387,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 416,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 747,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 816,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 854,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 857,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 939,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 1100,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 1124,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 1183,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 1229,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 1252,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 1555,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 1580,
+    "strict_neighbors": 8,
+    "boundary_ties": 2,
+    "status": "PASS"
+  },
+  {
+    "query_id": 1673,
+    "strict_neighbors": 8,
+    "boundary_ties": 2,
+    "status": "PASS"
+  },
+  {
+    "query_id": 1688,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 2040,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 2077,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 2105,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 2308,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 2699,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 2849,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 2860,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 3128,
+    "strict_neighbors": 9,
+    "boundary_ties": 2,
+    "status": "PASS"
+  },
+  {
+    "query_id": 3329,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 3523,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 3524,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 3684,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 3766,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 3883,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 4009,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 4107,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 4425,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 4473,
+    "strict_neighbors": 8,
+    "boundary_ties": 2,
+    "status": "PASS"
+  },
+  {
+    "query_id": 4951,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 5003,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 5470,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 5564,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 5587,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 5668,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 5761,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 6332,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 6348,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 6358,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 6383,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 6429,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 6696,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 6730,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 7016,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 7323,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 7395,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 7652,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 7696,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 7870,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 8253,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 8337,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 8351,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 8637,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 8900,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 8943,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 9003,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 9019,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 9035,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 9084,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 9131,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 9144,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 9232,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 9366,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 9695,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 9716,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 9825,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 9846,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 10113,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 10384,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 10646,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 10679,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 11061,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 12088,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 12165,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 12197,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 12434,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 12503,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 12744,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 12792,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 13034,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 13047,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 13101,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 13129,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 13138,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 13670,
+    "strict_neighbors": 8,
+    "boundary_ties": 2,
+    "status": "PASS"
+  },
+  {
+    "query_id": 13676,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 13817,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 13848,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 13856,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 13966,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 14120,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 14125,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 14190,
+    "strict_neighbors": 9,
+    "boundary_ties": 1,
+    "status": "PASS"
+  }
+]

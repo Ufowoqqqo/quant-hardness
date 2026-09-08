@@ -1,0 +1,34 @@
+[
+  {
+    "policy": "NATIVE",
+    "component_off_mean_us": 161.6498327352552,
+    "component_on_mean_us": 161.9128735114871,
+    "on_minus_off_us": 0.263040776231918,
+    "relative_on_minus_off": 0.0016272257866343232,
+    "paired_rep_difference_std_us": 0.42760799687905987
+  },
+  {
+    "policy": "GAP",
+    "component_off_mean_us": 182.42710108856903,
+    "component_on_mean_us": 182.2336459744998,
+    "on_minus_off_us": -0.19345511406922355,
+    "relative_on_minus_off": -0.0010604516155485744,
+    "paired_rep_difference_std_us": 0.48645106746752187
+  },
+  {
+    "policy": "RANDOM",
+    "component_off_mean_us": 171.107251834329,
+    "component_on_mean_us": 171.32521622027986,
+    "on_minus_off_us": 0.21796438595086443,
+    "relative_on_minus_off": 0.001273846570581938,
+    "paired_rep_difference_std_us": 0.5318880401595732
+  },
+  {
+    "policy": "ALL16",
+    "component_off_mean_us": 184.65068463574033,
+    "component_on_mean_us": 184.34259106491322,
+    "on_minus_off_us": -0.3080935708271113,
+    "relative_on_minus_off": -0.0016685211399832811,
+    "paired_rep_difference_std_us": 0.5657322996624127
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "class": "useful",
+    "queries": 2823,
+    "fraction_selected": 0.7938695163104612
+  },
+  {
+    "class": "neutral",
+    "queries": 733,
+    "fraction_selected": 0.20613048368953882
+  },
+  {
+    "class": "harmful",
+    "queries": 0,
+    "fraction_selected": 0.0
+  }
+]

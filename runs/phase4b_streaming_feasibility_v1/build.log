@@ -1,0 +1,37 @@
+gmake: Warning: File 'Makefile' has modification time 237 s in the future
+gmake[1]: Warning: File 'CMakeFiles/Makefile2' has modification time 237 s in the future
+gmake[2]: Warning: File 'CMakeFiles/Makefile2' has modification time 237 s in the future
+gmake[3]: Warning: File 'CMakeFiles/faiss_external.dir/progress.make' has modification time 237 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[3]: Warning: File 'CMakeFiles/faiss_external.dir/progress.make' has modification time 237 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 60%] Built target faiss_external
+gmake[3]: Warning: File 'CMakeFiles/qh_faiss_backend.dir/progress.make' has modification time 237 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[3]: Warning: File 'CMakeFiles/qh_faiss_backend.dir/progress.make' has modification time 237 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 73%] Built target qh_faiss_backend
+gmake[3]: Warning: File 'CMakeFiles/qh_streaming.dir/flags.make' has modification time 236 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[3]: Warning: File 'CMakeFiles/qh_streaming.dir/flags.make' has modification time 236 s in the future
+[ 80%] Building CXX object CMakeFiles/qh_streaming.dir/src/instrumentation/streaming_refinement.cpp.o
+[ 86%] Linking CXX static library libqh_streaming.a
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 86%] Built target qh_streaming
+gmake[3]: Warning: File 'CMakeFiles/faiss_phase4b.dir/flags.make' has modification time 235 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[3]: Warning: File 'CMakeFiles/faiss_phase4b.dir/flags.make' has modification time 235 s in the future
+[ 93%] Building CXX object CMakeFiles/faiss_phase4b.dir/src/experiments/faiss_phase4b.cpp.o
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4b.cpp: In function ‘int main(int, char**)’:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4b.cpp:96:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   96 |         if(pi==1)require(r.gap==gaps[q],"timed gap changed");outputs.push_back(r);
+      |         ^~
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4b.cpp:96:62: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   96 |         if(pi==1)require(r.gap==gaps[q],"timed gap changed");outputs.push_back(r);
+      |                                                              ^~~~~~~
+[100%] Linking CXX executable faiss_phase4b
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[100%] Built target faiss_phase4b
+gmake[2]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[1]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake: warning:  Clock skew detected.  Your build may be incomplete.

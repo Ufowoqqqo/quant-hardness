@@ -1,0 +1,142 @@
+[
+  {
+    "method": "scalar-deferred32",
+    "replicate": 0,
+    "amortized_us_per_query": 182.53224628122368,
+    "refine_final_us_per_query": 0.5712414397979232,
+    "mean_batch_completion_us": 5832.846578475336,
+    "p95_batch_completion_us": 6096.9087500000005,
+    "qps": 5478.484050754081,
+    "same_streaming_results": true
+  },
+  {
+    "method": "scalar-deferred32",
+    "replicate": 1,
+    "amortized_us_per_query": 182.3576565394331,
+    "refine_final_us_per_query": 0.5676577322481056,
+    "mean_batch_completion_us": 5827.267535874441,
+    "p95_batch_completion_us": 6068.89075,
+    "qps": 5483.729167049038,
+    "same_streaming_results": true
+  },
+  {
+    "method": "scalar-deferred32",
+    "replicate": 2,
+    "amortized_us_per_query": 182.3816538731406,
+    "refine_final_us_per_query": 0.5754769856862195,
+    "mean_batch_completion_us": 5828.034374439461,
+    "p95_batch_completion_us": 6090.5647500000005,
+    "qps": 5483.007631324426,
+    "same_streaming_results": true
+  },
+  {
+    "method": "scalar-deferred32",
+    "replicate": 3,
+    "amortized_us_per_query": 182.36354848442326,
+    "refine_final_us_per_query": 0.5762724529890542,
+    "mean_batch_completion_us": 5827.455813901346,
+    "p95_batch_completion_us": 6073.56225,
+    "qps": 5483.551994413049,
+    "same_streaming_results": true
+  },
+  {
+    "method": "scalar-deferred32",
+    "replicate": 4,
+    "amortized_us_per_query": 181.88892927308444,
+    "refine_final_us_per_query": 0.5778603003087285,
+    "mean_batch_completion_us": 5812.289282511209,
+    "p95_batch_completion_us": 6050.894,
+    "qps": 5497.860721905839,
+    "same_streaming_results": true
+  },
+  {
+    "method": "scalar-deferred32",
+    "replicate": 5,
+    "amortized_us_per_query": 182.8910705865843,
+    "refine_final_us_per_query": 0.5757147067078304,
+    "mean_batch_completion_us": 5844.312865470852,
+    "p95_batch_completion_us": 6136.8905,
+    "qps": 5467.735503940745,
+    "same_streaming_results": true
+  },
+  {
+    "method": "scalar-deferred32",
+    "replicate": 6,
+    "amortized_us_per_query": 182.22350091215267,
+    "refine_final_us_per_query": 0.5653900505192254,
+    "mean_batch_completion_us": 5822.980571748879,
+    "p95_batch_completion_us": 6066.89325,
+    "qps": 5487.766369290016,
+    "same_streaming_results": true
+  },
+  {
+    "method": "indexed-batch32",
+    "replicate": 0,
+    "amortized_us_per_query": 183.11689412012348,
+    "refine_final_us_per_query": 0.6583595986528206,
+    "mean_batch_completion_us": 5851.529091928251,
+    "p95_batch_completion_us": 6104.651250000001,
+    "qps": 5460.992579657924,
+    "same_streaming_results": true
+  },
+  {
+    "method": "indexed-batch32",
+    "replicate": 1,
+    "amortized_us_per_query": 182.08714341846758,
+    "refine_final_us_per_query": 0.6570834268874545,
+    "mean_batch_completion_us": 5818.623246636771,
+    "p95_batch_completion_us": 6060.701499999999,
+    "qps": 5491.8759294379615,
+    "same_streaming_results": true
+  },
+  {
+    "method": "indexed-batch32",
+    "replicate": 2,
+    "amortized_us_per_query": 181.97039552343531,
+    "refine_final_us_per_query": 0.6585992141453832,
+    "mean_batch_completion_us": 5814.892549327355,
+    "p95_batch_completion_us": 6050.744000000001,
+    "qps": 5495.399386936067,
+    "same_streaming_results": true
+  },
+  {
+    "method": "indexed-batch32",
+    "replicate": 3,
+    "amortized_us_per_query": 182.43601606792026,
+    "refine_final_us_per_query": 0.6618192534381139,
+    "mean_batch_completion_us": 5829.771526905829,
+    "p95_batch_completion_us": 6097.9865,
+    "qps": 5481.37380739395,
+    "same_streaming_results": true
+  },
+  {
+    "method": "indexed-batch32",
+    "replicate": 4,
+    "amortized_us_per_query": 182.1747163205164,
+    "refine_final_us_per_query": 0.6581264383946113,
+    "mean_batch_completion_us": 5821.421652466368,
+    "p95_batch_completion_us": 6054.70275,
+    "qps": 5489.235938979643,
+    "same_streaming_results": true
+  },
+  {
+    "method": "indexed-batch32",
+    "replicate": 5,
+    "amortized_us_per_query": 182.26594821779398,
+    "refine_final_us_per_query": 0.650945130507999,
+    "mean_batch_completion_us": 5824.3369820627795,
+    "p95_batch_completion_us": 6052.54625,
+    "qps": 5486.488341777785,
+    "same_streaming_results": true
+  },
+  {
+    "method": "indexed-batch32",
+    "replicate": 6,
+    "amortized_us_per_query": 182.5773619842829,
+    "refine_final_us_per_query": 0.6532900645523434,
+    "mean_batch_completion_us": 5834.288257847534,
+    "p95_batch_completion_us": 6075.42925,
+    "qps": 5477.130292232421,
+    "same_streaming_results": true
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "threshold": 710.40625,
+  "comparison": "<=",
+  "source_phase": "Phase4A ONLY",
+  "linear_q25": 710.40625,
+  "selected_rank2500_gap": 710.40625,
+  "phase4a_inclusive_count": 2501,
+  "phase4a_original_quota": 2500,
+  "score_source_sha256": "cd88e7eac9d4938840f09f901ebcaccc5c2f079fa5d8b50b701587c4d4f7406e",
+  "selection_source_sha256": "9a3838de92a7cdf1fd0d17b13ce71aab1b7ed743f2d515e6bc73bfd60c902569"
+}

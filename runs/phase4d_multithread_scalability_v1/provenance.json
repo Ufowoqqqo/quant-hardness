@@ -1,0 +1,137 @@
+{
+  "git_commit": "9a0c375c9151ec45bf7866c8d5b14e23198b48f6",
+  "faiss_commit": "20f14b31a6d54e243a3d1de6ae193fc4c3ec18ed",
+  "config": {
+    "run": "runs/phase4d_multithread_scalability_v1",
+    "phase4b": "runs/phase4b_streaming_feasibility_v1",
+    "phase4c": "runs/phase4c_bounded_candidate_retention_v1",
+    "graph_path": "/rwproject/kdd-db/kluaq/dataset/sift1m/phase3a_cache_v1/hnsw_fp32.index",
+    "model_path": "runs/phase4a_gap_guided_refinement_v1/model.index",
+    "graph_fingerprint": "1b3c18f6e2dd3ccec56e74eed30458f60a65f01234bf51478af25d84b5c02d16",
+    "dimension": "128",
+    "query_count": "14252",
+    "ef_search": "64",
+    "k": "10",
+    "L": "16",
+    "gap_threshold": "710.40625",
+    "workers": "1,2,4,8",
+    "worker_cpus": "2,3,4,5,6,7,8,9",
+    "coordinator_cpu": "0",
+    "internal_threads": "1",
+    "warmup_queries_per_worker": "512",
+    "passes_per_repetition": "4",
+    "repetitions": "5",
+    "order_seed": "94300011",
+    "stress_seed": "94300037",
+    "stress_sample_count": "512",
+    "stress_calls_per_worker": "4096",
+    "timestamp_pairs": "100000",
+    "throughput_penalty_target": "0.15"
+  },
+  "immutable_sha256": {
+    "configs/indexes/phase4d_multithread_scalability.conf": "fa4fc690201916984f79436dd5b37e98ac09b627270f7355e6cca243f8ccee7f",
+    "runs/phase4d_multithread_scalability_v1/preregistration.md": "2615a96ff9424a47f84f2635d5796ddafc748a7ba03cb9c5d17c1c5bdcfd0bee",
+    "CMakeLists.txt": "875e59a10bb210956ecb6bbc66bd6e74c17e4cd10de4c5f3508d2c701ac2dd70",
+    "src/experiments/faiss_phase4d.cpp": "45076043f38a5b68e4abde06a8a763b180f24a811af5c88de183d101ae824cfe",
+    "build/faiss_phase4d": "a601ea56f19bb15ad86b20227461dce742ed001382d5897f238524567a27f24b",
+    "/rwproject/kdd-db/kluaq/quant-hardness/scripts/prepare_phase4d.py": "6636ad07281cf658ef76286a3a13abfc23699cae3739fd8cc77fd5b3e5a0dc36",
+    "src/instrumentation/bounded_retention.h": "3fdea8cc8629aba77fba89d1258a13472f006019e9e58d7fd7bf5a5b745053f2",
+    "src/instrumentation/bounded_retention.cpp": "2c58d8137f8a38975f17afcfa12ee5ec92be9c7695f4fd4d5468c402d3037ef3",
+    "src/instrumentation/streaming_refinement.h": "9d3a6e6ad3dd3751c52430e01a030f6261ff4a7c572ffb91899601369d6cf8fb",
+    "src/instrumentation/streaming_refinement.cpp": "b55c612672d57510a17dca0a3f4dd6a1c8ae8ddeee609cede4a5421bed9f5122",
+    "/rwproject/kdd-db/kluaq/dataset/sift1m/phase3a_cache_v1/hnsw_fp32.index": "f1ff815e57dfdd77664e4c1386f9f9db29946f56688718568c4d83fb14a402e4",
+    "runs/phase4a_gap_guided_refinement_v1/model.index": "4e766507d0ba3eedef7d820eada6befe10f2f390616e319beaf26164403703a7",
+    "runs/phase4b_streaming_feasibility_v1/queries.f32": "368a7784e01b427ba8bfa1e2fd869fb48066bb109e9c0b3bcc28525ec55ed820",
+    "runs/phase4b_streaming_feasibility_v1/warmup.f32": "de05cd724d4d78db58154d6d9fa127b76eaa01189367c4c73d4bbc10db5a013e",
+    "runs/phase4b_streaming_feasibility_v1/queries_learn_ids.i64": "4225c998b2223587e6eb2efa993aa366e3d8171ce8a5a6d15a274fd45e02a74d",
+    "runs/phase4b_streaming_feasibility_v1/native_ids.i64": "ef8b5748e9d2779a8cc8b04d73a9ac620f89c144a74453a1c11b815035c660e5",
+    "runs/phase4b_streaming_feasibility_v1/all16_ids.i64": "590fd87be8856bd65d89668bdc63f5797cee9f3f84d6dcd7b7b9865048b39dba",
+    "runs/phase4b_streaming_feasibility_v1/gt_ids.i64": "7fb5f8852305bcd52b5a99e8e1b956804b3db62b107249038e916ca238886f8f",
+    "runs/phase4b_streaming_feasibility_v1/candidate_offsets.i64": "fb6661063a412b73f7097e20cfc6ab8943844950b9f2dbc417ef62bf4bcb7b6e",
+    "runs/phase4c_bounded_candidate_retention_v1/top16_ids.i64": "76acdb2afe16b12f933c2eb3056bc338d01149d0de42660b1caf5b32bccfcd7c",
+    "runs/phase4c_bounded_candidate_retention_v1/top16_order.u32": "9356ca12d11d5a0c95c686f97bc3863f250a52fb590b386d2d8b1acd43a8834d",
+    "runs/phase4c_bounded_candidate_retention_v1/top16_scores.f32": "06c7957aa24990f54ff30f21511597e0473b09596497de625668bcce6ba27215",
+    "runs/phase4c_bounded_candidate_retention_v1/validation_queries.csv": "b7855429c864dd6b988b562505532167f3f37898f24a0fe4b326913c668d46dd",
+    "runs/phase4d_multithread_scalability_v1/benchmark_order.i32": "6d16a3599536280cd26f6cab771b76da13e8386a78097d7e28147e83d41e7998",
+    "runs/phase4d_multithread_scalability_v1/stress_queries.i32": "0c278f8c08f4e0d0ebb950c072d904aa7f91ab221d26f2808be9ab44b509ef62"
+  },
+  "physical_core_assignments": {
+    "2": {
+      "core_id": "3",
+      "physical_package_id": "0",
+      "thread_siblings_list": "2,14"
+    },
+    "3": {
+      "core_id": "5",
+      "physical_package_id": "0",
+      "thread_siblings_list": "3,15"
+    },
+    "4": {
+      "core_id": "6",
+      "physical_package_id": "0",
+      "thread_siblings_list": "4,16"
+    },
+    "5": {
+      "core_id": "8",
+      "physical_package_id": "0",
+      "thread_siblings_list": "5,17"
+    },
+    "6": {
+      "core_id": "9",
+      "physical_package_id": "0",
+      "thread_siblings_list": "6,18"
+    },
+    "7": {
+      "core_id": "10",
+      "physical_package_id": "0",
+      "thread_siblings_list": "7,19"
+    },
+    "8": {
+      "core_id": "11",
+      "physical_package_id": "0",
+      "thread_siblings_list": "8,20"
+    },
+    "9": {
+      "core_id": "12",
+      "physical_package_id": "0",
+      "thread_siblings_list": "9,21"
+    }
+  },
+  "machine": {
+    "system": "Linux",
+    "node": "rwcpu8.cse.ust.hk",
+    "release": "5.14.0-687.24.1.el9_8.x86_64",
+    "version": "#1 SMP PREEMPT_DYNAMIC Thu Jul 9 18:14:06 EDT 2026",
+    "machine": "x86_64"
+  },
+  "lscpu": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           46 bits physical, 48 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  24\nOn-line CPU(s) list:                     0-23\nVendor ID:                               GenuineIntel\nModel name:                              Intel(R) Core(TM) i9-10920X CPU @ 3.50GHz\nCPU family:                              6\nModel:                                   85\nThread(s) per core:                      2\nCore(s) per socket:                      12\nSocket(s):                               1\nStepping:                                7\nCPU(s) scaling MHz:                      40%\nCPU max MHz:                             4800.0000\nCPU min MHz:                             1200.0000\nBogoMIPS:                                6999.82\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts hwp hwp_act_window hwp_epp hwp_pkg_req vnmi avx512_vnni md_clear flush_l1d arch_capabilities\nVirtualization:                          VT-x\nL1d cache:                               384 KiB (12 instances)\nL1i cache:                               384 KiB (12 instances)\nL2 cache:                                12 MiB (12 instances)\nL3 cache:                                19.3 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-23\nVulnerability Gather data sampling:      Mitigation; Microcode\nVulnerability Indirect target selection: Mitigation; Aligned branch/return thunks\nVulnerability Itlb multihit:             KVM: Mitigation: Split huge pages\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Mitigation; Clear CPU buffers; SMT vulnerable\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Mitigation; Enhanced IBRS\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Mitigation; TSX disabled\nVulnerability Vmscape:                   Mitigation; IBPB before exit to userspace\n",
+  "lscpu_extended": "CPU CORE SOCKET NODE ONLINE\n  0    0      0    0    yes\n  1    1      0    0    yes\n  2    2      0    0    yes\n  3    3      0    0    yes\n  4    4      0    0    yes\n  5    5      0    0    yes\n  6    6      0    0    yes\n  7    7      0    0    yes\n  8    8      0    0    yes\n  9    9      0    0    yes\n 10   10      0    0    yes\n 11   11      0    0    yes\n 12    0      0    0    yes\n 13    1      0    0    yes\n 14    2      0    0    yes\n 15    3      0    0    yes\n 16    4      0    0    yes\n 17    5      0    0    yes\n 18    6      0    0    yes\n 19    7      0    0    yes\n 20    8      0    0    yes\n 21    9      0    0    yes\n 22   10      0    0    yes\n 23   11      0    0    yes\n",
+  "memory": "MemTotal:       32273192 kB\nMemFree:         5238064 kB\nMemAvailable:   28712140 kB\nBuffers:               0 kB\nCached:         21106020 kB\nSwapCached:        21660 kB\nActive:         21901256 kB\nInactive:         393060 kB\nActive(anon):    1388760 kB\nInactive(anon):   134240 kB\nActive(file):   20512496 kB\nInactive(file):   258820 kB\nUnevictable:           0 kB\nMlocked:               0 kB\nSwapTotal:      67108860 kB\nSwapFree:       63594748 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:                28 kB\nWriteback:             0 kB\nAnonPages:       1141668 kB\nMapped:           401492 kB\nShmem:            335944 kB\nKReclaimable:    3180172 kB\nSlab:            3807092 kB\nSReclaimable:    3180172 kB\nSUnreclaim:       626920 kB\nKernelStack:       34112 kB\nPageTables:        33120 kB\nSecPageTables:      4112 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    83245456 kB\nCommitted_AS:   14497372 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:      229680 kB\nVmallocChunk:          0 kB\nPercpu:            21216 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:    362496 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nCmaTotal:              0 kB\nCmaFree:               0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      389980 kB\nDirectMap2M:     5574656 kB\nDirectMap1G:    27262976 kB\n",
+  "compiler": "c++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-14)\nCopyright (C) 2021 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "compiler_flags": "# CMAKE generated file: DO NOT EDIT!\n# Generated by \"Unix Makefiles\" Generator, CMake Version 4.0\n\n# compile CXX with /bin/c++\nCXX_DEFINES = \n\nCXX_INCLUDES = -I/rwproject/kdd-db/kluaq/quant-hardness/src -isystem /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss\n\nCXX_FLAGS = -O3 -DNDEBUG -std=c++20 -Wall -Wextra -Wpedantic -fopenmp\n\n",
+  "bounded_flags": "# CMAKE generated file: DO NOT EDIT!\n# Generated by \"Unix Makefiles\" Generator, CMake Version 4.0\n\n# compile CXX with /bin/c++\nCXX_DEFINES = \n\nCXX_INCLUDES = -I/rwproject/kdd-db/kluaq/quant-hardness/src -isystem /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss\n\nCXX_FLAGS = -O3 -DNDEBUG -std=c++20 -Wall -Wextra -Wpedantic -fopenmp\n\n",
+  "faiss_flags": "# CMAKE generated file: DO NOT EDIT!\n# Generated by \"Unix Makefiles\" Generator, CMake Version 4.0\n\n# compile CXX with /bin/c++\nCXX_DEFINES = -DFINTEGER=int\n\nCXX_INCLUDES = -I/rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss\n\nCXX_FLAGS = -O3 -DNDEBUG -std=gnu++20 -fPIC -fopenmp\n\n",
+  "cache_cpu2": {
+    "/sys/devices/system/cpu/cpu2/cache/index2/shared_cpu_list": "2,14",
+    "/sys/devices/system/cpu/cpu2/cache/index2/type": "Unified",
+    "/sys/devices/system/cpu/cpu2/cache/index2/size": "1024K",
+    "/sys/devices/system/cpu/cpu2/cache/index2/level": "2",
+    "/sys/devices/system/cpu/cpu2/cache/index0/shared_cpu_list": "2,14",
+    "/sys/devices/system/cpu/cpu2/cache/index0/type": "Data",
+    "/sys/devices/system/cpu/cpu2/cache/index0/size": "32K",
+    "/sys/devices/system/cpu/cpu2/cache/index0/level": "1",
+    "/sys/devices/system/cpu/cpu2/cache/index3/shared_cpu_list": "0-23",
+    "/sys/devices/system/cpu/cpu2/cache/index3/type": "Unified",
+    "/sys/devices/system/cpu/cpu2/cache/index3/size": "19712K",
+    "/sys/devices/system/cpu/cpu2/cache/index3/level": "3",
+    "/sys/devices/system/cpu/cpu2/cache/index1/shared_cpu_list": "2,14",
+    "/sys/devices/system/cpu/cpu2/cache/index1/type": "Instruction",
+    "/sys/devices/system/cpu/cpu2/cache/index1/size": "32K",
+    "/sys/devices/system/cpu/cpu2/cache/index1/level": "1"
+  },
+  "frequency_policy": {
+    "/sys/devices/system/cpu/cpu2/cpufreq/scaling_governor": "performance",
+    "/sys/devices/system/cpu/intel_pstate/no_turbo": "0"
+  },
+  "stress_sample_known_tie_queries": 210
+}

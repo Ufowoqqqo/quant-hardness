@@ -1,0 +1,5 @@
+workers,policy,additional_payload_bytes_per_query,nominal_payload_GB_per_s,not_measured_DRAM_bandwidth
+1,BOUNDED_ALL16,8192,0.0465942558239031,True
+2,BOUNDED_ALL16,8192,0.09001706478439912,True
+4,BOUNDED_ALL16,8192,0.17382336909909218,True
+8,BOUNDED_ALL16,8192,0.34145927459253483,True

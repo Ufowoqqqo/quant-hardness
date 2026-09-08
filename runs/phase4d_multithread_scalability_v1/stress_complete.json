@@ -1,0 +1,1 @@
+{"status":"PASS","calls":61440,"two_clock_loop_us_per_iteration":0.035901329999999995,"timestamp_note":"includes loop/output storage; diagnostic upper bound, not subtracted"}

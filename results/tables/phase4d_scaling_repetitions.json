@@ -1,0 +1,282 @@
+[
+  {
+    "policy": "NATIVE",
+    "workers": 1,
+    "replicate": 0,
+    "speedup": 1.0,
+    "parallel_efficiency": 1.0
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 1,
+    "replicate": 1,
+    "speedup": 1.0,
+    "parallel_efficiency": 1.0
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 1,
+    "replicate": 2,
+    "speedup": 1.0,
+    "parallel_efficiency": 1.0
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 1,
+    "replicate": 3,
+    "speedup": 1.0,
+    "parallel_efficiency": 1.0
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 1,
+    "replicate": 4,
+    "speedup": 1.0,
+    "parallel_efficiency": 1.0
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 1,
+    "replicate": 0,
+    "speedup": 1.0,
+    "parallel_efficiency": 1.0
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 1,
+    "replicate": 1,
+    "speedup": 1.0,
+    "parallel_efficiency": 1.0
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 1,
+    "replicate": 2,
+    "speedup": 1.0,
+    "parallel_efficiency": 1.0
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 1,
+    "replicate": 3,
+    "speedup": 1.0,
+    "parallel_efficiency": 1.0
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 1,
+    "replicate": 4,
+    "speedup": 1.0,
+    "parallel_efficiency": 1.0
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 2,
+    "replicate": 0,
+    "speedup": 1.9410365442728272,
+    "parallel_efficiency": 0.9705182721364136
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 2,
+    "replicate": 1,
+    "speedup": 1.9446216945643586,
+    "parallel_efficiency": 0.9723108472821793
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 2,
+    "replicate": 2,
+    "speedup": 1.9522963933248036,
+    "parallel_efficiency": 0.9761481966624018
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 2,
+    "replicate": 3,
+    "speedup": 1.945080002112797,
+    "parallel_efficiency": 0.9725400010563985
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 2,
+    "replicate": 4,
+    "speedup": 1.9358278152816022,
+    "parallel_efficiency": 0.9679139076408011
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 2,
+    "replicate": 0,
+    "speedup": 1.925362164409554,
+    "parallel_efficiency": 0.962681082204777
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 2,
+    "replicate": 1,
+    "speedup": 1.936508392065479,
+    "parallel_efficiency": 0.9682541960327395
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 2,
+    "replicate": 2,
+    "speedup": 1.9212430560923037,
+    "parallel_efficiency": 0.9606215280461519
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 2,
+    "replicate": 3,
+    "speedup": 1.9317573585354766,
+    "parallel_efficiency": 0.9658786792677383
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 2,
+    "replicate": 4,
+    "speedup": 1.9450044486332083,
+    "parallel_efficiency": 0.9725022243166042
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 4,
+    "replicate": 0,
+    "speedup": 3.758992637733577,
+    "parallel_efficiency": 0.9397481594333943
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 4,
+    "replicate": 1,
+    "speedup": 3.788180616072203,
+    "parallel_efficiency": 0.9470451540180508
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 4,
+    "replicate": 2,
+    "speedup": 3.7909237875473583,
+    "parallel_efficiency": 0.9477309468868396
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 4,
+    "replicate": 3,
+    "speedup": 3.755836438392505,
+    "parallel_efficiency": 0.9389591095981262
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 4,
+    "replicate": 4,
+    "speedup": 3.7639849291177874,
+    "parallel_efficiency": 0.9409962322794468
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 4,
+    "replicate": 0,
+    "speedup": 3.716661592614524,
+    "parallel_efficiency": 0.929165398153631
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 4,
+    "replicate": 1,
+    "speedup": 3.751376210096939,
+    "parallel_efficiency": 0.9378440525242348
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 4,
+    "replicate": 2,
+    "speedup": 3.7287645096063033,
+    "parallel_efficiency": 0.9321911274015758
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 4,
+    "replicate": 3,
+    "speedup": 3.716142625296578,
+    "parallel_efficiency": 0.9290356563241445
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 4,
+    "replicate": 4,
+    "speedup": 3.740188568072865,
+    "parallel_efficiency": 0.9350471420182163
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 8,
+    "replicate": 0,
+    "speedup": 7.360540582816618,
+    "parallel_efficiency": 0.9200675728520773
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 8,
+    "replicate": 1,
+    "speedup": 7.3979249579433395,
+    "parallel_efficiency": 0.9247406197429174
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 8,
+    "replicate": 2,
+    "speedup": 7.403822151252172,
+    "parallel_efficiency": 0.9254777689065214
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 8,
+    "replicate": 3,
+    "speedup": 7.371652901874798,
+    "parallel_efficiency": 0.9214566127343498
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 8,
+    "replicate": 4,
+    "speedup": 7.375176369194575,
+    "parallel_efficiency": 0.9218970461493219
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 8,
+    "replicate": 0,
+    "speedup": 7.26251606279053,
+    "parallel_efficiency": 0.9078145078488162
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 8,
+    "replicate": 1,
+    "speedup": 7.35349288772033,
+    "parallel_efficiency": 0.9191866109650413
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 8,
+    "replicate": 2,
+    "speedup": 7.3208905011400365,
+    "parallel_efficiency": 0.9151113126425046
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 8,
+    "replicate": 3,
+    "speedup": 7.3517686800997915,
+    "parallel_efficiency": 0.9189710850124739
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 8,
+    "replicate": 4,
+    "speedup": 7.353614927159372,
+    "parallel_efficiency": 0.9192018658949215
+  }
+]

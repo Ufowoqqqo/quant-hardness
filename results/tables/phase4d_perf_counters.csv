@@ -1,0 +1,21 @@
+policy,workers,event,unit,count,per_query,event_run_time_ns,percent_running,primary_metric,scope
+BOUNDED_ALL16,1,task-clock,msec,10022.17,0.1758028697726635,10022167339.0,100.0,False,user space; warmup/load excluded by enable/disable acknowledgement; includes final thread teardown
+BOUNDED_ALL16,1,cycles,,44749895187.0,784975.7084444289,10022167339.0,100.0,False,user space; warmup/load excluded by enable/disable acknowledgement; includes final thread teardown
+BOUNDED_ALL16,1,instructions,,67527283210.0,1184522.9302904855,10022167339.0,100.0,False,user space; warmup/load excluded by enable/disable acknowledgement; includes final thread teardown
+BOUNDED_ALL16,1,cache-references,,329653605.0,5782.58498807185,10022167339.0,100.0,False,user space; warmup/load excluded by enable/disable acknowledgement; includes final thread teardown
+BOUNDED_ALL16,1,cache-misses,,196233321.0,3442.206725371878,10022167339.0,100.0,False,user space; warmup/load excluded by enable/disable acknowledgement; includes final thread teardown
+BOUNDED_ALL16,8,task-clock,msec,10785.82,0.1891983581251754,10785815616.0,100.0,False,user space; warmup/load excluded by enable/disable acknowledgement; includes final thread teardown
+BOUNDED_ALL16,8,cycles,,45617046155.0,800186.7484388156,10785815616.0,100.0,False,user space; warmup/load excluded by enable/disable acknowledgement; includes final thread teardown
+BOUNDED_ALL16,8,instructions,,67527331776.0,1184523.782206006,10785815616.0,100.0,False,user space; warmup/load excluded by enable/disable acknowledgement; includes final thread teardown
+BOUNDED_ALL16,8,cache-references,,339350580.0,5952.683483019927,10785815616.0,100.0,False,user space; warmup/load excluded by enable/disable acknowledgement; includes final thread teardown
+BOUNDED_ALL16,8,cache-misses,,210240120.0,3687.905557114791,10785815616.0,100.0,False,user space; warmup/load excluded by enable/disable acknowledgement; includes final thread teardown
+NATIVE,1,task-clock,msec,9337.66,0.16379560763401627,9337656223.0,100.0,False,user space; warmup/load excluded by enable/disable acknowledgement; includes final thread teardown
+NATIVE,1,cycles,,41974366942.0,736289.0636752737,9337656223.0,100.0,False,user space; warmup/load excluded by enable/disable acknowledgement; includes final thread teardown
+NATIVE,1,instructions,,64839520102.0,1137375.8086935168,9337656223.0,100.0,False,user space; warmup/load excluded by enable/disable acknowledgement; includes final thread teardown
+NATIVE,1,cache-references,,311127733.0,5457.615299607072,9337656223.0,100.0,False,user space; warmup/load excluded by enable/disable acknowledgement; includes final thread teardown
+NATIVE,1,cache-misses,,180950764.0,3174.129315183834,9337656223.0,100.0,False,user space; warmup/load excluded by enable/disable acknowledgement; includes final thread teardown
+NATIVE,8,task-clock,msec,10004.32,0.17548975582374404,10004324918.0,100.0,False,user space; warmup/load excluded by enable/disable acknowledgement; includes final thread teardown
+NATIVE,8,cycles,,42809380862.0,750936.3749298344,10004324918.0,100.0,False,user space; warmup/load excluded by enable/disable acknowledgement; includes final thread teardown
+NATIVE,8,instructions,,64839567677.0,1137376.6432255122,10004324918.0,100.0,False,user space; warmup/load excluded by enable/disable acknowledgement; includes final thread teardown
+NATIVE,8,cache-references,,323236131.0,5670.013524417625,10004324918.0,100.0,False,user space; warmup/load excluded by enable/disable acknowledgement; includes final thread teardown
+NATIVE,8,cache-misses,,195459884.0,3428.6395593600896,10004324918.0,100.0,False,user space; warmup/load excluded by enable/disable acknowledgement; includes final thread teardown

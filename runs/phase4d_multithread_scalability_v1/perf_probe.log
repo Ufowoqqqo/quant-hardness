@@ -1,0 +1,15 @@
+
+ Performance counter stats for 'true':
+
+              0.34 msec task-clock                       #    0.338 CPUs utilized             
+            316053      cycles                           #    0.934 GHz                       
+            196749      instructions                     #    0.62  insn per cycle            
+              4974      cache-references                 #   14.697 M/sec                     
+               659      cache-misses                     #   13.25% of all cache refs         
+
+       0.001001724 seconds time elapsed
+
+       0.000000000 seconds user
+       0.001008000 seconds sys
+
+

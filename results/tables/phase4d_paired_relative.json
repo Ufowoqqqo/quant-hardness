@@ -1,0 +1,182 @@
+[
+  {
+    "workers": 1,
+    "replicate": 0,
+    "throughput_penalty": 0.06943651067178414,
+    "mean_latency_overhead": 0.07472339788662152,
+    "p95_latency_overhead": 0.08180349633599082,
+    "p99_latency_overhead": 0.08131106171752789,
+    "p99_ratio": 1.0813110617175279
+  },
+  {
+    "workers": 1,
+    "replicate": 1,
+    "throughput_penalty": 0.07422213350260953,
+    "mean_latency_overhead": 0.08026953727177455,
+    "p95_latency_overhead": 0.09340561624699095,
+    "p99_latency_overhead": 0.0988655094305626,
+    "p99_ratio": 1.0988655094305626
+  },
+  {
+    "workers": 1,
+    "replicate": 2,
+    "throughput_penalty": 0.06064902606093381,
+    "mean_latency_overhead": 0.06464400108816748,
+    "p95_latency_overhead": 0.06405841354063146,
+    "p99_latency_overhead": 0.06319814928747358,
+    "p99_ratio": 1.0631981492874736
+  },
+  {
+    "workers": 1,
+    "replicate": 3,
+    "throughput_penalty": 0.07000260690484894,
+    "mean_latency_overhead": 0.07536542918126798,
+    "p95_latency_overhead": 0.08396484211407995,
+    "p99_latency_overhead": 0.09240293854069503,
+    "p99_ratio": 1.092402938540695
+  },
+  {
+    "workers": 1,
+    "replicate": 4,
+    "throughput_penalty": 0.07763935216023865,
+    "mean_latency_overhead": 0.08426348581721954,
+    "p95_latency_overhead": 0.10188079284431528,
+    "p99_latency_overhead": 0.10605226477439977,
+    "p99_ratio": 1.1060522647743998
+  },
+  {
+    "workers": 2,
+    "replicate": 0,
+    "throughput_penalty": 0.07695105523904677,
+    "mean_latency_overhead": 0.08072984336309363,
+    "p95_latency_overhead": 0.09380956160109744,
+    "p99_latency_overhead": 0.0990590636404054,
+    "p99_ratio": 1.0990590636404054
+  },
+  {
+    "workers": 2,
+    "replicate": 1,
+    "throughput_penalty": 0.07808464100144896,
+    "mean_latency_overhead": 0.08232417209295662,
+    "p95_latency_overhead": 0.0995175577348939,
+    "p99_latency_overhead": 0.1096158173988333,
+    "p99_ratio": 1.1096158173988333
+  },
+  {
+    "workers": 2,
+    "replicate": 2,
+    "throughput_penalty": 0.0755903959641635,
+    "mean_latency_overhead": 0.08096911449135358,
+    "p95_latency_overhead": 0.08955030622242743,
+    "p99_latency_overhead": 0.08926194488177996,
+    "p99_ratio": 1.08926194488178
+  },
+  {
+    "workers": 2,
+    "replicate": 3,
+    "throughput_penalty": 0.07637253707871605,
+    "mean_latency_overhead": 0.0821643761118962,
+    "p95_latency_overhead": 0.09651152692851928,
+    "p99_latency_overhead": 0.10086804647569081,
+    "p99_ratio": 1.1008680464756908
+  },
+  {
+    "workers": 2,
+    "replicate": 4,
+    "throughput_penalty": 0.07326697698494766,
+    "mean_latency_overhead": 0.08069398193612631,
+    "p95_latency_overhead": 0.09583795625749092,
+    "p99_latency_overhead": 0.10280094985604493,
+    "p99_ratio": 1.102800949856045
+  },
+  {
+    "workers": 4,
+    "replicate": 0,
+    "throughput_penalty": 0.0799158408671864,
+    "mean_latency_overhead": 0.08297058553809777,
+    "p95_latency_overhead": 0.09494097355251396,
+    "p99_latency_overhead": 0.09941573177444174,
+    "p99_ratio": 1.0994157317744417
+  },
+  {
+    "workers": 4,
+    "replicate": 1,
+    "throughput_penalty": 0.0832166107714396,
+    "mean_latency_overhead": 0.0890479834813982,
+    "p95_latency_overhead": 0.10916790296855483,
+    "p99_latency_overhead": 0.11598820749855587,
+    "p99_ratio": 1.1159882074985559
+  },
+  {
+    "workers": 4,
+    "replicate": 2,
+    "throughput_penalty": 0.07605144023372201,
+    "mean_latency_overhead": 0.08422336307557265,
+    "p95_latency_overhead": 0.09883975791259081,
+    "p99_latency_overhead": 0.10602179304134118,
+    "p99_ratio": 1.1060217930413412
+  },
+  {
+    "workers": 4,
+    "replicate": 3,
+    "throughput_penalty": 0.0798313476678566,
+    "mean_latency_overhead": 0.0829428218464725,
+    "p95_latency_overhead": 0.09568017143998286,
+    "p99_latency_overhead": 0.09901225175892137,
+    "p99_ratio": 1.0990122517589214
+  },
+  {
+    "workers": 4,
+    "replicate": 4,
+    "throughput_penalty": 0.08347062603698296,
+    "mean_latency_overhead": 0.08606232263815605,
+    "p95_latency_overhead": 0.0997679485069296,
+    "p99_latency_overhead": 0.10639428396513306,
+    "p99_ratio": 1.106394283965133
+  },
+  {
+    "workers": 8,
+    "replicate": 0,
+    "throughput_penalty": 0.08182935578538231,
+    "mean_latency_overhead": 0.0824556140135353,
+    "p95_latency_overhead": 0.10191229387979917,
+    "p99_latency_overhead": 0.11751041400600748,
+    "p99_ratio": 1.1175104140060075
+  },
+  {
+    "workers": 8,
+    "replicate": 1,
+    "throughput_penalty": 0.07978237200313032,
+    "mean_latency_overhead": 0.07866621255140083,
+    "p95_latency_overhead": 0.0921628634827174,
+    "p99_latency_overhead": 0.10856895944224298,
+    "p99_ratio": 1.108568959442243
+  },
+  {
+    "workers": 8,
+    "replicate": 2,
+    "throughput_penalty": 0.07117087878939687,
+    "mean_latency_overhead": 0.07815273407743462,
+    "p95_latency_overhead": 0.08816747215182397,
+    "p99_latency_overhead": 0.09663797787294914,
+    "p99_ratio": 1.0966379778729491
+  },
+  {
+    "workers": 8,
+    "replicate": 3,
+    "throughput_penalty": 0.07251117244105032,
+    "mean_latency_overhead": 0.07661867130129929,
+    "p95_latency_overhead": 0.08717637401259326,
+    "p99_latency_overhead": 0.10015055843139198,
+    "p99_ratio": 1.100150558431392
+  },
+  {
+    "workers": 8,
+    "replicate": 4,
+    "throughput_penalty": 0.08033588776134215,
+    "mean_latency_overhead": 0.08333022904015808,
+    "p95_latency_overhead": 0.1025678248915709,
+    "p99_latency_overhead": 0.12033500443065237,
+    "p99_ratio": 1.1203350044306524
+  }
+]

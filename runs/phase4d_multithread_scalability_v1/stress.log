@@ -1,0 +1,5 @@
+stress MIXED T=1 rep=0 PASS
+stress MIXED T=2 rep=0 PASS
+stress MIXED T=4 rep=0 PASS
+stress MIXED T=8 rep=0 PASS
+stress COMPLETE

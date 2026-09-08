@@ -1890,3 +1890,137 @@ Final audit PASS:1,624,728 timed output/count checks,14252 independent
 stable-full-sort top16 references, unchanged immutable input/source/binary
 hashes, identical derived query rows,21 byte-identical tables/figures.
 Artifact manifest: `runs/phase4c_bounded_candidate_retention_v1/final_audit.json`.
+
+## Phase 4D — concurrent bounded ALL-L16 (2026-09-08)
+
+Execution Git `9a0c375c9151ec45bf7866c8d5b14e23198b48f6`, plus immutable
+new-harness/build hashes. FAISS `20f14b31a6d54e243a3d1de6ae193fc4c3ec18ed`.
+Preregistered in `runs/phase4d_multithread_scalability_v1/preregistration.md`
+before concurrent outcomes. Config `configs/indexes/phase4d_multithread_scalability.conf`.
+Same engine source, graph/PQ model/SIFT query IDs/GT, ef64/k10/L16; no GAP,
+training, data changes or query-risk work. Threads1/2/4/8 on physical CPUs2–9,
+coordinator0, internal OMP/BLAS1. Four complete14252-query passes/cell, five
+repetitions, shuffled policy/worker order seed94300011. Stress seed94300037;
+512 stress queries include210 previously known PQ cutoff ties;4096 calls/worker.
+
+Exact commands executed:
+
+```bash
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release > runs/phase4d_multithread_scalability_v1/configure.log 2>&1
+cmake --build build --target faiss_phase4d -j 8 > runs/phase4d_multithread_scalability_v1/build.log 2>&1
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/prepare_phase4d.py > runs/phase4d_multithread_scalability_v1/prepare.log 2>&1
+ctest --test-dir build --output-on-failure > runs/phase4d_multithread_scalability_v1/ctest.log 2>&1
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OMP_DYNAMIC=FALSE OMP_MAX_ACTIVE_LEVELS=1 taskset -c 0,2-9 ./build/faiss_phase4d stress configs/indexes/phase4d_multithread_scalability.conf > runs/phase4d_multithread_scalability_v1/stress.log 2>&1
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python -m unittest discover -s tests -p 'test_phase*_metrics.py' -v > runs/phase4d_multithread_scalability_v1/python_tests.log 2>&1
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OMP_DYNAMIC=FALSE OMP_MAX_ACTIVE_LEVELS=1 taskset -c 0 /tmp/phase3b-plot-env/bin/python scripts/run_phase4d_benchmarks.py > runs/phase4d_multithread_scalability_v1/runner.log 2>&1
+# Runner primary:
+# taskset -c 0,2-9 ./build/faiss_phase4d benchmark configs/indexes/phase4d_multithread_scalability.conf
+# After primary only, perf availability probe:
+# perf stat --all-user -e task-clock,cycles,instructions,cache-references,cache-misses -- true
+# Gated perf commands (actual FIFO paths recorded in benchmark_environment.json):
+# perf stat --all-user -D -1 --control fifo:CTL,ACK -x , -e task-clock,cycles,instructions,cache-references,cache-misses -o RAW_COUNTER_FILE -- taskset -c 0,2-9 ./build/faiss_phase4d profile configs/indexes/phase4d_multithread_scalability.conf T POLICY CTL ACK
+```
+
+Source audit: PQ ADC tables are per-call; visited tables are thread_local;
+each worker owns CandidateAccess; low-level HNSW APIs avoid shared global
+high-level statistics accumulation. Ready gate verifies T+1 live threads,
+distinct TLS addresses and OpenMP max_threads1. Warmup/start barrier excluded
+from service timing; per-query actual API latency retained, QPS uses total
+completion window. Post-stream comparisons/file writes excluded. Every repeat
+retained; worker-end offsets quantify finite-stream drain/imbalance.
+
+Machine: Intel i9-10920X,12 physical/24 logical cores, one NUMA node. Workers
+2–9 are distinct cores, not siblings14–21. L1d/L1i32KiB per core,L2 1MiB per
+core, shared L3 19712KiB; RAM32273192KiB. GCC11.5.0, same Release app flags
+`-O3 -DNDEBUG -std=c++20 -Wall -Wextra -Wpedantic -fopenmp`, generic CPU FAISS.
+Governor performance, turbo enabled and unchanged. Source/binary/config/model/
+input/cache/topology checksums and flags are in provenance; per-cell load,
+CPU/memory/frequency snapshots are raw *_before.txt/*_after.txt. Idle frequency
+snapshots are not locked active frequencies. Host precheck found no competing
+heavy job; namespace-local process snapshots are not continuous host monitoring.
+No agent-owned heavy jobs overlap timing. No exclusive-machine claim.
+
+Pre-benchmark correctness PASS:61440 mixed concurrent calls over1/2/4/8
+workers, native and bounded-refinement output IDs/top16 bits equal frozen
+references. No observed state leakage; model and graph memory hashes unchanged.
+Timestamp pair-loop upper-bound0.03590133us, not subtracted. Six C++ and86 Python
+tests pass. NFS build clock-skew warnings retained; executable built successfully.
+
+Analysis/reproduction commands after all primary and optional profiles:
+
+```bash
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/analyze_phase4d.py > runs/phase4d_multithread_scalability_v1/analysis.log 2>&1
+mktemp -d /tmp/phase4d-reproduce.XXXXXX
+# Returned /tmp/phase4d-reproduce.p7bkzL
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/analyze_phase4d.py --tables /tmp/phase4d-reproduce.p7bkzL/tables --figures /tmp/phase4d-reproduce.p7bkzL/figures > runs/phase4d_multithread_scalability_v1/reproduction.log 2>&1
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/audit_phase4d.py --reproduction /tmp/phase4d-reproduce.p7bkzL > runs/phase4d_multithread_scalability_v1/audit.log 2>&1
+```
+
+Observations, five-repeat means for1/2/4/8 workers:
+
+- NATIVE QPS:6118.50/11892.92/23076.26/45165.50.
+- ALL16 QPS:5687.78/10988.41/21218.67/41682.04.
+- NATIVE mean latency us:163.312/167.839/171.779/175.208.
+- ALL16 mean latency us:175.698/181.497/186.388/189.198.
+- NATIVE p95 us:191.491/196.074/200.470/203.366;
+  p99:205.558/209.776/214.253/216.942.
+- ALL16 p95 us:207.768/214.710/220.449/222.563;
+  p99:223.714/230.820/236.823/240.508.
+- Throughput penalty7.040/7.605/8.050/7.713%; mean overhead
+  7.584/8.138/8.505/7.984%; p99 ratios1.0883/1.1003/1.1053/1.1086.
+
+All<=15% throughput criteria pass.8-worker speedup7.382 native /7.328 ALL16;
+efficiency92.272/91.604%. Recall remains .85030873/.93997334 (all ID/counts
+identical),8.966 percentage-point gain. ALL16 retains92.287% of native QPS
+at8 workers. Every primary cell's mean/median/p90/p95/p99/QPS/recall and the
+mean/SD/min/max across repeats are in phase4d_repetitions/aggregate tables.
+40 primary cells,2,280,320 individual measurements,285040 per policy/T.
+
+Tail/CPU observations:8-worker paired p99 overhead ranges9.66–12.03%; maximum
+raw latency563.510us, not removed. Assigned-core utilization98.79/98.44% at8;
+last-worker drain fraction1.56/2.45%. Largest launch lag14.91us/cell. No extra
+live query threads, TLS aliasing, core migration or changed index hashes.
+
+Optional perf profiles all succeeded after primary, gates acknowledged,100%
+event-running time. Instructions/query1.137M native/1.185M ALL16 at both1/8;
+cache misses/query3174/3442 at1 and3429/3688 at8. Additional instructions
+approximately4.15%; misses approximately8.45% then7.56% above native. These
+are generic user-space cache events, not DRAM bandwidth or isolated FP32
+refinement traffic. Task-clock counts agree closely with worker CPU time;
+perf's default CPUs-utilized denominator includes disabled process phases and
+must not replace the hot-loop utilization estimate. Nominal additional FP32
+payload8192 bytes/query,0.3415GB/s at measured8-worker ALL16 QPS; not actual
+bandwidth. No unsupported hardware-causation claim.
+
+Confounders: fresh1-worker overhead7.58% differs from4C5.85% despite unchanged
+engine/inputs/results. Different longer-stream/worker allocator/cache/frequency
+context may matter, but no cause established; startup itself was excluded.
+All scaling uses the new contemporaneous baseline. Closed-loop service times
+exclude arrival queues/network delays; repeated queries and one warm resident
+single-NUMA machine do not establish production SLAs or external validity.
+Finite shard drain is included in QPS, not corrected away. Counter samples
+are diagnostic single runs, not primary repeats. No tuning, selective risk
+policy, retraining or run removal.
+
+Inherited training metadata: same65536 learning vectors, split94000011,
+PQ seed94000037,25 iterations,24 historical training threads; graph construction
+seed20260907/24 threads. None is an online internal-thread setting. Inputs and
+prior runs remain unchanged. Full report:
+`docs/phase4d_multithread_scalability.md`.
+
+Interpretation: Case A supported on this workload. No materially widening
+ALL16-specific efficiency loss or disproportionate tail breakdown through8
+physical cores. Bounded shallow exact refinement is worth external validation,
+not a universal systems/novelty claim. Do not return to query-level risk models.
+
+Exactly one next experiment: one preselected high-dimensional real embedding
+dataset external-validity gate, NATIVE versus unchanged bounded ALL-L16 at1/8
+workers, with independently fixed reasonable PQ/HNSW settings and offline
+candidate-oracle recall control. Jointly assess recall,QPS,p95/p99, without
+choosing data/policy settings based on favorable test outcomes.
+
+Final independent audit PASS:61440 stress,2,280,320 primary and228032 profile
+returned-ID/count checks, regenerated deterministic schedule, all immutable
+input/source/binary hashes unchanged, shared model/graph hashes unchanged,
+28 byte-identical regenerated tables/figures. Artifact manifest:
+`runs/phase4d_multithread_scalability_v1/final_audit.json`.

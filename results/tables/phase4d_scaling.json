@@ -1,0 +1,50 @@
+[
+  {
+    "policy": "NATIVE",
+    "workers": 1,
+    "speedup": 1.0,
+    "parallel_efficiency": 1.0
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 1,
+    "speedup": 1.0,
+    "parallel_efficiency": 1.0
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 2,
+    "speedup": 1.943763038916072,
+    "parallel_efficiency": 0.971881519458036
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 2,
+    "speedup": 1.9319348102608798,
+    "parallel_efficiency": 0.9659674051304399
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 4,
+    "speedup": 3.7715528821251416,
+    "parallel_efficiency": 0.9428882205312854
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 4,
+    "speedup": 3.7305750682237506,
+    "parallel_efficiency": 0.9326437670559377
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 8,
+    "speedup": 7.381789218040499,
+    "parallel_efficiency": 0.9227236522550624
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 8,
+    "speedup": 7.3283555784866605,
+    "parallel_efficiency": 0.9160444473108326
+  }
+]

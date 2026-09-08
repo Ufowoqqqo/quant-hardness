@@ -1,0 +1,650 @@
+[
+  {
+    "policy": "NATIVE",
+    "workers": 1,
+    "metric": "recall_at_10",
+    "mean": 0.8503087285994949,
+    "std": 0.0,
+    "min": 0.8503087285994949,
+    "max": 0.8503087285994949
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 1,
+    "metric": "qps",
+    "mean": 6118.503324288362,
+    "std": 14.93455724892673,
+    "min": 6096.041648084681,
+    "max": 6130.99788940075
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 1,
+    "metric": "mean_latency_us",
+    "mean": 163.31150828655626,
+    "std": 0.3994824494663978,
+    "min": 162.97854115211896,
+    "max": 163.9133374263261
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 1,
+    "metric": "median_latency_us",
+    "mean": 165.2353,
+    "std": 0.3848084913304378,
+    "min": 164.925,
+    "max": 165.84050000000002
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 1,
+    "metric": "p90_latency_us",
+    "mean": 185.1444,
+    "std": 0.6704767259196969,
+    "min": 184.5466,
+    "max": 186.1029
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 1,
+    "metric": "p95_latency_us",
+    "mean": 191.49094999999997,
+    "std": 0.7513322608872696,
+    "min": 190.7883,
+    "max": 192.53754999999995
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 1,
+    "metric": "p99_latency_us",
+    "mean": 205.55755600000003,
+    "std": 0.9562762331199157,
+    "min": 204.52737,
+    "max": 206.97758000000002
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 1,
+    "metric": "allocated_core_utilization",
+    "mean": 0.9980706999217841,
+    "std": 6.31385928686105e-05,
+    "min": 0.9979957074331199,
+    "max": 0.9981364243524695
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 1,
+    "metric": "last_worker_drain_fraction",
+    "mean": 0.0,
+    "std": 0.0,
+    "min": 0.0,
+    "max": 0.0
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 1,
+    "metric": "recall_at_10",
+    "mean": 0.9399733370754983,
+    "std": 0.0,
+    "min": 0.9399733370754983,
+    "max": 0.9399733370754983
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 1,
+    "metric": "qps",
+    "mean": 5687.775369128796,
+    "std": 32.385137633127954,
+    "min": 5651.467940742503,
+    "max": 5726.322659301455
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 1,
+    "metric": "mean_latency_us",
+    "mean": 175.69775635349424,
+    "std": 1.0008202443355423,
+    "min": 174.5093513892787,
+    "max": 176.82132998877353
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 1,
+    "metric": "median_latency_us",
+    "mean": 177.52130000000002,
+    "std": 0.7720152686313934,
+    "min": 176.612,
+    "max": 178.4015
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 1,
+    "metric": "p90_latency_us",
+    "mean": 200.25150000000002,
+    "std": 1.8255611739955542,
+    "min": 198.084,
+    "max": 202.44420000000002
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 1,
+    "metric": "p95_latency_us",
+    "mean": 207.76769,
+    "std": 2.413960153047277,
+    "min": 204.87119999999996,
+    "max": 210.54919999999996
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 1,
+    "metric": "p99_latency_us",
+    "mean": 223.71420199999997,
+    "std": 2.9530773867475872,
+    "min": 220.05818000000002,
+    "max": 226.94644
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 1,
+    "metric": "allocated_core_utilization",
+    "mean": 0.9979861356792574,
+    "std": 5.9778123043813544e-05,
+    "min": 0.9978958221326029,
+    "max": 0.9980361307842769
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 1,
+    "metric": "last_worker_drain_fraction",
+    "mean": 0.0,
+    "std": 0.0,
+    "min": 0.0,
+    "max": 0.0
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 2,
+    "metric": "recall_at_10",
+    "mean": 0.8503087285994948,
+    "std": 0.0,
+    "min": 0.8503087285994948,
+    "max": 0.8503087285994948
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 2,
+    "metric": "qps",
+    "mean": 11892.920615236835,
+    "std": 22.074449136283675,
+    "min": 11861.1617510835,
+    "max": 11919.38275710565
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 2,
+    "metric": "mean_latency_us",
+    "mean": 167.83867882402473,
+    "std": 0.2479004670520406,
+    "min": 167.57113768243056,
+    "max": 168.1289237300028
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 2,
+    "metric": "median_latency_us",
+    "mean": 169.89389999999997,
+    "std": 0.25358760813571807,
+    "min": 169.64350000000002,
+    "max": 170.1905
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 2,
+    "metric": "p90_latency_us",
+    "mean": 190.01454,
+    "std": 0.30445574062579683,
+    "min": 189.5832,
+    "max": 190.37030000000001
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 2,
+    "metric": "p95_latency_us",
+    "mean": 196.07442,
+    "std": 0.2925421008162835,
+    "min": 195.759,
+    "max": 196.52965
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 2,
+    "metric": "p99_latency_us",
+    "mean": 209.776066,
+    "std": 0.4106892953072871,
+    "min": 209.17774,
+    "max": 210.25679
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 2,
+    "metric": "allocated_core_utilization",
+    "mean": 0.9970816276913951,
+    "std": 0.0007994860903931708,
+    "min": 0.9961195965275361,
+    "max": 0.9979049434940431
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 2,
+    "metric": "last_worker_drain_fraction",
+    "mean": 0.0023580774855016646,
+    "std": 0.0015859011709682333,
+    "min": 0.0007587679847843865,
+    "max": 0.004238224166603517
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 2,
+    "metric": "recall_at_10",
+    "mean": 0.9399733370754981,
+    "std": 0.0,
+    "min": 0.9399733370754981,
+    "max": 0.9399733370754981
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 2,
+    "metric": "qps",
+    "mean": 10988.411228564346,
+    "std": 21.10700457031485,
+    "min": 10954.46333586432,
+    "max": 11009.06925553319
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 2,
+    "metric": "mean_latency_us",
+    "mean": 181.49675213303397,
+    "std": 0.2868080568795841,
+    "min": 181.13943602652256,
+    "max": 181.86329576550665
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 2,
+    "metric": "median_latency_us",
+    "mean": 183.29889999999997,
+    "std": 0.287148785475411,
+    "min": 182.892,
+    "max": 183.6035
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 2,
+    "metric": "p90_latency_us",
+    "mean": 207.09476,
+    "std": 0.516472848269878,
+    "min": 206.4523,
+    "max": 207.68630000000002
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 2,
+    "metric": "p95_latency_us",
+    "mean": 214.71022,
+    "std": 0.7323917160577531,
+    "min": 213.73119999999997,
+    "max": 215.48565
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 2,
+    "metric": "p99_latency_us",
+    "mean": 230.819998,
+    "std": 1.4103465115601892,
+    "min": 229.02472,
+    "max": 232.72372
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 2,
+    "metric": "allocated_core_utilization",
+    "mean": 0.9960608201259232,
+    "std": 0.0016086366409634172,
+    "min": 0.9937860447187153,
+    "max": 0.9974952889183051
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 2,
+    "metric": "last_worker_drain_fraction",
+    "mean": 0.004243237242945056,
+    "std": 0.00321417105432257,
+    "min": 0.0013757477853699632,
+    "max": 0.00883758668290395
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 4,
+    "metric": "recall_at_10",
+    "mean": 0.8503087285994949,
+    "std": 0.0,
+    "min": 0.8503087285994949,
+    "max": 0.8503087285994949
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 4,
+    "metric": "qps",
+    "mean": 23076.25884701203,
+    "std": 52.151814493004764,
+    "min": 23015.635363921974,
+    "max": 23147.04770860627
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 4,
+    "metric": "mean_latency_us",
+    "mean": 171.77865640611842,
+    "std": 0.30982955604273854,
+    "min": 171.39334896856582,
+    "max": 172.07324971933764
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 4,
+    "metric": "median_latency_us",
+    "mean": 173.9351,
+    "std": 0.18474928957915168,
+    "min": 173.6905,
+    "max": 174.10250000000002
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 4,
+    "metric": "p90_latency_us",
+    "mean": 194.33656000000002,
+    "std": 0.7095371963470288,
+    "min": 193.40460000000002,
+    "max": 195.0123
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 4,
+    "metric": "p95_latency_us",
+    "mean": 200.46958999999998,
+    "std": 0.9174805988412106,
+    "min": 199.28384999999994,
+    "max": 201.30659999999997
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 4,
+    "metric": "p99_latency_us",
+    "mean": 214.253132,
+    "std": 1.1491507892004487,
+    "min": 212.97941,
+    "max": 215.39193
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 4,
+    "metric": "allocated_core_utilization",
+    "mean": 0.9899370503195037,
+    "std": 0.0006039045353752982,
+    "min": 0.9890635516833352,
+    "max": 0.9907354519126212
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 4,
+    "metric": "last_worker_drain_fraction",
+    "mean": 0.013212805887191027,
+    "std": 0.0009044351635397696,
+    "min": 0.01201535806940297,
+    "max": 0.01448332817953686
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 4,
+    "metric": "recall_at_10",
+    "mean": 0.9399733370754981,
+    "std": 0.0,
+    "min": 0.9399733370754981,
+    "max": 0.9399733370754981
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 4,
+    "metric": "qps",
+    "mean": 21218.672985729027,
+    "std": 80.9634877146204,
+    "min": 21137.555784795404,
+    "max": 21352.108702557653
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 4,
+    "metric": "mean_latency_us",
+    "mean": 186.38787371596968,
+    "std": 0.30829609265688795,
+    "min": 185.94694332374405,
+    "max": 186.70669781434188
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 4,
+    "metric": "median_latency_us",
+    "mean": 188.21710000000002,
+    "std": 0.29542012456838235,
+    "min": 187.794,
+    "max": 188.508
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 4,
+    "metric": "p90_latency_us",
+    "mean": 212.57464,
+    "std": 0.45626836730152887,
+    "min": 211.87,
+    "max": 213.07330000000002
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 4,
+    "metric": "p95_latency_us",
+    "mean": 220.44875000000002,
+    "std": 0.6107888669581327,
+    "min": 219.46165,
+    "max": 221.03924999999998
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 4,
+    "metric": "p99_latency_us",
+    "mean": 236.82297,
+    "std": 0.8245253365118612,
+    "min": 235.65888,
+    "max": 237.68251
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 4,
+    "metric": "allocated_core_utilization",
+    "mean": 0.987545336491371,
+    "std": 0.0026255385656410272,
+    "min": 0.9854495036713691,
+    "max": 0.9914379713640785
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 4,
+    "metric": "last_worker_drain_fraction",
+    "mean": 0.01669637991508491,
+    "std": 0.0035438002522118965,
+    "min": 0.012145168047558316,
+    "max": 0.019512636217203328
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 8,
+    "metric": "recall_at_10",
+    "mean": 0.8503087285994949,
+    "std": 0.0,
+    "min": 0.8503087285994949,
+    "max": 0.8503087285994949
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 8,
+    "metric": "qps",
+    "mean": 45165.50186977678,
+    "std": 33.60786625060403,
+    "min": 45127.45877809725,
+    "max": 45203.7902363153
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 8,
+    "metric": "mean_latency_us",
+    "mean": 175.2084817358967,
+    "std": 0.08254178393324328,
+    "min": 175.09698221302273,
+    "max": 175.29439220811113
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 8,
+    "metric": "median_latency_us",
+    "mean": 177.67350000000002,
+    "std": 0.0707080264185104,
+    "min": 177.564,
+    "max": 177.735
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 8,
+    "metric": "p90_latency_us",
+    "mean": 197.50618000000003,
+    "std": 0.13159941869173056,
+    "min": 197.321,
+    "max": 197.6802
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 8,
+    "metric": "p95_latency_us",
+    "mean": 203.36637000000002,
+    "std": 0.162698342800419,
+    "min": 203.20895,
+    "max": 203.604
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 8,
+    "metric": "p99_latency_us",
+    "mean": 216.94213800000003,
+    "std": 0.5113076854204343,
+    "min": 216.43258,
+    "max": 217.71451000000002
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 8,
+    "metric": "allocated_core_utilization",
+    "mean": 0.9878715898353179,
+    "std": 0.0007317169581868466,
+    "min": 0.9868287522742026,
+    "max": 0.9886409782812583
+  },
+  {
+    "policy": "NATIVE",
+    "workers": 8,
+    "metric": "last_worker_drain_fraction",
+    "mean": 0.015626889968127285,
+    "std": 0.0017618017156521733,
+    "min": 0.013789310869537557,
+    "max": 0.017946400657184634
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 8,
+    "metric": "recall_at_10",
+    "mean": 0.9399733370754981,
+    "std": 0.0,
+    "min": 0.9399733370754981,
+    "max": 0.9399733370754981
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 8,
+    "metric": "qps",
+    "mean": 41682.04035553404,
+    "std": 216.523471489207,
+    "min": 41434.707898054156,
+    "max": 41921.78116294298
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 8,
+    "metric": "mean_latency_us",
+    "mean": 189.19777175133316,
+    "std": 0.4267286048599464,
+    "min": 188.71161470319953,
+    "max": 189.6878538450744
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 8,
+    "metric": "median_latency_us",
+    "mean": 191.41330000000002,
+    "std": 0.30136203310968895,
+    "min": 191.033,
+    "max": 191.7475
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 8,
+    "metric": "p90_latency_us",
+    "mean": 214.86238000000003,
+    "std": 0.8601342813770441,
+    "min": 213.9456,
+    "max": 215.804
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 8,
+    "metric": "p95_latency_us",
+    "mean": 222.56301,
+    "std": 1.3995308389778525,
+    "min": 221.17189999999997,
+    "max": 224.07965000000002
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 8,
+    "metric": "p99_latency_us",
+    "mean": 240.50793800000002,
+    "std": 1.9103862984014623,
+    "min": 238.754,
+    "max": 243.01116000000002
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 8,
+    "metric": "allocated_core_utilization",
+    "mean": 0.9843559554992375,
+    "std": 0.0035745491067336217,
+    "min": 0.9805921331456543,
+    "max": 0.9889074630980301
+  },
+  {
+    "policy": "BOUNDED_ALL16",
+    "workers": 8,
+    "metric": "last_worker_drain_fraction",
+    "mean": 0.02451621262453243,
+    "std": 0.006512717661137744,
+    "min": 0.014942878494482902,
+    "max": 0.03258071742645676
+  }
+]

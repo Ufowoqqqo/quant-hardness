@@ -1,0 +1,10 @@
+START primary benchmark
+COMPLETE primary benchmark
+START gated perf NATIVE 1
+COMPLETE gated perf NATIVE 1 PASS
+START gated perf BOUNDED_ALL16 1
+COMPLETE gated perf BOUNDED_ALL16 1 PASS
+START gated perf NATIVE 8
+COMPLETE gated perf NATIVE 8 PASS
+START gated perf BOUNDED_ALL16 8
+COMPLETE gated perf BOUNDED_ALL16 8 PASS

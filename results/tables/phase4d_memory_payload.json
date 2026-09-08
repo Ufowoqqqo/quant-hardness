@@ -1,0 +1,30 @@
+[
+  {
+    "workers": 1,
+    "policy": "BOUNDED_ALL16",
+    "additional_payload_bytes_per_query": 8192,
+    "nominal_payload_GB_per_s": 0.0465942558239031,
+    "not_measured_DRAM_bandwidth": true
+  },
+  {
+    "workers": 2,
+    "policy": "BOUNDED_ALL16",
+    "additional_payload_bytes_per_query": 8192,
+    "nominal_payload_GB_per_s": 0.09001706478439912,
+    "not_measured_DRAM_bandwidth": true
+  },
+  {
+    "workers": 4,
+    "policy": "BOUNDED_ALL16",
+    "additional_payload_bytes_per_query": 8192,
+    "nominal_payload_GB_per_s": 0.17382336909909218,
+    "not_measured_DRAM_bandwidth": true
+  },
+  {
+    "workers": 8,
+    "policy": "BOUNDED_ALL16",
+    "additional_payload_bytes_per_query": 8192,
+    "nominal_payload_GB_per_s": 0.34145927459253483,
+    "not_measured_DRAM_bandwidth": true
+  }
+]

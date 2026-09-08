@@ -267,3 +267,8 @@ add_test(NAME bounded_retention_correctness COMMAND bounded_retention_correctnes
 add_executable(faiss_phase4c src/experiments/faiss_phase4c.cpp)
 target_link_libraries(faiss_phase4c PRIVATE qh_bounded)
 target_compile_options(faiss_phase4c PRIVATE -Wall -Wextra -Wpedantic)
+
+find_package(Threads REQUIRED)
+add_executable(faiss_phase4d src/experiments/faiss_phase4d.cpp)
+target_link_libraries(faiss_phase4d PRIVATE qh_bounded Threads::Threads)
+target_compile_options(faiss_phase4d PRIVATE -Wall -Wextra -Wpedantic)

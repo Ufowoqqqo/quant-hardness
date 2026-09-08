@@ -1,0 +1,7 @@
+# started on Tue Sep  8 21:12:52 2026
+
+10785.82,msec,task-clock,10785815616,100.00,2.354,CPUs utilized
+45617046155,,cycles,10785815616,100.00,4.229,GHz
+67527331776,,instructions,10785815616,100.00,1.48,insn per cycle
+339350580,,cache-references,10785815616,100.00,31.463,M/sec
+210240120,,cache-misses,10785815616,100.00,61.95,of all cache refs

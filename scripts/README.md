@@ -96,3 +96,15 @@ variance identities and nine-model pair masks. Training-subset mean variance
 is not a formal random-effect estimate. `verify_phase3e_artifacts.py` checks
 old input integrity, all9 models and byte-identical independent regeneration.
 See the Phase 3E pre-registration, report and experiment log for exact commands.
+# Phase 3F fixed-pool orthogonal-basis stability
+
+`phase3f_rotation_validation.py` constructs non-learned QR bases, validates
+exact geometry before training, and saves the FP32 transformed inputs.
+`run_phase3f_models.py` trains15 new PQ64 models only after that gate; it calls
+the dedicated `build/faiss_rotation_stability rotation-scores` path (no graph
+search). `analyze_phase3f_rotation_stability.py` supports `derive`, `summarize`,
+`checkpoint`, and post-primary `ensemble`. `verify_phase3f_artifacts.py`
+audits immutable inputs, regenerated transforms and independent raw-analysis
+reproduction. Defaults point to the versioned Phase 3F config/run. The
+rotation-majority query bins differ explicitly from Phase 3E's model-count
+bins; variance components are descriptive, not causal allocations.

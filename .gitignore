@@ -1,3 +1,9 @@
 /build/
 __pycache__/
 *.py[cod]
+# Full arrays remain locally; lossless Git-sized parts and hashes are tracked.
+/runs/phase3f_rotation_stability_v1/rotation_0/base.f32
+/runs/phase3f_rotation_stability_v1/rotation_1/base.f32
+/runs/phase3f_rotation_stability_v1/rotation_2/base.f32
+/runs/phase3f_rotation_stability_v1/rotation_3/base.f32
+/runs/phase3f_rotation_stability_v1/rotation_4/base.f32

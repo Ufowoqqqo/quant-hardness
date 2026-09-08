@@ -1,0 +1,32 @@
+[
+  {
+    "harmful_rotation_count": 0,
+    "frequency": 0.0,
+    "queries": 674
+  },
+  {
+    "harmful_rotation_count": 1,
+    "frequency": 0.2,
+    "queries": 529
+  },
+  {
+    "harmful_rotation_count": 2,
+    "frequency": 0.4,
+    "queries": 705
+  },
+  {
+    "harmful_rotation_count": 3,
+    "frequency": 0.6,
+    "queries": 1142
+  },
+  {
+    "harmful_rotation_count": 4,
+    "frequency": 0.8,
+    "queries": 1970
+  },
+  {
+    "harmful_rotation_count": 5,
+    "frequency": 1.0,
+    "queries": 4980
+  }
+]

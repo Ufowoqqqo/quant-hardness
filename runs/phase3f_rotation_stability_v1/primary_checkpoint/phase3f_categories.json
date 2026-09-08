@@ -1,0 +1,74 @@
+[
+  {
+    "scope": "all",
+    "category": "rotation-robust",
+    "queries": 674,
+    "fraction": 0.0674,
+    "signed_loss_sum": 113.69999999999996,
+    "fraction_total_signed_loss": 0.007216161154585761,
+    "positive_loss_sum": 113.69999999999803
+  },
+  {
+    "scope": "all",
+    "category": "occasionally vulnerable",
+    "queries": 1234,
+    "fraction": 0.1234,
+    "signed_loss_sum": 784.2000000000004,
+    "fraction_total_signed_loss": 0.049770567963290754,
+    "positive_loss_sum": 784.2000000000975
+  },
+  {
+    "scope": "all",
+    "category": "usually vulnerable",
+    "queries": 3112,
+    "fraction": 0.3112,
+    "signed_loss_sum": 4000.1000000000017,
+    "fraction_total_signed_loss": 0.25387305395302134,
+    "positive_loss_sum": 4000.0999999980145
+  },
+  {
+    "scope": "all",
+    "category": "rotation-persistent",
+    "queries": 4980,
+    "fraction": 0.498,
+    "signed_loss_sum": 10858.300000000005,
+    "fraction_total_signed_loss": 0.6891402169290998,
+    "positive_loss_sum": 10858.300000008625
+  },
+  {
+    "scope": "oracle1",
+    "category": "rotation-robust",
+    "queries": 136,
+    "fraction": 0.01905829596412556,
+    "signed_loss_sum": 28.999999999999996,
+    "fraction_total_signed_loss": 0.002257160647571605,
+    "positive_loss_sum": 29.000000000000128
+  },
+  {
+    "scope": "oracle1",
+    "category": "occasionally vulnerable",
+    "queries": 488,
+    "fraction": 0.06838565022421525,
+    "signed_loss_sum": 326.99999999999994,
+    "fraction_total_signed_loss": 0.025451432129514305,
+    "positive_loss_sum": 327.0000000000032
+  },
+  {
+    "scope": "oracle1",
+    "category": "usually vulnerable",
+    "queries": 2095,
+    "fraction": 0.2935818385650224,
+    "signed_loss_sum": 2758.2,
+    "fraction_total_signed_loss": 0.21467932752179317,
+    "positive_loss_sum": 2758.199999999019
+  },
+  {
+    "scope": "oracle1",
+    "category": "rotation-persistent",
+    "queries": 4417,
+    "fraction": 0.6189742152466368,
+    "signed_loss_sum": 9733.800000000021,
+    "fraction_total_signed_loss": 0.7576120797011221,
+    "positive_loss_sum": 9733.800000005858
+  }
+]

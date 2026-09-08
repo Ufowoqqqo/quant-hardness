@@ -1,0 +1,75 @@
+{
+  "rotation": 0,
+  "rotation_seed": null,
+  "orthogonality_max_abs": 0.0,
+  "fp64_checks": [
+    {
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "max_tolerance_fraction": 0.0
+    },
+    {
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "max_tolerance_fraction": 0.0
+    },
+    {
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "max_tolerance_fraction": 0.0
+    }
+  ],
+  "fp32_storage_checks": [
+    {
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "max_tolerance_fraction": 0.0
+    },
+    {
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "max_tolerance_fraction": 0.0
+    },
+    {
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "max_tolerance_fraction": 0.0
+    }
+  ],
+  "fp32_accumulation_checks": [
+    {
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "max_tolerance_fraction": 0.0
+    },
+    {
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "max_tolerance_fraction": 0.0
+    },
+    {
+      "max_absolute_error": 0.0,
+      "max_relative_error": 0.0,
+      "max_tolerance_fraction": 0.0
+    }
+  ],
+  "sample_max_l2_norm_absolute_error": 0.0,
+  "candidate_validation": {
+    "raw_order_changed": 0,
+    "raw_topk_set_changed": 0,
+    "raw_topk_order_changed": 0,
+    "reference_boundary_tie": 171,
+    "strict_reference_reversals": 0
+  },
+  "candidates": 10353047,
+  "queries": 10000,
+  "max_candidate_distance_error": 0.0,
+  "max_candidate_relative_distance_error": 0.0,
+  "canonical_oracle_recall": 0.9531499999999714,
+  "raw_rotated_oracle_recall": 0.9531499999999714,
+  "exhaustive_queries": 100,
+  "gt_membership_changes_exact_ties_only": 0,
+  "R_sha256": "f6ffc42581de417343fe473df2e6f2b0ed94794425fe2f35d305cff8e66af6eb",
+  "base_sha256": "ac8e11ed111b09e882bcf0ef1a77ebdd36c89f495bce8fd596603f69c35148e6",
+  "queries_sha256": "bf4c4c9db385017e63e7b0a9ccd8e3aab3744a02e053c135e000fa0b1dea2d6f"
+}

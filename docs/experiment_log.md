@@ -1231,3 +1231,178 @@ original exact reference, and compare harmful-frequency persistence/local-gap
 associations while reporting PQ approximation quality without tuning. This
 separates Euclidean local-margin susceptibility from shared alignment with
 PQ subspaces. No optimized rotation, new quantizer or algorithm is proposed.
+
+## Phase 3F — preregistration and invariance gate (2026-09-07)
+
+Execution Git HEAD `676169d68f594e47d40340b20e8c77ac92c1a2f9`, with new
+Phase 3F sources recorded by checksum. Preregistration:
+`runs/phase3f_rotation_stability_v1/preregistration.md`; configuration:
+`configs/indexes/phase3f_rotation_stability.conf`. No data-driven basis
+selection or graph traversal. Same Phase 3E A sample IDs and initialization
+seeds; identity plus4 independent QR bases; train15 new standard PQ models.
+
+Commands executed:
+
+```bash
+/tmp/phase3b-plot-env/bin/python -m unittest discover -s tests -p 'test_phase3f_metrics.py' -v
+set -o pipefail
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/phase3f_rotation_validation.py 2>&1 | tee runs/phase3f_rotation_stability_v1/invariance_execution.log
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/phase3f_rotation_validation.py 2>&1 | tee runs/phase3f_rotation_stability_v1/invariance_execution_retry1.log
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build --target faiss_rotation_stability -j2
+/tmp/phase3b-plot-env/bin/python -m unittest discover -s tests -p 'test_phase3*_metrics.py' -v 2>&1 | tee runs/phase3f_rotation_stability_v1/python_tests.log
+ctest --test-dir build --output-on-failure
+```
+
+First validation invocation failed on a Python string/Path mismatch before
+preparation or rotation generation; fixed and retained its error log. A
+pre-analysis variance unit test exposed tiny spurious positive variance in
+constant-within-rotation designs; row-centering fixes arithmetic without
+changing the variance definition. All47 Python tests now pass. No PQ results
+had been generated during either fix. Build reports known filesystem clock
+skew warnings but compiles and links the dedicated executable successfully.
+
+Gate observations so far: R0-R3 preserve all non-tied candidate rankings.
+Raw tie-related top10 membership changes are logged, not overwritten. R3 raw
+tie order gives mean oracle .95316 versus canonical .95315; original exact
+tie policy remains fixed. Numerical tolerances and H1-H5 are unchanged.
+Training remains gated on all5 conditions passing.
+
+All5 gates subsequently passed. Maximum orthogonality error1.67e-15;
+all10,353,047 candidate distances checked per condition, no strict-reference
+ranking reversal. Random-basis candidate max absolute error0.00686–0.00733,
+max relative error2.52e-7–3.72e-7. Raw top10 membership tie changes
+R1/R2/R3/R4=7/5/6/6; exact reference oracle remains.95315.100 exhaustive
+queries per basis pass, including one R4 provided-GT membership tie change.
+
+```bash
+set -o pipefail
+/tmp/phase3b-plot-env/bin/python scripts/run_phase3f_models.py 2>&1 | tee runs/phase3f_rotation_stability_v1/models_execution.log
+```
+
+Runner checks all rotated-input hashes against the completed gate and calls,
+for model indices0..14, sequentially:
+
+```bash
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=24 ./build/faiss_rotation_stability rotation-scores configs/indexes/phase3f_rotation_stability.conf runs/phase3f_rotation_stability_v1 MODEL_INDEX
+```
+
+Exact expanded commands appear in `models_execution.log`; each model has its
+own `Rr-Ii_execution.log`, resolved config, training IDs, full model/codes,
+raw ADC scores and manifest. Model training/scoring results pending here.
+
+All15 training/scoring calls completed successfully. R0-I1/I2/I3 independently
+reproduce Phase3E A1/A2/A3 training-vector, codebook, code and complete score
+checksums. All models use one common sample-ID checksum, one candidate-request
+checksum and one graph fingerprint;15 distinct codebooks. No HNSW traversal
+was invoked for rotated data. Every model scores10,000 queries and10,353,047
+saved candidates, with scalar/batch4 ADC identity and1001 re-encoded ID checks.
+
+```bash
+set -o pipefail
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/analyze_phase3f_rotation_stability.py derive 2>&1 | tee runs/phase3f_rotation_stability_v1/derive_execution.log
+```
+
+## Phase 3F — primary analysis and post-primary diagnostic (2026-09-08)
+
+Commands (same configuration and run throughout):
+
+```bash
+OPENBLAS_NUM_THREADS=1 MPLCONFIGDIR=/tmp/phase3b-mpl /tmp/phase3b-plot-env/bin/python scripts/analyze_phase3f_rotation_stability.py summarize 2>&1 | tee runs/phase3f_rotation_stability_v1/summary_execution.log
+/tmp/phase3b-plot-env/bin/python scripts/analyze_phase3f_rotation_stability.py checkpoint
+OPENBLAS_NUM_THREADS=1 MPLCONFIGDIR=/tmp/phase3b-mpl /tmp/phase3b-plot-env/bin/python scripts/analyze_phase3f_rotation_stability.py ensemble
+mktemp -d /tmp/phase3f-reproduce.XXXXXX
+# Returned /tmp/phase3f-reproduce.9znOHW
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/analyze_phase3f_rotation_stability.py derive --derived /tmp/phase3f-reproduce.9znOHW/analysis
+OPENBLAS_NUM_THREADS=1 MPLCONFIGDIR=/tmp/phase3b-mpl /tmp/phase3b-plot-env/bin/python scripts/analyze_phase3f_rotation_stability.py summarize --derived /tmp/phase3f-reproduce.9znOHW/analysis --tables /tmp/phase3f-reproduce.9znOHW/tables --figures /tmp/phase3f-reproduce.9znOHW/figures
+OPENBLAS_NUM_THREADS=1 MPLCONFIGDIR=/tmp/phase3b-mpl /tmp/phase3b-plot-env/bin/python scripts/analyze_phase3f_rotation_stability.py ensemble --derived /tmp/phase3f-reproduce.9znOHW/ensemble --tables /tmp/phase3f-reproduce.9znOHW/tables --figures /tmp/phase3f-reproduce.9znOHW/figures
+/tmp/phase3b-plot-env/bin/python -m unittest discover -s tests -p 'test_phase3*_metrics.py' -v 2>&1 | tee runs/phase3f_rotation_stability_v1/python_tests_final.log
+ctest --test-dir build --output-on-failure 2>&1 | tee runs/phase3f_rotation_stability_v1/cpp_tests_final.log
+rsvg-convert results/figures/phase3f_geometry.svg -o /tmp/phase3f_geometry.png
+rsvg-convert results/figures/phase3f_rotation_recall.svg -o /tmp/phase3f_rotation_recall.png
+rsvg-convert results/figures/phase3f_ensemble.svg -o /tmp/phase3f_ensemble.png
+```
+
+**Observations (separate from interpretation)**
+
+- Mean Recall R0..R4:.852903/.846283/.847147/.846940/.847267; within-basis
+  SD .000288–.001141. Random bases modestly worsen MAE (1373.4–1378.8
+  vs1312.6), random inversion rate (.03590–.03603 vs.03450) and critical
+  inversions (6.0619–6.1945 vs5.5685). No rotation dropped or retuned.
+- Median harmful Jaccard .68536 within/.66903 between; loss Spearman
+  .41177/.36351; critical-count Spearman .44106/.37991. Identity-to-random
+  loss correlation .35682, random-to-random .36858. Matched/unmatched init
+  labels across bases yield .36430/.36318. All pair distributions preserved.
+- 49.80% are majority-harmful across all5 rotations, accounting for68.91%
+  of loss; within oracle=1,61.90% and75.76%, respectively. Independent
+  rotation-marginal reference predicts2582.96 persistent queries vs4980.
+- Mean population within-init/between-rotation-mean/total variance:
+  .00286698/.00143299/.00429996; W+B=T for every query.66.67/33.33% observed
+  shares are NOT causal variance components. Signed sample contrast .000357744,
+  W_sample .00430047;4160 negative contrasts and186 zero-variance queries retained.
+- Oracle=1 d12-d9 correlations: mean loss−.73912, harmful rotation frequency
+  −.56766. Mean single-model loss correlation−.44074. Median d12-d9
+  robust/occasional/usual/persistent:4056.5/2747/1693/915. Candidate-count
+  mean-loss association .02784, relative adjacent gap−.49363, wider d15-d6
+  −.65568. Weak/non-supportive descriptors retained alongside strong ones.
+- 362,197 union inversion triples:44.55% one-model,49.55% one-rotation,
+ 50.45% across>=2 rotations,3.58% across all5. Only1 pair persists across15
+  models. Pair Jaccard .14487 within/.11702 between, far below query overlap.
+- Post-checkpoint five-basis I1 score average:Recall.90574,loss.04741,
+  inversions1.5996,54.84% loss recovery from member mean. Initialization
+  averages:Recall.88442–.88588,loss.06727–.06873,inversions2.8302–2.9063,
+  recovery32.90–36.23%. Full query-level diagnostic data preserved.
+- All49 Python and5 C++ tests pass; independent raw-data derivation reproduces
+ 45 files byte-for-byte, including8 SVGs. Selected figures rendered and checked.
+
+**Anomalies/confounders and limits**
+
+- Raw exact ties are explicitly audited, not forced to match:canonical
+  exact oracle.95315 for every model, R3 raw floating tie oracle.95316.
+ 171 exact boundary ties and132–178 PQ boundary ties/model. Excluding exact
+  boundary ties retains within/between loss correlation .40931/.36156.
+- No negative net query/model losses occurred; all signed measurements
+  were retained. No candidate-order, source, or graph identity anomaly.
+- Higher harmful prevalence can mechanically increase Jaccard; independent
+  marginal references and oracle=1 results are reported. Pairwise rows
+  share queries/models; no independence or significance claim is made.
+- Three versus five averaged values, matched seeds and substantial
+  interaction prevent a pure rotation/initialization causal variance claim.
+ 15 versus9 models also confounds comparison of averaged geometry correlation
+  with3E. The diagnostics compare5 vs3 models and unequal member quality.
+- Four random bases, one SIFT realization and one training subset do not
+  establish universal hard-query classes or PQ-specific novelty. Standard
+  noisy top-k boundary fragility remains a competing explanation.
+
+**Interpretation and exactly one next experiment**
+
+CASE A is best supported for rotation-averaged susceptibility:high query
+overlap, a large majority-persistent population and strong invariant local-gap
+association survive changes of basis. This is not a causal variance-dominance
+estimate. Realization noise remains, and basis changes modestly reduce query
+stability and quality; they do not cause Case B's collapse.
+
+Next (not run):within-query PQ-residual permutation negative control, on
+the same saved exact scores/pools. Deterministic permutations preserve each
+query/model's full error distribution, signed bias and MAE while disrupting
+candidate-specific error alignment. Compare the same susceptibility and
+critical-inversion metrics with actual PQ to distinguish generic noisy top-k
+selection from PQ-specific structured errors. No algorithm or quantizer change.
+
+Final machine capture and full independent audit commands:
+
+```bash
+lscpu | tee runs/phase3f_rotation_stability_v1/machine_cpu.txt
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/verify_phase3f_artifacts.py runs/phase3f_rotation_stability_v1 /tmp/phase3f-reproduce.9znOHW --output runs/phase3f_rotation_stability_v1/final_verification.json
+```
+
+Machine CPU:Intel Core i9-10920X,12 cores/24 hardware threads; the run also
+records hostname/kernel/compiler, NumPy1.23.5, Matplotlib3.9.4 and the pinned
+FAISS/executable/source hashes. The final audit re-generates all transformed
+database/query arrays and QR matrices without deleting or replacing originals.
+
+Final audit result:PASS.45 derived/table/figure files reproduce byte-for-byte;
+318 artifact hashes recorded. All QR matrices and complete rotated FP32
+database/query arrays independently regenerate identically. All15 models,
+identity-model regression against3E and frozen source/candidate/graph inputs
+pass validation. Raw data and every previous run remain preserved.

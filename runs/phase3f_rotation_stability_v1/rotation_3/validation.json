@@ -1,0 +1,75 @@
+{
+  "rotation": 3,
+  "rotation_seed": 90600059,
+  "orthogonality_max_abs": 1.1102230246251565e-15,
+  "fp64_checks": [
+    {
+      "max_absolute_error": 1.1641532182693481e-10,
+      "max_relative_error": 4.515844954166126e-16,
+      "max_tolerance_fraction": 0.00043472130274852146
+    },
+    {
+      "max_absolute_error": 1.7462298274040222e-10,
+      "max_relative_error": 4.896982911621995e-16,
+      "max_tolerance_fraction": 0.000476340199459352
+    },
+    {
+      "max_absolute_error": 1.7462298274040222e-10,
+      "max_relative_error": 4.5883203135308e-16,
+      "max_tolerance_fraction": 0.0004414336432325632
+    }
+  ],
+  "fp32_storage_checks": [
+    {
+      "max_absolute_error": 0.006543111492646858,
+      "max_relative_error": 2.520701721139115e-08,
+      "max_tolerance_fraction": 0.0485439042392422
+    },
+    {
+      "max_absolute_error": 0.009873432689346373,
+      "max_relative_error": 2.9444992068549514e-08,
+      "max_tolerance_fraction": 0.05402461147728698
+    },
+    {
+      "max_absolute_error": 0.008696788747329265,
+      "max_relative_error": 2.8389274397539086e-08,
+      "max_tolerance_fraction": 0.051866994600939825
+    }
+  ],
+  "fp32_accumulation_checks": [
+    {
+      "max_absolute_error": 0.03125,
+      "max_relative_error": 1.2126268407675443e-07,
+      "max_tolerance_fraction": 0.06004880767087489
+    },
+    {
+      "max_absolute_error": 0.0625,
+      "max_relative_error": 1.4026567440858381e-07,
+      "max_tolerance_fraction": 0.06974154341941113
+    },
+    {
+      "max_absolute_error": 0.0625,
+      "max_relative_error": 1.4243650750241572e-07,
+      "max_tolerance_fraction": 0.07041587049789091
+    }
+  ],
+  "sample_max_l2_norm_absolute_error": 6.421298962777655e-06,
+  "candidate_validation": {
+    "raw_order_changed": 9696,
+    "raw_topk_set_changed": 6,
+    "raw_topk_order_changed": 32,
+    "reference_boundary_tie": 171,
+    "strict_reference_reversals": 0
+  },
+  "candidates": 10353047,
+  "queries": 10000,
+  "max_candidate_distance_error": 0.006859498738776892,
+  "max_candidate_relative_distance_error": 2.8786697756211514e-07,
+  "canonical_oracle_recall": 0.9531499999999714,
+  "raw_rotated_oracle_recall": 0.9531599999999717,
+  "exhaustive_queries": 100,
+  "gt_membership_changes_exact_ties_only": 0,
+  "R_sha256": "77f10040592e7b7917fa1a859bc9935f9a690adebe19750a3bdcb5889202f792",
+  "base_sha256": "2baaaa3b16ec7842a9d11dbfac3c403939009f5c4ac5185089da0c8f1455c3d5",
+  "queries_sha256": "99a6e1139d15e1d5951bc4da67cecd9d581a3daf4b17741a3d1cdebd2394a795"
+}

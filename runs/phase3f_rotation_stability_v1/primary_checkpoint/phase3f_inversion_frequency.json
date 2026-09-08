@@ -1,0 +1,452 @@
+[
+  {
+    "model_count": 1,
+    "rotation_count": 1,
+    "pairs": 161373,
+    "fraction_union": 0.4455393059578075
+  },
+  {
+    "model_count": 1,
+    "rotation_count": 2,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 1,
+    "rotation_count": 3,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 1,
+    "rotation_count": 4,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 1,
+    "rotation_count": 5,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 2,
+    "rotation_count": 1,
+    "pairs": 16440,
+    "fraction_union": 0.04538966363608754
+  },
+  {
+    "model_count": 2,
+    "rotation_count": 2,
+    "pairs": 56461,
+    "fraction_union": 0.15588478093413252
+  },
+  {
+    "model_count": 2,
+    "rotation_count": 3,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 2,
+    "rotation_count": 4,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 2,
+    "rotation_count": 5,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 3,
+    "rotation_count": 1,
+    "pairs": 1673,
+    "fraction_union": 0.004619033288514262
+  },
+  {
+    "model_count": 3,
+    "rotation_count": 2,
+    "pairs": 21465,
+    "fraction_union": 0.05926332907230043
+  },
+  {
+    "model_count": 3,
+    "rotation_count": 3,
+    "pairs": 20928,
+    "fraction_union": 0.05778071049732604
+  },
+  {
+    "model_count": 3,
+    "rotation_count": 4,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 3,
+    "rotation_count": 5,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 4,
+    "rotation_count": 1,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 4,
+    "rotation_count": 2,
+    "pairs": 5787,
+    "fraction_union": 0.015977492911316216
+  },
+  {
+    "model_count": 4,
+    "rotation_count": 3,
+    "pairs": 17614,
+    "fraction_union": 0.04863099363053808
+  },
+  {
+    "model_count": 4,
+    "rotation_count": 4,
+    "pairs": 6103,
+    "fraction_union": 0.016849946299941746
+  },
+  {
+    "model_count": 4,
+    "rotation_count": 5,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 5,
+    "rotation_count": 1,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 5,
+    "rotation_count": 2,
+    "pairs": 1070,
+    "fraction_union": 0.002954193436168715
+  },
+  {
+    "model_count": 5,
+    "rotation_count": 3,
+    "pairs": 9383,
+    "fraction_union": 0.025905791599599114
+  },
+  {
+    "model_count": 5,
+    "rotation_count": 4,
+    "pairs": 8888,
+    "fraction_union": 0.024539132019315454
+  },
+  {
+    "model_count": 5,
+    "rotation_count": 5,
+    "pairs": 942,
+    "fraction_union": 0.002600794595206476
+  },
+  {
+    "model_count": 6,
+    "rotation_count": 1,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 6,
+    "rotation_count": 2,
+    "pairs": 109,
+    "fraction_union": 0.0003009412005069065
+  },
+  {
+    "model_count": 6,
+    "rotation_count": 3,
+    "pairs": 3619,
+    "fraction_union": 0.009991800042518298
+  },
+  {
+    "model_count": 6,
+    "rotation_count": 4,
+    "pairs": 7995,
+    "fraction_union": 0.022073622917914835
+  },
+  {
+    "model_count": 6,
+    "rotation_count": 5,
+    "pairs": 2269,
+    "fraction_union": 0.006264546641744686
+  },
+  {
+    "model_count": 7,
+    "rotation_count": 1,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 7,
+    "rotation_count": 2,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 7,
+    "rotation_count": 3,
+    "pairs": 981,
+    "fraction_union": 0.0027084708045621584
+  },
+  {
+    "model_count": 7,
+    "rotation_count": 4,
+    "pairs": 5278,
+    "fraction_union": 0.014572180332802314
+  },
+  {
+    "model_count": 7,
+    "rotation_count": 5,
+    "pairs": 2947,
+    "fraction_union": 0.008136456127466545
+  },
+  {
+    "model_count": 8,
+    "rotation_count": 1,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 8,
+    "rotation_count": 2,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 8,
+    "rotation_count": 3,
+    "pairs": 196,
+    "fraction_union": 0.0005411419752234281
+  },
+  {
+    "model_count": 8,
+    "rotation_count": 4,
+    "pairs": 2568,
+    "fraction_union": 0.007090064246804915
+  },
+  {
+    "model_count": 8,
+    "rotation_count": 5,
+    "pairs": 2809,
+    "fraction_union": 0.007755448002054131
+  },
+  {
+    "model_count": 9,
+    "rotation_count": 1,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 9,
+    "rotation_count": 2,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 9,
+    "rotation_count": 3,
+    "pairs": 24,
+    "fraction_union": 6.626228268041977e-05
+  },
+  {
+    "model_count": 9,
+    "rotation_count": 4,
+    "pairs": 971,
+    "fraction_union": 0.002680861520111983
+  },
+  {
+    "model_count": 9,
+    "rotation_count": 5,
+    "pairs": 2051,
+    "fraction_union": 0.005662664240730873
+  },
+  {
+    "model_count": 10,
+    "rotation_count": 1,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 10,
+    "rotation_count": 2,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 10,
+    "rotation_count": 3,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 10,
+    "rotation_count": 4,
+    "pairs": 266,
+    "fraction_union": 0.0007344069663746524
+  },
+  {
+    "model_count": 10,
+    "rotation_count": 5,
+    "pairs": 1123,
+    "fraction_union": 0.0031005226437546417
+  },
+  {
+    "model_count": 11,
+    "rotation_count": 1,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 11,
+    "rotation_count": 2,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 11,
+    "rotation_count": 3,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 11,
+    "rotation_count": 4,
+    "pairs": 51,
+    "fraction_union": 0.000140807350695892
+  },
+  {
+    "model_count": 11,
+    "rotation_count": 5,
+    "pairs": 558,
+    "fraction_union": 0.0015405980723197598
+  },
+  {
+    "model_count": 12,
+    "rotation_count": 1,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 12,
+    "rotation_count": 2,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 12,
+    "rotation_count": 3,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 12,
+    "rotation_count": 4,
+    "pairs": 4,
+    "fraction_union": 1.1043713780069963e-05
+  },
+  {
+    "model_count": 12,
+    "rotation_count": 5,
+    "pairs": 183,
+    "fraction_union": 0.0005052499054382008
+  },
+  {
+    "model_count": 13,
+    "rotation_count": 1,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 13,
+    "rotation_count": 2,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 13,
+    "rotation_count": 3,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 13,
+    "rotation_count": 4,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 13,
+    "rotation_count": 5,
+    "pairs": 59,
+    "fraction_union": 0.00016289477825603193
+  },
+  {
+    "model_count": 14,
+    "rotation_count": 1,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 14,
+    "rotation_count": 2,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 14,
+    "rotation_count": 3,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 14,
+    "rotation_count": 4,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 14,
+    "rotation_count": 5,
+    "pairs": 8,
+    "fraction_union": 2.2087427560139925e-05
+  },
+  {
+    "model_count": 15,
+    "rotation_count": 1,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 15,
+    "rotation_count": 2,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 15,
+    "rotation_count": 3,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 15,
+    "rotation_count": 4,
+    "pairs": 0,
+    "fraction_union": 0.0
+  },
+  {
+    "model_count": 15,
+    "rotation_count": 5,
+    "pairs": 1,
+    "fraction_union": 2.7609284450174907e-06
+  }
+]

@@ -1,0 +1,674 @@
+[
+  {
+    "scope": "all",
+    "descriptor": "d1",
+    "target": "overall_mean_loss",
+    "queries": 10000,
+    "spearman": -0.135191601339111
+  },
+  {
+    "scope": "all",
+    "descriptor": "d1",
+    "target": "harmful_rotation_frequency",
+    "queries": 10000,
+    "spearman": -0.15435010368576896
+  },
+  {
+    "scope": "all",
+    "descriptor": "d1",
+    "target": "within_rotation_initialization_variance",
+    "queries": 10000,
+    "spearman": -0.0579997741780633
+  },
+  {
+    "scope": "all",
+    "descriptor": "d1",
+    "target": "between_rotation_variance",
+    "queries": 10000,
+    "spearman": -0.03446024716511041
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk",
+    "target": "overall_mean_loss",
+    "queries": 10000,
+    "spearman": -0.22905461198141108
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk",
+    "target": "harmful_rotation_frequency",
+    "queries": 10000,
+    "spearman": -0.21993507945186025
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk",
+    "target": "within_rotation_initialization_variance",
+    "queries": 10000,
+    "spearman": -0.13186575580995313
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk",
+    "target": "between_rotation_variance",
+    "queries": 10000,
+    "spearman": -0.08218968271934422
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk_plus_1",
+    "target": "overall_mean_loss",
+    "queries": 10000,
+    "spearman": -0.2397795193992542
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk_plus_1",
+    "target": "harmful_rotation_frequency",
+    "queries": 10000,
+    "spearman": -0.22979312818700673
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk_plus_1",
+    "target": "within_rotation_initialization_variance",
+    "queries": 10000,
+    "spearman": -0.13824424767644447
+  },
+  {
+    "scope": "all",
+    "descriptor": "dk_plus_1",
+    "target": "between_rotation_variance",
+    "queries": 10000,
+    "spearman": -0.0867774628439964
+  },
+  {
+    "scope": "all",
+    "descriptor": "d20",
+    "target": "overall_mean_loss",
+    "queries": 10000,
+    "spearman": -0.2557819197897462
+  },
+  {
+    "scope": "all",
+    "descriptor": "d20",
+    "target": "harmful_rotation_frequency",
+    "queries": 10000,
+    "spearman": -0.2391961413743088
+  },
+  {
+    "scope": "all",
+    "descriptor": "d20",
+    "target": "within_rotation_initialization_variance",
+    "queries": 10000,
+    "spearman": -0.15271731525616733
+  },
+  {
+    "scope": "all",
+    "descriptor": "d20",
+    "target": "between_rotation_variance",
+    "queries": 10000,
+    "spearman": -0.09558564053940344
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_margin",
+    "target": "overall_mean_loss",
+    "queries": 10000,
+    "spearman": -0.37045312064917396
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_margin",
+    "target": "harmful_rotation_frequency",
+    "queries": 10000,
+    "spearman": -0.3068592283225833
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_margin",
+    "target": "within_rotation_initialization_variance",
+    "queries": 10000,
+    "spearman": -0.19171722691088405
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_margin",
+    "target": "between_rotation_variance",
+    "queries": 10000,
+    "spearman": -0.12861296097083705
+  },
+  {
+    "scope": "all",
+    "descriptor": "relative_boundary_margin",
+    "target": "overall_mean_loss",
+    "queries": 10000,
+    "spearman": -0.288958133921362
+  },
+  {
+    "scope": "all",
+    "descriptor": "relative_boundary_margin",
+    "target": "harmful_rotation_frequency",
+    "queries": 10000,
+    "spearman": -0.23155736718067615
+  },
+  {
+    "scope": "all",
+    "descriptor": "relative_boundary_margin",
+    "target": "within_rotation_initialization_variance",
+    "queries": 10000,
+    "spearman": -0.1448991883706817
+  },
+  {
+    "scope": "all",
+    "descriptor": "relative_boundary_margin",
+    "target": "between_rotation_variance",
+    "queries": 10000,
+    "spearman": -0.09786226838322891
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r1",
+    "target": "overall_mean_loss",
+    "queries": 10000,
+    "spearman": -0.37045312064917396
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r1",
+    "target": "harmful_rotation_frequency",
+    "queries": 10000,
+    "spearman": -0.3068592283225833
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r1",
+    "target": "within_rotation_initialization_variance",
+    "queries": 10000,
+    "spearman": -0.19171722691088405
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r1",
+    "target": "between_rotation_variance",
+    "queries": 10000,
+    "spearman": -0.12861296097083705
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r2",
+    "target": "overall_mean_loss",
+    "queries": 10000,
+    "spearman": -0.5774696496792288
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r2",
+    "target": "harmful_rotation_frequency",
+    "queries": 10000,
+    "spearman": -0.44230671347312106
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r2",
+    "target": "within_rotation_initialization_variance",
+    "queries": 10000,
+    "spearman": -0.3783103702918038
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r2",
+    "target": "between_rotation_variance",
+    "queries": 10000,
+    "spearman": -0.25516318695060003
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r5",
+    "target": "overall_mean_loss",
+    "queries": 10000,
+    "spearman": -0.5412311761706506
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r5",
+    "target": "harmful_rotation_frequency",
+    "queries": 10000,
+    "spearman": -0.39050973369666
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r5",
+    "target": "within_rotation_initialization_variance",
+    "queries": 10000,
+    "spearman": -0.41183189705190104
+  },
+  {
+    "scope": "all",
+    "descriptor": "boundary_gap_r5",
+    "target": "between_rotation_variance",
+    "queries": 10000,
+    "spearman": -0.2792136441964437
+  },
+  {
+    "scope": "all",
+    "descriptor": "local_distance_concentration",
+    "target": "overall_mean_loss",
+    "queries": 10000,
+    "spearman": -0.11408098077677774
+  },
+  {
+    "scope": "all",
+    "descriptor": "local_distance_concentration",
+    "target": "harmful_rotation_frequency",
+    "queries": 10000,
+    "spearman": -0.03192335134481143
+  },
+  {
+    "scope": "all",
+    "descriptor": "local_distance_concentration",
+    "target": "within_rotation_initialization_variance",
+    "queries": 10000,
+    "spearman": -0.12433966182984388
+  },
+  {
+    "scope": "all",
+    "descriptor": "local_distance_concentration",
+    "target": "between_rotation_variance",
+    "queries": 10000,
+    "spearman": -0.07927252729689041
+  },
+  {
+    "scope": "all",
+    "descriptor": "candidate_count",
+    "target": "overall_mean_loss",
+    "queries": 10000,
+    "spearman": -0.1618877236676203
+  },
+  {
+    "scope": "all",
+    "descriptor": "candidate_count",
+    "target": "harmful_rotation_frequency",
+    "queries": 10000,
+    "spearman": -0.1676589093703238
+  },
+  {
+    "scope": "all",
+    "descriptor": "candidate_count",
+    "target": "within_rotation_initialization_variance",
+    "queries": 10000,
+    "spearman": -0.040038068281178694
+  },
+  {
+    "scope": "all",
+    "descriptor": "candidate_count",
+    "target": "between_rotation_variance",
+    "queries": 10000,
+    "spearman": -0.06529796698670069
+  },
+  {
+    "scope": "all",
+    "descriptor": "oracle_recall",
+    "target": "overall_mean_loss",
+    "queries": 10000,
+    "spearman": 0.4675002193085686
+  },
+  {
+    "scope": "all",
+    "descriptor": "oracle_recall",
+    "target": "harmful_rotation_frequency",
+    "queries": 10000,
+    "spearman": 0.4922871467921233
+  },
+  {
+    "scope": "all",
+    "descriptor": "oracle_recall",
+    "target": "within_rotation_initialization_variance",
+    "queries": 10000,
+    "spearman": 0.1862920536635479
+  },
+  {
+    "scope": "all",
+    "descriptor": "oracle_recall",
+    "target": "between_rotation_variance",
+    "queries": 10000,
+    "spearman": 0.17329678517451041
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d1",
+    "target": "overall_mean_loss",
+    "queries": 7136,
+    "spearman": 0.08128182803007321
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d1",
+    "target": "harmful_rotation_frequency",
+    "queries": 7136,
+    "spearman": 0.07298806058482828
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d1",
+    "target": "within_rotation_initialization_variance",
+    "queries": 7136,
+    "spearman": 0.033493257500356456
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d1",
+    "target": "between_rotation_variance",
+    "queries": 7136,
+    "spearman": 0.057215979849593646
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk",
+    "target": "overall_mean_loss",
+    "queries": 7136,
+    "spearman": -0.055533916464808555
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk",
+    "target": "harmful_rotation_frequency",
+    "queries": 7136,
+    "spearman": -0.027230613104863494
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk",
+    "target": "within_rotation_initialization_variance",
+    "queries": 7136,
+    "spearman": -0.050827229184577084
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk",
+    "target": "between_rotation_variance",
+    "queries": 7136,
+    "spearman": 0.00700000704714022
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk_plus_1",
+    "target": "overall_mean_loss",
+    "queries": 7136,
+    "spearman": -0.07139309498265728
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk_plus_1",
+    "target": "harmful_rotation_frequency",
+    "queries": 7136,
+    "spearman": -0.042962249083754026
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk_plus_1",
+    "target": "within_rotation_initialization_variance",
+    "queries": 7136,
+    "spearman": -0.0588627899229593
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "dk_plus_1",
+    "target": "between_rotation_variance",
+    "queries": 7136,
+    "spearman": 0.0011022856154154343
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d20",
+    "target": "overall_mean_loss",
+    "queries": 7136,
+    "spearman": -0.10501174141168326
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d20",
+    "target": "harmful_rotation_frequency",
+    "queries": 7136,
+    "spearman": -0.06931526000764336
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d20",
+    "target": "within_rotation_initialization_variance",
+    "queries": 7136,
+    "spearman": -0.08093000881994145
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "d20",
+    "target": "between_rotation_variance",
+    "queries": 7136,
+    "spearman": -0.01395734773901487
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_margin",
+    "target": "overall_mean_loss",
+    "queries": 7136,
+    "spearman": -0.5170752577950961
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_margin",
+    "target": "harmful_rotation_frequency",
+    "queries": 7136,
+    "spearman": -0.4505859627383845
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_margin",
+    "target": "within_rotation_initialization_variance",
+    "queries": 7136,
+    "spearman": -0.21927771348916772
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_margin",
+    "target": "between_rotation_variance",
+    "queries": 7136,
+    "spearman": -0.14326184092677177
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "relative_boundary_margin",
+    "target": "overall_mean_loss",
+    "queries": 7136,
+    "spearman": -0.49362581876872974
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "relative_boundary_margin",
+    "target": "harmful_rotation_frequency",
+    "queries": 7136,
+    "spearman": -0.4414013752411065
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "relative_boundary_margin",
+    "target": "within_rotation_initialization_variance",
+    "queries": 7136,
+    "spearman": -0.19996620344719465
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "relative_boundary_margin",
+    "target": "between_rotation_variance",
+    "queries": 7136,
+    "spearman": -0.14010768929236625
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r1",
+    "target": "overall_mean_loss",
+    "queries": 7136,
+    "spearman": -0.5170752577950961
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r1",
+    "target": "harmful_rotation_frequency",
+    "queries": 7136,
+    "spearman": -0.4505859627383845
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r1",
+    "target": "within_rotation_initialization_variance",
+    "queries": 7136,
+    "spearman": -0.21927771348916772
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r1",
+    "target": "between_rotation_variance",
+    "queries": 7136,
+    "spearman": -0.14326184092677177
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r2",
+    "target": "overall_mean_loss",
+    "queries": 7136,
+    "spearman": -0.7391215116095753
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r2",
+    "target": "harmful_rotation_frequency",
+    "queries": 7136,
+    "spearman": -0.5676554877275296
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r2",
+    "target": "within_rotation_initialization_variance",
+    "queries": 7136,
+    "spearman": -0.4067769768340308
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r2",
+    "target": "between_rotation_variance",
+    "queries": 7136,
+    "spearman": -0.26454056890695515
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r5",
+    "target": "overall_mean_loss",
+    "queries": 7136,
+    "spearman": -0.6556781114501526
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r5",
+    "target": "harmful_rotation_frequency",
+    "queries": 7136,
+    "spearman": -0.4669399685227065
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r5",
+    "target": "within_rotation_initialization_variance",
+    "queries": 7136,
+    "spearman": -0.410953222964246
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "boundary_gap_r5",
+    "target": "between_rotation_variance",
+    "queries": 7136,
+    "spearman": -0.26347567454413895
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "local_distance_concentration",
+    "target": "overall_mean_loss",
+    "queries": 7136,
+    "spearman": -0.33745037359264596
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "local_distance_concentration",
+    "target": "harmful_rotation_frequency",
+    "queries": 7136,
+    "spearman": -0.23972890430021002
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "local_distance_concentration",
+    "target": "within_rotation_initialization_variance",
+    "queries": 7136,
+    "spearman": -0.204486186785782
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "local_distance_concentration",
+    "target": "between_rotation_variance",
+    "queries": 7136,
+    "spearman": -0.14142687763968612
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "candidate_count",
+    "target": "overall_mean_loss",
+    "queries": 7136,
+    "spearman": 0.027844215497858652
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "candidate_count",
+    "target": "harmful_rotation_frequency",
+    "queries": 7136,
+    "spearman": 0.04200463934728331
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "candidate_count",
+    "target": "within_rotation_initialization_variance",
+    "queries": 7136,
+    "spearman": 0.04417916539534553
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "candidate_count",
+    "target": "between_rotation_variance",
+    "queries": 7136,
+    "spearman": 0.006527487123170679
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "oracle_recall",
+    "target": "overall_mean_loss",
+    "queries": 7136,
+    "spearman": null
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "oracle_recall",
+    "target": "harmful_rotation_frequency",
+    "queries": 7136,
+    "spearman": null
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "oracle_recall",
+    "target": "within_rotation_initialization_variance",
+    "queries": 7136,
+    "spearman": null
+  },
+  {
+    "scope": "oracle1",
+    "descriptor": "oracle_recall",
+    "target": "between_rotation_variance",
+    "queries": 7136,
+    "spearman": null
+  }
+]

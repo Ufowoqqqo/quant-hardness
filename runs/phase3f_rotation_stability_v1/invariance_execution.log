@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/rwproject/kdd-db/kluaq/quant-hardness/scripts/phase3f_rotation_validation.py", line 151, in <module>
+    if __name__=='__main__':main()
+  File "/rwproject/kdd-db/kluaq/quant-hardness/scripts/phase3f_rotation_validation.py", line 60, in main
+    cfg=read_conf(a.config);c=read_conf(cfg['phase3a_config']);run=a.run
+  File "/rwproject/kdd-db/kluaq/quant-hardness/scripts/analyze_phase3a_sift1m.py", line 71, in read_conf
+    for raw in path.read_text(encoding="utf-8").splitlines():
+AttributeError: 'str' object has no attribute 'read_text'

@@ -1,0 +1,31 @@
+./build/faiss_rotation_stability rotation-scores configs/indexes/phase3f_rotation_stability.conf runs/phase3f_rotation_stability_v1 0
+R0-I1 complete
+./build/faiss_rotation_stability rotation-scores configs/indexes/phase3f_rotation_stability.conf runs/phase3f_rotation_stability_v1 1
+R0-I2 complete
+./build/faiss_rotation_stability rotation-scores configs/indexes/phase3f_rotation_stability.conf runs/phase3f_rotation_stability_v1 2
+R0-I3 complete
+./build/faiss_rotation_stability rotation-scores configs/indexes/phase3f_rotation_stability.conf runs/phase3f_rotation_stability_v1 3
+R1-I1 complete
+./build/faiss_rotation_stability rotation-scores configs/indexes/phase3f_rotation_stability.conf runs/phase3f_rotation_stability_v1 4
+R1-I2 complete
+./build/faiss_rotation_stability rotation-scores configs/indexes/phase3f_rotation_stability.conf runs/phase3f_rotation_stability_v1 5
+R1-I3 complete
+./build/faiss_rotation_stability rotation-scores configs/indexes/phase3f_rotation_stability.conf runs/phase3f_rotation_stability_v1 6
+R2-I1 complete
+./build/faiss_rotation_stability rotation-scores configs/indexes/phase3f_rotation_stability.conf runs/phase3f_rotation_stability_v1 7
+R2-I2 complete
+./build/faiss_rotation_stability rotation-scores configs/indexes/phase3f_rotation_stability.conf runs/phase3f_rotation_stability_v1 8
+R2-I3 complete
+./build/faiss_rotation_stability rotation-scores configs/indexes/phase3f_rotation_stability.conf runs/phase3f_rotation_stability_v1 9
+R3-I1 complete
+./build/faiss_rotation_stability rotation-scores configs/indexes/phase3f_rotation_stability.conf runs/phase3f_rotation_stability_v1 10
+R3-I2 complete
+./build/faiss_rotation_stability rotation-scores configs/indexes/phase3f_rotation_stability.conf runs/phase3f_rotation_stability_v1 11
+R3-I3 complete
+./build/faiss_rotation_stability rotation-scores configs/indexes/phase3f_rotation_stability.conf runs/phase3f_rotation_stability_v1 12
+R4-I1 complete
+./build/faiss_rotation_stability rotation-scores configs/indexes/phase3f_rotation_stability.conf runs/phase3f_rotation_stability_v1 13
+R4-I2 complete
+./build/faiss_rotation_stability rotation-scores configs/indexes/phase3f_rotation_stability.conf runs/phase3f_rotation_stability_v1 14
+R4-I3 complete
+all15 models complete

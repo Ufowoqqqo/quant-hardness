@@ -1000,16 +1000,20 @@ void export_precision(const std::string &config_path,
 // Phase 3D is score-only: consume saved IDs, never invoke HNSW search.
 void export_seed_scores(const std::string &config_path,
                         const std::filesystem::path &run, int model,
-                        bool sample_design = false) {
+                        bool sample_design = false, bool rotation_design = false) {
   const auto s=read_values(config_path);
   const auto frozen=read_values(s.at("phase3c_config"));
   const Config c=read_config(s.at("phase3a_config"));
   const auto seeds=split(s.at("training_seeds"), ',');
-  const int model_count=sample_design?9:5;
-  require(model>=0 && model<model_count && seeds.size()==static_cast<std::size_t>(model_count), "invalid model index");
+  const int model_count=rotation_design?15:sample_design?9:5;
+  require(model>=0 && model<model_count && seeds.size()==static_cast<std::size_t>(rotation_design?3:model_count), "invalid model index");
   std::string subset="O",model_name="seed_"+std::to_string(model);
   int sample_seed;
-  if (sample_design) {
+  if (rotation_design) {
+    require(s.at("design")=="phase3f_5x3","invalid rotation design");
+    subset="A";model_name="R"+std::to_string(model/3)+"-I"+std::to_string(model%3+1);
+    sample_seed=std::stoi(s.at("training_sample_seed"));
+  } else if (sample_design) {
     require(s.at("design")=="phase3e_3x3","invalid sample design");
     const auto names=split(s.at("subset_names"),','),sample_seeds=split(s.at("subset_sampling_seeds"),',');
     require(names==std::vector<std::string>({"A","B","C"}) && sample_seeds.size()==3,
@@ -1017,13 +1021,33 @@ void export_seed_scores(const std::string &config_path,
     subset=names[model/3];model_name=subset+std::to_string(model%3+1);
     sample_seed=std::stoi(sample_seeds[model/3]);
   } else sample_seed=std::stoi(s.at("training_sample_seed"));
-  const bool reproduce_original=!sample_design && model==0;
+  const bool reproduce_original=!sample_design && !rotation_design && model==0;
   require(s.at("pq_m")=="64" && s.at("pq_nbits")=="8" &&
           s.at("ef_search")=="64" && s.at("k")=="10", "seed experiment changed");
   require(std::endian::native==std::endian::little, "little endian required");
   const auto destination=run/model_name;
   require(!std::filesystem::exists(destination), "refusing to overwrite seed output");
-  const auto dataset=load_dataset(c);
+  auto dataset=load_dataset(c);
+  std::string rotation_hash="not_applicable",rotated_base_hash="not_applicable",rotated_query_hash="not_applicable";
+  if (rotation_design) {
+    const auto gate=read_values((run/"invariance_gate.conf").string());
+    require(gate.at("status")=="PASS" && gate.at("config_sha256")==sha256_file(config_path),
+            "all-rotation pretraining invariance gate missing or stale");
+    const auto root=run/("rotation_"+std::to_string(model/3));
+    rotation_hash=sha256_file((root/"R.f64").string());
+    rotated_base_hash=sha256_file((root/"base.f32").string());
+    rotated_query_hash=sha256_file((root/"queries.f32").string());
+    const auto prefix="R"+std::to_string(model/3)+"_";
+    require(rotation_hash==gate.at(prefix+"R_sha256") && rotated_base_hash==gate.at(prefix+"base_sha256") &&
+            rotated_query_hash==gate.at(prefix+"queries_sha256"),"rotated input changed after validation");
+    const auto read_raw=[&](const std::filesystem::path &p,std::vector<float> &target) {
+      require(std::filesystem::file_size(p)==target.size()*sizeof(float),"rotated array size mismatch");
+      std::ifstream input(p,std::ios::binary);
+      require(static_cast<bool>(input.read(reinterpret_cast<char*>(target.data()),target.size()*sizeof(float))),"truncated rotated array");
+      require(std::all_of(target.begin(),target.end(),[](float v){return std::isfinite(v);}),"nonfinite rotation");
+    };
+    read_raw(root/"base.f32",dataset.base);read_raw(root/"queries.f32",dataset.queries);
+  }
   auto graph=load_graph(std::filesystem::path(c.cache_directory)/"hnsw_fp32.index");
   const auto fingerprint=quant_hardness::graph_fingerprint(graph.graph->hnsw);
   require(fingerprint==frozen.at("graph_fingerprint"),"frozen graph differs");
@@ -1043,7 +1067,7 @@ void export_seed_scores(const std::string &config_path,
   ids_file.close();
   omp_set_num_threads(std::stoi(s.at("training_threads")));
   faiss::IndexPQ pq(c.dimension,64,8,faiss::METRIC_L2);
-  pq.pq.cp.seed=std::stoi(seeds[model]);
+  pq.pq.cp.seed=std::stoi(seeds[rotation_design?model%3:model]);
   require(pq.pq.cp.niter==25 && pq.pq.cp.nredo==1 &&
           pq.pq.cp.max_points_per_centroid==256 && !pq.do_polysemous_training,
           "unexpected standard PQ training defaults");
@@ -1110,7 +1134,11 @@ void export_seed_scores(const std::string &config_path,
        << "\",\"hostname\":\"" << hostname() << "\",\"kernel\":\"" << kernel()
        << "\",\"compiler\":\"" << __VERSION__ << "\",\"model\":" << model
        << ",\"model_name\":\"" << model_name << "\",\"training_subset\":\"" << subset
-       << "\",\"initialization_index\":" << (sample_design?model%3+1:model+1)
+       << "\",\"initialization_index\":" << ((sample_design||rotation_design)?model%3+1:model+1)
+       << ",\"rotation_index\":" << (rotation_design?model/3:-1)
+       << ",\"rotation_sha256\":\"" << rotation_hash
+       << "\",\"rotated_base_sha256\":\"" << rotated_base_hash
+       << "\",\"rotated_queries_sha256\":\"" << rotated_query_hash << "\""
        << ",\"seed\":" << pq.pq.cp.seed << ",\"training_sample_seed\":" << sample_seed
        << ",\"training_count\":" << training_count << ",\"training_ids_sha256\":\"" << bytes_hash(permutation)
        << "\",\"training_vectors_sha256\":\"" << bytes_hash(training)
@@ -1136,6 +1164,9 @@ void export_seed_scores(const std::string &config_path,
 
 int main(int argc, char **argv) {
   try {
+    if (argc == 5 && std::string(argv[1]) == "rotation-scores") {
+      export_seed_scores(argv[2],argv[3],std::stoi(argv[4]),false,true);return 0;
+    }
     if (argc == 5 && std::string(argv[1]) == "sample-scores") {
       export_seed_scores(argv[2],argv[3],std::stoi(argv[4]),true);return 0;
     }

@@ -1,0 +1,8 @@
+{
+  "union_pairs": 362197,
+  "one_model_fraction": 0.4455393059578075,
+  "one_rotation_fraction": 0.4955480028824093,
+  "at_least_two_rotations_fraction": 0.5044519971175907,
+  "all_five_rotations_fraction": 0.0357540233629765,
+  "all15_models_fraction": 2.7609284450174907e-06
+}

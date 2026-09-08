@@ -237,6 +237,9 @@ target_compile_options(dataset_loader_correctness PRIVATE
     -Wall -Wextra -Wpedantic)
 
 enable_testing()
+add_executable(faiss_phase4a src/experiments/faiss_phase4a.cpp)
+target_link_libraries(faiss_phase4a PRIVATE qh_faiss_backend qh_instrumentation qh_metrics)
+target_compile_options(faiss_phase4a PRIVATE -Wall -Wextra -Wpedantic)
 add_test(
     NAME faiss_backend_validation
     COMMAND faiss_backend_validation

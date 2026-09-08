@@ -1564,3 +1564,111 @@ Final audit:PASS.27 table/figure files and the complete PQ-only observable
 file reproduce byte-for-byte in the independent output directory. The
 primary checkpoint remains unchanged after the bridge. Raw/script/report
 checksums are preserved in `runs/phase3h_rank_conditioned_nulls_v1/final_audit.json`.
+# Phase 4A — preregistered held-out refinement gatekeeper
+
+Configuration: `configs/indexes/phase4a_gap_guided_refinement.conf`.
+Preregistration: `runs/phase4a_gap_guided_refinement_v1/preregistration.md`.
+Frozen observable raw g9_12_pq; L=16,32,64; fractions=.10,.25,.50;
+100 random-selection replicates. No outcomes inspected when registered.
+
+Commands (repository root):
+
+```bash
+curl -fL --connect-timeout 10 --max-time 120 'https://huggingface.co/datasets/qbo-odp/sift1m/resolve/bd8ccad6c2a0a0a3a7519f6d37c0e5a2d59fe55b/sift_learn.fvecs?download=true' -o runs/phase4a_gap_guided_refinement_v1/sift_learn.fvecs
+curl -fL -C - --connect-timeout 10 --max-time 240 'https://huggingface.co/datasets/qbo-odp/sift1m/resolve/bd8ccad6c2a0a0a3a7519f6d37c0e5a2d59fe55b/sift_learn.fvecs?download=true' -o runs/phase4a_gap_guided_refinement_v1/sift_learn.fvecs
+curl -fL -C - --retry 3 --retry-all-errors --connect-timeout 15 --max-time 300 'https://huggingface.co/datasets/qbo-odp/sift1m/resolve/bd8ccad6c2a0a0a3a7519f6d37c0e5a2d59fe55b/sift_learn.fvecs?download=true' -o runs/phase4a_gap_guided_refinement_v1/sift_learn.fvecs
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release > runs/phase4a_gap_guided_refinement_v1/configure.log 2>&1
+cmake --build build --target faiss_phase4a -j 8 > runs/phase4a_gap_guided_refinement_v1/build.log 2>&1
+cmake --build build --target faiss_phase4a -j 8 > runs/phase4a_gap_guided_refinement_v1/build_retry1.log 2>&1
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python -m unittest discover -s tests -p test_phase4a_metrics.py -v > runs/phase4a_gap_guided_refinement_v1/tests.log 2>&1
+ctest --test-dir build --output-on-failure > runs/phase4a_gap_guided_refinement_v1/ctest.log 2>&1
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/prepare_phase4a.py > runs/phase4a_gap_guided_refinement_v1/prepare.log 2>&1
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=24 ./build/faiss_phase4a configs/indexes/phase4a_gap_guided_refinement.conf > runs/phase4a_gap_guided_refinement_v1/execution.log 2>&1
+```
+
+Preparation observation: 10,017 learning records overlap old-query contents;
+195 additional duplicate learning records removed; no base-content overlap;
+89,788 eligible. Fixed split: 65,536 training + 10,000 never-before-used queries.
+No scientific outcomes yet. Download resumed after timeout/TLS connection
+failure; complete SHA256 matches pinned source. First build failed at FAISS
+MaybeOwnedVector equality syntax; fixed before any measurement. All six new
+tests and five C++ tests pass. Next in-protocol check: independent exhaustive
+GT and candidate-score validation before policy comparisons.
+
+### Phase 4A completed measurement, validation and frozen-policy analysis
+
+The pre-registered experiment finished without model or graph changes. The
+existing reference BLAS made full 10k × 1M ground truth the long stage; no
+query reduction, distance backend substitution or timing benchmark was made.
+
+```bash
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/phase4a_gt_reference.py > runs/phase4a_gap_guided_refinement_v1/gt_reference.log 2>&1
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python -m unittest discover -s tests -p 'test_phase*_metrics.py' -v > runs/phase4a_gap_guided_refinement_v1/regression_tests.log 2>&1
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/analyze_phase4a.py validate > runs/phase4a_gap_guided_refinement_v1/validation.log 2>&1
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/analyze_phase4a.py analyze > runs/phase4a_gap_guided_refinement_v1/analysis.log 2>&1
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/phase4a_tie_sensitivity.py > runs/phase4a_gap_guided_refinement_v1/tie_sensitivity.log 2>&1
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python -m unittest discover -s tests -p 'test_phase*_metrics.py' -v > runs/phase4a_gap_guided_refinement_v1/regression_tests_final.log 2>&1
+mktemp -d /tmp/phase4a-reproduce.XXXXXX
+# Returned /tmp/phase4a-reproduce.3YxCOu
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/analyze_phase4a.py analyze --tables /tmp/phase4a-reproduce.3YxCOu/tables --figures /tmp/phase4a-reproduce.3YxCOu/figures --derived /tmp/phase4a-reproduce.3YxCOu/analysis > runs/phase4a_gap_guided_refinement_v1/reproduction.log 2>&1
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/phase4a_tie_sensitivity.py --tables /tmp/phase4a-reproduce.3YxCOu/tables > runs/phase4a_gap_guided_refinement_v1/reproduction_tie.log 2>&1
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/audit_phase4a.py --reproduction /tmp/phase4a-reproduce.3YxCOu > runs/phase4a_gap_guided_refinement_v1/audit.log 2>&1
+```
+
+Observations (10,000 held-out queries): PQ native .850560; full PQ candidate
+oracle .951390; exact native .952760; exact L0 oracle .952320. Candidate
+recoverable gap .100830; mean signed discovery delta .000930. Raw gap/loss
+Spearman -.357433. Quintile loss declines .146400 to .056200; harmful fraction
+.8470 to .4925. GAP exceeds RANDOM empirical 97.5th percentile at 9/9 aggregate
+and 36/36 shard budgets. All L pass both required 25%/50% comparisons.
+At L16/25%: cost4, GAP recall .881250 vs random .873171. At L16/50%: cost8,
+GAP .906200 vs random .895774. Depth-specific selector efficiency across all
+points is 29.46–42.22%. Full tables preserve every point and all 4,500 random
+allocation outcomes. Pre-registered useful criterion passes; the qualitative
+strong-gatekeeper description is supported, not a significance claim.
+
+Counterevidence/limits: top16-all recall .941020 at cost16 exceeds GAP
+L32/50% .913540 at the same cost. Uniform shallow refinement is a necessary
+practical baseline. Top32-all .951290 nearly equals full pool .951390; L64
+adds little. One model/index and query shards do not establish independent
+codebook or dataset replication. Budget selection is workload-level, not
+yet a deployed streaming cutoff. No timing superiority is claimed.
+
+Correctness: all 10,361,485 stored candidate FP32 distances equal direct
+FP64 distances; 100 deterministic full-base GT comparisons pass; whole
+base/graph-storage and PQ code ID alignment pass; graph fingerprint and
+native instrumented results unchanged. Minimum candidate count236, no short
+pools. 686 native/global-PQ ordered-list differences are score ties.
+44 exact-control recall anomalies are all -.1 at GT rank10 ties (40 pairs
+identical vectors, four distinct equidistant pairs), mean -.000440.
+Six negative ranking-loss cases are retained and verified boundary ties.
+Primary ID metrics remain unchanged. Separate post-primary tie-aware
+sensitivity has zero exact-control discrepancies, native/oracle recalls
+.850650/.951980 and still passes at all L. Matplotlib used a temporary
+cache because its default home cache is not writable; SVG output succeeded.
+
+Final audit PASS: 10,000 scalar query-reference checks, 135 nonrandom policy
+points, all 4,500 random budgets, exact regeneration of query rows/selection
+arrays and 22 byte-identical table/figure files. 71 Python and five C++ tests
+pass. Prior raw runs are untouched. Full report:
+`docs/phase4a_gap_guided_refinement.md`.
+
+Exactly one next experiment: frozen L16/raw-gap 25th-percentile streaming
+cutoff on the 14,252 remaining unused eligible learning vectors, same PQ and
+graph, against equal-realized-count random refinement and a clearly labeled
+higher-cost uniform top16 reference; measure recall, realized exact costs
+and end-to-end latency/selector overhead without threshold retuning.
+
+### Phase 4A fresh-distance execution control and final audit
+
+```bash
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/verify_phase4a_refinement_execution.py > runs/phase4a_gap_guided_refinement_v1/physical_refinement.log 2>&1
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/audit_phase4a.py --reproduction /tmp/phase4a-reproduce.3YxCOu > runs/phase4a_gap_guided_refinement_v1/audit_final.log 2>&1
+```
+
+Fresh direct FP32 refinement reads no candidate-exact cache: all nine budgets
+for GAP/ORACLE/RANDOM-replicate0 yield matching result IDs, unchanged unselected
+native results, and exactly L distances per selected query. 27 controls,
+2,856,000 counted FP32 distances, PASS. This validates executable refinement
+semantics and cost counting in addition to offline replay; not a speed test.
+Final audit refreshed to include this additional raw validation/source.

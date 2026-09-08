@@ -1,0 +1,34 @@
+{
+  "graph_origin": "runs/phase3a_sift1m_v1/prepared_state.conf",
+  "graph_construction": {
+    "metric": "FP32 squared L2",
+    "M": 16,
+    "efConstruction": 80,
+    "seed": 20260907,
+    "construction_threads": 24,
+    "rebuilt_in_phase4a": false
+  },
+  "search": {
+    "efSearch": 64,
+    "k": 10,
+    "threads": 1,
+    "check_relative_distance": true,
+    "bounded_queue": true,
+    "candidate_semantics": "existing corrected L0 unique distance-evaluated IDs including L0 seed; excludes upper-only evaluations",
+    "candidate_tie_order": "first L0 distance evaluation"
+  },
+  "pq": {
+    "architecture": "identity-basis standard FAISS PQ64x8, ADC squared L2",
+    "training_count": 65536,
+    "initialization_seed": 94000037,
+    "training_iterations": 25,
+    "nredo": 1,
+    "max_points_per_centroid": 256,
+    "training_threads": 24,
+    "base_ID_order": "unchanged, verified by full re-encoding",
+    "full_serialized_state": "model.index",
+    "codebook_float_array": "codebooks.f32"
+  },
+  "clarification": "export_validation.json min_candidates=64 is the enforced lower bound, not the observed minimum; observed minimum is in phase4a_summary.json",
+  "timing": "No wall-clock benchmark or speed claim; progress diagnostics only. NFS timestamps and local clock may differ; use content hashes, not mtime, for provenance."
+}

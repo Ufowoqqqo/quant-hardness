@@ -1,0 +1,15 @@
+{
+  "eligible": 89788,
+  "excluded": 10212,
+  "excluded_by_reason": {
+    "base_overlap": 0,
+    "old_query_overlap": 10017,
+    "duplicate_learn": 195
+  },
+  "train_count": 65536,
+  "query_count": 10000,
+  "split_seed": 94000011,
+  "query_vs_training_content_overlap": 0,
+  "query_vs_old_queries_content_overlap": 0,
+  "query_vs_base_content_overlap": 0
+}

@@ -1,0 +1,5 @@
+training one frozen PQ model
+exhaustive FP32 ground truth
+PQ L0 search with native identity control
+exact L0 discovery/control measurement
+export PASS

@@ -1,0 +1,21 @@
+{
+  "metric_definition": "strict d<d10 hits plus min(GT boundary slots, retrieved d=d10 hits), divided by10; exact equality on integer SIFT squared distances",
+  "post_primary_sensitivity": true,
+  "unchanged_GAP_and_random_selection": true,
+  "primary_oracle_selectors_not_reoptimized_for_secondary_metric": true,
+  "tie_aware_exact_control_discrepancies": 0,
+  "tie_aware_exact_native_recall": 0.9528399999999999,
+  "tie_aware_recalls": {
+    "native": 0.8506500000000001,
+    "oracle": 0.95198,
+    "top16": 0.94156,
+    "top32": 0.9518800000000001,
+    "top64": 0.95198
+  },
+  "passing_depths": [
+    16,
+    32,
+    64
+  ],
+  "useful_criterion_pass": true
+}

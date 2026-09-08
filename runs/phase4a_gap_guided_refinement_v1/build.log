@@ -1,0 +1,609 @@
+gmake: Warning: File 'Makefile' has modification time 237 s in the future
+gmake[1]: Warning: File 'CMakeFiles/Makefile2' has modification time 237 s in the future
+gmake[2]: Warning: File 'CMakeFiles/Makefile2' has modification time 237 s in the future
+gmake[3]: Warning: File 'CMakeFiles/faiss_external.dir/progress.make' has modification time 237 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[3]: Warning: File 'CMakeFiles/faiss_external.dir/progress.make' has modification time 237 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 40%] Built target faiss_external
+gmake[3]: Warning: File 'CMakeFiles/qh_metrics.dir/progress.make' has modification time 237 s in the future
+gmake[3]: Warning: File 'CMakeFiles/qh_instrumentation.dir/progress.make' has modification time 237 s in the future
+gmake[3]: Warning: File 'CMakeFiles/qh_faiss_backend.dir/progress.make' has modification time 237 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[3]: Warning: File 'CMakeFiles/qh_faiss_backend.dir/progress.make' has modification time 237 s in the future
+gmake[3]: Warning: File 'CMakeFiles/qh_metrics.dir/progress.make' has modification time 237 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[3]: Warning: File 'CMakeFiles/qh_instrumentation.dir/progress.make' has modification time 237 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+[ 63%] Built target qh_faiss_backend
+[ 81%] Built target qh_metrics
+[ 90%] Built target qh_instrumentation
+gmake[3]: Warning: File 'CMakeFiles/faiss_phase4a.dir/flags.make' has modification time 236 s in the future
+gmake[3]: warning:  Clock skew detected.  Your build may be incomplete.
+gmake[3]: Warning: File 'CMakeFiles/faiss_phase4a.dir/flags.make' has modification time 236 s in the future
+[ 95%] Building CXX object CMakeFiles/faiss_phase4a.dir/src/experiments/faiss_phase4a.cpp.o
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp: In function ‘int main(int, char**)’:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:16: error: no match for ‘operator==’ (operand types are ‘std::vector<unsigned char, std::allocator<unsigned char> >’ and ‘faiss::MaybeOwnedVector<unsigned char>’)
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |           ~~~~~^~~~~~~~~~
+      |           |         |
+      |           |         faiss::MaybeOwnedVector<unsigned char>
+      |           std::vector<unsigned char, std::allocator<unsigned char> >
+In file included from /usr/include/c++/11/bits/stl_algobase.h:67,
+                 from /usr/include/c++/11/bits/char_traits.h:39,
+                 from /usr/include/c++/11/string:40,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:4,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/stl_iterator.h:1122:5: note: candidate: ‘template<class _IteratorL, class _IteratorR, class _Container>  requires requires(_IteratorL __lhs, _IteratorR __rhs) {{__lhs == __rhs} -> decltype(auto) [requires std::convertible_to<<placeholder>, bool>];} constexpr bool __gnu_cxx::operator==(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)’ (reversed)
+ 1122 |     operator==(const __normal_iterator<_IteratorL, _Container>& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/stl_iterator.h:1122:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘faiss::MaybeOwnedVector<unsigned char>’ is not derived from ‘const __gnu_cxx::__normal_iterator<_IteratorL, _Container>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/x86_64-redhat-linux/bits/c++allocator.h:33,
+                 from /usr/include/c++/11/bits/allocator.h:46,
+                 from /usr/include/c++/11/string:41,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:4,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/ext/new_allocator.h:183:9: note: candidate: ‘template<class _Up> constexpr bool __gnu_cxx::operator==(const __gnu_cxx::new_allocator<unsigned char>&, const __gnu_cxx::new_allocator<_Tp>&)’ (reversed)
+  183 |         operator==(const new_allocator&, const new_allocator<_Up>&)
+      |         ^~~~~~~~
+/usr/include/c++/11/ext/new_allocator.h:183:9: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘std::vector<unsigned char, std::allocator<unsigned char> >’ is not derived from ‘const __gnu_cxx::new_allocator<_Tp>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/bits/stl_algobase.h:67,
+                 from /usr/include/c++/11/bits/char_traits.h:39,
+                 from /usr/include/c++/11/string:40,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:4,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/stl_iterator.h:495:5: note: candidate: ‘template<class _IteratorL, class _IteratorR> constexpr bool std::operator==(const std::reverse_iterator<_IteratorL>&, const std::reverse_iterator<_IteratorR>&) requires requires{{std::operator==::__x->base() == std::operator==::__y->base()} -> decltype(auto) [requires std::convertible_to<<placeholder>, bool>];}’ (reversed)
+  495 |     operator==(const reverse_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/stl_iterator.h:495:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘faiss::MaybeOwnedVector<unsigned char>’ is not derived from ‘const std::reverse_iterator<_IteratorL>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/bits/stl_algobase.h:67,
+                 from /usr/include/c++/11/bits/char_traits.h:39,
+                 from /usr/include/c++/11/string:40,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:4,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/stl_iterator.h:1585:5: note: candidate: ‘template<class _IteratorL, class _IteratorR> constexpr bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&) requires requires{{std::operator==::__x->base() == std::operator==::__y->base()} -> decltype(auto) [requires std::convertible_to<<placeholder>, bool>];}’ (reversed)
+ 1585 |     operator==(const move_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/stl_iterator.h:1585:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘faiss::MaybeOwnedVector<unsigned char>’ is not derived from ‘const std::move_iterator<_IteratorL>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/string:41,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:4,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/allocator.h:218:5: note: candidate: ‘template<class _T1, class _T2> constexpr bool std::operator==(const std::allocator<_CharT>&, const std::allocator<_T2>&)’ (reversed)
+  218 |     operator==(const allocator<_T1>&, const allocator<_T2>&)
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/allocator.h:218:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘faiss::MaybeOwnedVector<unsigned char>’ is not derived from ‘const std::allocator<_CharT>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/bits/basic_string.h:48,
+                 from /usr/include/c++/11/string:55,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:4,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/string_view:544:5: note: candidate: ‘template<class _CharT, class _Traits> constexpr bool std::operator==(std::basic_string_view<_CharT, _Traits>, std::__type_identity_t<std::basic_string_view<_CharT, _Traits> >)’ (reversed)
+  544 |     operator==(basic_string_view<_CharT, _Traits> __x,
+      |     ^~~~~~~~
+/usr/include/c++/11/string_view:544:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘faiss::MaybeOwnedVector<unsigned char>’ is not derived from ‘std::basic_string_view<_CharT, _Traits>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/string:55,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:4,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/basic_string.h:6248:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, const _CharT*)’ (reversed)
+ 6248 |     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/basic_string.h:6248:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘faiss::MaybeOwnedVector<unsigned char>’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexHNSW.h:12,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:8,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/optional:1045:5: note: candidate: ‘template<class _Tp, class _Up> constexpr std::__optional_eq_t<_Tp, _Up> std::operator==(const std::optional<_Tp>&, const std::optional<_Up>&)’ (reversed)
+ 1045 |     operator==(const optional<_Tp>& __lhs, const optional<_Up>& __rhs)
+      |     ^~~~~~~~
+/usr/include/c++/11/optional:1045:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘faiss::MaybeOwnedVector<unsigned char>’ is not derived from ‘const std::optional<_Tp>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexHNSW.h:12,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:8,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/optional:1105:5: note: candidate: ‘template<class _Tp> constexpr bool std::operator==(const std::optional<_Tp>&, std::nullopt_t)’ (reversed)
+ 1105 |     operator==(const optional<_Tp>& __lhs, nullopt_t) noexcept
+      |     ^~~~~~~~
+/usr/include/c++/11/optional:1105:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘faiss::MaybeOwnedVector<unsigned char>’ is not derived from ‘const std::optional<_Tp>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexHNSW.h:12,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:8,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/optional:1173:5: note: candidate: ‘template<class _Tp, class _Up> constexpr std::__optional_eq_t<_Tp, _Up> std::operator==(const std::optional<_Tp>&, const _Up&)’ (reversed)
+ 1173 |     operator==(const optional<_Tp>& __lhs, const _Up& __rhs)
+      |     ^~~~~~~~
+/usr/include/c++/11/optional:1173:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘faiss::MaybeOwnedVector<unsigned char>’ is not derived from ‘const std::optional<_Tp>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexHNSW.h:12,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:8,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/optional:1179:5: note: candidate: ‘template<class _Tp, class _Up> constexpr std::__optional_eq_t<_Up, _Tp> std::operator==(const _Up&, const std::optional<_Tp>&)’ (reversed)
+ 1179 |     operator==(const _Up& __lhs, const optional<_Tp>& __rhs)
+      |     ^~~~~~~~
+/usr/include/c++/11/optional:1179:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘std::vector<unsigned char, std::allocator<unsigned char> >’ is not derived from ‘const std::optional<_Tp>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/bits/unique_ptr.h:37,
+                 from /usr/include/c++/11/memory:76,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/impl/maybe_owned_vector.h:12,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlatCodes.h:14,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlat.h:15,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexHNSW.h:16,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:8,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/tuple:1538:5: note: candidate: ‘template<class ... _TElements, class ... _UElements> constexpr bool std::operator==(const std::tuple<_Tps ...>&, const std::tuple<_UTypes ...>&)’ (reversed)
+ 1538 |     operator==(const tuple<_TElements...>& __t,
+      |     ^~~~~~~~
+/usr/include/c++/11/tuple:1538:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘faiss::MaybeOwnedVector<unsigned char>’ is not derived from ‘const std::tuple<_Tps ...>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/impl/maybe_owned_vector.h:12,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlatCodes.h:14,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlat.h:15,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexHNSW.h:16,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:8,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/unique_ptr.h:753:5: note: candidate: ‘template<class _Tp, class _Dp, class _Up, class _Ep> bool std::operator==(const std::unique_ptr<_Tp, _Dp>&, const std::unique_ptr<_Up, _Ep>&)’ (reversed)
+  753 |     operator==(const unique_ptr<_Tp, _Dp>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/unique_ptr.h:753:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘faiss::MaybeOwnedVector<unsigned char>’ is not derived from ‘const std::unique_ptr<_Tp, _Dp>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/memory:76,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/impl/maybe_owned_vector.h:12,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlatCodes.h:14,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlat.h:15,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexHNSW.h:16,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:8,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/unique_ptr.h:760:5: note: candidate: ‘template<class _Tp, class _Dp> bool std::operator==(const std::unique_ptr<_Tp, _Dp>&, std::nullptr_t)’ (reversed)
+  760 |     operator==(const unique_ptr<_Tp, _Dp>& __x, nullptr_t) noexcept
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/unique_ptr.h:760:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘faiss::MaybeOwnedVector<unsigned char>’ is not derived from ‘const std::unique_ptr<_Tp, _Dp>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/bits/shared_ptr.h:53,
+                 from /usr/include/c++/11/memory:77,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/impl/maybe_owned_vector.h:12,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlatCodes.h:14,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlat.h:15,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexHNSW.h:16,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:8,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/shared_ptr_base.h:1410:5: note: candidate: ‘template<class _Tp1, class _Tp2, __gnu_cxx::_Lock_policy _Lp> bool std::operator==(const std::__shared_ptr<_Tp1, _Lp>&, const std::__shared_ptr<_Tp2, _Lp>&)’ (reversed)
+ 1410 |     operator==(const __shared_ptr<_Tp1, _Lp>& __a,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr_base.h:1410:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘faiss::MaybeOwnedVector<unsigned char>’ is not derived from ‘const std::__shared_ptr<_Tp1, _Lp>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/bits/shared_ptr.h:53,
+                 from /usr/include/c++/11/memory:77,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/impl/maybe_owned_vector.h:12,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlatCodes.h:14,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlat.h:15,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexHNSW.h:16,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:8,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/shared_ptr_base.h:1416:5: note: candidate: ‘template<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator==(const std::__shared_ptr<_Tp, _Lp>&, std::nullptr_t)’ (reversed)
+ 1416 |     operator==(const __shared_ptr<_Tp, _Lp>& __a, nullptr_t) noexcept
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr_base.h:1416:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘faiss::MaybeOwnedVector<unsigned char>’ is not derived from ‘const std::__shared_ptr<_Tp, _Lp>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/memory:77,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/impl/maybe_owned_vector.h:12,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlatCodes.h:14,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlat.h:15,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexHNSW.h:16,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:8,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/shared_ptr.h:437:5: note: candidate: ‘template<class _Tp, class _Up> bool std::operator==(const std::shared_ptr<_Tp>&, const std::shared_ptr<_Tp>&)’ (reversed)
+  437 |     operator==(const shared_ptr<_Tp>& __a, const shared_ptr<_Up>& __b) noexcept
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:437:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘faiss::MaybeOwnedVector<unsigned char>’ is not derived from ‘const std::shared_ptr<_Tp>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/memory:77,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/impl/maybe_owned_vector.h:12,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlatCodes.h:14,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlat.h:15,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexHNSW.h:16,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:8,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/shared_ptr.h:443:5: note: candidate: ‘template<class _Tp> bool std::operator==(const std::shared_ptr<_Tp>&, std::nullptr_t)’ (reversed)
+  443 |     operator==(const shared_ptr<_Tp>& __a, nullptr_t) noexcept
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/shared_ptr.h:443:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘faiss::MaybeOwnedVector<unsigned char>’ is not derived from ‘const std::shared_ptr<_Tp>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/functional:59,
+                 from /usr/include/c++/11/pstl/glue_algorithm_defs.h:13,
+                 from /usr/include/c++/11/algorithm:74,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/impl/Panorama.h:18,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlat.h:16,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexHNSW.h:16,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:8,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/std_function.h:718:5: note: candidate: ‘template<class _Res, class ... _Args> bool std::operator==(const std::function<_Res(_ArgTypes ...)>&, std::nullptr_t)’ (reversed)
+  718 |     operator==(const function<_Res(_Args...)>& __f, nullptr_t) noexcept
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/std_function.h:718:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘faiss::MaybeOwnedVector<unsigned char>’ is not derived from ‘const std::function<_Res(_ArgTypes ...)>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/bits/ios_base.h:46,
+                 from /usr/include/c++/11/ios:42,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/bits/unique_ptr.h:42,
+                 from /usr/include/c++/11/memory:76,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/impl/maybe_owned_vector.h:12,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlatCodes.h:14,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlat.h:15,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexHNSW.h:16,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:8,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/system_error:368:3: note: candidate: ‘bool std::operator==(const std::error_code&, const std::error_condition&)’ (reversed)
+  368 |   operator==(const error_code& __lhs, const error_condition& __rhs) noexcept
+      |   ^~~~~~~~
+/usr/include/c++/11/system_error:368:32: note:   no known conversion for argument 1 from ‘faiss::MaybeOwnedVector<unsigned char>’ to ‘const std::error_code&’
+  368 |   operator==(const error_code& __lhs, const error_condition& __rhs) noexcept
+      |              ~~~~~~~~~~~~~~~~~~^~~~~
+In file included from /usr/include/c++/11/bits/stl_algobase.h:67,
+                 from /usr/include/c++/11/bits/char_traits.h:39,
+                 from /usr/include/c++/11/string:40,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:4,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/stl_iterator.h:1136:5: note: candidate: ‘template<class _Iterator, class _Container> constexpr bool __gnu_cxx::operator==(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&) requires requires{{__gnu_cxx::operator==::__lhs->base() == __gnu_cxx::operator==::__rhs->base()} -> decltype(auto) [requires std::convertible_to<<placeholder>, bool>];}’
+ 1136 |     operator==(const __normal_iterator<_Iterator, _Container>& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/stl_iterator.h:1136:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘std::vector<unsigned char, std::allocator<unsigned char> >’ is not derived from ‘const __gnu_cxx::__normal_iterator<_Iterator, _Container>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/bits/stl_algobase.h:64,
+                 from /usr/include/c++/11/bits/char_traits.h:39,
+                 from /usr/include/c++/11/string:40,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:4,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/stl_pair.h:466:5: note: candidate: ‘template<class _T1, class _T2> constexpr bool std::operator==(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)’
+  466 |     operator==(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/stl_pair.h:466:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘std::vector<unsigned char, std::allocator<unsigned char> >’ is not derived from ‘const std::pair<_T1, _T2>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/bits/stl_algobase.h:67,
+                 from /usr/include/c++/11/bits/char_traits.h:39,
+                 from /usr/include/c++/11/string:40,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:4,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/stl_iterator.h:547:5: note: candidate: ‘template<class _Iterator> constexpr bool std::operator==(const std::reverse_iterator<_IteratorL>&, const std::reverse_iterator<_IteratorL>&) requires requires{{std::operator==::__x->base() == std::operator==::__y->base()} -> decltype(auto) [requires std::convertible_to<<placeholder>, bool>];}’
+  547 |     operator==(const reverse_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/stl_iterator.h:547:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘std::vector<unsigned char, std::allocator<unsigned char> >’ is not derived from ‘const std::reverse_iterator<_IteratorL>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/bits/stl_algobase.h:67,
+                 from /usr/include/c++/11/bits/char_traits.h:39,
+                 from /usr/include/c++/11/string:40,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:4,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/stl_iterator.h:1648:5: note: candidate: ‘template<class _Iterator> constexpr bool std::operator==(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)’
+ 1648 |     operator==(const move_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/stl_iterator.h:1648:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘std::vector<unsigned char, std::allocator<unsigned char> >’ is not derived from ‘const std::move_iterator<_IteratorL>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/bits/char_traits.h:40,
+                 from /usr/include/c++/11/string:40,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:4,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/postypes.h:222:5: note: candidate: ‘template<class _StateT> bool std::operator==(const std::fpos<_StateT>&, const std::fpos<_StateT>&)’
+  222 |     operator==(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/postypes.h:222:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘std::vector<unsigned char, std::allocator<unsigned char> >’ is not derived from ‘const std::fpos<_StateT>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/bits/basic_string.h:48,
+                 from /usr/include/c++/11/string:55,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:4,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/string_view:538:5: note: candidate: ‘template<class _CharT, class _Traits> constexpr bool std::operator==(std::basic_string_view<_CharT, _Traits>, std::basic_string_view<_CharT, _Traits>)’
+  538 |     operator==(basic_string_view<_CharT, _Traits> __x,
+      |     ^~~~~~~~
+/usr/include/c++/11/string_view:538:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘std::vector<unsigned char, std::allocator<unsigned char> >’ is not derived from ‘std::basic_string_view<_CharT, _Traits>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/string:55,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:4,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/basic_string.h:6226:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)’
+ 6226 |     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/basic_string.h:6226:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘std::vector<unsigned char, std::allocator<unsigned char> >’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/string:55,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:4,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/basic_string.h:6234:5: note: candidate: ‘template<class _CharT> typename __gnu_cxx::__enable_if<std::__is_char<_Tp>::__value, bool>::__type std::operator==(const std::__cxx11::basic_string<_CharT>&, const std::__cxx11::basic_string<_CharT>&)’
+ 6234 |     operator==(const basic_string<_CharT>& __lhs,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/basic_string.h:6234:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘std::vector<unsigned char, std::allocator<unsigned char> >’ is not derived from ‘const std::__cxx11::basic_string<_CharT>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/vector:67,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:5,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/stl_vector.h:1892:5: note: candidate: ‘template<class _Tp, class _Alloc> bool std::operator==(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)’
+ 1892 |     operator==(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/stl_vector.h:1892:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘faiss::MaybeOwnedVector<unsigned char>’ is not derived from ‘const std::vector<_Tp, _Alloc>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/tuple:39,
+                 from /usr/include/c++/11/bits/unique_ptr.h:37,
+                 from /usr/include/c++/11/memory:76,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/impl/maybe_owned_vector.h:12,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlatCodes.h:14,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlat.h:15,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexHNSW.h:16,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:8,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/array:276:5: note: candidate: ‘template<class _Tp, long unsigned int _Nm> constexpr bool std::operator==(const std::array<_Tp, _Nm>&, const std::array<_Tp, _Nm>&)’
+  276 |     operator==(const array<_Tp, _Nm>& __one, const array<_Tp, _Nm>& __two)
+      |     ^~~~~~~~
+/usr/include/c++/11/array:276:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘std::vector<unsigned char, std::allocator<unsigned char> >’ is not derived from ‘const std::array<_Tp, _Nm>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/bits/locale_facets.h:48,
+                 from /usr/include/c++/11/bits/basic_ios.h:37,
+                 from /usr/include/c++/11/ios:44,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/bits/unique_ptr.h:42,
+                 from /usr/include/c++/11/memory:76,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/impl/maybe_owned_vector.h:12,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlatCodes.h:14,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlat.h:15,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexHNSW.h:16,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:8,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/streambuf_iterator.h:226:5: note: candidate: ‘template<class _CharT, class _Traits> bool std::operator==(const std::istreambuf_iterator<_CharT, _Traits>&, const std::istreambuf_iterator<_CharT, _Traits>&)’
+  226 |     operator==(const istreambuf_iterator<_CharT, _Traits>& __a,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/streambuf_iterator.h:226:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘std::vector<unsigned char, std::allocator<unsigned char> >’ is not derived from ‘const std::istreambuf_iterator<_CharT, _Traits>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/unordered_set:47,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/impl/IDSelector.h:10,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/impl/Panorama.h:14,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlat.h:16,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexHNSW.h:16,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:8,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/unordered_set.h:1804:5: note: candidate: ‘template<class _Value1, class _Hash1, class _Pred1, class _Alloc1> bool std::operator==(const std::unordered_set<_Value1, _Hash1, _Pred1, _Alloc1>&, const std::unordered_set<_Value1, _Hash1, _Pred1, _Alloc1>&)’
+ 1804 |     operator==(const unordered_set<_Value, _Hash, _Pred, _Alloc>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/unordered_set.h:1804:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘std::vector<unsigned char, std::allocator<unsigned char> >’ is not derived from ‘const std::unordered_set<_Value1, _Hash1, _Pred1, _Alloc1>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/unordered_set:47,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/impl/IDSelector.h:10,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/impl/Panorama.h:14,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlat.h:16,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexHNSW.h:16,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:8,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/unordered_set.h:1818:5: note: candidate: ‘template<class _Value1, class _Hash1, class _Pred1, class _Alloc1> bool std::operator==(const std::unordered_multiset<_Value1, _Hash1, _Pred1, _Alloc1>&, const std::unordered_multiset<_Value1, _Hash1, _Pred1, _Alloc1>&)’
+ 1818 |     operator==(const unordered_multiset<_Value, _Hash, _Pred, _Alloc>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/unordered_set.h:1818:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘std::vector<unsigned char, std::allocator<unsigned char> >’ is not derived from ‘const std::unordered_multiset<_Value1, _Hash1, _Pred1, _Alloc1>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/unordered_map:47,
+                 from /usr/include/c++/11/functional:61,
+                 from /usr/include/c++/11/pstl/glue_algorithm_defs.h:13,
+                 from /usr/include/c++/11/algorithm:74,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/impl/Panorama.h:18,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlat.h:16,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexHNSW.h:16,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:8,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/unordered_map.h:2134:5: note: candidate: ‘template<class _Key1, class _Tp1, class _Hash1, class _Pred1, class _Alloc1> bool std::operator==(const std::unordered_map<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>&, const std::unordered_map<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>&)’
+ 2134 |     operator==(const unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/unordered_map.h:2134:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘std::vector<unsigned char, std::allocator<unsigned char> >’ is not derived from ‘const std::unordered_map<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/unordered_map:47,
+                 from /usr/include/c++/11/functional:61,
+                 from /usr/include/c++/11/pstl/glue_algorithm_defs.h:13,
+                 from /usr/include/c++/11/algorithm:74,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/impl/Panorama.h:18,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlat.h:16,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexHNSW.h:16,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:8,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/unordered_map.h:2148:5: note: candidate: ‘template<class _Key1, class _Tp1, class _Hash1, class _Pred1, class _Alloc1> bool std::operator==(const std::unordered_multimap<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>&, const std::unordered_multimap<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>&)’
+ 2148 |     operator==(const unordered_multimap<_Key, _Tp, _Hash, _Pred, _Alloc>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/unordered_map.h:2148:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘std::vector<unsigned char, std::allocator<unsigned char> >’ is not derived from ‘const std::unordered_multimap<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/deque:67,
+                 from /usr/include/c++/11/queue:60,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/impl/HNSW.h:11,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexHNSW.h:19,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:8,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/stl_deque.h:2247:5: note: candidate: ‘template<class _Tp, class _Alloc> bool std::operator==(const std::deque<_Tp, _Alloc>&, const std::deque<_Tp, _Alloc>&)’
+ 2247 |     operator==(const deque<_Tp, _Alloc>& __x, const deque<_Tp, _Alloc>& __y)
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/stl_deque.h:2247:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘std::vector<unsigned char, std::allocator<unsigned char> >’ is not derived from ‘const std::deque<_Tp, _Alloc>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/queue:64,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/impl/HNSW.h:11,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexHNSW.h:19,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:8,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/stl_queue.h:344:5: note: candidate: ‘template<class _Tp, class _Seq> bool std::operator==(const std::queue<_Tp, _Seq>&, const std::queue<_Tp, _Seq>&)’
+  344 |     operator==(const queue<_Tp, _Seq>& __x, const queue<_Tp, _Seq>& __y)
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/stl_queue.h:344:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘std::vector<unsigned char, std::allocator<unsigned char> >’ is not derived from ‘const std::queue<_Tp, _Seq>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/random:51,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/utils/random.h:17,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/impl/HNSW.h:21,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexHNSW.h:19,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:8,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/random.tcc:1899:5: note: candidate: ‘template<class _RealType1> bool std::operator==(const std::normal_distribution<_RealType>&, const std::normal_distribution<_RealType>&)’
+ 1899 |     operator==(const std::normal_distribution<_RealType>& __d1,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/random.tcc:1899:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘std::vector<unsigned char, std::allocator<unsigned char> >’ is not derived from ‘const std::normal_distribution<_RealType>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/set:61,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/utils/utils.h:20,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexHNSW.h:22,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:8,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/stl_set.h:985:5: note: candidate: ‘template<class _Key, class _Compare, class _Alloc> bool std::operator==(const std::set<_Key, _Compare, _Allocator>&, const std::set<_Key, _Compare, _Allocator>&)’
+  985 |     operator==(const set<_Key, _Compare, _Alloc>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/stl_set.h:985:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘std::vector<unsigned char, std::allocator<unsigned char> >’ is not derived from ‘const std::set<_Key, _Compare, _Allocator>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/set:62,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/utils/utils.h:20,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexHNSW.h:22,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:8,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/stl_multiset.h:971:5: note: candidate: ‘template<class _Key, class _Compare, class _Alloc> bool std::operator==(const std::multiset<_Key, _Compare, _Allocator>&, const std::multiset<_Key, _Compare, _Allocator>&)’
+  971 |     operator==(const multiset<_Key, _Compare, _Alloc>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/stl_multiset.h:971:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘std::vector<unsigned char, std::allocator<unsigned char> >’ is not derived from ‘const std::multiset<_Key, _Compare, _Allocator>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/map:61,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:14:
+/usr/include/c++/11/bits/stl_map.h:1463:5: note: candidate: ‘template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator==(const std::map<_Key, _Tp, _Compare, _Allocator>&, const std::map<_Key, _Tp, _Compare, _Allocator>&)’
+ 1463 |     operator==(const map<_Key, _Tp, _Compare, _Alloc>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/stl_map.h:1463:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘std::vector<unsigned char, std::allocator<unsigned char> >’ is not derived from ‘const std::map<_Key, _Tp, _Compare, _Allocator>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/map:62,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:14:
+/usr/include/c++/11/bits/stl_multimap.h:1128:5: note: candidate: ‘template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator==(const std::multimap<_Key, _Tp, _Compare, _Allocator>&, const std::multimap<_Key, _Tp, _Compare, _Allocator>&)’
+ 1128 |     operator==(const multimap<_Key, _Tp, _Compare, _Alloc>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/stl_multimap.h:1128:5: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘std::vector<unsigned char, std::allocator<unsigned char> >’ is not derived from ‘const std::multimap<_Key, _Tp, _Compare, _Allocator>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlatCodes.h:14,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlat.h:15,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexHNSW.h:16,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:8,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/impl/maybe_owned_vector.h:309:6: note: candidate: ‘template<class T> bool faiss::operator==(const faiss::MaybeOwnedVector<T>&, const faiss::MaybeOwnedVector<T>&)’
+  309 | bool operator==(
+      |      ^~~~~~~~
+/rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/impl/maybe_owned_vector.h:309:6: note:   template argument deduction/substitution failed:
+/rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:62:21: note:   ‘std::vector<unsigned char, std::allocator<unsigned char> >’ is not derived from ‘const faiss::MaybeOwnedVector<T>’
+   62 |   require(codes==pq.codes,"complete PQ code ID alignment failed");codes.clear();codes.shrink_to_fit();
+      |                     ^~~~~
+In file included from /usr/include/c++/11/string:41,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:4,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/bits/allocator.h:204:7: note: candidate: ‘constexpr bool std::operator==(const std::allocator<unsigned char>&, const std::allocator<unsigned char>&)’
+  204 |       operator==(const allocator&, const allocator&) _GLIBCXX_NOTHROW
+      |       ^~~~~~~~
+/usr/include/c++/11/bits/allocator.h:204:18: note:   no known conversion for argument 1 from ‘std::vector<unsigned char, std::allocator<unsigned char> >’ to ‘const std::allocator<unsigned char>&’
+  204 |       operator==(const allocator&, const allocator&) _GLIBCXX_NOTHROW
+      |                  ^~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/11/bits/ios_base.h:46,
+                 from /usr/include/c++/11/ios:42,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/bits/unique_ptr.h:42,
+                 from /usr/include/c++/11/memory:76,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/impl/maybe_owned_vector.h:12,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlatCodes.h:14,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexFlat.h:15,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss/faiss/IndexHNSW.h:16,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/graph/faiss_shared_hnsw.h:8,
+                 from /rwproject/kdd-db/kluaq/quant-hardness/src/experiments/faiss_phase4a.cpp:2:
+/usr/include/c++/11/system_error:362:3: note: candidate: ‘bool std::operator==(const std::error_code&, const std::error_code&)’
+  362 |   operator==(const error_code& __lhs, const error_code& __rhs) noexcept
+      |   ^~~~~~~~
+/usr/include/c++/11/system_error:362:32: note:   no known conversion for argument 1 from ‘std::vector<unsigned char, std::allocator<unsigned char> >’ to ‘const std::error_code&’
+  362 |   operator==(const error_code& __lhs, const error_code& __rhs) noexcept
+      |              ~~~~~~~~~~~~~~~~~~^~~~~
+/usr/include/c++/11/system_error:376:3: note: candidate: ‘bool std::operator==(const std::error_condition&, const std::error_condition&)’
+  376 |   operator==(const error_condition& __lhs,
+      |   ^~~~~~~~
+/usr/include/c++/11/system_error:376:37: note:   no known conversion for argument 1 from ‘std::vector<unsigned char, std::allocator<unsigned char> >’ to ‘const std::error_condition&’
+  376 |   operator==(const error_condition& __lhs,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+gmake[3]: *** [CMakeFiles/faiss_phase4a.dir/build.make:79: CMakeFiles/faiss_phase4a.dir/src/experiments/faiss_phase4a.cpp.o] Error 1
+gmake[2]: *** [CMakeFiles/Makefile2:794: CMakeFiles/faiss_phase4a.dir/all] Error 2
+gmake[1]: *** [CMakeFiles/Makefile2:801: CMakeFiles/faiss_phase4a.dir/rule] Error 2
+gmake: *** [Makefile:381: faiss_phase4a] Error 2

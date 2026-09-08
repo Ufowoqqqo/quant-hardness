@@ -1,0 +1,26 @@
+scope,reference,recall,cost
+all,PQ native,0.85056,0
+all,full PQ candidate oracle,0.95139,1036.1485
+all,top16 all,0.94102,16
+all,top32 all,0.95129,32
+all,top64 all,0.95139,64
+shard0,PQ native,0.84724,0
+shard0,full PQ candidate oracle,0.95008,1035.7584
+shard0,top16 all,0.93908,16
+shard0,top32 all,0.9499599999999999,32
+shard0,top64 all,0.95008,64
+shard1,PQ native,0.852,0
+shard1,full PQ candidate oracle,0.9536,1030.19
+shard1,top16 all,0.9431200000000001,16
+shard1,top32 all,0.9535199999999999,32
+shard1,top64 all,0.9536,64
+shard2,PQ native,0.85272,0
+shard2,full PQ candidate oracle,0.9532400000000001,1038.7064
+shard2,top16 all,0.94336,16
+shard2,top32 all,0.9532,32
+shard2,top64 all,0.9532400000000001,64
+shard3,PQ native,0.85028,0
+shard3,full PQ candidate oracle,0.9486399999999999,1039.9392
+shard3,top16 all,0.9385199999999999,16
+shard3,top32 all,0.94848,32
+shard3,top64 all,0.9486399999999999,64

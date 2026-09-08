@@ -1,0 +1,1 @@
+{"status":"PASS","graph_fingerprint":"1b3c18f6e2dd3ccec56e74eed30458f60a65f01234bf51478af25d84b5c02d16","instrumented_native_identity_all_queries":true,"complete_base_storage_alignment":true,"complete_pq_code_alignment":true,"min_candidates":64,"pq_niter":25,"pq_max_points_per_centroid":256}

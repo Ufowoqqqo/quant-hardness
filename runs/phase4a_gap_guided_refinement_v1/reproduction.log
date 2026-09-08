@@ -1,0 +1,29 @@
+/homes/kluaq/.config/matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /tmp/matplotlib-um4i5ru7 because there was an issue with the default path (/homes/kluaq/.config/matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+{
+  "queries": 10000,
+  "native_recall": 0.85056,
+  "full_candidate_oracle_recall": 0.95139,
+  "exact_native_recall": 0.9527599999999999,
+  "exact_L0_oracle_recall": 0.9523199999999999,
+  "mean_delta_discovery": 0.0009299999999999999,
+  "mean_delta_exact_control": -0.00044,
+  "recoverable_gap": 0.10083,
+  "useful_heldout_stratification_pass": true,
+  "depths_passing_both_primary_budgets": [
+    16,
+    32,
+    64
+  ],
+  "budgets_exceeding_random_p975": 9,
+  "gap_spearman": -0.3574325898144005,
+  "negative_ranking_loss_queries": 6,
+  "min_candidate_count": 236,
+  "short_pool_queries": 0,
+  "candidate_semantics": "PQ-guided level-0 distance evaluations; exact control never used in selection",
+  "raw_candidate_sha256": {
+    "ids": "decd3aed84de39d4633004750cf0b418ee249a48d00bea3e54308979c4c312d4",
+    "offsets": "2b971943419cda6169c435683583d9b4251236944776384f6df463335b7d1946",
+    "pq": "25ef21bba4092ca32e75ee810913a2d1725771a2cbe8bfd542457e0f853bc0e8"
+  }
+}

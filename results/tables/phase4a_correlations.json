@@ -1,0 +1,52 @@
+[
+  {
+    "scope": "all",
+    "feature": "g9_12_pq",
+    "spearman_loss": -0.3574325898144005
+  },
+  {
+    "scope": "all",
+    "feature": "g9_12_rel",
+    "spearman_loss": -0.27578461607562305
+  },
+  {
+    "scope": "shard0",
+    "feature": "g9_12_pq",
+    "spearman_loss": -0.37356377481282577
+  },
+  {
+    "scope": "shard0",
+    "feature": "g9_12_rel",
+    "spearman_loss": -0.30088820315552994
+  },
+  {
+    "scope": "shard1",
+    "feature": "g9_12_pq",
+    "spearman_loss": -0.3420203615650676
+  },
+  {
+    "scope": "shard1",
+    "feature": "g9_12_rel",
+    "spearman_loss": -0.25999576010919073
+  },
+  {
+    "scope": "shard2",
+    "feature": "g9_12_pq",
+    "spearman_loss": -0.3610281667471075
+  },
+  {
+    "scope": "shard2",
+    "feature": "g9_12_rel",
+    "spearman_loss": -0.2830192460234396
+  },
+  {
+    "scope": "shard3",
+    "feature": "g9_12_pq",
+    "spearman_loss": -0.35299265823249987
+  },
+  {
+    "scope": "shard3",
+    "feature": "g9_12_rel",
+    "spearman_loss": -0.2598714745470721
+  }
+]

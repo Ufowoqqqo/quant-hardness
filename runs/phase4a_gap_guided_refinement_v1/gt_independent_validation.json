@@ -1,0 +1,702 @@
+[
+  {
+    "query_id": 22,
+    "gt_threshold": 44126.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 95,
+    "gt_threshold": 55331.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 152,
+    "gt_threshold": 60686.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 325,
+    "gt_threshold": 63725.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 434,
+    "gt_threshold": 67751.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 521,
+    "gt_threshold": 64142.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 552,
+    "gt_threshold": 71088.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 693,
+    "gt_threshold": 74695.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 853,
+    "gt_threshold": 38734.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 1061,
+    "gt_threshold": 25651.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 1205,
+    "gt_threshold": 61807.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 1385,
+    "gt_threshold": 36879.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 2,
+    "status": "PASS"
+  },
+  {
+    "query_id": 1423,
+    "gt_threshold": 74251.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 1512,
+    "gt_threshold": 48875.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 1632,
+    "gt_threshold": 50624.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 1649,
+    "gt_threshold": 40115.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 1699,
+    "gt_threshold": 41318.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 1700,
+    "gt_threshold": 34337.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 2089,
+    "gt_threshold": 41105.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 2150,
+    "gt_threshold": 41633.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 2231,
+    "gt_threshold": 23172.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 2395,
+    "gt_threshold": 50155.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 2648,
+    "gt_threshold": 28634.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 2701,
+    "gt_threshold": 51901.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 2856,
+    "gt_threshold": 59199.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 2860,
+    "gt_threshold": 34908.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 2911,
+    "gt_threshold": 57532.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 2978,
+    "gt_threshold": 80608.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 3009,
+    "gt_threshold": 48978.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 3161,
+    "gt_threshold": 40376.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 3206,
+    "gt_threshold": 31903.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 3265,
+    "gt_threshold": 33815.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 3612,
+    "gt_threshold": 54406.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 3628,
+    "gt_threshold": 62148.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 3638,
+    "gt_threshold": 22966.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 3706,
+    "gt_threshold": 18412.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 3750,
+    "gt_threshold": 54269.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 3919,
+    "gt_threshold": 22244.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 3924,
+    "gt_threshold": 68210.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 3925,
+    "gt_threshold": 40928.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 4319,
+    "gt_threshold": 78196.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 2,
+    "status": "PASS"
+  },
+  {
+    "query_id": 4410,
+    "gt_threshold": 71420.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 4546,
+    "gt_threshold": 43500.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 4776,
+    "gt_threshold": 66700.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 4792,
+    "gt_threshold": 48403.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 4804,
+    "gt_threshold": 74352.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 4909,
+    "gt_threshold": 50445.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 4941,
+    "gt_threshold": 71852.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 2,
+    "status": "PASS"
+  },
+  {
+    "query_id": 5034,
+    "gt_threshold": 63601.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 5045,
+    "gt_threshold": 51543.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 5064,
+    "gt_threshold": 64014.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 5212,
+    "gt_threshold": 88272.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 5324,
+    "gt_threshold": 46727.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 5445,
+    "gt_threshold": 49543.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 5536,
+    "gt_threshold": 33020.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 5593,
+    "gt_threshold": 29325.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 5940,
+    "gt_threshold": 22776.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 5954,
+    "gt_threshold": 48565.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 5984,
+    "gt_threshold": 57754.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 6009,
+    "gt_threshold": 41007.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 6238,
+    "gt_threshold": 53806.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 6241,
+    "gt_threshold": 17581.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 6262,
+    "gt_threshold": 10975.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 6282,
+    "gt_threshold": 35345.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 6295,
+    "gt_threshold": 72221.0,
+    "strictly_closer": 8,
+    "ties_at_threshold": 2,
+    "status": "PASS"
+  },
+  {
+    "query_id": 6428,
+    "gt_threshold": 45259.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 6846,
+    "gt_threshold": 59670.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 6903,
+    "gt_threshold": 63406.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 7140,
+    "gt_threshold": 39077.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 7141,
+    "gt_threshold": 27180.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 7221,
+    "gt_threshold": 30729.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 7415,
+    "gt_threshold": 52001.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 7461,
+    "gt_threshold": 72107.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 7595,
+    "gt_threshold": 59550.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 7687,
+    "gt_threshold": 15489.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 7728,
+    "gt_threshold": 98228.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 7761,
+    "gt_threshold": 59526.0,
+    "strictly_closer": 8,
+    "ties_at_threshold": 2,
+    "status": "PASS"
+  },
+  {
+    "query_id": 7865,
+    "gt_threshold": 5494.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 7889,
+    "gt_threshold": 44776.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 7912,
+    "gt_threshold": 15511.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 7959,
+    "gt_threshold": 25290.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 7995,
+    "gt_threshold": 56321.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 8032,
+    "gt_threshold": 72185.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 8200,
+    "gt_threshold": 71332.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 8305,
+    "gt_threshold": 57109.0,
+    "strictly_closer": 8,
+    "ties_at_threshold": 2,
+    "status": "PASS"
+  },
+  {
+    "query_id": 8323,
+    "gt_threshold": 47395.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 8347,
+    "gt_threshold": 64609.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 8410,
+    "gt_threshold": 23465.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 8424,
+    "gt_threshold": 73652.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 8521,
+    "gt_threshold": 32313.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 8576,
+    "gt_threshold": 75817.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 8635,
+    "gt_threshold": 64930.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 8637,
+    "gt_threshold": 58108.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 8815,
+    "gt_threshold": 46433.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 8871,
+    "gt_threshold": 41559.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 9017,
+    "gt_threshold": 66436.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 9055,
+    "gt_threshold": 25941.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 9671,
+    "gt_threshold": 53274.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 9720,
+    "gt_threshold": 46409.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  },
+  {
+    "query_id": 9785,
+    "gt_threshold": 51202.0,
+    "strictly_closer": 9,
+    "ties_at_threshold": 1,
+    "status": "PASS"
+  }
+]

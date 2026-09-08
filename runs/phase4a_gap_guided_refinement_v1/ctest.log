@@ -1,0 +1,15 @@
+Test project /rwproject/kdd-db/kluaq/quant-hardness/build
+    Start 1: faiss_backend_validation
+1/5 Test #1: faiss_backend_validation .........   Passed    0.45 sec
+    Start 2: phase1_correctness
+2/5 Test #2: phase1_correctness ...............   Passed    0.46 sec
+    Start 3: decomposition_correctness
+3/5 Test #3: decomposition_correctness ........   Passed    0.44 sec
+    Start 4: candidate_semantics_regression
+4/5 Test #4: candidate_semantics_regression ...   Passed   21.63 sec
+    Start 5: dataset_loader_correctness
+5/5 Test #5: dataset_loader_correctness .......   Passed    0.03 sec
+
+100% tests passed, 0 tests failed out of 5
+
+Total Test time (real) =  23.19 sec

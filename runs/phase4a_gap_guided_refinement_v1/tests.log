@@ -1,0 +1,11 @@
+test_gap_is_frozen_raw_and_short_rule (test_phase4a_metrics.Phase4ATests) ... ok
+test_gap_selection_no_labels_and_ties (test_phase4a_metrics.Phase4ATests) ... ok
+test_oracle_is_budget_upper_bound (test_phase4a_metrics.Phase4ATests) ... ok
+test_random_exact_count_reproducible (test_phase4a_metrics.Phase4ATests) ... ok
+test_rerank_reference_and_cost (test_phase4a_metrics.Phase4ATests) ... ok
+test_signed_recall_and_ratios (test_phase4a_metrics.Phase4ATests) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.003s
+
+OK

@@ -1,0 +1,152 @@
+[
+  {
+    "scope": "all",
+    "reference": "PQ native",
+    "recall": 0.85056,
+    "cost": 0
+  },
+  {
+    "scope": "all",
+    "reference": "full PQ candidate oracle",
+    "recall": 0.95139,
+    "cost": 1036.1485
+  },
+  {
+    "scope": "all",
+    "reference": "top16 all",
+    "recall": 0.94102,
+    "cost": 16
+  },
+  {
+    "scope": "all",
+    "reference": "top32 all",
+    "recall": 0.95129,
+    "cost": 32
+  },
+  {
+    "scope": "all",
+    "reference": "top64 all",
+    "recall": 0.95139,
+    "cost": 64
+  },
+  {
+    "scope": "shard0",
+    "reference": "PQ native",
+    "recall": 0.84724,
+    "cost": 0
+  },
+  {
+    "scope": "shard0",
+    "reference": "full PQ candidate oracle",
+    "recall": 0.95008,
+    "cost": 1035.7584
+  },
+  {
+    "scope": "shard0",
+    "reference": "top16 all",
+    "recall": 0.93908,
+    "cost": 16
+  },
+  {
+    "scope": "shard0",
+    "reference": "top32 all",
+    "recall": 0.9499599999999999,
+    "cost": 32
+  },
+  {
+    "scope": "shard0",
+    "reference": "top64 all",
+    "recall": 0.95008,
+    "cost": 64
+  },
+  {
+    "scope": "shard1",
+    "reference": "PQ native",
+    "recall": 0.852,
+    "cost": 0
+  },
+  {
+    "scope": "shard1",
+    "reference": "full PQ candidate oracle",
+    "recall": 0.9536,
+    "cost": 1030.19
+  },
+  {
+    "scope": "shard1",
+    "reference": "top16 all",
+    "recall": 0.9431200000000001,
+    "cost": 16
+  },
+  {
+    "scope": "shard1",
+    "reference": "top32 all",
+    "recall": 0.9535199999999999,
+    "cost": 32
+  },
+  {
+    "scope": "shard1",
+    "reference": "top64 all",
+    "recall": 0.9536,
+    "cost": 64
+  },
+  {
+    "scope": "shard2",
+    "reference": "PQ native",
+    "recall": 0.85272,
+    "cost": 0
+  },
+  {
+    "scope": "shard2",
+    "reference": "full PQ candidate oracle",
+    "recall": 0.9532400000000001,
+    "cost": 1038.7064
+  },
+  {
+    "scope": "shard2",
+    "reference": "top16 all",
+    "recall": 0.94336,
+    "cost": 16
+  },
+  {
+    "scope": "shard2",
+    "reference": "top32 all",
+    "recall": 0.9532,
+    "cost": 32
+  },
+  {
+    "scope": "shard2",
+    "reference": "top64 all",
+    "recall": 0.9532400000000001,
+    "cost": 64
+  },
+  {
+    "scope": "shard3",
+    "reference": "PQ native",
+    "recall": 0.85028,
+    "cost": 0
+  },
+  {
+    "scope": "shard3",
+    "reference": "full PQ candidate oracle",
+    "recall": 0.9486399999999999,
+    "cost": 1039.9392
+  },
+  {
+    "scope": "shard3",
+    "reference": "top16 all",
+    "recall": 0.9385199999999999,
+    "cost": 16
+  },
+  {
+    "scope": "shard3",
+    "reference": "top32 all",
+    "recall": 0.94848,
+    "cost": 32
+  },
+  {
+    "scope": "shard3",
+    "reference": "top64 all",
+    "recall": 0.9486399999999999,
+    "cost": 64
+  }
+]

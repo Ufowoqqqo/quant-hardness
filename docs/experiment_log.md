@@ -1485,3 +1485,82 @@ Final audit:PASS.33 table/figure files regenerate byte-for-byte in the
 independent temporary output directory. Integer-count aggregate checks and
 all744 negative-loss GT boundary-tie substitutions pass. Artifact checksums
 are recorded in `runs/phase3g_residual_permutation_v1/final_audit.json`.
+
+## Phase 3H pre-registered hierarchy (before outcomes)
+
+Config:`configs/indexes/phase3h_rank_conditioned_nulls.conf`; preregistration:
+`runs/phase3h_rank_conditioned_nulls_v1/preregistration.md`. Five existing
+models,all10,000 fixed queries,N0-N4 plus N_distance,100 permutations each.
+N0 first50 must reproduce Phase3G exactly. Five model-level workers,one
+BLAS thread each. No training or traversal. Primary mechanisms first;
+PQ-only observable bridge only after a saved primary checkpoint.
+
+```bash
+set -o pipefail
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python -m unittest discover -s tests -p test_phase3h_metrics.py -v 2>&1 | tee runs/phase3h_rank_conditioned_nulls_v1/tests.log
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/run_phase3h_rank_conditioned_nulls.py --config configs/indexes/phase3h_rank_conditioned_nulls.conf --run runs/phase3h_rank_conditioned_nulls_v1 2>&1 | tee runs/phase3h_rank_conditioned_nulls_v1/execution.log
+```
+
+Eight reference tests pass before production. Empty-tail handling,bin
+multisets,N0 prefix identity,scalar metric reference,signed closure and
+PQ-only feature/quintile semantics are covered. Equal-count distance bins
+are rank quartiles,not an independent rank-versus-distance identification.
+
+## Phase 3H completed — final exact-distance mechanism phase and PQ-only bridge
+
+Execution commit92e5c0235fc6ec9eda6fe33bd78d497f42804984; resolved config,
+source hashes,input/model/graph checksums and machine information are in
+`runs/phase3h_rank_conditioned_nulls_v1/provenance.json`. The100-draw
+six-condition,five-model run used972.8s after setup. No training or traversal.
+N0 first50 exactly reproduces all Phase3G saved metrics/IDs.64 regression
+tests pass. No bin/permutation/model/query settings changed after outcomes.
+
+Further exact commands (logged pipelines use `set -o pipefail`):
+
+```bash
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python -m unittest discover -s tests -p 'test_phase3*_metrics.py' -v 2>&1 | tee runs/phase3h_rank_conditioned_nulls_v1/regression_tests.log
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/analyze_phase3h_rank_conditioned_nulls.py primary --config configs/indexes/phase3h_rank_conditioned_nulls.conf --run runs/phase3h_rank_conditioned_nulls_v1 2>&1 | tee runs/phase3h_rank_conditioned_nulls_v1/primary_analysis.log
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/analyze_phase3h_rank_conditioned_nulls.py bridge --config configs/indexes/phase3h_rank_conditioned_nulls.conf --run runs/phase3h_rank_conditioned_nulls_v1 2>&1 | tee runs/phase3h_rank_conditioned_nulls_v1/bridge_analysis.log
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/verify_phase3h_artifacts.py --config configs/indexes/phase3h_rank_conditioned_nulls.conf --run runs/phase3h_rank_conditioned_nulls_v1 2>&1 | tee runs/phase3h_rank_conditioned_nulls_v1/verification.log
+mktemp -d /tmp/phase3h-reproduce.XXXXXX
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/analyze_phase3h_rank_conditioned_nulls.py primary --config configs/indexes/phase3h_rank_conditioned_nulls.conf --run runs/phase3h_rank_conditioned_nulls_v1 --tables /tmp/phase3h-reproduce.5IFLI7/tables --figures /tmp/phase3h-reproduce.5IFLI7/figures 2>&1 | tee runs/phase3h_rank_conditioned_nulls_v1/reproduction_primary.log
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/analyze_phase3h_rank_conditioned_nulls.py bridge --config configs/indexes/phase3h_rank_conditioned_nulls.conf --run runs/phase3h_rank_conditioned_nulls_v1 --tables /tmp/phase3h-reproduce.5IFLI7/tables --figures /tmp/phase3h-reproduce.5IFLI7/figures --bridge-output /tmp/phase3h-reproduce.5IFLI7/bridge 2>&1 | tee runs/phase3h_rank_conditioned_nulls_v1/reproduction_bridge.log
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/audit_phase3h_final.py --config configs/indexes/phase3h_rank_conditioned_nulls.conf --run runs/phase3h_rank_conditioned_nulls_v1 --reproduction /tmp/phase3h-reproduce.5IFLI7
+```
+
+Observations,five-model means:observed loss.104982; N0.141570,N1.148221,
+N2.114415,N3.106240,N4.106035,N_distance.118176. Descriptive loss-gap
+closures−.1818,.7422,.9656,.9712,.6394 for N1...N_distance; not causal shares.
+N1 is worse than N0 in four models. N3/N4 gains differ little. Oracle1
+d12-d9 correlations with loss/excess are−.7133/+.0144 for N3 and
+−.6913/+.0278 for N4. Rank-dependent residual magnitude/variance and signed
+bias are present jointly; the experiment does not isolate variance alone.
+
+Post-primary bridge selected g9_12_pq by the pre-registered stable-correlation
+rule. Oracle1 Spearman−.4294 to−.4423; all-query−.3683 to−.3778. Across
+model-specific quintiles,smallest gap mean loss.15189 versus largest gap
+.05909; harmful rates.8705 versus.5168. Feature selection is exploratory,
+not held-out validation; inputs are PQ-only but candidate pools remain the
+fixed exact-traversal pools. No ready reconstruction-error scalar was present,
+so that conditional optional feature was omitted.
+
+Controls:all30million saved outcomes audited,300,000 complete sampled null
+replays identical,all50,000 PQ-feature rows verified by scalar reference.
+Frozen inputs and pre-bridge checkpoint unchanged.12,270 negative null
+losses arise from GT substitutions at exact boundary ties;3,181 negative
+null scores remain unclipped. Equal-count distance bins are ordinal rank
+quartiles and do not independently identify numeric-distance versus rank
+effects. Temporary Matplotlib cache fallback only; no failed scientific run.
+
+Decision:closest Case A,with the N1 counterexample and joint bias/scale
+caveat. End exact-distance-only mechanism work. Exactly ONE next experiment
+(not run):held-out fixed-budget refinement-feasibility gate using frozen
+g9_12_pq,on genuinely unused queries and actual PQ-traversal pools; compare
+span-prioritized versus random selection at the same pre-fixed budget,
+unrefined recall and an offline oracle bound. No further residual mechanism
+experiment or new algorithm is implemented/recommended in this phase.
+
+Final audit:PASS.27 table/figure files and the complete PQ-only observable
+file reproduce byte-for-byte in the independent output directory. The
+primary checkpoint remains unchanged after the bridge. Raw/script/report
+checksums are preserved in `runs/phase3h_rank_conditioned_nulls_v1/final_audit.json`.

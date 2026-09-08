@@ -1,0 +1,115 @@
+/homes/kluaq/.config/matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /tmp/matplotlib-wlfmngmy because there was an issue with the default path (/homes/kluaq/.config/matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+{
+  "selected_observable": {
+    "observable": "g9_12_pq",
+    "consistent_sign": true,
+    "minimum_absolute_spearman": 0.42944833815838573,
+    "median_absolute_spearman": 0.43619146537304687,
+    "spearman_by_model": [
+      -0.42944833815838573,
+      -0.43619146537304687,
+      -0.44230012692484544,
+      -0.4417327696070497,
+      -0.4305457208880525
+    ]
+  },
+  "feature_ranking": [
+    {
+      "observable": "g10_11_pq",
+      "consistent_sign": true,
+      "minimum_absolute_spearman": 0.31129422357234127,
+      "median_absolute_spearman": 0.31983283541545704,
+      "spearman_by_model": [
+        -0.3289497008653314,
+        -0.31129422357234127,
+        -0.3227402422481993,
+        -0.31983283541545704,
+        -0.31411614657801473
+      ]
+    },
+    {
+      "observable": "g9_12_pq",
+      "consistent_sign": true,
+      "minimum_absolute_spearman": 0.42944833815838573,
+      "median_absolute_spearman": 0.43619146537304687,
+      "spearman_by_model": [
+        -0.42944833815838573,
+        -0.43619146537304687,
+        -0.44230012692484544,
+        -0.4417327696070497,
+        -0.4305457208880525
+      ]
+    },
+    {
+      "observable": "relative_g10_11_pq",
+      "consistent_sign": true,
+      "minimum_absolute_spearman": 0.2945018060325328,
+      "median_absolute_spearman": 0.3056779061569304,
+      "spearman_by_model": [
+        -0.31729492171281365,
+        -0.2945018060325328,
+        -0.31401075552332414,
+        -0.3056779061569304,
+        -0.29524463202803436
+      ]
+    },
+    {
+      "observable": "relative_g9_12_pq",
+      "consistent_sign": true,
+      "minimum_absolute_spearman": 0.41846339813044714,
+      "median_absolute_spearman": 0.4254826843899728,
+      "spearman_by_model": [
+        -0.4254826843899728,
+        -0.42337909740894614,
+        -0.4412689642863925,
+        -0.4359843338016166,
+        -0.41846339813044714
+      ]
+    },
+    {
+      "observable": "count_1pct",
+      "consistent_sign": true,
+      "minimum_absolute_spearman": 0.3538628517558291,
+      "median_absolute_spearman": 0.3639087724686557,
+      "spearman_by_model": [
+        0.3639087724686557,
+        0.36043705646996094,
+        0.37127558576687486,
+        0.37159219291078305,
+        0.3538628517558291
+      ]
+    },
+    {
+      "observable": "count_2pct",
+      "consistent_sign": true,
+      "minimum_absolute_spearman": 0.42030751657942295,
+      "median_absolute_spearman": 0.428659156080364,
+      "spearman_by_model": [
+        0.42030751657942295,
+        0.4271446211784439,
+        0.428659156080364,
+        0.43315337960581723,
+        0.42903206776983044
+      ]
+    },
+    {
+      "observable": "count_5pct",
+      "consistent_sign": true,
+      "minimum_absolute_spearman": 0.37225214396241996,
+      "median_absolute_spearman": 0.40394477837355103,
+      "spearman_by_model": [
+        0.37225214396241996,
+        0.40394477837355103,
+        0.40939162863028017,
+        0.42206917852340897,
+        0.3922104660729609
+      ]
+    }
+  ],
+  "reconstruction_error_scalar": "not present in saved inputs; omitted",
+  "primary_checkpoint_sha256": "e7de720f7b013f2e92a4c5639b04eea0a74798b5a206f35973e845c8bba0bb21",
+  "feature_function_accepts_only_pq_scores": true,
+  "fixed_pool_selection_is_exact_not_deployed_pq_search": true,
+  "selection_is_exploratory_not_heldout": true
+}

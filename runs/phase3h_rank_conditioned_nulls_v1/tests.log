@@ -1,0 +1,13 @@
+test_closure_signed_and_guarded (test_phase3h_metrics.RankNullTests) ... ok
+test_distance_quantiles_are_rank_quartiles (test_phase3h_metrics.RankNullTests) ... ok
+test_exact_registered_edges (test_phase3h_metrics.RankNullTests) ... ok
+test_n0_matches_3g_prefix (test_phase3h_metrics.RankNullTests) ... ok
+test_pq_observables_only_scores_and_scale (test_phase3h_metrics.RankNullTests) ... ok
+test_preserves_bin_multisets_and_reference (test_phase3h_metrics.RankNullTests) ... ok
+test_rejects_cross_bin_exchange (test_phase3h_metrics.RankNullTests) ... ok
+test_tie_preserving_quintiles (test_phase3h_metrics.RankNullTests) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.029s
+
+OK

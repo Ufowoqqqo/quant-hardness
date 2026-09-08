@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "queries": 10000,
+  "conditions": [
+    "N0",
+    "N1",
+    "N2",
+    "N3",
+    "N4",
+    "N_distance"
+  ],
+  "permutations": 100,
+  "n0_first50_all_metrics_and_ids_identical_to_3G": true,
+  "within_bin_assignments_all_checked": true,
+  "observed_outputs_and_frozen_pools_match": true,
+  "scalar_reference_checks": 600,
+  "negative_null_scores_not_clipped": {
+    "N0": 725,
+    "N1": 132,
+    "N2": 55,
+    "N3": 18,
+    "N4": 21,
+    "N_distance": 167
+  },
+  "min_candidate_count": 247,
+  "elapsed_seconds": 961.7394511159509
+}

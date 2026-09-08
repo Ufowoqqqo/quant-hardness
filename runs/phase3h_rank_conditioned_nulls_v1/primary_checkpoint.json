@@ -1,0 +1,26 @@
+{
+  "stage": "primary complete before PQ-only bridge",
+  "tables_sha256": {
+    "results/tables/phase3h_aggregate.csv": "054c27025290e9b0c5a882081660148fe1be74bfe7fb4c039ccef5a40b87b0f4",
+    "results/tables/phase3h_aggregate.json": "789d3fc0850e1559409b7471fa37b58992a13cd580a626a81b427f32c31f5223",
+    "results/tables/phase3h_aggregate_draws.csv": "a3f2168327ca27a19818b7a54095414d13f650c59a7ddec4dae95dfe3d1ca9fd",
+    "results/tables/phase3h_aggregate_draws.json": "aee14a2cc14488b51a87f8aa78430b52a1a830d9fde8eb72d685434c7c088fc0",
+    "results/tables/phase3h_combined.csv": "d13a5217e63be932d883efe128188d9417c93e4a23db7853e71f3bc412a655ab",
+    "results/tables/phase3h_combined.json": "18ee1942be4c7d53254c1fb9ccc73ae5f08d388ba11b8cd9edf8b48181b10eee",
+    "results/tables/phase3h_gap_closure.csv": "044721234ce092ec94a6d87880e0592947d73afe5a162118de44956ed3508564",
+    "results/tables/phase3h_gap_closure.json": "f9c5db443acf71179a6b3a051e13525a6617957bbfc10e8a3ecfb13367e63427",
+    "results/tables/phase3h_geometry_correlations.csv": "79a0b27bbb160e666c8f54397b659c71ad85f186131dbf1ac210ef64620f5ddc",
+    "results/tables/phase3h_geometry_correlations.json": "261a2f43ab8189d5ae6bce1131f008d9e4b27a55322fb6868961dee4e0b6e6d0",
+    "results/tables/phase3h_primary_summary.json": "864bb3c597eb3e931488e713dd8149b8e3ca0e53a72584f3cfff693de46446b0",
+    "results/tables/phase3h_residual_diagnostics.csv": "fe46bd4c8faf753e34c672e21142c41995f3ff6e366fbfc28309f5809057e770",
+    "results/tables/phase3h_residual_diagnostics.json": "489f9211969b27c0ce1da2b41a7ac6cd5fe085adcbbec9bb4da2ca3df78671b8"
+  },
+  "figures_sha256": {
+    "results/figures/phase3h_gap_closure.svg": "f1b3f05530de425ab38b1d9806cd0514c12717c326bd9d24c06da988bccdd612",
+    "results/figures/phase3h_geometry_excess.svg": "9a5d059b729fab4a9df8df9a1417438d6585596eee1be25206dc503f507011d8",
+    "results/figures/phase3h_geometry_loss.svg": "db6db0375d0eda0d0df9a08d08961014e7284514eab4008b3fa222a97256c8ae",
+    "results/figures/phase3h_inversions.svg": "e0f7375eec6a5586d545c6be373a1cc45495bdd295f6ebf7ac8e73e6a4185494",
+    "results/figures/phase3h_loss.svg": "2ab03d3d6038a7aae2a4a0b99a576119b3bedcebba2046e106d4061f12188e53",
+    "results/figures/phase3h_residual_rank.svg": "298eea7e16f83c145ac58026e7ea2d2f20d71f231e3c703e1233089f79e6377a"
+  }
+}

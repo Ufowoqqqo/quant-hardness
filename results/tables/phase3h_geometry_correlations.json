@@ -1,0 +1,1250 @@
+[
+  {
+    "model": "R0-I1",
+    "scope": "all",
+    "condition": "observed",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.3560533330091463
+  },
+  {
+    "model": "R0-I1",
+    "scope": "all",
+    "condition": "N0",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.5870533035585703
+  },
+  {
+    "model": "R0-I1",
+    "scope": "all",
+    "condition": "N0",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.06522321717696862
+  },
+  {
+    "model": "R0-I1",
+    "scope": "all",
+    "condition": "N1",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.5390786435534372
+  },
+  {
+    "model": "R0-I1",
+    "scope": "all",
+    "condition": "N1",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.09153697352572093
+  },
+  {
+    "model": "R0-I1",
+    "scope": "all",
+    "condition": "N2",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.46716671003785865
+  },
+  {
+    "model": "R0-I1",
+    "scope": "all",
+    "condition": "N2",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.048000809170152134
+  },
+  {
+    "model": "R0-I1",
+    "scope": "all",
+    "condition": "N3",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.4283599263381726
+  },
+  {
+    "model": "R0-I1",
+    "scope": "all",
+    "condition": "N3",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": -0.0031046800553565677
+  },
+  {
+    "model": "R0-I1",
+    "scope": "all",
+    "condition": "N4",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.4002058274619228
+  },
+  {
+    "model": "R0-I1",
+    "scope": "all",
+    "condition": "N4",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.018356142586065924
+  },
+  {
+    "model": "R0-I1",
+    "scope": "all",
+    "condition": "N_distance",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.5861617164744559
+  },
+  {
+    "model": "R0-I1",
+    "scope": "all",
+    "condition": "N_distance",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.013499133610555266
+  },
+  {
+    "model": "R0-I1",
+    "scope": "oracle1",
+    "condition": "observed",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.42430487863109106
+  },
+  {
+    "model": "R0-I1",
+    "scope": "oracle1",
+    "condition": "N0",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.7697477687943558
+  },
+  {
+    "model": "R0-I1",
+    "scope": "oracle1",
+    "condition": "N0",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.08606491095174365
+  },
+  {
+    "model": "R0-I1",
+    "scope": "oracle1",
+    "condition": "N1",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.7078979758343649
+  },
+  {
+    "model": "R0-I1",
+    "scope": "oracle1",
+    "condition": "N1",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.12056138314928942
+  },
+  {
+    "model": "R0-I1",
+    "scope": "oracle1",
+    "condition": "N2",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.5734924681739179
+  },
+  {
+    "model": "R0-I1",
+    "scope": "oracle1",
+    "condition": "N2",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.06612519546378971
+  },
+  {
+    "model": "R0-I1",
+    "scope": "oracle1",
+    "condition": "N3",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.5187685091458982
+  },
+  {
+    "model": "R0-I1",
+    "scope": "oracle1",
+    "condition": "N3",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.006953863988695757
+  },
+  {
+    "model": "R0-I1",
+    "scope": "oracle1",
+    "condition": "N4",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.4813695907105981
+  },
+  {
+    "model": "R0-I1",
+    "scope": "oracle1",
+    "condition": "N4",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.03659914583927924
+  },
+  {
+    "model": "R0-I1",
+    "scope": "oracle1",
+    "condition": "N_distance",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.7647018930682489
+  },
+  {
+    "model": "R0-I1",
+    "scope": "oracle1",
+    "condition": "N_distance",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.023006891983099995
+  },
+  {
+    "model": "R1-I1",
+    "scope": "all",
+    "condition": "observed",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.3561413334124545
+  },
+  {
+    "model": "R1-I1",
+    "scope": "all",
+    "condition": "N0",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.6023789437847927
+  },
+  {
+    "model": "R1-I1",
+    "scope": "all",
+    "condition": "N0",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.06821776971926859
+  },
+  {
+    "model": "R1-I1",
+    "scope": "all",
+    "condition": "N1",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.5393872253623793
+  },
+  {
+    "model": "R1-I1",
+    "scope": "all",
+    "condition": "N1",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.10974053895202165
+  },
+  {
+    "model": "R1-I1",
+    "scope": "all",
+    "condition": "N2",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.4782816699375692
+  },
+  {
+    "model": "R1-I1",
+    "scope": "all",
+    "condition": "N2",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.07457453591228486
+  },
+  {
+    "model": "R1-I1",
+    "scope": "all",
+    "condition": "N3",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.4382965761214936
+  },
+  {
+    "model": "R1-I1",
+    "scope": "all",
+    "condition": "N3",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.020730172520481736
+  },
+  {
+    "model": "R1-I1",
+    "scope": "all",
+    "condition": "N4",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.41091110745460785
+  },
+  {
+    "model": "R1-I1",
+    "scope": "all",
+    "condition": "N4",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.04772402579795645
+  },
+  {
+    "model": "R1-I1",
+    "scope": "all",
+    "condition": "N_distance",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.6105841142324715
+  },
+  {
+    "model": "R1-I1",
+    "scope": "all",
+    "condition": "N_distance",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.03463339483832328
+  },
+  {
+    "model": "R1-I1",
+    "scope": "oracle1",
+    "condition": "observed",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.43179559092039577
+  },
+  {
+    "model": "R1-I1",
+    "scope": "oracle1",
+    "condition": "N0",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.7755358064491218
+  },
+  {
+    "model": "R1-I1",
+    "scope": "oracle1",
+    "condition": "N0",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.07972462432266755
+  },
+  {
+    "model": "R1-I1",
+    "scope": "oracle1",
+    "condition": "N1",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.6948901333455164
+  },
+  {
+    "model": "R1-I1",
+    "scope": "oracle1",
+    "condition": "N1",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.12531957793870505
+  },
+  {
+    "model": "R1-I1",
+    "scope": "oracle1",
+    "condition": "N2",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.5757335858348143
+  },
+  {
+    "model": "R1-I1",
+    "scope": "oracle1",
+    "condition": "N2",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.0762013581931963
+  },
+  {
+    "model": "R1-I1",
+    "scope": "oracle1",
+    "condition": "N3",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.5241261402542831
+  },
+  {
+    "model": "R1-I1",
+    "scope": "oracle1",
+    "condition": "N3",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.015966212824284672
+  },
+  {
+    "model": "R1-I1",
+    "scope": "oracle1",
+    "condition": "N4",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.4919349614951411
+  },
+  {
+    "model": "R1-I1",
+    "scope": "oracle1",
+    "condition": "N4",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.048516836483591515
+  },
+  {
+    "model": "R1-I1",
+    "scope": "oracle1",
+    "condition": "N_distance",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.7864697536579485
+  },
+  {
+    "model": "R1-I1",
+    "scope": "oracle1",
+    "condition": "N_distance",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.038023854627171234
+  },
+  {
+    "model": "R2-I1",
+    "scope": "all",
+    "condition": "observed",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.3654316831948324
+  },
+  {
+    "model": "R2-I1",
+    "scope": "all",
+    "condition": "N0",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.6013272719002213
+  },
+  {
+    "model": "R2-I1",
+    "scope": "all",
+    "condition": "N0",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.05891350952451252
+  },
+  {
+    "model": "R2-I1",
+    "scope": "all",
+    "condition": "N1",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.5401661021734517
+  },
+  {
+    "model": "R2-I1",
+    "scope": "all",
+    "condition": "N1",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.10161310994644805
+  },
+  {
+    "model": "R2-I1",
+    "scope": "all",
+    "condition": "N2",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.4822471980748846
+  },
+  {
+    "model": "R2-I1",
+    "scope": "all",
+    "condition": "N2",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.062107545114565975
+  },
+  {
+    "model": "R2-I1",
+    "scope": "all",
+    "condition": "N3",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.44597295382437213
+  },
+  {
+    "model": "R2-I1",
+    "scope": "all",
+    "condition": "N3",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.011490022199301547
+  },
+  {
+    "model": "R2-I1",
+    "scope": "all",
+    "condition": "N4",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.41330101600015273
+  },
+  {
+    "model": "R2-I1",
+    "scope": "all",
+    "condition": "N4",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.03447740813334682
+  },
+  {
+    "model": "R2-I1",
+    "scope": "all",
+    "condition": "N_distance",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.6081232128110229
+  },
+  {
+    "model": "R2-I1",
+    "scope": "all",
+    "condition": "N_distance",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.021770311902540612
+  },
+  {
+    "model": "R2-I1",
+    "scope": "oracle1",
+    "condition": "observed",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.4423994851182199
+  },
+  {
+    "model": "R2-I1",
+    "scope": "oracle1",
+    "condition": "N0",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.7728307946359185
+  },
+  {
+    "model": "R2-I1",
+    "scope": "oracle1",
+    "condition": "N0",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.0685086148679956
+  },
+  {
+    "model": "R2-I1",
+    "scope": "oracle1",
+    "condition": "N1",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.6967031221773045
+  },
+  {
+    "model": "R2-I1",
+    "scope": "oracle1",
+    "condition": "N1",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.1183922691056657
+  },
+  {
+    "model": "R2-I1",
+    "scope": "oracle1",
+    "condition": "N2",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.5841049860074273
+  },
+  {
+    "model": "R2-I1",
+    "scope": "oracle1",
+    "condition": "N2",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.06515223532105092
+  },
+  {
+    "model": "R2-I1",
+    "scope": "oracle1",
+    "condition": "N3",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.5395012084019245
+  },
+  {
+    "model": "R2-I1",
+    "scope": "oracle1",
+    "condition": "N3",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.01171237792433634
+  },
+  {
+    "model": "R2-I1",
+    "scope": "oracle1",
+    "condition": "N4",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.4974937651188284
+  },
+  {
+    "model": "R2-I1",
+    "scope": "oracle1",
+    "condition": "N4",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.03835508272799049
+  },
+  {
+    "model": "R2-I1",
+    "scope": "oracle1",
+    "condition": "N_distance",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.7824533493568986
+  },
+  {
+    "model": "R2-I1",
+    "scope": "oracle1",
+    "condition": "N_distance",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.02264701501027352
+  },
+  {
+    "model": "R3-I1",
+    "scope": "all",
+    "condition": "observed",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.35079341065029546
+  },
+  {
+    "model": "R3-I1",
+    "scope": "all",
+    "condition": "N0",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.6003600916694067
+  },
+  {
+    "model": "R3-I1",
+    "scope": "all",
+    "condition": "N0",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.07538308262054304
+  },
+  {
+    "model": "R3-I1",
+    "scope": "all",
+    "condition": "N1",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.5364998599738042
+  },
+  {
+    "model": "R3-I1",
+    "scope": "all",
+    "condition": "N1",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.1136488996198494
+  },
+  {
+    "model": "R3-I1",
+    "scope": "all",
+    "condition": "N2",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.47797198455346274
+  },
+  {
+    "model": "R3-I1",
+    "scope": "all",
+    "condition": "N2",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.07991773449200493
+  },
+  {
+    "model": "R3-I1",
+    "scope": "all",
+    "condition": "N3",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.4397071343959797
+  },
+  {
+    "model": "R3-I1",
+    "scope": "all",
+    "condition": "N3",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.02683300319770322
+  },
+  {
+    "model": "R3-I1",
+    "scope": "all",
+    "condition": "N4",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.40746402931894693
+  },
+  {
+    "model": "R3-I1",
+    "scope": "all",
+    "condition": "N4",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.04547548587544253
+  },
+  {
+    "model": "R3-I1",
+    "scope": "all",
+    "condition": "N_distance",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.6079836257182939
+  },
+  {
+    "model": "R3-I1",
+    "scope": "all",
+    "condition": "N_distance",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.03834554692263679
+  },
+  {
+    "model": "R3-I1",
+    "scope": "oracle1",
+    "condition": "observed",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.42824395855148034
+  },
+  {
+    "model": "R3-I1",
+    "scope": "oracle1",
+    "condition": "N0",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.7718687666030418
+  },
+  {
+    "model": "R3-I1",
+    "scope": "oracle1",
+    "condition": "N0",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.08526354489908422
+  },
+  {
+    "model": "R3-I1",
+    "scope": "oracle1",
+    "condition": "N1",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.6986940956384916
+  },
+  {
+    "model": "R3-I1",
+    "scope": "oracle1",
+    "condition": "N1",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.13477816568475467
+  },
+  {
+    "model": "R3-I1",
+    "scope": "oracle1",
+    "condition": "N2",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.5861036941919554
+  },
+  {
+    "model": "R3-I1",
+    "scope": "oracle1",
+    "condition": "N2",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.09024361478625506
+  },
+  {
+    "model": "R3-I1",
+    "scope": "oracle1",
+    "condition": "N3",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.5380536642712731
+  },
+  {
+    "model": "R3-I1",
+    "scope": "oracle1",
+    "condition": "N3",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.03243219603232349
+  },
+  {
+    "model": "R3-I1",
+    "scope": "oracle1",
+    "condition": "N4",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.4940883030966884
+  },
+  {
+    "model": "R3-I1",
+    "scope": "oracle1",
+    "condition": "N4",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.05311821873056088
+  },
+  {
+    "model": "R3-I1",
+    "scope": "oracle1",
+    "condition": "N_distance",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.7841839858060282
+  },
+  {
+    "model": "R3-I1",
+    "scope": "oracle1",
+    "condition": "N_distance",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.04224286856136074
+  },
+  {
+    "model": "R4-I1",
+    "scope": "all",
+    "condition": "observed",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.37289067438322915
+  },
+  {
+    "model": "R4-I1",
+    "scope": "all",
+    "condition": "N0",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.6026662756682881
+  },
+  {
+    "model": "R4-I1",
+    "scope": "all",
+    "condition": "N0",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.05375994863743201
+  },
+  {
+    "model": "R4-I1",
+    "scope": "all",
+    "condition": "N1",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.5353376210429382
+  },
+  {
+    "model": "R4-I1",
+    "scope": "all",
+    "condition": "N1",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.08499628761683493
+  },
+  {
+    "model": "R4-I1",
+    "scope": "all",
+    "condition": "N2",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.4804845627115116
+  },
+  {
+    "model": "R4-I1",
+    "scope": "all",
+    "condition": "N2",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.049116823168899246
+  },
+  {
+    "model": "R4-I1",
+    "scope": "all",
+    "condition": "N3",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.43824721545356476
+  },
+  {
+    "model": "R4-I1",
+    "scope": "all",
+    "condition": "N3",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": -0.01508451703217462
+  },
+  {
+    "model": "R4-I1",
+    "scope": "all",
+    "condition": "N4",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.41317637198636065
+  },
+  {
+    "model": "R4-I1",
+    "scope": "all",
+    "condition": "N4",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.009875131830183664
+  },
+  {
+    "model": "R4-I1",
+    "scope": "all",
+    "condition": "N_distance",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.6075330336768091
+  },
+  {
+    "model": "R4-I1",
+    "scope": "all",
+    "condition": "N_distance",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.013150329586943756
+  },
+  {
+    "model": "R4-I1",
+    "scope": "oracle1",
+    "condition": "observed",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.4581279316207247
+  },
+  {
+    "model": "R4-I1",
+    "scope": "oracle1",
+    "condition": "N0",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.7732373554799015
+  },
+  {
+    "model": "R4-I1",
+    "scope": "oracle1",
+    "condition": "N0",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.05484005271657305
+  },
+  {
+    "model": "R4-I1",
+    "scope": "oracle1",
+    "condition": "N1",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.6957668127270282
+  },
+  {
+    "model": "R4-I1",
+    "scope": "oracle1",
+    "condition": "N1",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.0940751105969306
+  },
+  {
+    "model": "R4-I1",
+    "scope": "oracle1",
+    "condition": "N2",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.586011183147765
+  },
+  {
+    "model": "R4-I1",
+    "scope": "oracle1",
+    "condition": "N2",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.04362998780271279
+  },
+  {
+    "model": "R4-I1",
+    "scope": "oracle1",
+    "condition": "N3",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.5327984085998828
+  },
+  {
+    "model": "R4-I1",
+    "scope": "oracle1",
+    "condition": "N3",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": -0.029454007141227402
+  },
+  {
+    "model": "R4-I1",
+    "scope": "oracle1",
+    "condition": "N4",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.5000026289296468
+  },
+  {
+    "model": "R4-I1",
+    "scope": "oracle1",
+    "condition": "N4",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": -0.001459646659282858
+  },
+  {
+    "model": "R4-I1",
+    "scope": "oracle1",
+    "condition": "N_distance",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.782672902317868
+  },
+  {
+    "model": "R4-I1",
+    "scope": "oracle1",
+    "condition": "N_distance",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.007579109488739299
+  },
+  {
+    "model": "five_model_mean",
+    "scope": "all",
+    "condition": "observed",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.5215879249889216
+  },
+  {
+    "model": "five_model_mean",
+    "scope": "all",
+    "condition": "N0",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.6066917667726259
+  },
+  {
+    "model": "five_model_mean",
+    "scope": "all",
+    "condition": "N0",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.12566845711154978
+  },
+  {
+    "model": "five_model_mean",
+    "scope": "all",
+    "condition": "N1",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.5794782024908328
+  },
+  {
+    "model": "five_model_mean",
+    "scope": "all",
+    "condition": "N1",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.19588666290318607
+  },
+  {
+    "model": "five_model_mean",
+    "scope": "all",
+    "condition": "N2",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.5801107993217431
+  },
+  {
+    "model": "five_model_mean",
+    "scope": "all",
+    "condition": "N2",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.12657692946307972
+  },
+  {
+    "model": "five_model_mean",
+    "scope": "all",
+    "condition": "N3",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.5615185527127827
+  },
+  {
+    "model": "five_model_mean",
+    "scope": "all",
+    "condition": "N3",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.01624956975966562
+  },
+  {
+    "model": "five_model_mean",
+    "scope": "all",
+    "condition": "N4",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.547110861145829
+  },
+  {
+    "model": "five_model_mean",
+    "scope": "all",
+    "condition": "N4",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.02640797886295277
+  },
+  {
+    "model": "five_model_mean",
+    "scope": "all",
+    "condition": "N_distance",
+    "target": "loss",
+    "queries": 10000,
+    "spearman": -0.6153485576528753
+  },
+  {
+    "model": "five_model_mean",
+    "scope": "all",
+    "condition": "N_distance",
+    "target": "excess",
+    "queries": 10000,
+    "spearman": 0.04603781434623334
+  },
+  {
+    "model": "five_model_mean",
+    "scope": "oracle1",
+    "condition": "observed",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.6584011302024309
+  },
+  {
+    "model": "five_model_mean",
+    "scope": "oracle1",
+    "condition": "N0",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.7851131419693911
+  },
+  {
+    "model": "five_model_mean",
+    "scope": "oracle1",
+    "condition": "N0",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.14697842247407675
+  },
+  {
+    "model": "five_model_mean",
+    "scope": "oracle1",
+    "condition": "N1",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.7635306873980107
+  },
+  {
+    "model": "five_model_mean",
+    "scope": "oracle1",
+    "condition": "N1",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.23641413236334705
+  },
+  {
+    "model": "five_model_mean",
+    "scope": "oracle1",
+    "condition": "N2",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.732249940399087
+  },
+  {
+    "model": "five_model_mean",
+    "scope": "oracle1",
+    "condition": "N2",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.1371066983029232
+  },
+  {
+    "model": "five_model_mean",
+    "scope": "oracle1",
+    "condition": "N3",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.7133325935235639
+  },
+  {
+    "model": "five_model_mean",
+    "scope": "oracle1",
+    "condition": "N3",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.014441453726543898
+  },
+  {
+    "model": "five_model_mean",
+    "scope": "oracle1",
+    "condition": "N4",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.691284110330939
+  },
+  {
+    "model": "five_model_mean",
+    "scope": "oracle1",
+    "condition": "N4",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.02777790824065712
+  },
+  {
+    "model": "five_model_mean",
+    "scope": "oracle1",
+    "condition": "N_distance",
+    "target": "loss",
+    "queries": 7136,
+    "spearman": -0.7980570500984714
+  },
+  {
+    "model": "five_model_mean",
+    "scope": "oracle1",
+    "condition": "N_distance",
+    "target": "excess",
+    "queries": 7136,
+    "spearman": 0.04949179804324545
+  }
+]

@@ -1,0 +1,249 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "model": "R0-I1",
+      "condition": "N0",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 313,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R0-I1",
+      "condition": "N1",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 347,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R0-I1",
+      "condition": "N2",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 477,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R0-I1",
+      "condition": "N3",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 568,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R0-I1",
+      "condition": "N4",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 567,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R0-I1",
+      "condition": "N_distance",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 458,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R1-I1",
+      "condition": "N0",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 275,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R1-I1",
+      "condition": "N1",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 258,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R1-I1",
+      "condition": "N2",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 457,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R1-I1",
+      "condition": "N3",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 422,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R1-I1",
+      "condition": "N4",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 455,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R1-I1",
+      "condition": "N_distance",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 405,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R2-I1",
+      "condition": "N0",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 311,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R2-I1",
+      "condition": "N1",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 329,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R2-I1",
+      "condition": "N2",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 436,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R2-I1",
+      "condition": "N3",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 471,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R2-I1",
+      "condition": "N4",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 391,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R2-I1",
+      "condition": "N_distance",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 385,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R3-I1",
+      "condition": "N0",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 271,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R3-I1",
+      "condition": "N1",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 285,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R3-I1",
+      "condition": "N2",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 407,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R3-I1",
+      "condition": "N3",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 389,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R3-I1",
+      "condition": "N4",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 570,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R3-I1",
+      "condition": "N_distance",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 433,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R4-I1",
+      "condition": "N0",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 292,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R4-I1",
+      "condition": "N1",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 329,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R4-I1",
+      "condition": "N2",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 510,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R4-I1",
+      "condition": "N3",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 556,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R4-I1",
+      "condition": "N4",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 506,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    },
+    {
+      "model": "R4-I1",
+      "condition": "N_distance",
+      "saved_queries_audited": 10000,
+      "replayed_permutations": 10000,
+      "negative_losses_retained": 397,
+      "negative_losses_only_gt_boundary_tie_substitutions": true
+    }
+  ],
+  "pq_only_observables_scalar_reference_all50000": true,
+  "all_frozen_inputs_unchanged": true,
+  "total_sampled_replays": 300000,
+  "total_saved_samples_audited": 30000000
+}

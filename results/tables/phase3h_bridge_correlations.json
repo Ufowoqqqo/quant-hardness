@@ -1,0 +1,562 @@
+[
+  {
+    "model": "R0-I1",
+    "scope": "all",
+    "observable": "g10_11_pq",
+    "queries": 10000,
+    "spearman": -0.279606932764267,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R0-I1",
+    "scope": "all",
+    "observable": "g9_12_pq",
+    "queries": 10000,
+    "spearman": -0.3682569375247107,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R0-I1",
+    "scope": "all",
+    "observable": "relative_g10_11_pq",
+    "queries": 10000,
+    "spearman": -0.2321831557945187,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R0-I1",
+    "scope": "all",
+    "observable": "relative_g9_12_pq",
+    "queries": 10000,
+    "spearman": -0.2950264791099746,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R0-I1",
+    "scope": "all",
+    "observable": "count_1pct",
+    "queries": 10000,
+    "spearman": 0.25337360076070514,
+    "populated_quintiles": 4
+  },
+  {
+    "model": "R0-I1",
+    "scope": "all",
+    "observable": "count_2pct",
+    "queries": 10000,
+    "spearman": 0.2795747330634167,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R0-I1",
+    "scope": "all",
+    "observable": "count_5pct",
+    "queries": 10000,
+    "spearman": 0.17455077980567968,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R0-I1",
+    "scope": "oracle1",
+    "observable": "g10_11_pq",
+    "queries": 7136,
+    "spearman": -0.3289497008653314,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R0-I1",
+    "scope": "oracle1",
+    "observable": "g9_12_pq",
+    "queries": 7136,
+    "spearman": -0.42944833815838573,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R0-I1",
+    "scope": "oracle1",
+    "observable": "relative_g10_11_pq",
+    "queries": 7136,
+    "spearman": -0.31729492171281365,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R0-I1",
+    "scope": "oracle1",
+    "observable": "relative_g9_12_pq",
+    "queries": 7136,
+    "spearman": -0.4254826843899728,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R0-I1",
+    "scope": "oracle1",
+    "observable": "count_1pct",
+    "queries": 7136,
+    "spearman": 0.3639087724686557,
+    "populated_quintiles": 4
+  },
+  {
+    "model": "R0-I1",
+    "scope": "oracle1",
+    "observable": "count_2pct",
+    "queries": 7136,
+    "spearman": 0.42030751657942295,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R0-I1",
+    "scope": "oracle1",
+    "observable": "count_5pct",
+    "queries": 7136,
+    "spearman": 0.37225214396241996,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R1-I1",
+    "scope": "all",
+    "observable": "g10_11_pq",
+    "queries": 10000,
+    "spearman": -0.27085873691706247,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R1-I1",
+    "scope": "all",
+    "observable": "g9_12_pq",
+    "queries": 10000,
+    "spearman": -0.3749512959345968,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R1-I1",
+    "scope": "all",
+    "observable": "relative_g10_11_pq",
+    "queries": 10000,
+    "spearman": -0.21788350959587086,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R1-I1",
+    "scope": "all",
+    "observable": "relative_g9_12_pq",
+    "queries": 10000,
+    "spearman": -0.2883431222278449,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R1-I1",
+    "scope": "all",
+    "observable": "count_1pct",
+    "queries": 10000,
+    "spearman": 0.2571676233909027,
+    "populated_quintiles": 4
+  },
+  {
+    "model": "R1-I1",
+    "scope": "all",
+    "observable": "count_2pct",
+    "queries": 10000,
+    "spearman": 0.2800321781930261,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R1-I1",
+    "scope": "all",
+    "observable": "count_5pct",
+    "queries": 10000,
+    "spearman": 0.20101535631446288,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R1-I1",
+    "scope": "oracle1",
+    "observable": "g10_11_pq",
+    "queries": 7136,
+    "spearman": -0.31129422357234127,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R1-I1",
+    "scope": "oracle1",
+    "observable": "g9_12_pq",
+    "queries": 7136,
+    "spearman": -0.43619146537304687,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R1-I1",
+    "scope": "oracle1",
+    "observable": "relative_g10_11_pq",
+    "queries": 7136,
+    "spearman": -0.2945018060325328,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R1-I1",
+    "scope": "oracle1",
+    "observable": "relative_g9_12_pq",
+    "queries": 7136,
+    "spearman": -0.42337909740894614,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R1-I1",
+    "scope": "oracle1",
+    "observable": "count_1pct",
+    "queries": 7136,
+    "spearman": 0.36043705646996094,
+    "populated_quintiles": 4
+  },
+  {
+    "model": "R1-I1",
+    "scope": "oracle1",
+    "observable": "count_2pct",
+    "queries": 7136,
+    "spearman": 0.4271446211784439,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R1-I1",
+    "scope": "oracle1",
+    "observable": "count_5pct",
+    "queries": 7136,
+    "spearman": 0.40394477837355103,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R2-I1",
+    "scope": "all",
+    "observable": "g10_11_pq",
+    "queries": 10000,
+    "spearman": -0.2701079621515634,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R2-I1",
+    "scope": "all",
+    "observable": "g9_12_pq",
+    "queries": 10000,
+    "spearman": -0.37784866880115436,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R2-I1",
+    "scope": "all",
+    "observable": "relative_g10_11_pq",
+    "queries": 10000,
+    "spearman": -0.2215708254423872,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R2-I1",
+    "scope": "all",
+    "observable": "relative_g9_12_pq",
+    "queries": 10000,
+    "spearman": -0.30099492699910624,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R2-I1",
+    "scope": "all",
+    "observable": "count_1pct",
+    "queries": 10000,
+    "spearman": 0.2676534405976301,
+    "populated_quintiles": 4
+  },
+  {
+    "model": "R2-I1",
+    "scope": "all",
+    "observable": "count_2pct",
+    "queries": 10000,
+    "spearman": 0.28015838378370095,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R2-I1",
+    "scope": "all",
+    "observable": "count_5pct",
+    "queries": 10000,
+    "spearman": 0.20734112406172978,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R2-I1",
+    "scope": "oracle1",
+    "observable": "g10_11_pq",
+    "queries": 7136,
+    "spearman": -0.3227402422481993,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R2-I1",
+    "scope": "oracle1",
+    "observable": "g9_12_pq",
+    "queries": 7136,
+    "spearman": -0.44230012692484544,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R2-I1",
+    "scope": "oracle1",
+    "observable": "relative_g10_11_pq",
+    "queries": 7136,
+    "spearman": -0.31401075552332414,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R2-I1",
+    "scope": "oracle1",
+    "observable": "relative_g9_12_pq",
+    "queries": 7136,
+    "spearman": -0.4412689642863925,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R2-I1",
+    "scope": "oracle1",
+    "observable": "count_1pct",
+    "queries": 7136,
+    "spearman": 0.37127558576687486,
+    "populated_quintiles": 4
+  },
+  {
+    "model": "R2-I1",
+    "scope": "oracle1",
+    "observable": "count_2pct",
+    "queries": 7136,
+    "spearman": 0.428659156080364,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R2-I1",
+    "scope": "oracle1",
+    "observable": "count_5pct",
+    "queries": 7136,
+    "spearman": 0.40939162863028017,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R3-I1",
+    "scope": "all",
+    "observable": "g10_11_pq",
+    "queries": 10000,
+    "spearman": -0.26490374583606635,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R3-I1",
+    "scope": "all",
+    "observable": "g9_12_pq",
+    "queries": 10000,
+    "spearman": -0.3777340180816975,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R3-I1",
+    "scope": "all",
+    "observable": "relative_g10_11_pq",
+    "queries": 10000,
+    "spearman": -0.21283063730808596,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R3-I1",
+    "scope": "all",
+    "observable": "relative_g9_12_pq",
+    "queries": 10000,
+    "spearman": -0.29551189855256754,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R3-I1",
+    "scope": "all",
+    "observable": "count_1pct",
+    "queries": 10000,
+    "spearman": 0.25985498629002357,
+    "populated_quintiles": 4
+  },
+  {
+    "model": "R3-I1",
+    "scope": "all",
+    "observable": "count_2pct",
+    "queries": 10000,
+    "spearman": 0.28238022524226114,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R3-I1",
+    "scope": "all",
+    "observable": "count_5pct",
+    "queries": 10000,
+    "spearman": 0.2074488324943312,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R3-I1",
+    "scope": "oracle1",
+    "observable": "g10_11_pq",
+    "queries": 7136,
+    "spearman": -0.31983283541545704,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R3-I1",
+    "scope": "oracle1",
+    "observable": "g9_12_pq",
+    "queries": 7136,
+    "spearman": -0.4417327696070497,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R3-I1",
+    "scope": "oracle1",
+    "observable": "relative_g10_11_pq",
+    "queries": 7136,
+    "spearman": -0.3056779061569304,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R3-I1",
+    "scope": "oracle1",
+    "observable": "relative_g9_12_pq",
+    "queries": 7136,
+    "spearman": -0.4359843338016166,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R3-I1",
+    "scope": "oracle1",
+    "observable": "count_1pct",
+    "queries": 7136,
+    "spearman": 0.37159219291078305,
+    "populated_quintiles": 4
+  },
+  {
+    "model": "R3-I1",
+    "scope": "oracle1",
+    "observable": "count_2pct",
+    "queries": 7136,
+    "spearman": 0.43315337960581723,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R3-I1",
+    "scope": "oracle1",
+    "observable": "count_5pct",
+    "queries": 7136,
+    "spearman": 0.42206917852340897,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R4-I1",
+    "scope": "all",
+    "observable": "g10_11_pq",
+    "queries": 10000,
+    "spearman": -0.27286702029893883,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R4-I1",
+    "scope": "all",
+    "observable": "g9_12_pq",
+    "queries": 10000,
+    "spearman": -0.370253452385672,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R4-I1",
+    "scope": "all",
+    "observable": "relative_g10_11_pq",
+    "queries": 10000,
+    "spearman": -0.21470712811984713,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R4-I1",
+    "scope": "all",
+    "observable": "relative_g9_12_pq",
+    "queries": 10000,
+    "spearman": -0.2785232772192386,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R4-I1",
+    "scope": "all",
+    "observable": "count_1pct",
+    "queries": 10000,
+    "spearman": 0.24568129662364724,
+    "populated_quintiles": 4
+  },
+  {
+    "model": "R4-I1",
+    "scope": "all",
+    "observable": "count_2pct",
+    "queries": 10000,
+    "spearman": 0.27690568876965715,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R4-I1",
+    "scope": "all",
+    "observable": "count_5pct",
+    "queries": 10000,
+    "spearman": 0.18742346878549496,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R4-I1",
+    "scope": "oracle1",
+    "observable": "g10_11_pq",
+    "queries": 7136,
+    "spearman": -0.31411614657801473,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R4-I1",
+    "scope": "oracle1",
+    "observable": "g9_12_pq",
+    "queries": 7136,
+    "spearman": -0.4305457208880525,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R4-I1",
+    "scope": "oracle1",
+    "observable": "relative_g10_11_pq",
+    "queries": 7136,
+    "spearman": -0.29524463202803436,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R4-I1",
+    "scope": "oracle1",
+    "observable": "relative_g9_12_pq",
+    "queries": 7136,
+    "spearman": -0.41846339813044714,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R4-I1",
+    "scope": "oracle1",
+    "observable": "count_1pct",
+    "queries": 7136,
+    "spearman": 0.3538628517558291,
+    "populated_quintiles": 4
+  },
+  {
+    "model": "R4-I1",
+    "scope": "oracle1",
+    "observable": "count_2pct",
+    "queries": 7136,
+    "spearman": 0.42903206776983044,
+    "populated_quintiles": 5
+  },
+  {
+    "model": "R4-I1",
+    "scope": "oracle1",
+    "observable": "count_5pct",
+    "queries": 7136,
+    "spearman": 0.3922104660729609,
+    "populated_quintiles": 5
+  }
+]

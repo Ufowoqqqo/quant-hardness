@@ -1,0 +1,152 @@
+[
+  {
+    "model": "R0-I1",
+    "region": "top10",
+    "candidates": 100000,
+    "candidate_weighted_signed_mean": 266.1417130780029,
+    "candidate_weighted_mae": 957.1778152508545,
+    "candidate_weighted_variance": 1504289.4716143408,
+    "query_mean_signed_residual": 266.1417130780029,
+    "query_mean_mae": 957.1778152508546
+  },
+  {
+    "model": "R0-I1",
+    "region": "near11_20",
+    "candidates": 100000,
+    "candidate_weighted_signed_mean": 226.93871076049805,
+    "candidate_weighted_mae": 1010.8072891369629,
+    "candidate_weighted_variance": 1692012.0986482324,
+    "query_mean_signed_residual": 226.93871076049805,
+    "query_mean_mae": 1010.8072891369629
+  },
+  {
+    "model": "R0-I1",
+    "region": "far21plus",
+    "candidates": 10153047,
+    "candidate_weighted_signed_mean": 114.62134232232312,
+    "candidate_weighted_mae": 1332.1198630207684,
+    "candidate_weighted_variance": 3028229.1855926043,
+    "query_mean_signed_residual": 82.7313759319464,
+    "query_mean_mae": 1316.7460110852737
+  },
+  {
+    "model": "R1-I1",
+    "region": "top10",
+    "candidates": 100000,
+    "candidate_weighted_signed_mean": 456.2115880639648,
+    "candidate_weighted_mae": 1063.102372770996,
+    "candidate_weighted_variance": 1602162.9001392631,
+    "query_mean_signed_residual": 456.2115880639648,
+    "query_mean_mae": 1063.1023727709962
+  },
+  {
+    "model": "R1-I1",
+    "region": "near11_20",
+    "candidates": 100000,
+    "candidate_weighted_signed_mean": 373.0011694104004,
+    "candidate_weighted_mae": 1109.0533463146974,
+    "candidate_weighted_variance": 1844876.6880599966,
+    "query_mean_signed_residual": 373.0011694104004,
+    "query_mean_mae": 1109.0533463146971
+  },
+  {
+    "model": "R1-I1",
+    "region": "far21plus",
+    "candidates": 10153047,
+    "candidate_weighted_signed_mean": -29.026534279306706,
+    "candidate_weighted_mae": 1397.5035648545688,
+    "candidate_weighted_variance": 3281907.110718269,
+    "query_mean_signed_residual": 4.242794823446156,
+    "query_mean_mae": 1381.7959938313245
+  },
+  {
+    "model": "R2-I1",
+    "region": "top10",
+    "candidates": 100000,
+    "candidate_weighted_signed_mean": 449.70626212402345,
+    "candidate_weighted_mae": 1058.0011225830078,
+    "candidate_weighted_variance": 1596360.5378520105,
+    "query_mean_signed_residual": 449.7062621240234,
+    "query_mean_mae": 1058.0011225830078
+  },
+  {
+    "model": "R2-I1",
+    "region": "near11_20",
+    "candidates": 100000,
+    "candidate_weighted_signed_mean": 381.9381450292969,
+    "candidate_weighted_mae": 1102.5780001953126,
+    "candidate_weighted_variance": 1817740.1387219063,
+    "query_mean_signed_residual": 381.9381450292969,
+    "query_mean_mae": 1102.5780001953126
+  },
+  {
+    "model": "R2-I1",
+    "region": "far21plus",
+    "candidates": 10153047,
+    "candidate_weighted_signed_mean": -34.53749078990308,
+    "candidate_weighted_mae": 1396.9771383155387,
+    "candidate_weighted_variance": 3287558.509242178,
+    "query_mean_signed_residual": -1.5740454202820284,
+    "query_mean_mae": 1380.9289521938003
+  },
+  {
+    "model": "R3-I1",
+    "region": "top10",
+    "candidates": 100000,
+    "candidate_weighted_signed_mean": 442.3656809838867,
+    "candidate_weighted_mae": 1054.717921657715,
+    "candidate_weighted_variance": 1587589.8153951627,
+    "query_mean_signed_residual": 442.3656809838867,
+    "query_mean_mae": 1054.717921657715
+  },
+  {
+    "model": "R3-I1",
+    "region": "near11_20",
+    "candidates": 100000,
+    "candidate_weighted_signed_mean": 368.1574690478516,
+    "candidate_weighted_mae": 1094.6846796044922,
+    "candidate_weighted_variance": 1805366.8225401642,
+    "query_mean_signed_residual": 368.1574690478515,
+    "query_mean_mae": 1094.6846796044922
+  },
+  {
+    "model": "R3-I1",
+    "region": "far21plus",
+    "candidates": 10153047,
+    "candidate_weighted_signed_mean": -37.98050831828403,
+    "candidate_weighted_mae": 1392.825245634969,
+    "candidate_weighted_variance": 3265528.0257537235,
+    "query_mean_signed_residual": -4.819910193741405,
+    "query_mean_mae": 1376.839831196657
+  },
+  {
+    "model": "R4-I1",
+    "region": "top10",
+    "candidates": 100000,
+    "candidate_weighted_signed_mean": 432.9527126477051,
+    "candidate_weighted_mae": 1054.681903927002,
+    "candidate_weighted_variance": 1600526.8727640095,
+    "query_mean_signed_residual": 432.95271264770514,
+    "query_mean_mae": 1054.6819039270022
+  },
+  {
+    "model": "R4-I1",
+    "region": "near11_20",
+    "candidates": 100000,
+    "candidate_weighted_signed_mean": 364.45366443115233,
+    "candidate_weighted_mae": 1098.6132490893556,
+    "candidate_weighted_variance": 1817686.9690946112,
+    "query_mean_signed_residual": 364.45366443115233,
+    "query_mean_mae": 1098.6132490893553
+  },
+  {
+    "model": "R4-I1",
+    "region": "far21plus",
+    "candidates": 10153047,
+    "candidate_weighted_signed_mean": -44.422772439902694,
+    "candidate_weighted_mae": 1396.2549826495147,
+    "candidate_weighted_variance": 3287797.5222388236,
+    "query_mean_signed_residual": -10.221952985469652,
+    "query_mean_mae": 1380.2292170651638
+  }
+]

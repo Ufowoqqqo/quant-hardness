@@ -1,0 +1,282 @@
+[
+  {
+    "model": "R0-I1",
+    "scope": "all",
+    "predictor": "top10_minus_near_signed_bias",
+    "target": "excess_loss",
+    "spearman": 0.39266879713736175
+  },
+  {
+    "model": "R0-I1",
+    "scope": "all",
+    "predictor": "top10_minus_far_mae",
+    "target": "excess_loss",
+    "spearman": 0.20425853804781494
+  },
+  {
+    "model": "R0-I1",
+    "scope": "all",
+    "predictor": "top10_minus_far_signed_bias",
+    "target": "excess_loss",
+    "spearman": 0.26752909056114854
+  },
+  {
+    "model": "R0-I1",
+    "scope": "all",
+    "predictor": "residual_distance_spearman",
+    "target": "excess_loss",
+    "spearman": 0.014779188331722225
+  },
+  {
+    "model": "R0-I1",
+    "scope": "oracle1",
+    "predictor": "top10_minus_near_signed_bias",
+    "target": "excess_loss",
+    "spearman": 0.4206367937607671
+  },
+  {
+    "model": "R0-I1",
+    "scope": "oracle1",
+    "predictor": "top10_minus_far_mae",
+    "target": "excess_loss",
+    "spearman": 0.18384087974808005
+  },
+  {
+    "model": "R0-I1",
+    "scope": "oracle1",
+    "predictor": "top10_minus_far_signed_bias",
+    "target": "excess_loss",
+    "spearman": 0.28835613377120645
+  },
+  {
+    "model": "R0-I1",
+    "scope": "oracle1",
+    "predictor": "residual_distance_spearman",
+    "target": "excess_loss",
+    "spearman": 0.022841234054551608
+  },
+  {
+    "model": "R1-I1",
+    "scope": "all",
+    "predictor": "top10_minus_near_signed_bias",
+    "target": "excess_loss",
+    "spearman": 0.41852681777227585
+  },
+  {
+    "model": "R1-I1",
+    "scope": "all",
+    "predictor": "top10_minus_far_mae",
+    "target": "excess_loss",
+    "spearman": 0.1803590852072584
+  },
+  {
+    "model": "R1-I1",
+    "scope": "all",
+    "predictor": "top10_minus_far_signed_bias",
+    "target": "excess_loss",
+    "spearman": 0.2910296817606976
+  },
+  {
+    "model": "R1-I1",
+    "scope": "all",
+    "predictor": "residual_distance_spearman",
+    "target": "excess_loss",
+    "spearman": -0.003056261985227895
+  },
+  {
+    "model": "R1-I1",
+    "scope": "oracle1",
+    "predictor": "top10_minus_near_signed_bias",
+    "target": "excess_loss",
+    "spearman": 0.45452457023212933
+  },
+  {
+    "model": "R1-I1",
+    "scope": "oracle1",
+    "predictor": "top10_minus_far_mae",
+    "target": "excess_loss",
+    "spearman": 0.1942315272635251
+  },
+  {
+    "model": "R1-I1",
+    "scope": "oracle1",
+    "predictor": "top10_minus_far_signed_bias",
+    "target": "excess_loss",
+    "spearman": 0.3143086303801037
+  },
+  {
+    "model": "R1-I1",
+    "scope": "oracle1",
+    "predictor": "residual_distance_spearman",
+    "target": "excess_loss",
+    "spearman": 0.001694854579825974
+  },
+  {
+    "model": "R2-I1",
+    "scope": "all",
+    "predictor": "top10_minus_near_signed_bias",
+    "target": "excess_loss",
+    "spearman": 0.4099737026914432
+  },
+  {
+    "model": "R2-I1",
+    "scope": "all",
+    "predictor": "top10_minus_far_mae",
+    "target": "excess_loss",
+    "spearman": 0.1816670082589939
+  },
+  {
+    "model": "R2-I1",
+    "scope": "all",
+    "predictor": "top10_minus_far_signed_bias",
+    "target": "excess_loss",
+    "spearman": 0.3009371372632061
+  },
+  {
+    "model": "R2-I1",
+    "scope": "all",
+    "predictor": "residual_distance_spearman",
+    "target": "excess_loss",
+    "spearman": -0.003467670809429347
+  },
+  {
+    "model": "R2-I1",
+    "scope": "oracle1",
+    "predictor": "top10_minus_near_signed_bias",
+    "target": "excess_loss",
+    "spearman": 0.4442075823863267
+  },
+  {
+    "model": "R2-I1",
+    "scope": "oracle1",
+    "predictor": "top10_minus_far_mae",
+    "target": "excess_loss",
+    "spearman": 0.17633040592370822
+  },
+  {
+    "model": "R2-I1",
+    "scope": "oracle1",
+    "predictor": "top10_minus_far_signed_bias",
+    "target": "excess_loss",
+    "spearman": 0.32484542184381715
+  },
+  {
+    "model": "R2-I1",
+    "scope": "oracle1",
+    "predictor": "residual_distance_spearman",
+    "target": "excess_loss",
+    "spearman": -0.0015144753165532046
+  },
+  {
+    "model": "R3-I1",
+    "scope": "all",
+    "predictor": "top10_minus_near_signed_bias",
+    "target": "excess_loss",
+    "spearman": 0.419734770154896
+  },
+  {
+    "model": "R3-I1",
+    "scope": "all",
+    "predictor": "top10_minus_far_mae",
+    "target": "excess_loss",
+    "spearman": 0.1871627141839336
+  },
+  {
+    "model": "R3-I1",
+    "scope": "all",
+    "predictor": "top10_minus_far_signed_bias",
+    "target": "excess_loss",
+    "spearman": 0.3085477308890682
+  },
+  {
+    "model": "R3-I1",
+    "scope": "all",
+    "predictor": "residual_distance_spearman",
+    "target": "excess_loss",
+    "spearman": -0.0029542247323277146
+  },
+  {
+    "model": "R3-I1",
+    "scope": "oracle1",
+    "predictor": "top10_minus_near_signed_bias",
+    "target": "excess_loss",
+    "spearman": 0.44884371174035953
+  },
+  {
+    "model": "R3-I1",
+    "scope": "oracle1",
+    "predictor": "top10_minus_far_mae",
+    "target": "excess_loss",
+    "spearman": 0.18511521212112364
+  },
+  {
+    "model": "R3-I1",
+    "scope": "oracle1",
+    "predictor": "top10_minus_far_signed_bias",
+    "target": "excess_loss",
+    "spearman": 0.32718575369756675
+  },
+  {
+    "model": "R3-I1",
+    "scope": "oracle1",
+    "predictor": "residual_distance_spearman",
+    "target": "excess_loss",
+    "spearman": -0.010643731342808159
+  },
+  {
+    "model": "R4-I1",
+    "scope": "all",
+    "predictor": "top10_minus_near_signed_bias",
+    "target": "excess_loss",
+    "spearman": 0.3947501433882999
+  },
+  {
+    "model": "R4-I1",
+    "scope": "all",
+    "predictor": "top10_minus_far_mae",
+    "target": "excess_loss",
+    "spearman": 0.1682616720360905
+  },
+  {
+    "model": "R4-I1",
+    "scope": "all",
+    "predictor": "top10_minus_far_signed_bias",
+    "target": "excess_loss",
+    "spearman": 0.279201587326845
+  },
+  {
+    "model": "R4-I1",
+    "scope": "all",
+    "predictor": "residual_distance_spearman",
+    "target": "excess_loss",
+    "spearman": -0.0016135056350002432
+  },
+  {
+    "model": "R4-I1",
+    "scope": "oracle1",
+    "predictor": "top10_minus_near_signed_bias",
+    "target": "excess_loss",
+    "spearman": 0.43395650237523753
+  },
+  {
+    "model": "R4-I1",
+    "scope": "oracle1",
+    "predictor": "top10_minus_far_mae",
+    "target": "excess_loss",
+    "spearman": 0.16419597369212388
+  },
+  {
+    "model": "R4-I1",
+    "scope": "oracle1",
+    "predictor": "top10_minus_far_signed_bias",
+    "target": "excess_loss",
+    "spearman": 0.30186064226042764
+  },
+  {
+    "model": "R4-I1",
+    "scope": "oracle1",
+    "predictor": "residual_distance_spearman",
+    "target": "excess_loss",
+    "spearman": -0.007880641121435975
+  }
+]

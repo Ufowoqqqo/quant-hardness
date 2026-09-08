@@ -1,0 +1,62 @@
+R0-I1: full saved-ID audit and deterministic replay PASS
+R1-I1: full saved-ID audit and deterministic replay PASS
+R2-I1: full saved-ID audit and deterministic replay PASS
+R3-I1: full saved-ID audit and deterministic replay PASS
+R4-I1: full saved-ID audit and deterministic replay PASS
+[
+  {
+    "model": "R0-I1",
+    "all_query_saved_topk_membership_hits_and_summaries_verified": 10000,
+    "replayed_queries": 100,
+    "replayed_permutations": 5000,
+    "centered_order_changes": 0,
+    "centered_set_changes": 0,
+    "centered_max_fp64_roundoff": 2.9103830456733704e-11,
+    "centered_non_tied_order_reversals": 0,
+    "negative_null_losses_preserved": 164
+  },
+  {
+    "model": "R1-I1",
+    "all_query_saved_topk_membership_hits_and_summaries_verified": 10000,
+    "replayed_queries": 100,
+    "replayed_permutations": 5000,
+    "centered_order_changes": 0,
+    "centered_set_changes": 0,
+    "centered_max_fp64_roundoff": 2.9103830456733704e-11,
+    "centered_non_tied_order_reversals": 0,
+    "negative_null_losses_preserved": 138
+  },
+  {
+    "model": "R2-I1",
+    "all_query_saved_topk_membership_hits_and_summaries_verified": 10000,
+    "replayed_queries": 100,
+    "replayed_permutations": 5000,
+    "centered_order_changes": 0,
+    "centered_set_changes": 0,
+    "centered_max_fp64_roundoff": 2.9103830456733704e-11,
+    "centered_non_tied_order_reversals": 0,
+    "negative_null_losses_preserved": 149
+  },
+  {
+    "model": "R3-I1",
+    "all_query_saved_topk_membership_hits_and_summaries_verified": 10000,
+    "replayed_queries": 100,
+    "replayed_permutations": 5000,
+    "centered_order_changes": 0,
+    "centered_set_changes": 0,
+    "centered_max_fp64_roundoff": 2.9103830456733704e-11,
+    "centered_non_tied_order_reversals": 0,
+    "negative_null_losses_preserved": 136
+  },
+  {
+    "model": "R4-I1",
+    "all_query_saved_topk_membership_hits_and_summaries_verified": 10000,
+    "replayed_queries": 100,
+    "replayed_permutations": 5000,
+    "centered_order_changes": 0,
+    "centered_set_changes": 0,
+    "centered_max_fp64_roundoff": 2.9103830456733704e-11,
+    "centered_non_tied_order_reversals": 0,
+    "negative_null_losses_preserved": 157
+  }
+]

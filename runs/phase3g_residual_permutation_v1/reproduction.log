@@ -1,0 +1,432 @@
+/homes/kluaq/.config/matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /tmp/matplotlib-2wlg_zpq because there was an issue with the default path (/homes/kluaq/.config/matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+{
+  "aggregate_all": [
+    {
+      "model": "R0-I1",
+      "scope": "all",
+      "queries": 10000,
+      "metric": "recall",
+      "observed": 0.8536400000000002,
+      "null_mean": 0.8161197999999797,
+      "null_std": 0.0007151351805990843,
+      "null_median": 0.8162649999999794,
+      "null_p05": 0.8149579999999795,
+      "null_p95": 0.8171319999999817,
+      "observed_minus_null": 0.03752020000002043,
+      "null_over_observed": 0.9560468113021644
+    },
+    {
+      "model": "R0-I1",
+      "scope": "all",
+      "queries": 10000,
+      "metric": "loss",
+      "observed": 0.09951,
+      "null_mean": 0.13703020000000116,
+      "null_std": 0.0007151351805989776,
+      "null_median": 0.13688500000000142,
+      "null_p05": 0.1360180000000016,
+      "null_p95": 0.13819200000000104,
+      "observed_minus_null": -0.037520200000001155,
+      "null_over_observed": 1.3770495427595333
+    },
+    {
+      "model": "R0-I1",
+      "scope": "all",
+      "queries": 10000,
+      "metric": "inversions",
+      "observed": 5.5562,
+      "null_mean": 9.65486,
+      "null_std": 0.08249570922670064,
+      "null_median": 9.662500000000001,
+      "null_p05": 9.543935,
+      "null_p95": 9.777605,
+      "observed_minus_null": -4.09866,
+      "null_over_observed": 1.737673229905331
+    },
+    {
+      "model": "R0-I1",
+      "scope": "all",
+      "queries": 10000,
+      "metric": "harmful_fraction",
+      "observed": 0.7001,
+      "null_mean": 0.81844,
+      "null_std": 0.0027752550903163,
+      "null_median": 0.8183,
+      "null_p05": 0.81388,
+      "null_p95": 0.82322,
+      "observed_minus_null": -0.11834,
+      "null_over_observed": 1.1690329952863876
+    },
+    {
+      "model": "R1-I1",
+      "scope": "all",
+      "queries": 10000,
+      "metric": "recall",
+      "observed": 0.84552,
+      "null_mean": 0.8102575999999815,
+      "null_std": 0.0006816084219078768,
+      "null_median": 0.8102199999999794,
+      "null_p05": 0.8092204999999808,
+      "null_p95": 0.8111384999999808,
+      "observed_minus_null": 0.03526240000001857,
+      "null_over_observed": 0.958295013719346
+    },
+    {
+      "model": "R1-I1",
+      "scope": "all",
+      "queries": 10000,
+      "metric": "loss",
+      "observed": 0.10763000000000002,
+      "null_mean": 0.14289239999999992,
+      "null_std": 0.000681608421908217,
+      "null_median": 0.1429299999999999,
+      "null_p05": 0.14201149999999987,
+      "null_p95": 0.1439294999999996,
+      "observed_minus_null": -0.0352623999999999,
+      "null_over_observed": 1.3276261265446427
+    },
+    {
+      "model": "R1-I1",
+      "scope": "all",
+      "queries": 10000,
+      "metric": "inversions",
+      "observed": 6.2528,
+      "null_mean": 10.262332,
+      "null_std": 0.0851325076164283,
+      "null_median": 10.25435,
+      "null_p05": 10.13474,
+      "null_p95": 10.40049,
+      "observed_minus_null": -4.009532000000001,
+      "null_over_observed": 1.6412378454452408
+    },
+    {
+      "model": "R1-I1",
+      "scope": "all",
+      "queries": 10000,
+      "metric": "harmful_fraction",
+      "observed": 0.7337,
+      "null_mean": 0.8359719999999998,
+      "null_std": 0.0031490873313403268,
+      "null_median": 0.8358,
+      "null_p05": 0.82969,
+      "null_p95": 0.841555,
+      "observed_minus_null": -0.10227199999999981,
+      "null_over_observed": 1.1393921221207575
+    },
+    {
+      "model": "R2-I1",
+      "scope": "all",
+      "queries": 10000,
+      "metric": "recall",
+      "observed": 0.8477800000000001,
+      "null_mean": 0.8101919999999816,
+      "null_std": 0.0007656369897014929,
+      "null_median": 0.8101899999999819,
+      "null_p05": 0.8090484999999825,
+      "null_p95": 0.8111054999999804,
+      "observed_minus_null": 0.037588000000018496,
+      "null_over_observed": 0.9556630257849695
+    },
+    {
+      "model": "R2-I1",
+      "scope": "all",
+      "queries": 10000,
+      "metric": "loss",
+      "observed": 0.10537,
+      "null_mean": 0.14295799999999995,
+      "null_std": 0.0007656369897019748,
+      "null_median": 0.1429599999999997,
+      "null_p05": 0.14204450000000013,
+      "null_p95": 0.14410150000000033,
+      "observed_minus_null": -0.03758799999999994,
+      "null_over_observed": 1.3567239252159053
+    },
+    {
+      "model": "R2-I1",
+      "scope": "all",
+      "queries": 10000,
+      "metric": "inversions",
+      "observed": 6.1024,
+      "null_mean": 10.288268,
+      "null_std": 0.07824846465208236,
+      "null_median": 10.2778,
+      "null_p05": 10.17695,
+      "null_p95": 10.421705,
+      "observed_minus_null": -4.185868,
+      "null_over_observed": 1.6859379916098585
+    },
+    {
+      "model": "R2-I1",
+      "scope": "all",
+      "queries": 10000,
+      "metric": "harmful_fraction",
+      "observed": 0.7246,
+      "null_mean": 0.835792,
+      "null_std": 0.0035913637907556894,
+      "null_median": 0.83595,
+      "null_p05": 0.8298,
+      "null_p95": 0.8414,
+      "observed_minus_null": -0.11119199999999996,
+      "null_over_observed": 1.1534529395528568
+    },
+    {
+      "model": "R3-I1",
+      "scope": "all",
+      "queries": 10000,
+      "metric": "recall",
+      "observed": 0.8472600000000002,
+      "null_mean": 0.8109655999999815,
+      "null_std": 0.0007296746828945868,
+      "null_median": 0.8108999999999784,
+      "null_p05": 0.809551999999985,
+      "null_p95": 0.8119429999999827,
+      "observed_minus_null": 0.03629440000001871,
+      "null_over_observed": 0.9571626183225708
+    },
+    {
+      "model": "R3-I1",
+      "scope": "all",
+      "queries": 10000,
+      "metric": "loss",
+      "observed": 0.10589000000000001,
+      "null_mean": 0.14218440000000013,
+      "null_std": 0.0007296746828943152,
+      "null_median": 0.14224999999999977,
+      "null_p05": 0.1412070000000001,
+      "null_p95": 0.14359800000000028,
+      "observed_minus_null": -0.036294400000000115,
+      "null_over_observed": 1.342755689866844
+    },
+    {
+      "model": "R3-I1",
+      "scope": "all",
+      "queries": 10000,
+      "metric": "inversions",
+      "observed": 6.0736,
+      "null_mean": 10.196206,
+      "null_std": 0.07183127171308017,
+      "null_median": 10.21235,
+      "null_p05": 10.076765,
+      "null_p95": 10.29528,
+      "observed_minus_null": -4.122606,
+      "null_over_observed": 1.6787746970495259
+    },
+    {
+      "model": "R3-I1",
+      "scope": "all",
+      "queries": 10000,
+      "metric": "harmful_fraction",
+      "observed": 0.7268,
+      "null_mean": 0.83386,
+      "null_std": 0.0033505406204043567,
+      "null_median": 0.83415,
+      "null_p05": 0.828225,
+      "null_p95": 0.8391099999999999,
+      "observed_minus_null": -0.10706000000000004,
+      "null_over_observed": 1.147303247110622
+    },
+    {
+      "model": "R4-I1",
+      "scope": "all",
+      "queries": 10000,
+      "metric": "recall",
+      "observed": 0.8466400000000002,
+      "null_mean": 0.8105377999999815,
+      "null_std": 0.0007992937954392788,
+      "null_median": 0.810554999999982,
+      "null_p05": 0.8093124999999812,
+      "null_p95": 0.8118419999999812,
+      "observed_minus_null": 0.036102200000018625,
+      "null_over_observed": 0.957358263252364
+    },
+    {
+      "model": "R4-I1",
+      "scope": "all",
+      "queries": 10000,
+      "metric": "loss",
+      "observed": 0.10651000000000001,
+      "null_mean": 0.14261220000000002,
+      "null_std": 0.0007992937954396667,
+      "null_median": 0.1425950000000006,
+      "null_p05": 0.14130800000000024,
+      "null_p95": 0.14383749999999956,
+      "observed_minus_null": -0.036102200000000015,
+      "null_over_observed": 1.3389559665759085
+    },
+    {
+      "model": "R4-I1",
+      "scope": "all",
+      "queries": 10000,
+      "metric": "inversions",
+      "observed": 6.0697,
+      "null_mean": 10.247756000000003,
+      "null_std": 0.07539256218389881,
+      "null_median": 10.25875,
+      "null_p05": 10.12631,
+      "null_p95": 10.353145,
+      "observed_minus_null": -4.178056000000002,
+      "null_over_observed": 1.6883463762624187
+    },
+    {
+      "model": "R4-I1",
+      "scope": "all",
+      "queries": 10000,
+      "metric": "harmful_fraction",
+      "observed": 0.7274,
+      "null_mean": 0.8344179999999999,
+      "null_std": 0.003743112859312564,
+      "null_median": 0.8336,
+      "null_p05": 0.828745,
+      "null_p95": 0.8411500000000001,
+      "observed_minus_null": -0.10701799999999984,
+      "null_over_observed": 1.1471240032994223
+    }
+  ],
+  "geometry_oracle1": [
+    {
+      "model": "R0-I1",
+      "scope": "oracle1",
+      "descriptor": "boundary_gap_r2",
+      "target": "observed_loss",
+      "queries": 7136,
+      "spearman": -0.42430487863109106
+    },
+    {
+      "model": "R0-I1",
+      "scope": "oracle1",
+      "descriptor": "boundary_gap_r2",
+      "target": "null_mean_loss",
+      "queries": 7136,
+      "spearman": -0.7618380735315033
+    },
+    {
+      "model": "R0-I1",
+      "scope": "oracle1",
+      "descriptor": "boundary_gap_r2",
+      "target": "excess_loss",
+      "queries": 7136,
+      "spearman": 0.08406507293996912
+    },
+    {
+      "model": "R1-I1",
+      "scope": "oracle1",
+      "descriptor": "boundary_gap_r2",
+      "target": "observed_loss",
+      "queries": 7136,
+      "spearman": -0.43179559092039577
+    },
+    {
+      "model": "R1-I1",
+      "scope": "oracle1",
+      "descriptor": "boundary_gap_r2",
+      "target": "null_mean_loss",
+      "queries": 7136,
+      "spearman": -0.7677536417190709
+    },
+    {
+      "model": "R1-I1",
+      "scope": "oracle1",
+      "descriptor": "boundary_gap_r2",
+      "target": "excess_loss",
+      "queries": 7136,
+      "spearman": 0.07988707354347334
+    },
+    {
+      "model": "R2-I1",
+      "scope": "oracle1",
+      "descriptor": "boundary_gap_r2",
+      "target": "observed_loss",
+      "queries": 7136,
+      "spearman": -0.4423994851182199
+    },
+    {
+      "model": "R2-I1",
+      "scope": "oracle1",
+      "descriptor": "boundary_gap_r2",
+      "target": "null_mean_loss",
+      "queries": 7136,
+      "spearman": -0.7650319489526302
+    },
+    {
+      "model": "R2-I1",
+      "scope": "oracle1",
+      "descriptor": "boundary_gap_r2",
+      "target": "excess_loss",
+      "queries": 7136,
+      "spearman": 0.06618595061334552
+    },
+    {
+      "model": "R3-I1",
+      "scope": "oracle1",
+      "descriptor": "boundary_gap_r2",
+      "target": "observed_loss",
+      "queries": 7136,
+      "spearman": -0.42824395855148034
+    },
+    {
+      "model": "R3-I1",
+      "scope": "oracle1",
+      "descriptor": "boundary_gap_r2",
+      "target": "null_mean_loss",
+      "queries": 7136,
+      "spearman": -0.764697479315729
+    },
+    {
+      "model": "R3-I1",
+      "scope": "oracle1",
+      "descriptor": "boundary_gap_r2",
+      "target": "excess_loss",
+      "queries": 7136,
+      "spearman": 0.08374956204111603
+    },
+    {
+      "model": "R4-I1",
+      "scope": "oracle1",
+      "descriptor": "boundary_gap_r2",
+      "target": "observed_loss",
+      "queries": 7136,
+      "spearman": -0.4581279316207247
+    },
+    {
+      "model": "R4-I1",
+      "scope": "oracle1",
+      "descriptor": "boundary_gap_r2",
+      "target": "null_mean_loss",
+      "queries": 7136,
+      "spearman": -0.7658317273333004
+    },
+    {
+      "model": "R4-I1",
+      "scope": "oracle1",
+      "descriptor": "boundary_gap_r2",
+      "target": "excess_loss",
+      "queries": 7136,
+      "spearman": 0.053574300645050144
+    },
+    {
+      "model": "five_model_mean",
+      "scope": "oracle1",
+      "descriptor": "boundary_gap_r2",
+      "target": "observed_loss",
+      "queries": 7136,
+      "spearman": -0.6584011302024309
+    },
+    {
+      "model": "five_model_mean",
+      "scope": "oracle1",
+      "descriptor": "boundary_gap_r2",
+      "target": "null_mean_loss",
+      "queries": 7136,
+      "spearman": -0.7839920610164822
+    },
+    {
+      "model": "five_model_mean",
+      "scope": "oracle1",
+      "descriptor": "boundary_gap_r2",
+      "target": "excess_loss",
+      "queries": 7136,
+      "spearman": 0.14723779015089514
+    }
+  ]
+}

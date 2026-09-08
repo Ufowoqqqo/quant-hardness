@@ -1,0 +1,57 @@
+[
+  {
+    "model": "R0-I1",
+    "observed_replacement_pairs": 21787,
+    "observed_pair_mean_exact_margin": 1410.3775187038143,
+    "observed_pair_mean_error_difference": 2802.2711429624837,
+    "same_pair_shuffled_mean_error_difference": 5.041419771750983,
+    "same_pair_null_inversion_fraction": 0.28865378436682426,
+    "shuffled_selected_pair_count_mean": 34413.62,
+    "shuffled_selected_pair_mean_error_difference": 3911.461483891461,
+    "shuffled_selected_pair_mean_exact_margin": 1965.5066470775234
+  },
+  {
+    "model": "R1-I1",
+    "observed_replacement_pairs": 24063,
+    "observed_pair_mean_exact_margin": 1465.6070730997797,
+    "observed_pair_mean_error_difference": 2908.3468575297866,
+    "same_pair_shuffled_mean_error_difference": 1.5350889643648638,
+    "same_pair_null_inversion_fraction": 0.28486971699289365,
+    "shuffled_selected_pair_count_mean": 36935.16,
+    "shuffled_selected_pair_mean_error_difference": 4015.5863735222288,
+    "shuffled_selected_pair_mean_exact_margin": 2019.604372094232
+  },
+  {
+    "model": "R2-I1",
+    "observed_replacement_pairs": 23556,
+    "observed_pair_mean_exact_margin": 1461.3565970453387,
+    "observed_pair_mean_error_difference": 2910.871372056424,
+    "same_pair_shuffled_mean_error_difference": -3.2914007284378504,
+    "same_pair_null_inversion_fraction": 0.28557819663779926,
+    "shuffled_selected_pair_count_mean": 37007.08,
+    "shuffled_selected_pair_mean_error_difference": 4022.8248417470786,
+    "shuffled_selected_pair_mean_exact_margin": 2025.267898466996
+  },
+  {
+    "model": "R3-I1",
+    "observed_replacement_pairs": 23580,
+    "observed_pair_mean_exact_margin": 1463.0420695504665,
+    "observed_pair_mean_error_difference": 2877.151354245355,
+    "same_pair_shuffled_mean_error_difference": -3.9640002613277936,
+    "same_pair_null_inversion_fraction": 0.28438592027141646,
+    "shuffled_selected_pair_count_mean": 36704.92,
+    "shuffled_selected_pair_mean_error_difference": 4002.737061424333,
+    "shuffled_selected_pair_mean_exact_margin": 2012.564771153295
+  },
+  {
+    "model": "R4-I1",
+    "observed_replacement_pairs": 23565,
+    "observed_pair_mean_exact_margin": 1462.57772119669,
+    "observed_pair_mean_error_difference": 2892.337015303416,
+    "same_pair_shuffled_mean_error_difference": 1.0434455257151098,
+    "same_pair_null_inversion_fraction": 0.2863373647358371,
+    "shuffled_selected_pair_count_mean": 36862.96,
+    "shuffled_selected_pair_mean_error_difference": 4023.7725131237,
+    "shuffled_selected_pair_mean_exact_margin": 2021.1877852456776
+  }
+]

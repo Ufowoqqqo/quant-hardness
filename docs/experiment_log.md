@@ -1,5 +1,24 @@
 # Experiment log
 
+## Phase 3G pre-registered residual-permutation negative control
+
+Pre-registration: `runs/phase3g_residual_permutation_v1/preregistration.md`.
+Configuration: `configs/indexes/phase3g_residual_permutation.conf`.
+Five fixed R0-I1 through R4-I1 models,50 deterministic shuffles/query/model,
+all10,000 queries; reuse exact FP32 pools and stored PQ ADC scores. No search
+or training. Hypotheses and signed interpretation fixed before outcomes.
+
+```bash
+set -o pipefail
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python -m unittest discover -s tests -p test_phase3g_metrics.py -v 2>&1 | tee runs/phase3g_residual_permutation_v1/tests.log
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/run_phase3g_residual_permutation.py --config configs/indexes/phase3g_residual_permutation.conf --run runs/phase3g_residual_permutation_v1 2>&1 | tee runs/phase3g_residual_permutation_v1/execution.log
+```
+
+Reference tests:7 pass before production. Includes scalar nested-pair/full-sort
+agreement, Phase3C metric regression, strict ties, signed loss, reconstruction,
+deterministic bijections, multiset preservation and empirical midranks.
+Results/anomalies/next experiment will be appended after primary analysis.
+
 Append one entry after every meaningful experiment. Do not overwrite prior
 entries.
 
@@ -1406,3 +1425,63 @@ Final audit result:PASS.45 derived/table/figure files reproduce byte-for-byte;
 database/query arrays independently regenerate identically. All15 models,
 identity-model regression against3E and frozen source/candidate/graph inputs
 pass validation. Raw data and every previous run remain preserved.
+
+## Phase 3G completed — residual-permutation negative control
+
+Config:`configs/indexes/phase3g_residual_permutation.conf`; pre-registration
+`runs/phase3g_residual_permutation_v1/preregistration.md` written before null
+outcomes. Execution Git commit5e6334a327e662b119c3b196530a2db327e9eb51;
+dirty implementation/source hashes and CPU/kernel/NumPy details are in
+`provenance.json`. No graph traversal or PQ training/scoring was performed.
+Five existing R0-I1...R4-I1 score files; all10,000 fixed SIFT queries;
+50 shuffles/query/model with PCG64 SeedSequence([90700011,r,q,p]).
+
+Exact commands (shell uses `set -o pipefail` for logged pipelines):
+
+```bash
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python -m unittest discover -s tests -p test_phase3g_metrics.py -v 2>&1 | tee runs/phase3g_residual_permutation_v1/tests.log
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/run_phase3g_residual_permutation.py --config configs/indexes/phase3g_residual_permutation.conf --run runs/phase3g_residual_permutation_v1 2>&1 | tee runs/phase3g_residual_permutation_v1/execution.log
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python -m unittest discover -s tests -p 'test_phase3*_metrics.py' -v 2>&1 | tee runs/phase3g_residual_permutation_v1/regression_tests.log
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/analyze_phase3g_residual_permutation.py --config configs/indexes/phase3g_residual_permutation.conf --run runs/phase3g_residual_permutation_v1 2>&1 | tee runs/phase3g_residual_permutation_v1/analysis.log
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/verify_phase3g_artifacts.py --config configs/indexes/phase3g_residual_permutation.conf --run runs/phase3g_residual_permutation_v1 2>&1 | tee runs/phase3g_residual_permutation_v1/verification.log
+mktemp -d /tmp/phase3g-reproduce.XXXXXX
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/analyze_phase3g_residual_permutation.py --config configs/indexes/phase3g_residual_permutation.conf --run runs/phase3g_residual_permutation_v1 --tables /tmp/phase3g-reproduce.AAiOqX/tables --figures /tmp/phase3g-reproduce.AAiOqX/figures 2>&1 | tee runs/phase3g_residual_permutation_v1/reproduction.log
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/verify_phase3g_artifacts.py --config configs/indexes/phase3g_residual_permutation.conf --run runs/phase3g_residual_permutation_v1 2>&1 | tee runs/phase3g_residual_permutation_v1/verification_retry1.log
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/audit_phase3g_final.py --config configs/indexes/phase3g_residual_permutation.conf --run runs/phase3g_residual_permutation_v1 --reproduction /tmp/phase3g-reproduce.AAiOqX
+```
+
+The first verifier was stopped after discovering repeated NPZ decompression
+inside its query loop. Retry reads each model's arrays once; no experimental
+metric or raw output changed. Original log and primary table checkpoint are
+preserved. Plotting fell back to a writable temporary Matplotlib cache.
+
+Observations:five-model mean observed loss.104982 versus null.14153544;
+excess−.03655344. Every model has negative mean excess(.0353–.0376 less loss
+than its null). Null mean inversions9.65–10.29 versus observed5.56–6.25.
+Under oracle=1(n=7136),five-model mean d12-d9 Spearman is−.6584 with observed
+loss,−.7840 with null loss and+.1472 with excess. Observed top10 residual MAE
+is957–1063 versus1332–1398 in farther candidates. No positive mean excess
+damage is observed. Full report:`docs/phase3g_residual_permutation.md`.
+
+Controls:all50,000 observed rankings reproduce Phase3F; unchanged frozen
+inputs,all2.5 million saved top-10s audited,25,000 deterministic null samples
+replayed,centered diagnostic gives zero ordered/set differences.56 metric
+tests pass. Main derivation570.6s after initialization. All raw data retained.
+
+Anomalies/confounders:744 null losses of−.1 occur only on pre-existing exact
+boundary ties;1060 negative null candidate scores remain unclipped. Global
+shuffling destroys rank-dependent bias and variance together with individual
+assignment; these effects cannot be separately attributed. Null averaging50
+shuffles differs from a single observed codebook. Exact descriptors/residuals
+are offline oracle quantities,not demonstrated online uncertainty signals.
+
+Exactly one next experiment (NOT run):within-query residual shuffling within
+fixed exact-rank bands1–10,11–20,21–50,51–100,101+,same5 models/50 shuffles.
+Compare against actual PQ and this global null to isolate coarse
+rank-conditioned residual distributions from finer candidate dependence.
+No new algorithm is proposed or implemented.
+
+Final audit:PASS.33 table/figure files regenerate byte-for-byte in the
+independent temporary output directory. Integer-count aggregate checks and
+all744 negative-loss GT boundary-tie substitutions pass. Artifact checksums
+are recorded in `runs/phase3g_residual_permutation_v1/final_audit.json`.

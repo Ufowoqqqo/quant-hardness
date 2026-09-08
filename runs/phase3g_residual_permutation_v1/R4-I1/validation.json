@@ -1,0 +1,14 @@
+{
+  "observed_scores_exactly_reconstructed": true,
+  "all_observed_ordered_ids_and_metrics_match_3F": true,
+  "all_permutations_bijective": true,
+  "all_candidate_order_and_exact_topk_gt_match": true,
+  "queries": 10000,
+  "permutations_per_query": 50,
+  "scalar_reference_checks": 100,
+  "negative_null_scores_not_clipped": 170,
+  "exact_boundary_tie_queries": 171,
+  "score_count": 10353047,
+  "model": "R4-I1",
+  "elapsed_total_seconds": 567.0140712717548
+}

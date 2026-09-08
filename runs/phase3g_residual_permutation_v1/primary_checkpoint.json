@@ -1,0 +1,30 @@
+{
+  "stage": "primary tables and figures complete before centered diagnostic",
+  "tables_sha256": {
+    "results/tables/phase3g_aggregate.csv": "ec50cf4caffa9c340e8262d1718ff05c584a414dd44fc087994c62035481e707",
+    "results/tables/phase3g_aggregate.json": "f8118e2cf0bcc29f1ef1a216e84a6296faefc130f26d21a68c21283c34a1e5d8",
+    "results/tables/phase3g_aggregate_permutation_draws.csv": "2b6d5fda60e60b2d7d6e0e289b4fbc6d1bcbfe5b048e6374faec716751869ebc",
+    "results/tables/phase3g_aggregate_permutation_draws.json": "0004faeafacff5f8cc8b93646c73830d1ead44607174922b38a24a21422434a8",
+    "results/tables/phase3g_empirical_ranks.csv": "8ba1f453e82c595e64895bc636a84b811e251d14e90a9b6b63140d4bc246bfab",
+    "results/tables/phase3g_empirical_ranks.json": "d541f83f8cd1c123968217df0843819d276e105b43f35a2418cdbba9f06e94fa",
+    "results/tables/phase3g_geometry_bins.csv": "9874b70758dbdf710f1dcb6180feec587828846b281e3f8615bb61d9b81c7bd4",
+    "results/tables/phase3g_geometry_bins.json": "8e6599015990922104a4dc8ac939ce2e4794c622e8fb656a615fe2595f462ca6",
+    "results/tables/phase3g_geometry_correlations.csv": "4ea526f77d464361ff191b2e72e7bf8b80ca4e5c827cbb8502d412719f57fa18",
+    "results/tables/phase3g_geometry_correlations.json": "e07c53a294c3222f10b194362e30d2805db0d996817cf2caed4115e2ecbded19",
+    "results/tables/phase3g_query_summary.csv": "427a10a71a43e7c1006de46d1e8fdd557a7cda5e9cd60882bc442fb96b5673bd",
+    "results/tables/phase3g_query_summary.json": "9ffaf88c563e59c9919fba8c9aba1bc72e31889ebc31ab326f7249fb703332c8",
+    "results/tables/phase3g_replacement_pairs.csv": "c8ca05ca1df0472890476f8d8c463ae0319a6bc5fd2241dcef24ef04853ffbaf",
+    "results/tables/phase3g_replacement_pairs.json": "891da0261331b195bf46717022f1a661283391716e06b0bd4d03055e87dc3280",
+    "results/tables/phase3g_residual_bins.csv": "860dde7c6f02855e92ba27a0ac4b7ce7f72aadd79dd956b3f7136c69e7b9b269",
+    "results/tables/phase3g_residual_bins.json": "f5e4b6e4e3f7992c503194d3fd97d9a7bf8f041848d2216e346a671cbe6041af",
+    "results/tables/phase3g_residual_dependence.csv": "68e07d3e7d9532ec3620752f3163514a5fc78cf9052e6890af8bae2a1ee9d39b",
+    "results/tables/phase3g_residual_dependence.json": "21aee3c12ed5409ab176a1eb418216647bedb50d0234990d0ca291688b2b4f16",
+    "results/tables/phase3g_residual_excess_associations.csv": "a4162be67b7c9eeee1a0e4959f9bb12129efe1466df4bfd73ec588d144594cc6",
+    "results/tables/phase3g_residual_excess_associations.json": "570fc0b948504e50d7be5199e81f85f78f6fb21f11c15b5796c85a34ab1aee92",
+    "results/tables/phase3g_residual_rank.csv": "d65a585b9bd80348619f37e46c6537b799eb0ab8212a17dc10aec831cbed86c7",
+    "results/tables/phase3g_residual_rank.json": "579bee281ff87f658ebdcea8b6b8c4aabaf06ce1bd88fae2e6eb5055dc5ef436",
+    "results/tables/phase3g_residual_regions.csv": "f919cc9ab752d50fdbb70636a30236bfbc212253fa266bf54ccdf793b86d0816",
+    "results/tables/phase3g_residual_regions.json": "a7d929edc41f0a9a252a19c243d65b70b3153e55844fb1543e7fdbcee56afbb8",
+    "results/tables/phase3g_summary.json": "c2dc348cd4893658bd7fe6b0c2efbeddd8fe9fc09622c9c61f3d46018eec61ab"
+  }
+}

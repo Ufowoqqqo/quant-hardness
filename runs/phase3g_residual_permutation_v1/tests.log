@@ -1,0 +1,12 @@
+test_deterministic_independent_streams_and_multiset (test_phase3g_metrics.ResidualTests) ... ok
+test_invalid_input (test_phase3g_metrics.ResidualTests) ... ok
+test_pair_identity_control (test_phase3g_metrics.ResidualTests) ... ok
+test_reconstruction_centering_constant_and_signed_loss (test_phase3g_metrics.ResidualTests) ... ok
+test_scalar_and_prior_reference (test_phase3g_metrics.ResidualTests) ... ok
+test_strict_ties_and_order (test_phase3g_metrics.ResidualTests) ... ok
+test_tie_rank (test_phase3g_metrics.ResidualTests) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.062s
+
+OK

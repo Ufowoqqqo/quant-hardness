@@ -1,0 +1,3 @@
+mode,mean_total_us_intrusive,mean_retention_callbacks_us_including_inner_clock_cost,search_minus_measured_retention_us_NOT_counterfactual_core,stage1_primary_mean_us,timer_note
+BOUNDED,181.12968039573394,8.976796379455518,171.6654795818131,168.94371509763042,per-callback timers perturb search; not used for optimization gate
+FULL,200.04785356441198,23.592990387314074,173.00165639910188,184.9646915019446,per-callback timers perturb search; not used for optimization gate

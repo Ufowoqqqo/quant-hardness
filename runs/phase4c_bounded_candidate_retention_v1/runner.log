@@ -1,0 +1,6 @@
+START primary
+COMPLETE primary
+START diagnostic
+COMPLETE diagnostic
+START detail
+COMPLETE detail

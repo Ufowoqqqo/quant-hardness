@@ -1,0 +1,21 @@
+{
+  "candidate_count_mean": 1034.5839882121807,
+  "candidate_count_median": 1076.5,
+  "candidate_count_p95": 1337.0,
+  "candidate_count_min": 216,
+  "candidate_count_max": 1920,
+  "full_mean_ID_score_bytes": 8276.671905697445,
+  "full_mean_ID_score_order_bytes": 12415.007858546167,
+  "full_capacity_bytes": 4024576,
+  "full_tag_bytes": 4000000,
+  "full_capacity_per_array": 2048,
+  "bounded_heap_bytes": 208,
+  "bounded_top16_sorted_copy_bytes": 192,
+  "bounded_retained_IDs": 16,
+  "bounded_retained_scores": 16,
+  "incremental_collector_dynamic_allocations_per_query_FULL": 0,
+  "incremental_collector_dynamic_allocations_per_query_BOUNDED": 0,
+  "allocation_note": "source accounting plus zero capacity growth; not global malloc profiling; shared FAISS/DC allocations remain",
+  "FP32_refinement_bytes_per_all_query": 8192,
+  "FP32_side_database_bytes": 512000000
+}

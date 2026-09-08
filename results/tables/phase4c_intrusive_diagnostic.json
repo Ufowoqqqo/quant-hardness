@@ -1,0 +1,18 @@
+[
+  {
+    "mode": "BOUNDED",
+    "mean_total_us_intrusive": 181.12968039573394,
+    "mean_retention_callbacks_us_including_inner_clock_cost": 8.976796379455518,
+    "search_minus_measured_retention_us_NOT_counterfactual_core": 171.6654795818131,
+    "stage1_primary_mean_us": 168.94371509763042,
+    "timer_note": "per-callback timers perturb search; not used for optimization gate"
+  },
+  {
+    "mode": "FULL",
+    "mean_total_us_intrusive": 200.04785356441198,
+    "mean_retention_callbacks_us_including_inner_clock_cost": 23.592990387314074,
+    "search_minus_measured_retention_us_NOT_counterfactual_core": 173.00165639910188,
+    "stage1_primary_mean_us": 184.9646915019446,
+    "timer_note": "per-callback timers perturb search; not used for optimization gate"
+  }
+]

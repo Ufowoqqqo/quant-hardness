@@ -1772,3 +1772,121 @@ Final reproduction audit PASS:798112 timed query traces,57008 policy/query
 recall checks,30 exactly regenerated random masks, identical derived query
 rows and29 byte-identical tables/figures. Artifact hashes are preserved in
 `runs/phase4b_streaming_feasibility_v1/final_audit.json`.
+
+## Phase 4C — bounded top16 retention (2026-09-08)
+
+Frozen design recorded before timings at
+`runs/phase4c_bounded_candidate_retention_v1/preregistration.md`;
+configuration `configs/indexes/phase4c_bounded_candidate_retention.conf`.
+Git execution revision is the Phase4B commit `a9591c9` (full hash in provenance),
+plus immutable source/binary hashes. Same FAISS revision
+`20f14b31a6d54e243a3d1de6ae193fc4c3ec18ed`, graph/PQ model/14252 queries and
+512 old warmups. No data transformation, training, GT recomputation or altered
+search parameters. ef64/k10/L16, frozen inclusive gap710.40625. Seven repeats,
+primary-order seed94200011, secondary-order seed94200037. Reuse of Phase4B
+queries is an implementation comparison, not a new generalization test.
+
+Commands executed:
+
+```bash
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release > runs/phase4c_bounded_candidate_retention_v1/configure.log 2>&1
+# This first build was launched before asynchronous configure finished:
+cmake --build build --target faiss_phase4c bounded_retention_correctness -j 8 > runs/phase4c_bounded_candidate_retention_v1/build.log 2>&1
+# No target existed yet; after successful configure, rerun:
+cmake --build build --target faiss_phase4c bounded_retention_correctness -j 8 > runs/phase4c_bounded_candidate_retention_v1/build_after_configure.log 2>&1
+./build/bounded_retention_correctness > runs/phase4c_bounded_candidate_retention_v1/bounded_test.log 2>&1
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/prepare_phase4c.py > runs/phase4c_bounded_candidate_retention_v1/prepare.log 2>&1
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 taskset -c 2 ./build/faiss_phase4c validate configs/indexes/phase4c_bounded_candidate_retention.conf > runs/phase4c_bounded_candidate_retention_v1/validation.log 2>&1
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python -m unittest discover -s tests -p 'test_phase*_metrics.py' -v > runs/phase4c_bounded_candidate_retention_v1/python_tests.log 2>&1
+ctest --test-dir build --output-on-failure > runs/phase4c_bounded_candidate_retention_v1/ctest.log 2>&1
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/run_phase4c_benchmarks.py > runs/phase4c_bounded_candidate_retention_v1/runner.log 2>&1
+# Runner executes sequentially (never alongside validation/analysis/build):
+# taskset -c 2 ./build/faiss_phase4c primary configs/indexes/phase4c_bounded_candidate_retention.conf
+# taskset -c 2 ./build/faiss_phase4c diagnostic configs/indexes/phase4c_bounded_candidate_retention.conf
+# taskset -c 2 ./build/faiss_phase4c detail configs/indexes/phase4c_bounded_candidate_retention.conf
+```
+
+Before timing, host read-only `ps -eo pid,comm,pcpu --sort=-pcpu | head -12`
+showed no heavy competing job. No host settings or unrelated processes changed.
+Same i9-10920X/CPU2/one OMP+OpenBLAS thread as4B; GCC11.5.0, Release generic
+CPU FAISS, `-O3 -DNDEBUG -std=c++20 -Wall -Wextra -Wpedantic -fopenmp` app flags.
+Exact compiler/FAISS flags, memory, CPU, governor/turbo snapshots and process
+state are archived in provenance/environment JSON. Shared machine, not exclusive
+isolation. Build clock-skew warnings from NFS retained; both targets built.
+
+Pre-benchmark equivalence PASS:256536 mode/clock/query checks across14252
+queries; legacy full pool order/scores, native bits, ordered top16 bits,
+ALL16 exact distances/outputs and frozen GAP results identical.210 rank16
+boundary-tie queries require no equivalence relaxation. Fixed heap208 bytes;
+full scratch4024576 bytes, no vector-capacity growth.200 randomized/tied/
+duplicate stream references pass;81 Python and6 C++ tests pass. Original4B
+implementation and raw runs are unchanged.
+
+Post-benchmark analysis and independent regeneration commands:
+
+```bash
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/analyze_phase4c.py > runs/phase4c_bounded_candidate_retention_v1/analysis.log 2>&1
+mktemp -d /tmp/phase4c-reproduce.XXXXXX
+# Returned /tmp/phase4c-reproduce.JbBbYg
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/analyze_phase4c.py --tables /tmp/phase4c-reproduce.JbBbYg/tables --figures /tmp/phase4c-reproduce.JbBbYg/figures --derived /tmp/phase4c-reproduce.JbBbYg/analysis > runs/phase4c_bounded_candidate_retention_v1/reproduction.log 2>&1
+OPENBLAS_NUM_THREADS=1 /tmp/phase3b-plot-env/bin/python scripts/audit_phase4c.py --reproduction /tmp/phase4c-reproduce.JbBbYg > runs/phase4c_bounded_candidate_retention_v1/audit.log 2>&1
+```
+
+Observations (primary clocksOFF): NATIVE/FULL/BOUNDED/FULL_ALL16/BOUNDED_ALL16
+mean microseconds162.831814/184.732080/169.108819/186.707853/172.358667.
+Corresponding p95:190.8707/218.78995/198.53685/220.047/203.59665;
+p99:205.50137/235.28485/213.11711/236.49237/219.40833. Native/access-only
+recall .85030873; both ALL16 recall .93997334, IDs exactly identical.
+Full-overhead21.900266us, bounded-overhead6.277005us: reduction71.338225%,
+passes <=50% residual-overhead criterion. End-to-end ALL16 saving7.685368%
+(speedup1.083252x), below the alternative10% threshold. The preregistered OR
+optimization gate passes. Per-repeat savings and complete latency distributions
+are retained, not only averages.
+
+Stage-clock observation: full extraction3.152us, bounded finalize0.245us;
+exact16 stage2.122/2.093us for full/bounded. Intrusive capture-clock readings
+23.593/8.977us raise total to200.048/181.130us, versus stage-only184.965/168.944.
+Do not treat those timer-perturbed readings as exclusive uninstrumented work.
+No exact cache/bandwidth attribution. OFF/stageON confirms the optimization
+without per-callback clocks; maximum primary ON−OFF magnitude0.504%.
+
+Secondary contemporaneous NATIVE/GAP_BOUNDED/BOUNDED_ALL16 mean
+162.828867/169.907621/172.555502us. GAP remains recall .88050098 and selects
+3556 (24.950884%) with exactly56896 distances. Its saving vsALL16 is1.534510%,
+and ALL16-gain retention33.672431%; both selective-value gates fail. ALL16
+costs only2.648us more than GAP for .05947235 more recall. All three discrete
+points are formally nondominated; practical value is a separate judgment.
+
+Memory observations: pool mean1034.584/p951337, range216–1920. Full live
+ID/score/order bytes mean12415 plus4MB tags (reserved total4024576/worker).
+Bounded heap208 bytes plus192-byte sorted copy and common outputs, no extra
+tags/full arrays. Both collectors allocate0 dynamically/query after full
+reserve on this stream; shared FAISS/DC allocations remain. This is source/
+capacity accounting, not RSS/malloc profiling. Identical16-row FP32 payload
+8192 bytes/query for both ALL16 paths; FP32 side database512MB still required.
+
+Confounders: warm resident index, fixed query order, one shared nonexclusive
+machine/model; intentional old-query reuse is not a new generalization test.
+Active CPU frequency is not inferred from idle frequency snapshots. Runner ps
+snapshots are namespace-local; separate host-visible precheck is preserved in
+host_check_note.md. Callback clocks alter timing substantially; their subtracted
+search remainder is not a pure-core counterfactual. GT metric/tie conventions
+are unchanged because outputs/inputs are unchanged. No performance-driven
+implementation revisions or discarded repetitions. Full report:
+`docs/phase4c_bounded_candidate_retention.md`.
+
+Interpretation: Case A is supported for candidate-access overhead, with modest
+whole-query benefit; not Case B. Uniform bounded ALL16 is within approximately6%
+of native latency for8.97 recall percentage points more. Do not invest further
+in query-level risk prediction on this evidence. Native remains the latency
+endpoint; bounded ALL16 the strong high-recall reference.
+
+Exactly one next experiment: NATIVE versus BOUNDED_ALL16 at1/2/4/8 pinned,
+independent single-thread query workers, same frozen inputs/results. Measure
+QPS and p95/p99 to test whether uniform refinement's small cost survives
+concurrent shared-memory/cache pressure before deployment conclusions.
+
+Final audit PASS:1,624,728 timed output/count checks,14252 independent
+stable-full-sort top16 references, unchanged immutable input/source/binary
+hashes, identical derived query rows,21 byte-identical tables/figures.
+Artifact manifest: `runs/phase4c_bounded_candidate_retention_v1/final_audit.json`.

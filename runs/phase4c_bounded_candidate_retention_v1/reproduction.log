@@ -1,0 +1,77 @@
+/homes/kluaq/.config/matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /tmp/matplotlib-6nk9buca because there was an issue with the default path (/homes/kluaq/.config/matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+{
+  "primary": {
+    "native_mean_us": 162.8318142616575,
+    "full_mean_us": 184.7320800088208,
+    "bounded_mean_us": 169.1088191231306,
+    "full_all16_mean_us": 186.70785293292172,
+    "bounded_all16_mean_us": 172.35866723467385,
+    "full_overhead_us": 21.900265747163274,
+    "bounded_overhead_us": 6.277004861473074,
+    "overhead_reduction": 0.7133822514329019,
+    "all16_latency_saving": 0.07685368061836739,
+    "all16_speedup": 1.083251895181522,
+    "overhead_gate_pass": true,
+    "all16_gate_pass": false,
+    "meaningful_optimization": true
+  },
+  "secondary_frozen_gap": {
+    "gap_latency_saving": 0.015345096753542564,
+    "all16_recall_gain_retained": 0.336724313326552,
+    "selectivity_gate_pass": false
+  },
+  "secondary_frontier": [
+    {
+      "mode": "NATIVE",
+      "dominated_by": []
+    },
+    {
+      "mode": "GAP_BOUNDED",
+      "dominated_by": []
+    },
+    {
+      "mode": "BOUNDED_ALL16",
+      "dominated_by": []
+    }
+  ],
+  "validation": {
+    "status": "PASS",
+    "queries": 14252,
+    "mode_clock_checks": 256536,
+    "all_native_bits_identical": true,
+    "all_top16_ordered_ID_score_bits_identical": true,
+    "all_refined_output_IDs_identical": true,
+    "all_legacy_pool_order_scores_identical": true,
+    "rank16_boundary_tie_queries": 210,
+    "full_scratch_bytes": 4024576,
+    "bounded_heap_bytes": 208,
+    "candidate_capacity_growth_queries": 0,
+    "graph_fingerprint": "1b3c18f6e2dd3ccec56e74eed30458f60a65f01234bf51478af25d84b5c02d16"
+  },
+  "query_count": 14252,
+  "primary_clock_level": 0,
+  "all_query_outputs_identical": true,
+  "timed_traces": 1624728,
+  "candidate_memory": {
+    "candidate_count_mean": 1034.5839882121807,
+    "candidate_count_median": 1076.5,
+    "candidate_count_p95": 1337.0,
+    "candidate_count_min": 216,
+    "candidate_count_max": 1920,
+    "full_mean_ID_score_bytes": 8276.671905697445,
+    "full_mean_ID_score_order_bytes": 12415.007858546167,
+    "full_capacity_bytes": 4024576,
+    "full_tag_bytes": 4000000,
+    "full_capacity_per_array": 2048,
+    "bounded_heap_bytes": 208,
+    "bounded_top16_sorted_copy_bytes": 192,
+    "bounded_retained_IDs": 16,
+    "bounded_retained_scores": 16,
+    "incremental_collector_dynamic_allocations_per_query_FULL": 0,
+    "incremental_collector_dynamic_allocations_per_query_BOUNDED": 0,
+    "allocation_note": "source accounting plus zero capacity growth; not global malloc profiling; shared FAISS/DC allocations remain",
+    "FP32_refinement_bytes_per_all_query": 8192,
+    "FP32_side_database_bytes": 512000000
+  }
+}

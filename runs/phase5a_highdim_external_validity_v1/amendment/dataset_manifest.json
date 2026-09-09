@@ -1,0 +1,303 @@
+{
+  "status": "LOCAL_SHARDS_AND_SPLIT_VALIDATED_NO_RETRIEVAL",
+  "timestamp_utc": "2026-09-09T06:47:19.517500+00:00",
+  "parent_commit": "d56f1b2c8edfba8e7dc9a53eab46096b2b4d9198",
+  "config": {
+    "run": "runs/phase5a_highdim_external_validity_v1",
+    "status": "PRE_RUN_DATASET_AMENDMENT",
+    "dataset": "Qdrant/dbpedia-entities-openai3-text-embedding-3-large-1536-1M",
+    "dataset_revision": "4a9731217921bc476a0f03544f11f22ae4903fa5",
+    "dataset_cache": "/rwproject/kdd-db/kluaq/.cache/huggingface/datasets/Qdrant___dbpedia-entities-openai3-text-embedding-3-large-1536-1_m/default/0.0.0/4a9731217921bc476a0f03544f11f22ae4903fa5",
+    "dataset_manifest": "runs/phase5a_highdim_external_validity_v1/amendment/dataset_manifest.json",
+    "expected_dimension": "1536",
+    "metric": "normalized_fp32_squared_l2",
+    "normalization": "fp32_cast_then_fp64_norm_and_divide_then_fp32_storage_v1",
+    "split_seed": "20260909",
+    "training_sample_seed": "95000011",
+    "training_vectors": "65536",
+    "base_count": "990000",
+    "query_count": "10000",
+    "hnsw_m": "16",
+    "ef_construction": "80",
+    "graph_seed": "20260907",
+    "construction_threads": "24",
+    "pq_m": "768",
+    "pq_nbits": "8",
+    "pq_seed": "95000037",
+    "pq_niter": "25",
+    "pq_training_threads": "24",
+    "pq_secondary": "NONE",
+    "ef_values": "32,64,128",
+    "k": "10",
+    "L": "16",
+    "quality_seed": "95000053",
+    "quality_pairs": "10000",
+    "quality_order_pairs": "10000",
+    "gt_validation_seed": "95000071",
+    "gt_validation_queries": "32",
+    "search_threads": "1",
+    "single_thread_repetitions": "5",
+    "concurrency_workers": "1,8",
+    "concurrency_ef": "64",
+    "concurrency_repetitions": "5",
+    "passes_per_repetition": "4",
+    "warmup_queries_per_worker": "512",
+    "worker_cpus": "2,3,4,5,6,7,8,9",
+    "coordinator_cpu": "0",
+    "order_seed": "95000089",
+    "H1_min_candidate_oracle_recovery": "0.90",
+    "H2_min_L16_recovery": "0.60"
+  },
+  "config_sha256": "a6adf89d6ccaeddd8f0f840433eee3b8e818a669f629e2d5d6652d9a742688fd",
+  "source_repository": "Qdrant/dbpedia-entities-openai3-text-embedding-3-large-1536-1M",
+  "revision": "4a9731217921bc476a0f03544f11f22ae4903fa5",
+  "dataset_info_sha256": "e16e0a9c4da418429a209a1415890db7a32b3cd4b47fb61bc9c34e7656a63cd5",
+  "shards": [
+    {
+      "path": "/rwproject/kdd-db/kluaq/.cache/huggingface/datasets/Qdrant___dbpedia-entities-openai3-text-embedding-3-large-1536-1_m/default/0.0.0/4a9731217921bc476a0f03544f11f22ae4903fa5/dbpedia-entities-openai3-text-embedding-3-large-1536-1_m-train-00000-of-00026.arrow",
+      "sha256": "1954eeb66fc88e5f566bf769ca48fd43fce54cacf7413fd8a361010cbaae97be",
+      "bytes": 500325064,
+      "rows": 39462,
+      "row_start": 0,
+      "row_end_exclusive": 39462
+    },
+    {
+      "path": "/rwproject/kdd-db/kluaq/.cache/huggingface/datasets/Qdrant___dbpedia-entities-openai3-text-embedding-3-large-1536-1_m/default/0.0.0/4a9731217921bc476a0f03544f11f22ae4903fa5/dbpedia-entities-openai3-text-embedding-3-large-1536-1_m-train-00001-of-00026.arrow",
+      "sha256": "ef1b8ca077d46b6c0c2c795f8e7649836531ef26949e1861e6ab5b77625d45d5",
+      "bytes": 500389064,
+      "rows": 39462,
+      "row_start": 39462,
+      "row_end_exclusive": 78924
+    },
+    {
+      "path": "/rwproject/kdd-db/kluaq/.cache/huggingface/datasets/Qdrant___dbpedia-entities-openai3-text-embedding-3-large-1536-1_m/default/0.0.0/4a9731217921bc476a0f03544f11f22ae4903fa5/dbpedia-entities-openai3-text-embedding-3-large-1536-1_m-train-00002-of-00026.arrow",
+      "sha256": "65a3861655523bbbbe44ebc237b944e5972aa0c42aa88f743b8d3c7ed24aaf65",
+      "bytes": 500415512,
+      "rows": 39462,
+      "row_start": 78924,
+      "row_end_exclusive": 118386
+    },
+    {
+      "path": "/rwproject/kdd-db/kluaq/.cache/huggingface/datasets/Qdrant___dbpedia-entities-openai3-text-embedding-3-large-1536-1_m/default/0.0.0/4a9731217921bc476a0f03544f11f22ae4903fa5/dbpedia-entities-openai3-text-embedding-3-large-1536-1_m-train-00003-of-00026.arrow",
+      "sha256": "fd59076783d8fe4619e6eca3044c7649e89c12065c40eee478cb9bf34c6daf87",
+      "bytes": 500370264,
+      "rows": 39462,
+      "row_start": 118386,
+      "row_end_exclusive": 157848
+    },
+    {
+      "path": "/rwproject/kdd-db/kluaq/.cache/huggingface/datasets/Qdrant___dbpedia-entities-openai3-text-embedding-3-large-1536-1_m/default/0.0.0/4a9731217921bc476a0f03544f11f22ae4903fa5/dbpedia-entities-openai3-text-embedding-3-large-1536-1_m-train-00004-of-00026.arrow",
+      "sha256": "660683c80f8312045fb107daa843fa4a628f5b9ec4e2d4e67c9aa1c1bbf61a04",
+      "bytes": 500392520,
+      "rows": 39462,
+      "row_start": 157848,
+      "row_end_exclusive": 197310
+    },
+    {
+      "path": "/rwproject/kdd-db/kluaq/.cache/huggingface/datasets/Qdrant___dbpedia-entities-openai3-text-embedding-3-large-1536-1_m/default/0.0.0/4a9731217921bc476a0f03544f11f22ae4903fa5/dbpedia-entities-openai3-text-embedding-3-large-1536-1_m-train-00005-of-00026.arrow",
+      "sha256": "07a4aa5675daaecb05df13c425f3d6284ef469f0bc8a655314a020e1302bc150",
+      "bytes": 500372728,
+      "rows": 39462,
+      "row_start": 197310,
+      "row_end_exclusive": 236772
+    },
+    {
+      "path": "/rwproject/kdd-db/kluaq/.cache/huggingface/datasets/Qdrant___dbpedia-entities-openai3-text-embedding-3-large-1536-1_m/default/0.0.0/4a9731217921bc476a0f03544f11f22ae4903fa5/dbpedia-entities-openai3-text-embedding-3-large-1536-1_m-train-00006-of-00026.arrow",
+      "sha256": "3063a9a9ccfa2c15dede45b0cd75b43e50cebfdfef0a5a5e0b90c49765ebd48f",
+      "bytes": 500436416,
+      "rows": 39462,
+      "row_start": 236772,
+      "row_end_exclusive": 276234
+    },
+    {
+      "path": "/rwproject/kdd-db/kluaq/.cache/huggingface/datasets/Qdrant___dbpedia-entities-openai3-text-embedding-3-large-1536-1_m/default/0.0.0/4a9731217921bc476a0f03544f11f22ae4903fa5/dbpedia-entities-openai3-text-embedding-3-large-1536-1_m-train-00007-of-00026.arrow",
+      "sha256": "ba3e8afee8ccef0f3efd0b0fe7b32605aca8689050d0082b25b80e2ceec89ecb",
+      "bytes": 500421080,
+      "rows": 39462,
+      "row_start": 276234,
+      "row_end_exclusive": 315696
+    },
+    {
+      "path": "/rwproject/kdd-db/kluaq/.cache/huggingface/datasets/Qdrant___dbpedia-entities-openai3-text-embedding-3-large-1536-1_m/default/0.0.0/4a9731217921bc476a0f03544f11f22ae4903fa5/dbpedia-entities-openai3-text-embedding-3-large-1536-1_m-train-00008-of-00026.arrow",
+      "sha256": "95699675711630a564e19b2957238a73a3c3644dd2fb59634c38d1f2f38ca153",
+      "bytes": 500376600,
+      "rows": 39462,
+      "row_start": 315696,
+      "row_end_exclusive": 355158
+    },
+    {
+      "path": "/rwproject/kdd-db/kluaq/.cache/huggingface/datasets/Qdrant___dbpedia-entities-openai3-text-embedding-3-large-1536-1_m/default/0.0.0/4a9731217921bc476a0f03544f11f22ae4903fa5/dbpedia-entities-openai3-text-embedding-3-large-1536-1_m-train-00009-of-00026.arrow",
+      "sha256": "a0c0ef9a0b229fe979afec7592fbf3d6553d7722993b5ae877e0b5de0d736f38",
+      "bytes": 500386088,
+      "rows": 39462,
+      "row_start": 355158,
+      "row_end_exclusive": 394620
+    },
+    {
+      "path": "/rwproject/kdd-db/kluaq/.cache/huggingface/datasets/Qdrant___dbpedia-entities-openai3-text-embedding-3-large-1536-1_m/default/0.0.0/4a9731217921bc476a0f03544f11f22ae4903fa5/dbpedia-entities-openai3-text-embedding-3-large-1536-1_m-train-00010-of-00026.arrow",
+      "sha256": "f47b7c8fe292d017db970349a9b1e0f129828331f1505cda88fd3df24e0c6341",
+      "bytes": 500423096,
+      "rows": 39462,
+      "row_start": 394620,
+      "row_end_exclusive": 434082
+    },
+    {
+      "path": "/rwproject/kdd-db/kluaq/.cache/huggingface/datasets/Qdrant___dbpedia-entities-openai3-text-embedding-3-large-1536-1_m/default/0.0.0/4a9731217921bc476a0f03544f11f22ae4903fa5/dbpedia-entities-openai3-text-embedding-3-large-1536-1_m-train-00011-of-00026.arrow",
+      "sha256": "2b6875c0968df39ae07b17326013fdcc7466ee9269973a87129c6a0914907f08",
+      "bytes": 500367616,
+      "rows": 39462,
+      "row_start": 434082,
+      "row_end_exclusive": 473544
+    },
+    {
+      "path": "/rwproject/kdd-db/kluaq/.cache/huggingface/datasets/Qdrant___dbpedia-entities-openai3-text-embedding-3-large-1536-1_m/default/0.0.0/4a9731217921bc476a0f03544f11f22ae4903fa5/dbpedia-entities-openai3-text-embedding-3-large-1536-1_m-train-00012-of-00026.arrow",
+      "sha256": "6bca9240136098104626be119518edd7f86218d6cbfbad28cd2aec683e8d2a58",
+      "bytes": 500422272,
+      "rows": 39462,
+      "row_start": 473544,
+      "row_end_exclusive": 513006
+    },
+    {
+      "path": "/rwproject/kdd-db/kluaq/.cache/huggingface/datasets/Qdrant___dbpedia-entities-openai3-text-embedding-3-large-1536-1_m/default/0.0.0/4a9731217921bc476a0f03544f11f22ae4903fa5/dbpedia-entities-openai3-text-embedding-3-large-1536-1_m-train-00013-of-00026.arrow",
+      "sha256": "7e7f4cac5fd3cbe018fb03ae09aa3afa9c50b0e89774451ff785dea56c83d276",
+      "bytes": 500338824,
+      "rows": 39462,
+      "row_start": 513006,
+      "row_end_exclusive": 552468
+    },
+    {
+      "path": "/rwproject/kdd-db/kluaq/.cache/huggingface/datasets/Qdrant___dbpedia-entities-openai3-text-embedding-3-large-1536-1_m/default/0.0.0/4a9731217921bc476a0f03544f11f22ae4903fa5/dbpedia-entities-openai3-text-embedding-3-large-1536-1_m-train-00014-of-00026.arrow",
+      "sha256": "17f33aca3bc4522c94660b26303226ad43def2f354658fbff0d7e6309a885765",
+      "bytes": 500343272,
+      "rows": 39461,
+      "row_start": 552468,
+      "row_end_exclusive": 591929
+    },
+    {
+      "path": "/rwproject/kdd-db/kluaq/.cache/huggingface/datasets/Qdrant___dbpedia-entities-openai3-text-embedding-3-large-1536-1_m/default/0.0.0/4a9731217921bc476a0f03544f11f22ae4903fa5/dbpedia-entities-openai3-text-embedding-3-large-1536-1_m-train-00015-of-00026.arrow",
+      "sha256": "aa7cde7c5ce10f792a1d1d9a8346e2803cf61f69770e8624f1316c88a2e7f4d3",
+      "bytes": 500396472,
+      "rows": 39461,
+      "row_start": 591929,
+      "row_end_exclusive": 631390
+    },
+    {
+      "path": "/rwproject/kdd-db/kluaq/.cache/huggingface/datasets/Qdrant___dbpedia-entities-openai3-text-embedding-3-large-1536-1_m/default/0.0.0/4a9731217921bc476a0f03544f11f22ae4903fa5/dbpedia-entities-openai3-text-embedding-3-large-1536-1_m-train-00016-of-00026.arrow",
+      "sha256": "763bc34e4c84f54dde0731267473ba78c77eece26959951116fe06336194f2c4",
+      "bytes": 500415936,
+      "rows": 39461,
+      "row_start": 631390,
+      "row_end_exclusive": 670851
+    },
+    {
+      "path": "/rwproject/kdd-db/kluaq/.cache/huggingface/datasets/Qdrant___dbpedia-entities-openai3-text-embedding-3-large-1536-1_m/default/0.0.0/4a9731217921bc476a0f03544f11f22ae4903fa5/dbpedia-entities-openai3-text-embedding-3-large-1536-1_m-train-00017-of-00026.arrow",
+      "sha256": "cd992e21ae16ce9b95fab1fcb5facb470aedbb0d2ba3615708725b00d8c67420",
+      "bytes": 500367664,
+      "rows": 39461,
+      "row_start": 670851,
+      "row_end_exclusive": 710312
+    },
+    {
+      "path": "/rwproject/kdd-db/kluaq/.cache/huggingface/datasets/Qdrant___dbpedia-entities-openai3-text-embedding-3-large-1536-1_m/default/0.0.0/4a9731217921bc476a0f03544f11f22ae4903fa5/dbpedia-entities-openai3-text-embedding-3-large-1536-1_m-train-00018-of-00026.arrow",
+      "sha256": "012c1e9532cac620f5bff1a08478d5ad889d12458f49a293fbfe3106099b9ccd",
+      "bytes": 500360560,
+      "rows": 39461,
+      "row_start": 710312,
+      "row_end_exclusive": 749773
+    },
+    {
+      "path": "/rwproject/kdd-db/kluaq/.cache/huggingface/datasets/Qdrant___dbpedia-entities-openai3-text-embedding-3-large-1536-1_m/default/0.0.0/4a9731217921bc476a0f03544f11f22ae4903fa5/dbpedia-entities-openai3-text-embedding-3-large-1536-1_m-train-00019-of-00026.arrow",
+      "sha256": "23e52a135dfde11373415fef96997155ac832022af0f95a87fc66de82403716f",
+      "bytes": 500365864,
+      "rows": 39461,
+      "row_start": 749773,
+      "row_end_exclusive": 789234
+    },
+    {
+      "path": "/rwproject/kdd-db/kluaq/.cache/huggingface/datasets/Qdrant___dbpedia-entities-openai3-text-embedding-3-large-1536-1_m/default/0.0.0/4a9731217921bc476a0f03544f11f22ae4903fa5/dbpedia-entities-openai3-text-embedding-3-large-1536-1_m-train-00020-of-00026.arrow",
+      "sha256": "b58474d51032fa60ff42432342fbbaa4a8eae5ea9875b54786af112657696caa",
+      "bytes": 500318920,
+      "rows": 39461,
+      "row_start": 789234,
+      "row_end_exclusive": 828695
+    },
+    {
+      "path": "/rwproject/kdd-db/kluaq/.cache/huggingface/datasets/Qdrant___dbpedia-entities-openai3-text-embedding-3-large-1536-1_m/default/0.0.0/4a9731217921bc476a0f03544f11f22ae4903fa5/dbpedia-entities-openai3-text-embedding-3-large-1536-1_m-train-00021-of-00026.arrow",
+      "sha256": "e01430b25accd924db5c8d8d5b91f0173774febfb1ba15130ad028271c714cb6",
+      "bytes": 500346016,
+      "rows": 39461,
+      "row_start": 828695,
+      "row_end_exclusive": 868156
+    },
+    {
+      "path": "/rwproject/kdd-db/kluaq/.cache/huggingface/datasets/Qdrant___dbpedia-entities-openai3-text-embedding-3-large-1536-1_m/default/0.0.0/4a9731217921bc476a0f03544f11f22ae4903fa5/dbpedia-entities-openai3-text-embedding-3-large-1536-1_m-train-00022-of-00026.arrow",
+      "sha256": "e53a78bedeb4344e889e35707eb148eaed9495e62e6e585655cd088049760d5f",
+      "bytes": 500403128,
+      "rows": 39461,
+      "row_start": 868156,
+      "row_end_exclusive": 907617
+    },
+    {
+      "path": "/rwproject/kdd-db/kluaq/.cache/huggingface/datasets/Qdrant___dbpedia-entities-openai3-text-embedding-3-large-1536-1_m/default/0.0.0/4a9731217921bc476a0f03544f11f22ae4903fa5/dbpedia-entities-openai3-text-embedding-3-large-1536-1_m-train-00023-of-00026.arrow",
+      "sha256": "6250aafe2ce670b5d4a8f84d20dcb3549974ded366172ab411a4a19dc1d976c0",
+      "bytes": 500408880,
+      "rows": 39461,
+      "row_start": 907617,
+      "row_end_exclusive": 947078
+    },
+    {
+      "path": "/rwproject/kdd-db/kluaq/.cache/huggingface/datasets/Qdrant___dbpedia-entities-openai3-text-embedding-3-large-1536-1_m/default/0.0.0/4a9731217921bc476a0f03544f11f22ae4903fa5/dbpedia-entities-openai3-text-embedding-3-large-1536-1_m-train-00024-of-00026.arrow",
+      "sha256": "6e128a78488a3e366c0cbe046e597b43f4f46b9c1f4b60aef614f8b583ebd206",
+      "bytes": 500346104,
+      "rows": 39461,
+      "row_start": 947078,
+      "row_end_exclusive": 986539
+    },
+    {
+      "path": "/rwproject/kdd-db/kluaq/.cache/huggingface/datasets/Qdrant___dbpedia-entities-openai3-text-embedding-3-large-1536-1_m/default/0.0.0/4a9731217921bc476a0f03544f11f22ae4903fa5/dbpedia-entities-openai3-text-embedding-3-large-1536-1_m-train-00025-of-00026.arrow",
+      "sha256": "a7844eb8abf1a7ef50eb71de6a5d4189926d9257577798f19f6ec96517da875b",
+      "bytes": 170665872,
+      "rows": 13461,
+      "row_start": 986539,
+      "row_end_exclusive": 1000000
+    }
+  ],
+  "row_identity": "concatenate numbered Arrow shards, then record batches/rows in stored order",
+  "ids": {
+    "base": {
+      "path": "runs/phase5a_highdim_external_validity_v1/amendment/base_source_ids.i64",
+      "count": 990000,
+      "sha256": "0b65c6b76ebcb691fdfe199eb0c642ee556f0878f01f17a1006d6b0d16e36a40",
+      "dtype": "<i8"
+    },
+    "query": {
+      "path": "runs/phase5a_highdim_external_validity_v1/amendment/query_source_ids.i64",
+      "count": 10000,
+      "sha256": "4bc58919e88432cfa96f8450ed52616ffb95585a486977d9edf39ff8bb0f8797",
+      "dtype": "<i8"
+    },
+    "pq_training": {
+      "path": "runs/phase5a_highdim_external_validity_v1/amendment/pq_training_source_ids.i64",
+      "count": 65536,
+      "sha256": "c348d26740f319d8061549e51b12b21d9c6fd09701c4a80782fabea24f208204",
+      "dtype": "<i8"
+    }
+  },
+  "source_dtype": "float64",
+  "output_dtype": "float32",
+  "dimension": 1536,
+  "max_normalized_norm_error": 2.995396664040584e-08,
+  "numpy": "1.26.4",
+  "pyarrow": "17.0.0",
+  "machine": {
+    "system": "Linux",
+    "node": "rwcpu8.cse.ust.hk",
+    "release": "5.14.0-687.24.1.el9_8.x86_64",
+    "version": "#1 SMP PREEMPT_DYNAMIC Thu Jul 9 18:14:06 EDT 2026",
+    "machine": "x86_64",
+    "processor": "x86_64"
+  },
+  "preprocessing_sha256": "967c588882082161dd1d7c3296bd919dea4e84adc1b254143e11fcdf3784045f",
+  "freezer_sha256": "348db669ebc177cc219213a8a56d36ba95cc6544df3957c93c9e086e5bcb8cd2",
+  "validation_scope": "All shards decoded, dimensions/nulls/finite/nonzero/norm checked; local checksums are not comparison with a publisher-signed checksum. Normalized batches were discarded, not ANN inputs; no GT or retrieval run."
+}

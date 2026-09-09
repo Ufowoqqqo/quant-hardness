@@ -1,0 +1,35 @@
+{
+  "status": "METADATA_ONLY_NOT_VALIDATED_DATASET",
+  "downloaded_prefix_bytes": 1048576,
+  "prefix_sha256": "c6e485945c19dd6edf850a9251caf44835aed5e58339170fb14a98d04adb16ec",
+  "expected_artifact_bytes": 6160008192,
+  "h5py_version": "2.10.0",
+  "attributes": {
+    "dimension": "1536",
+    "distance": "angular",
+    "point_type": "float",
+    "type": "dense"
+  },
+  "datasets": {
+    "distances": {
+      "status": "OBJECT_METADATA_NOT_IN_PREFIX"
+    },
+    "neighbors": {
+      "status": "OBJECT_METADATA_NOT_IN_PREFIX"
+    },
+    "test": {
+      "shape": [
+        10000,
+        1536
+      ],
+      "dtype": "float32"
+    },
+    "train": {
+      "shape": [
+        990000,
+        1536
+      ],
+      "dtype": "float32"
+    }
+  }
+}

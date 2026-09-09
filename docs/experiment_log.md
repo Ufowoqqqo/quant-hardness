@@ -2024,3 +2024,107 @@ returned-ID/count checks, regenerated deterministic schedule, all immutable
 input/source/binary hashes unchanged, shared model/graph hashes unchanged,
 28 byte-identical regenerated tables/figures. Artifact manifest:
 `runs/phase4d_multithread_scalability_v1/final_audit.json`.
+
+## Phase 5A preflight only — 2026-09-08
+
+Parent Git `d56f1b2c8edfba8e7dc9a53eab46096b2b4d9198`, pinned FAISS
+`20f14b31a6d54e243a3d1de6ae193fc4c3ec18ed`. No retrieval outcomes inspected.
+Config: `configs/indexes/phase5a_highdim_external_validity.conf`.
+Preregistration: `runs/phase5a_highdim_external_validity_v1/preregistration.md`.
+Dataset/PQ/GT preparation and all requested experiments remain NOT RUN.
+
+Commands (network calls required sandbox escalation):
+
+```bash
+curl -I -L --max-time 30 https://ann-benchmarks.com/dbpedia-openai-1000k-angular.hdf5
+curl -I -L --max-time 30 https://storage.googleapis.com/ann-filtered-benchmark/datasets/dbpedia_openai_1M.tgz
+curl -L --fail --max-time 30 https://huggingface.co/api/datasets/KShivendu/dbpedia-entities-openai-1M
+curl -L --fail --max-time 30 https://raw.githubusercontent.com/qdrant/vector-db-benchmark/master/datasets/datasets.json
+mkdir -p runs/phase5a_highdim_external_validity_v1/source
+curl --fail --location --retry 3 --continue-at - --output runs/phase5a_highdim_external_validity_v1/source/dbpedia_openai_1M.tgz https://storage.googleapis.com/ann-filtered-benchmark/datasets/dbpedia_openai_1M.tgz
+curl -L --fail --max-time 25 --range 0-1048575 -o /tmp/phase5a_archive_header.gz https://storage.googleapis.com/ann-filtered-benchmark/datasets/dbpedia_openai_1M.tgz
+curl -I -L --max-time 20 https://storage.googleapis.com/ann-datasets/ann-benchmarks/dbpedia-openai-1000k-angular.hdf5
+curl --http1.1 --fail -L --max-time 40 --range 0-8388607 -o /tmp/phase5a_hdf5_header https://storage.googleapis.com/ann-datasets/ann-benchmarks/dbpedia-openai-1000k-angular.hdf5
+curl --fail -L --retry 2 --retry-all-errors --max-time 30 --range 0-1048575 -o /tmp/phase5a_hdf5_header https://storage.googleapis.com/ann-datasets/ann-benchmarks/dbpedia-openai-1000k-angular.hdf5
+curl --fail -L --max-time 25 --range 0-1048575 -o /tmp/phase5a_hdf5_alternate_header https://ann-datasets.storage.googleapis.com/ann-benchmarks/dbpedia-openai-1000k-angular.hdf5
+curl --fail -L --max-time 30 --output runs/phase5a_highdim_external_validity_v1/source/dbpedia-openai-1000k-angular.hdf5.partial https://storage.googleapis.com/ann-datasets/ann-benchmarks/dbpedia-openai-1000k-angular.hdf5
+cp /tmp/phase5a_hdf5_header runs/phase5a_highdim_external_validity_v1/source/hdf5_prefix_1MiB.metadata_only
+cp /tmp/phase5a_archive_header.gz runs/phase5a_highdim_external_validity_v1/source/archive_prefix_1MiB.incomplete.gz
+/usr/local/bin/python scripts/phase5a_inspect_header.py runs/phase5a_highdim_external_validity_v1/source/hdf5_prefix_1MiB.metadata_only --artifact-size 6160008192 --output runs/phase5a_highdim_external_validity_v1/source/header_metadata.json
+/usr/local/bin/python -m unittest discover -s tests -p test_phase5a_header.py
+git diff --check
+```
+
+Observations: original HDF5 link404; archive full transfercurl92 after15113B;
+mirror HEAD200; 1MiB range succeeded(~85KB/s); forcedHTTP1.1 failedcurl35;
+alternate hostname range also succeeded(~104KiB/s). A30-second full HDF5
+transfer probe was used to measure whether the range result was misleading;
+no partial file qualifies as a valid input. Prefix metadata identifies
+990000×1536 train and10000×1536 test, FP32/angular; contents/GT unchecked.
+Metadata inspection uses a disposable sparse file solely to satisfy HDF5's
+EOF check, never for reading vector data; missing object metadata is explicitly
+marked missing. One metadata/no-overwrite unit test passed. This is not an
+ANN/GT/retention correctness test.
+
+Full HDF5 probe outcome:2,867,200 bytes/30s, curl28 at the deliberately set
+timeout. Estimated full duration~18h at that rate; the mirror is reachable,
+not proven unavailable. No background transfer is left active. Complete
+artifact acquisition remains pending; no dataset integrity claim is made.
+
+Environment: Intel i9-10920X,12physical/24logical CPUs, approximately30GiB
+RAM/27GiB available, workspace929GB free, /tmp101GB free at initial preflight.
+Old plotting environment lacks h5py; attempting
+`/tmp/phase3b-plot-env/bin/python -m pip install h5py==3.11.0` failedTLS EOF.
+Existing `/usr/local/bin/python` has h5py2.10.0 and was sufficient; no dependency
+or search implementation was changed. Two initial metadata probe attempts
+failed (anonymous file pathname, then out-of-prefix object); fixed without
+writing a false success artifact. All incomplete downloads preserved.
+
+Confounders/prerequisites: full integrity unverified; reserving training IDs
+changes the canonical base and invalidates provided GT for primary scoring;
+high-dimensional PQ table cost must be included; seed alone does not guarantee
+multithread graph reconstruction. No scientific interpretation yet. Next
+operational step is a complete verified artifact, then the frozen primary
+experiment—not parameter tuning or a low-dimensional substitute.
+
+## Phase 5A pre-run dataset amendment — 2026-09-09
+
+User approved availability-based replacement of ada-002 with local
+`Qdrant/dbpedia-entities-openai3-text-embedding-3-large-1536-1M`, cached source
+revision `4a9731217921bc476a0f03544f11f22ae4903fa5`, BEFORE any ANN results.
+Parent Git `d56f1b2c8edfba8e7dc9a53eab46096b2b4d9198`.
+Binding design: `docs/phase5a_dataset_amendment.md`; frozen config:
+`configs/indexes/phase5a_highdim_external_validity.conf`.
+
+```bash
+/rwproject/kdd-db/kluaq/miniconda3/envs/build_env/bin/python -m unittest discover -s tests -p test_phase5a_dataset.py
+/rwproject/kdd-db/kluaq/miniconda3/envs/build_env/bin/python scripts/freeze_phase5a_amendment.py
+/rwproject/kdd-db/kluaq/miniconda3/envs/build_env/bin/python scripts/audit_phase5a_amendment.py
+git diff --check -- docs/experiment_log.md
+```
+
+Environment recorded in manifest: NumPy1.26.4, PyArrow17.0.0, existing build_env
+Python; no dependency installation. Freezer read all26 local Arrow shards,
+calculated individual SHA-256, validated1000000 rows,1536 coordinates,
+no null/nonfinite/zero vectors, max normalized FP32 norm error2.995396664e-08.
+Three unit tests passed; regenerating complete role ID lists matched saved
+bytes and hashes. These are data/preprocessing tests, not retrieval tests.
+
+Split PCG64 seed20260909: first990000 permuted rows base, remaining10000 query;
+training65536 sampled from base positions only, independent PCG64 seed95000011.
+Base insertion/query/training order is explicitly saved. First cast to FP32,
+then FP64 norm/division of those values, final FP32 storage. PQ768×8 and all
+other ANN/system hypotheses remain unchanged. No ground truth, training,
+graph construction or ANN experiment was run. This commit is the required
+pre-retrieval gate, not evidence about scientific hypotheses.
+
+Manifest: `runs/phase5a_highdim_external_validity_v1/amendment/dataset_manifest.json`,
+SHA-256 `98aa2949f8faf56aea0e3c35da9f73c549a32a1f5b4ba4280e343dff25b36ebd`.
+Source shard paths/hashes/row ranges, source metadata hash, code/config hashes,
+all role-ID hashes and environment are retained there. No old files deleted.
+Confounders: dataset version is different; no official evaluation split;
+row exclusion does not guarantee semantic independence/content uniqueness;
+local hashes are not publisher checksum authentication. Characterize as
+held-out entity-to-entity NN, not natural-language-query retrieval.
+Next operational step after committing: use the frozen inputs/preprocessing
+for the original Phase5A external-validity experiment, without retuning.

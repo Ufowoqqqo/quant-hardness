@@ -12,7 +12,7 @@ int main(int argc,char**argv){try{
  const int nq=10000,d=1536,passes=std::stoi(c.at("passes_per_repetition")),warmups=std::stoi(c.at("warmup_queries_per_worker"));
  omp_set_num_threads(1);omp_set_dynamic(0);omp_set_max_active_levels(1);pin(std::stoi(c.at("coordinator_cpu")));
  auto owner=std::unique_ptr<faiss::Index>(faiss::read_index((root+"graph.index").c_str()));auto* graph=dynamic_cast<faiss::IndexHNSW*>(owner.get());req(graph,"graph");auto* flat=dynamic_cast<faiss::IndexFlat*>(graph->storage);req(flat,"flat");
- auto po=std::unique_ptr<faiss::Index>(faiss::read_index((root+"pq.index").c_str()));auto* pq=dynamic_cast<faiss::IndexPQ*>(po.get());req(pq,"pq");architecture(*graph,*pq);auto fp=graph_fingerprint(graph->hnsw);
+ auto po=std::unique_ptr<faiss::Index>(faiss::read_index((root+"pq.index").c_str()));auto* pq=dynamic_cast<faiss::IndexPQ*>(po.get());req(pq,"pq");architecture(*graph,*pq,std::stoi(c.at("pq_m")));auto fp=graph_fingerprint(graph->hnsw);
  auto cb=hash_bytes(pq->pq.centroids.data(),pq->pq.centroids.size()*4),codes=hash_bytes(pq->codes.data(),pq->codes.size());
  auto query=load<float>(root+"prepared/query.f32"),warm=load<float>(root+"prepared/warmup.f32");req(query.size()==size_t(nq)*d&&warm.size()==size_t(warmups)*d,"query shape");
  std::map<int,std::vector<Id>> refs_native,refs_all,refs_top;

@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "queries_per_ef": 10000,
+  "graph_fingerprint": "cd95032163d55937f2d4e90b1ab6e33d5509c938987d10a3c2cacc16d01b8f5d",
+  "full_offline_top16_identity": true,
+  "exact_control_anomalies": [],
+  "strict_ID_recall_preserved": true
+}

@@ -1,11 +1,13 @@
 """Validate saved per-query IDs/metrics and diagnose exact-control ties."""
+import argparse
 import json
 from pathlib import Path
 import numpy as np
 
 
 def main():
-    root=Path('runs/phase5a_highdim_external_validity_v1')
+    parser=argparse.ArgumentParser();parser.add_argument('--root',default='runs/phase5a_highdim_external_validity_v1');args=parser.parse_args()
+    root=Path(args.root)
     assert not (root/'recall_audit.json').exists()
     gt=np.fromfile(root/'gt_ids.i64',dtype='<i8').reshape(10000,11)[:,:10]
     base=np.memmap(root/'prepared/base.f32',dtype='<f4',mode='r',shape=(990000,1536))
@@ -44,6 +46,8 @@ def main():
             controls.append(dict(ef=ef,query_id=int(qi),delta=float(rows['delta_exact_control'][qi]),
                                  max_sorted_fp64_distance_difference=err,classification='numerical/boundary tie; strict ID metric preserved'))
         np.testing.assert_allclose(rows['total_loss'],rows['discovery_loss']+rows['ranking_loss'],atol=1e-14,rtol=0)
+        np.testing.assert_allclose(rows['recall_candidate_oracle'],rows['coverage_pq'],atol=1e-14,rtol=0)
+        np.testing.assert_allclose(rows['recall_exact_oracle'],rows['coverage_exact'],atol=1e-14,rtol=0)
     assert len(set(fingerprints))==1
     assert fingerprints[0]==json.loads((root/'graph.json').read_text())['fingerprint']
     with (root/'recall_audit.json').open('x') as f:json.dump(dict(status='PASS',queries_per_ef=10000,

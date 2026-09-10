@@ -1,0 +1,20 @@
+[
+  {
+    "ef": 32,
+    "total_loss_increase_384_minus_768": 0.04437999999999999,
+    "discovery_loss_increase_384_minus_768": -0.00052,
+    "ranking_loss_increase_384_minus_768": 0.044899999999999995
+  },
+  {
+    "ef": 64,
+    "total_loss_increase_384_minus_768": 0.05184999999999998,
+    "discovery_loss_increase_384_minus_768": -0.0007200000000000002,
+    "ranking_loss_increase_384_minus_768": 0.05257
+  },
+  {
+    "ef": 128,
+    "total_loss_increase_384_minus_768": 0.05700999999999999,
+    "discovery_loss_increase_384_minus_768": 0.0005099999999999998,
+    "ranking_loss_increase_384_minus_768": 0.0565
+  }
+]

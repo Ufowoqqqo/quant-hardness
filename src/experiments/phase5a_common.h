@@ -48,5 +48,5 @@ inline std::string file_hash(const std::string& p){Mapped m(p);return hash_bytes
 inline void pin(int cpu){cpu_set_t m;CPU_ZERO(&m);CPU_SET(cpu,&m);req(pthread_setaffinity_np(pthread_self(),sizeof(m),&m)==0,"pin");}
 inline double recall(const Id* a,const Id* gt){int n=0;for(int i=0;i<10;++i)for(int j=0;j<10;++j)if(a[i]==gt[j]){++n;break;}return n/10.0;}
 inline std::vector<Id> rerank(const float* base,const float* q,int d,const std::vector<int32_t>& ids){std::vector<std::pair<float,size_t>> ranked;for(size_t j=0;j<ids.size();++j)ranked.emplace_back(faiss::fvec_L2sqr(q,base+size_t(ids[j])*d,d),j);req(ranked.size()>=10,"short oracle");std::partial_sort(ranked.begin(),ranked.begin()+10,ranked.end());std::vector<Id> result;for(int j=0;j<10;++j)result.push_back(ids[ranked[j].second]);return result;}
-inline void architecture(const faiss::IndexHNSW& graph,const faiss::IndexPQ& pq){req(graph.d==1536&&graph.ntotal==990000&&pq.d==1536&&pq.ntotal==990000&&pq.pq.M==768&&pq.pq.nbits==8,"frozen architecture mismatch");}
+inline void architecture(const faiss::IndexHNSW& graph,const faiss::IndexPQ& pq,int m=768){req((m==768||m==384)&&graph.d==1536&&graph.ntotal==990000&&pq.d==1536&&pq.ntotal==990000&&pq.pq.M==m&&pq.pq.nbits==8&&pq.code_size==size_t(m),"frozen architecture mismatch");}
 }

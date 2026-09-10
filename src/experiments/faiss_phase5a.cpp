@@ -9,7 +9,9 @@ int main(int argc,char**argv){try{
  req(argc==3,"usage: faiss_phase5a gt|gt-reference|graph|pq|sanity|recall CONFIG");
  auto c=config(argv[2]);auto root=c.at("run")+"/";auto prep=root+"prepared/";std::string mode=argv[1];
  const int d=std::stoi(c.at("expected_dimension")),n=std::stoi(c.at("base_count")),nq=std::stoi(c.at("query_count"));
- req(d==1536&&n==990000&&nq==10000&&c.at("pq_m")=="768"&&c.at("ef_values")=="32,64,128","frozen config");
+ const int m=std::stoi(c.at("pq_m"));
+ req(d==1536&&n==990000&&nq==10000&&(m==768||m==384)&&c.at("ef_values")=="32,64,128","frozen config");
+ if(c.contains("reuse_run")){req(m==384,"Phase5B PQ384 only");req(mode=="pq"||mode=="sanity"||mode=="recall","Phase5B forbids rebuilding graph/GT");req(std::filesystem::exists(root+"input_verification.json"),"reuse verification gate");}
  req(std::filesystem::exists(prep+"provenance.json"),"preparation gate");
  omp_set_dynamic(0);omp_set_max_active_levels(1);omp_set_num_threads(24);
  if(mode=="gt"||mode=="gt-reference"){
@@ -43,7 +45,7 @@ int main(int argc,char**argv){try{
  }
  if(mode=="pq"){
   req(!std::filesystem::exists(root+"pq.index"),"PQ overwrite");Mapped train(prep+"training.f32"),base(prep+"base.f32");
-  faiss::IndexPQ pq(d,768,8,faiss::METRIC_L2);pq.pq.cp.seed=std::stoi(c.at("pq_seed"));pq.pq.cp.niter=std::stoi(c.at("pq_niter"));pq.verbose=true;pq.pq.verbose=true;
+  faiss::IndexPQ pq(d,m,8,faiss::METRIC_L2);pq.pq.cp.seed=std::stoi(c.at("pq_seed"));pq.pq.cp.niter=std::stoi(c.at("pq_niter"));pq.verbose=true;pq.pq.verbose=true;
   omp_set_num_threads(std::stoi(c.at("pq_training_threads")));auto start=Clock::now();pq.train(65536,train.data());double training=seconds(start);start=Clock::now();pq.add(n,base.data());double encoding=seconds(start);
   faiss::write_index(&pq,(root+"pq.index").c_str());auto f=output(root+"pq.json");f<<"{\"training_seconds\":"<<training<<",\"encoding_seconds\":"<<encoding<<",\"code_size\":"<<pq.code_size<<",\"dsub\":"<<pq.pq.dsub<<",\"training_rows\":65536,\"seed\":"<<pq.pq.cp.seed<<",\"niter\":"<<pq.pq.cp.niter<<",\"nredo\":"<<pq.pq.cp.nredo<<",\"max_points_per_centroid\":"<<pq.pq.cp.max_points_per_centroid<<",\"codebook_sha256\":\""<<hash_bytes(pq.pq.centroids.data(),pq.pq.centroids.size()*4)<<"\",\"codes_sha256\":\""<<hash_bytes(pq.codes.data(),pq.codes.size())<<"\",\"file_sha256\":\""<<file_hash(root+"pq.index")<<"\"}\n";return 0;
  }
@@ -51,20 +53,21 @@ int main(int argc,char**argv){try{
  if(mode=="sanity"){
   Mapped base(prep+"base.f32"),queries(prep+"query.f32");omp_set_num_threads(1);std::mt19937_64 rng(std::stoull(c.at("quality_seed")));
   auto f=output(root+"sanity_pairs.csv");f<<"sample,query_id,base_id,other_id,exact,pq,absolute_relative_error,reconstruction_l2,order_inversion,adc_reference_error\n";
-  std::unique_ptr<faiss::DistanceComputer> dc(pq->get_distance_computer());std::vector<float> reconstructed(d);std::vector<uint8_t> code(768);
+  std::unique_ptr<faiss::DistanceComputer> dc(pq->get_distance_computer());std::vector<float> reconstructed(d);std::vector<uint8_t> code(m);
   for(int s=0;s<std::stoi(c.at("quality_pairs"));++s){Id qi=rng()%nq,i=rng()%n,j=rng()%n;while(j==i)j=rng()%n;auto* q=queries.data()+qi*d;auto* x=base.data()+i*d;dc->set_query(q);float exact=faiss::fvec_L2sqr(q,x,d),approx=(*dc)(i),other=(*dc)(j),eother=faiss::fvec_L2sqr(q,base.data()+j*d,d);
    pq->reconstruct(i,reconstructed.data());float recon=std::sqrt(faiss::fvec_L2sqr(x,reconstructed.data(),d));float ref=faiss::fvec_L2sqr(q,reconstructed.data(),d);
-   req(std::isfinite(approx)&&std::abs(approx-ref)<=2e-5f,"ADC/reconstruction reference mismatch");pq->pq.compute_code(x,code.data());req(std::equal(code.begin(),code.end(),pq->codes.begin()+i*768),"PQ ID alignment");
+   req(std::isfinite(approx)&&std::abs(approx-ref)<=2e-5f,"ADC/reconstruction reference mismatch");pq->pq.compute_code(x,code.data());req(std::equal(code.begin(),code.end(),pq->codes.begin()+i*m),"PQ ID alignment");
    f<<s<<','<<qi<<','<<i<<','<<j<<','<<exact<<','<<approx<<','<<(exact>1e-12?std::abs(approx-exact)/exact:std::numeric_limits<float>::quiet_NaN())<<','<<recon<<','<<((exact-eother)*(approx-other)<0)<<','<<std::abs(approx-ref)<<'\n';
   }auto pass=output(root+"sanity_complete.json");pass<<"{\"status\":\"PASS\",\"sample_pairs\":10000,\"sample_order_pairs\":10000,\"reference_ADC_and_code_alignment_checked\":true}\n";return 0;
  }
  req(mode=="recall","unknown mode");req(std::filesystem::exists(root+"gt_validation.json")&&std::filesystem::exists(root+"sanity_complete.json"),"GT/sanity gates");
- auto owner=std::unique_ptr<faiss::Index>(faiss::read_index((root+"graph.index").c_str()));auto* graph=dynamic_cast<faiss::IndexHNSW*>(owner.get());req(graph,"graph");auto* flat=dynamic_cast<faiss::IndexFlat*>(graph->storage);req(flat,"flat");architecture(*graph,*pq);
+ auto owner=std::unique_ptr<faiss::Index>(faiss::read_index((root+"graph.index").c_str()));auto* graph=dynamic_cast<faiss::IndexHNSW*>(owner.get());req(graph,"graph");auto* flat=dynamic_cast<faiss::IndexFlat*>(graph->storage);req(flat,"flat");architecture(*graph,*pq,m);
  auto fingerprint=graph_fingerprint(graph->hnsw);auto queries=load<float>(prep+"query.f32");auto gt=load<Id>(root+"gt_ids.i64");omp_set_num_threads(1);
  for(int ef:{32,64,128}){
   std::string dir=root+"recall_ef"+std::to_string(ef)+"/";req(!std::filesystem::exists(dir),"recall overwrite");std::filesystem::create_directory(dir);
   faiss::SearchParametersHNSW params;params.efSearch=ef;
   auto exact=search_with_level0_recording(*graph,*flat,queries.data(),nq,10,params,true);
+  if(c.contains("reuse_run")){auto old=load<Id>(c.at("reuse_run")+"/recall_ef"+std::to_string(ef)+"/exact_ids.i64");req(exact.native.ids==old,"Phase5A exact IDs changed");}
   auto pq_reference=search_with_storage(*graph,*pq,queries.data(),nq,10,params);
   CandidateAccess full(*graph,*pq,flat->get_xb(),0,ef,true),bounded(*graph,*pq,flat->get_xb(),0,ef,false);
   auto rows=output(dir+"per_query.csv");rows<<"query_id,recall_exact,recall_pq,recall_candidate_oracle,recall_all16,recall_exact_oracle,delta_exact_control,total_loss,discovery_loss,ranking_loss,exact_l0_count,pq_l0_count,coverage_exact,coverage_pq,top16_boundary_tie\n";

@@ -1,0 +1,35 @@
+{
+  "commands": [
+    [
+      "recall",
+      [
+        "build/faiss_phase5a",
+        "recall",
+        "configs/indexes/phase5b_compression_robustness.conf"
+      ]
+    ],
+    [
+      "recall_audit",
+      [
+        "/rwproject/kdd-db/kluaq/miniconda3/envs/build_env/bin/python",
+        "scripts/audit_phase5a_recall.py",
+        "--root",
+        "runs/phase5b_compression_robustness_v1"
+      ]
+    ],
+    [
+      "recall_analysis",
+      [
+        "/tmp/phase3b-plot-env/bin/python",
+        "scripts/analyze_phase5b.py",
+        "--stage",
+        "recall"
+      ]
+    ]
+  ],
+  "environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  }
+}

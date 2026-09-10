@@ -18,8 +18,10 @@ def snapshot(path):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--tables', default='results/tables')
+    parser.add_argument('--root', default='runs/phase5a_highdim_external_validity_v1')
+    parser.add_argument('--prefix', default='phase5a')
     args = parser.parse_args()
-    root = Path('runs/phase5a_highdim_external_validity_v1')
+    root = Path(args.root)
     rows = []
     for path in sorted(root.glob('benchmark_*/*_before.txt')):
         after = path.with_name(path.name.replace('_before.txt', '_after.txt'))
@@ -39,7 +41,7 @@ def main():
             available_memory_min_kib=min(mb['MemAvailable'], ma['MemAvailable']),
             swapfree_change_kib=ma['SwapFree'] - mb['SwapFree']))
     assert len(rows) == 50
-    target = Path(args.tables) / 'phase5a_environment'
+    target = Path(args.tables) / (args.prefix+'_environment')
     with target.with_suffix('.json').open('x') as out:
         json.dump(rows, out, indent=2)
     with target.with_suffix('.csv').open('x', newline='') as out:

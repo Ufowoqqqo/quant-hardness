@@ -12,3 +12,5 @@ __pycache__/
 /runs/phase5a_highdim_external_validity_v1/pq.index
 /runs/phase5a_highdim_external_validity_v1/prepared/*.f32
 /runs/phase5a_highdim_external_validity_v1/prepared_interrupted_nfs_writes/
+# Phase5B trained model remains local; metadata/code checksum and raw runs kept.
+/runs/phase5b_compression_robustness_v1/pq.index

@@ -1,0 +1,3 @@
+pq_m,code_bytes_per_vector,code_payload_bytes,code_compression,raw_fp32_payload_bytes,graph_serialized_bytes_including_fp32,graph_serialized_nonvector_remainder_bytes,codebook_bytes,adc_table_bytes_per_worker,all16_vector_payload_bytes_per_query,deployed_payload_estimate_graph_raw_codes_codebook
+768,768,760320000,8.0,6082560000,6225374202,142814202,1572864,786432,98304,6987267066
+384,384,380160000,16.0,6082560000,6225374202,142814202,1572864,393216,98304,6607107066

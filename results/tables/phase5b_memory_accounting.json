@@ -1,0 +1,28 @@
+[
+  {
+    "pq_m": 768,
+    "code_bytes_per_vector": 768,
+    "code_payload_bytes": 760320000,
+    "code_compression": 8.0,
+    "raw_fp32_payload_bytes": 6082560000,
+    "graph_serialized_bytes_including_fp32": 6225374202,
+    "graph_serialized_nonvector_remainder_bytes": 142814202,
+    "codebook_bytes": 1572864,
+    "adc_table_bytes_per_worker": 786432,
+    "all16_vector_payload_bytes_per_query": 98304,
+    "deployed_payload_estimate_graph_raw_codes_codebook": 6987267066
+  },
+  {
+    "pq_m": 384,
+    "code_bytes_per_vector": 384,
+    "code_payload_bytes": 380160000,
+    "code_compression": 16.0,
+    "raw_fp32_payload_bytes": 6082560000,
+    "graph_serialized_bytes_including_fp32": 6225374202,
+    "graph_serialized_nonvector_remainder_bytes": 142814202,
+    "codebook_bytes": 1572864,
+    "adc_table_bytes_per_worker": 393216,
+    "all16_vector_payload_bytes_per_query": 98304,
+    "deployed_payload_estimate_graph_raw_codes_codebook": 6607107066
+  }
+]

@@ -1,0 +1,259 @@
+{
+  "status": "PASS",
+  "frozen_files_checked": 14,
+  "benchmark_cells": 50,
+  "timed_queries": 2000000,
+  "every_timed_ID_matches_reference": true,
+  "cells": [
+    {
+      "stage": "single",
+      "cell": "ef128_T1_p0_r0.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef128_T1_p0_r1.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef128_T1_p0_r2.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef128_T1_p0_r3.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef128_T1_p0_r4.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef128_T1_p1_r0.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef128_T1_p1_r1.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef128_T1_p1_r2.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef128_T1_p1_r3.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef128_T1_p1_r4.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef32_T1_p0_r0.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef32_T1_p0_r1.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef32_T1_p0_r2.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef32_T1_p0_r3.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef32_T1_p0_r4.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef32_T1_p1_r0.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef32_T1_p1_r1.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef32_T1_p1_r2.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef32_T1_p1_r3.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef32_T1_p1_r4.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef64_T1_p0_r0.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef64_T1_p0_r1.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef64_T1_p0_r2.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef64_T1_p0_r3.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef64_T1_p0_r4.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef64_T1_p1_r0.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef64_T1_p1_r1.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef64_T1_p1_r2.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef64_T1_p1_r3.json",
+      "queries": 40000
+    },
+    {
+      "stage": "single",
+      "cell": "ef64_T1_p1_r4.json",
+      "queries": 40000
+    },
+    {
+      "stage": "concurrent",
+      "cell": "ef64_T1_p0_r0.json",
+      "queries": 40000
+    },
+    {
+      "stage": "concurrent",
+      "cell": "ef64_T1_p0_r1.json",
+      "queries": 40000
+    },
+    {
+      "stage": "concurrent",
+      "cell": "ef64_T1_p0_r2.json",
+      "queries": 40000
+    },
+    {
+      "stage": "concurrent",
+      "cell": "ef64_T1_p0_r3.json",
+      "queries": 40000
+    },
+    {
+      "stage": "concurrent",
+      "cell": "ef64_T1_p0_r4.json",
+      "queries": 40000
+    },
+    {
+      "stage": "concurrent",
+      "cell": "ef64_T1_p1_r0.json",
+      "queries": 40000
+    },
+    {
+      "stage": "concurrent",
+      "cell": "ef64_T1_p1_r1.json",
+      "queries": 40000
+    },
+    {
+      "stage": "concurrent",
+      "cell": "ef64_T1_p1_r2.json",
+      "queries": 40000
+    },
+    {
+      "stage": "concurrent",
+      "cell": "ef64_T1_p1_r3.json",
+      "queries": 40000
+    },
+    {
+      "stage": "concurrent",
+      "cell": "ef64_T1_p1_r4.json",
+      "queries": 40000
+    },
+    {
+      "stage": "concurrent",
+      "cell": "ef64_T8_p0_r0.json",
+      "queries": 40000
+    },
+    {
+      "stage": "concurrent",
+      "cell": "ef64_T8_p0_r1.json",
+      "queries": 40000
+    },
+    {
+      "stage": "concurrent",
+      "cell": "ef64_T8_p0_r2.json",
+      "queries": 40000
+    },
+    {
+      "stage": "concurrent",
+      "cell": "ef64_T8_p0_r3.json",
+      "queries": 40000
+    },
+    {
+      "stage": "concurrent",
+      "cell": "ef64_T8_p0_r4.json",
+      "queries": 40000
+    },
+    {
+      "stage": "concurrent",
+      "cell": "ef64_T8_p1_r0.json",
+      "queries": 40000
+    },
+    {
+      "stage": "concurrent",
+      "cell": "ef64_T8_p1_r1.json",
+      "queries": 40000
+    },
+    {
+      "stage": "concurrent",
+      "cell": "ef64_T8_p1_r2.json",
+      "queries": 40000
+    },
+    {
+      "stage": "concurrent",
+      "cell": "ef64_T8_p1_r3.json",
+      "queries": 40000
+    },
+    {
+      "stage": "concurrent",
+      "cell": "ef64_T8_p1_r4.json",
+      "queries": 40000
+    }
+  ]
+}

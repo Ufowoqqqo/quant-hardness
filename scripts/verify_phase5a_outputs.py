@@ -1,4 +1,5 @@
 """Independent post-run check of every timed ID and frozen implementation hash."""
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -14,7 +15,8 @@ def sha(path):
 
 
 def main():
-    root = Path('runs/phase5a_highdim_external_validity_v1')
+    parser=argparse.ArgumentParser();parser.add_argument('--root',default='runs/phase5a_highdim_external_validity_v1');args=parser.parse_args()
+    root = Path(args.root)
     provenance = json.loads((root / 'execution_provenance.json').read_text())
     for path, expected in provenance['sha256'].items():
         assert sha(path) == expected, path

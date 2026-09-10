@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "all_frozen_input_hashes_unchanged": 51,
+  "exact_oracle_coverage_equal_all_queries": true,
+  "exact_controls_equal_phase5a": true,
+  "independently_validated_rank_rows": 300000,
+  "all16_residual_gap_equals_excluded_GT_items_per_query": true,
+  "controls": [
+    {
+      "ef": 32,
+      "GT_relevant_oracle_items_outside_top16": 368,
+      "mean_positive_discovery_mass": 0.01529,
+      "mean_negative_discovery_mass": -0.015969999999999998
+    },
+    {
+      "ef": 64,
+      "GT_relevant_oracle_items_outside_top16": 553,
+      "mean_positive_discovery_mass": 0.007690000000000001,
+      "mean_negative_discovery_mass": -0.007260000000000001
+    },
+    {
+      "ef": 128,
+      "GT_relevant_oracle_items_outside_top16": 673,
+      "mean_positive_discovery_mass": 0.0038699999999999997,
+      "mean_negative_discovery_mass": -0.00322
+    }
+  ],
+  "script_sha256": "5768bd120e100ca5a9e965bf4c2667bf15de5b62447a89515d488baa64ca893b"
+}

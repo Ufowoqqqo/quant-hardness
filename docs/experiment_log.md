@@ -2307,3 +2307,129 @@ graph, same training IDs/seed, ef32/64/128 and L16, compared with current
 PQ768x8. Test dependence on fine dsub2 precision, not a broad parameter sweep.
 This next experiment has NOT been run. Phase5A primary execution is complete
 and stopped; no unauthorized exploratory diagnostics were launched.
+
+## Phase5B — preregistered compression robustness
+
+User subsequently authorized exactly one PQ384x8 experiment on frozen Phase5A
+artifacts. Parent commit541a0eb8c812bf9926f0bc5de3699d908dfa20a4. Preregistration
+`runs/phase5b_compression_robustness_v1/preregistration.md` and configuration
+`configs/indexes/phase5b_compression_robustness.conf` were written before model
+training/retrieval. H1 oracle recovery>=.90; H2 ranking-side predominance;
+H3 L16 recovery>=.80 at one practical point, secondary>=.60 at most points;
+H4 systems direction left open. No graph rebuild, new split, normalization,
+training sample, alternative PQ or L32/L64 refinement.
+
+Commands:
+
+```bash
+cmake --build build --target faiss_phase5a faiss_phase5a_bench phase5a_retention_correctness -j 4
+/rwproject/kdd-db/kluaq/miniconda3/envs/build_env/bin/python -u scripts/prepare_phase5b.py
+/rwproject/kdd-db/kluaq/miniconda3/envs/build_env/bin/python -u scripts/run_phase5b.py --stage model
+```
+
+Input verification PASS: all archived vectors, role IDs reconstructed from
+frozen seeds, exact GT/reference files, serialized graph, original PQ and
+historical result tables match committed Phase5A metadata. No graph rebuilt.
+Symlinks reference original arrays and graph, not newly transformed copies.
+Model stage runs correctness tests before one PQ384 training and sanity.
+Shared driver accepts768/384; online instrumentation/search code is unchanged
+and checked against its Phase5A hash. The bounded fixture now tests both
+1536-dimensional PQ layouts against full-sort/reference exact reranking.
+Build retains GCC11.5.0 Release generic flags; NFS clock-skew warnings persist
+but modified targets compile/link successfully. Full model/source/environment
+provenance is saved before training. Historical5A QPS is not contemporaneously
+randomized with5B; cross-phase timing comparisons retain this confound.
+
+Phase5B model stage passed7/7 CTests and trained exactly one PQ384x8:
+training530.700027s,encoding36.558373s,384B/code,dsub4,seed95000037,
+25 iterations,1 redo. Codebook SHA-256
+`25b67a5fb81c84f25f2d61dcc16f29847dedb86b27e063653390da03044c5061`;
+base-code SHA-256 `883b61f52605d9ac3e2366aa77638ca12c9bea5673916c751914407ae0094aa2`.
+Sanity implementation gate passed10000 paired/order samples. Additional
+offline rank/tie tests passed2/2 using:
+
+```bash
+MPLCONFIGDIR=/tmp/phase5b-mpl-cache /tmp/phase3b-plot-env/bin/python tests/test_phase5b_analysis.py
+/rwproject/kdd-db/kluaq/miniconda3/envs/build_env/bin/python -u scripts/run_phase5b.py --stage recall
+```
+
+Recall stage starts only after model/sanity completion. The analysis/audit
+source hashes are frozen before this retrieval stage. Native exact results
+must equal Phase5A on all queries; no results are used to change configuration.
+
+Conversation/usage interruption recovery: the old unified-process handle no
+longer existed when the user returned, but all three recall completion files,
+the PASS audit and generated recall tables were present. No training or recall
+restart was performed. All30000 exact-control discrepancies are zero and
+full/bounded/native identity passes. System benchmarks had not started.
+Continuation command:
+
+```bash
+/rwproject/kdd-db/kluaq/miniconda3/envs/build_env/bin/python -u scripts/run_phase5b.py --stage systems
+```
+
+The runner verifies frozen source/config/binary hashes before starting. PQ384
+recall native/oracle/ALL16 at ef32=.83320/.89709/.89341,
+ef64=.86500/.94159/.93606, ef128=.88098/.96537/.95864. Signed discovery
+losses−.00068/.00043/.00065. L16 recovery94.24%/92.78%/92.03%.
+These observations did not change any model, threshold or benchmark policy.
+
+Single-thread benchmark completed30 cells,1200000 timed queries,1091.11s
+runner stage elapsed (includes untimed I/O/checks). PQ384 native/ALL16 QPS:
+ef32 1656.37/1568.21;ef64 1297.42/1233.50;ef128 915.14/892.29.
+ALL16 throughput penalties5.323%/4.927%/2.497%. All12 measured5A/5B points
+were compared without interpolation: frontier=PQ384 nativeef32,PQ384 ALL16
+ef32/64/128,and PQ768 ALL16ef128. Phase5A remains historical timing reference.
+Single analysis completed before the limited ef64 1/8-worker benchmark began.
+
+Limited concurrency complete20 cells/800000 timed queries,410.42s runner stage.
+ef64 native/ALL16 QPS=1297.21/1242.11 at1 worker,9730.02/9285.84 at8 workers.
+Throughput penalties4.247%/4.565%,8-worker efficiencies93.76%/93.45%,p99
+overhead6.488%. All timed outputs pass. Final analysis then performed only
+the authorized approximate-rank diagnostic from recorded candidate scores:
+GT-relevant oracle members within top16=99.5898%/99.4127%/99.3029% at
+ef32/64/128. No L32/L64 distances or search were run.
+
+Post-run verification/reproduction commands:
+
+```bash
+/rwproject/kdd-db/kluaq/miniconda3/envs/build_env/bin/python scripts/verify_phase5a_outputs.py --root runs/phase5b_compression_robustness_v1
+/rwproject/kdd-db/kluaq/miniconda3/envs/build_env/bin/python scripts/summarize_phase5a_environment.py --root runs/phase5b_compression_robustness_v1 --prefix phase5b
+mktemp -d /tmp/phase5b-regeneration-XXXXXX
+MPLCONFIGDIR=/tmp/phase5b-mpl-cache /tmp/phase3b-plot-env/bin/python scripts/analyze_phase5b.py --stage final --tables /tmp/phase5b-regeneration-KkuxnE/tables --figures /tmp/phase5b-regeneration-KkuxnE/figures
+/rwproject/kdd-db/kluaq/miniconda3/envs/build_env/bin/python scripts/summarize_phase5a_environment.py --root runs/phase5b_compression_robustness_v1 --prefix phase5b --tables /tmp/phase5b-regeneration-KkuxnE/tables
+/rwproject/kdd-db/kluaq/miniconda3/envs/build_env/bin/python scripts/verify_phase5a_regeneration.py /tmp/phase5b-regeneration-KkuxnE --root runs/phase5b_compression_robustness_v1 --prefix phase5b
+/rwproject/kdd-db/kluaq/miniconda3/envs/build_env/bin/python scripts/verify_phase5b_controls.py
+```
+
+Independent benchmark audit PASS:14 frozen implementation/config/binary files,
+all50 cells/2000000 timed query IDs match references.34 regenerated tables/
+figures are byte-identical. Shared audit helpers were parameterized for root/
+output prefix only; original5A outputs are unchanged. Raw Phase5B model is
+kept locally and excluded from ordinary Git staging because of its size;
+codebook/code/model hashes are recorded, no file deleted.
+
+Host snapshots: load1.33–3.65,min available memory23012284KiB,max host-wide
+iowait.187%,no free-swap change. These counters include warmup, not per-kernel
+profiling. Separate-phase timing, turbo/frequency and one model/index are
+confounders; all repetitions retained. Adverse discovery variation is also
+retained: ef64 positive/negative query fractions grow2.04%/1.61% (PQ768) to
+4.56%/3.91% (PQ384). Small mean discovery loss includes cancellation.
+
+Interpretation: Case A supported at frozen aggregate operating points; H1/H2/H3
+pass, but not a universal per-query or further-compression claim. Only suggested
+next experiment: a preregistered contemporaneous baseline comparison against
+pinned SymphonyQG on the same data/GT with explicit ISA/compiler/full-memory
+accounting, using each system's native graph and observed Recall-QPS points.
+Paper/author repository were inspected read-only for this recommendation;
+no SymphonyQG implementation or additional experiment was run. Phase5B stops
+after the authorized primary results and audits.
+
+Final Phase5B post-run controls PASS:51 original input/reference hashes
+unchanged, exact native/oracle IDs identical to5A, oracle=coverage for every
+query,300000 candidate-rank rows independently validated by stable argsort.
+For every query, oracle−ALL16 recall equals excluded relevant-item count/10;
+outside-top16 totals368/553/673 at ef32/64/128. The extra full-file hash audit
+took a long wall-clock interval; the completed result was recovered by polling
+the existing session, without rerunning training/recall/benchmarks. No index
+was rebuilt, file deleted, or parameter changed. Report and artifacts complete.

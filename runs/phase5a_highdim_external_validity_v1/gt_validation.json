@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "queries": 100,
+  "absolute_distance_tolerance": 2e-05,
+  "max_primary_fp32_vs_fp64_distance_error": 4.811763674172909e-07,
+  "tolerance_boundary_disagreements": [],
+  "exact_fp32_rank10_rank11_tie_queries": 0,
+  "reference_note": "independent scalar FP64 squared-L2 exhaustive C++ plus NumPy FP64 cosine exhaustive",
+  "recall_semantics": "strict primary FP32 GT ID intersection /10; no tolerance recall substitution",
+  "sha256": {
+    "gt_ids.i64": "27d79de76e344ab0237dde665d38a0b400e5847e5ef4893823dbfc9f4b5fd495",
+    "gt_distances.f64": "cc791bec2e2fc64419327abb688c44989087be95f7837114c2d378eb79aba875",
+    "gt.json": "891e9850de2ec105c63de11865eaa06e8fd4cf05eeca82f1dd7ab394accd0539",
+    "gt-reference_ids.i64": "ee114c69a8b0a113494d362519bb4fcc8399656a7e52c077a914886eac04a870",
+    "gt-reference_distances.f64": "00d86dcfffed63c2c3c591d022b1c0a305115ce90a92143f9c81bd98067adda2",
+    "gt-reference.json": "901d8739428bdf2232429043c7faad50d2446a1068401b85576576d36f548f80",
+    "gt-cosine-reference_ids.i64": "ee114c69a8b0a113494d362519bb4fcc8399656a7e52c077a914886eac04a870"
+  }
+}

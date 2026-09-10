@@ -1,0 +1,30 @@
+[
+  {
+    "policy": 0,
+    "workers": 1,
+    "qps": 735.4316961371833,
+    "speedup": 1.0,
+    "parallel_efficiency": 1.0
+  },
+  {
+    "policy": 0,
+    "workers": 8,
+    "qps": 5591.485157516632,
+    "speedup": 7.602997242144467,
+    "parallel_efficiency": 0.9503746552680584
+  },
+  {
+    "policy": 1,
+    "workers": 1,
+    "qps": 719.9672444558191,
+    "speedup": 1.0,
+    "parallel_efficiency": 1.0
+  },
+  {
+    "policy": 1,
+    "workers": 8,
+    "qps": 5478.564295370027,
+    "speedup": 7.609463260388952,
+    "parallel_efficiency": 0.951182907548619
+  }
+]

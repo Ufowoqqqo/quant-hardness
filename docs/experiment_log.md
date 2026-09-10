@@ -2128,3 +2128,182 @@ local hashes are not publisher checksum authentication. Characterize as
 held-out entity-to-entity NN, not natural-language-query retrieval.
 Next operational step after committing: use the frozen inputs/preprocessing
 for the original Phase5A external-validity experiment, without retuning.
+
+## Phase 5A primary execution — implementation and reconstruction
+
+Started from committed/pushed amendment
+`fbdf4784a505dfbf201be9e78f788e67d31fd4b2`. No dataset/PQ/normalization/split
+changes. Latest user request increases independent GT validation to100
+queries; the immutable config still records the earlier32 and execution
+metadata explicitly records100. Details: `runs/phase5a_highdim_external_validity_v1/execution_notes.md`.
+
+Commands so far:
+
+```bash
+/rwproject/kdd-db/kluaq/miniconda3/envs/build_env/bin/python scripts/prepare_phase5a.py
+# Interrupted random NFS writes after78924 rows; preserved, not used:
+mv runs/phase5a_highdim_external_validity_v1/prepared runs/phase5a_highdim_external_validity_v1/prepared_interrupted_nfs_writes
+# Same frozen vector arithmetic/IDs, local NVMe writes + sequential archive copy:
+/rwproject/kdd-db/kluaq/miniconda3/envs/build_env/bin/python scripts/prepare_phase5a.py
+cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+cmake --build build --target faiss_phase5a faiss_phase5a_bench phase5a_retention_correctness -j 8
+/rwproject/kdd-db/kluaq/miniconda3/envs/build_env/bin/python -m py_compile scripts/prepare_phase5a.py scripts/validate_phase5a_gt.py scripts/audit_phase5a_recall.py scripts/analyze_phase5a.py scripts/run_phase5a.py
+/rwproject/kdd-db/kluaq/miniconda3/envs/build_env/bin/python -m unittest discover -s tests -p test_phase5a_dataset.py
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 ctest --test-dir build --output-on-failure
+cp build/Testing/Temporary/LastTest.log runs/phase5a_highdim_external_validity_v1/implementation_tests.log
+```
+
+Implementation validation:3 Python split/preprocessing tests passed; all7
+C++ tests passed, including new d1536/PQ768 fixture at ef32/64/128 comparing
+bounded retention to full sort and exact refinement references, native IDs
+and graph fingerprint. Synthetic fixture uses deterministic centroids, not
+another trained primary PQ model. Test log is preserved. No primary recall
+or performance outcomes yet at this entry. Only CandidateAccess ef guard
+generalized; FAISS HNSW and L16 comparator unchanged.
+
+Build anomaly: NFS worktree scan stalled CMake; status now has30s timeout and
+conservatively marks dirty on failure. Initial configure interrupted; completed
+configure/build then succeeded with existing clock-skew warnings. No compiler
+optimization flags changed. Test outcomes validate compiled code, not a claim
+that the NFS clock is synchronized. Query timing uses steady_clock, not mtime.
+Next: finish verified arrays, frozen GT/index/PQ stages, then correctness-gated
+primary measurement. All exploratory extensions remain forbidden.
+
+Pre-ANN execution recovery: after all1000000 normalized rows and sequential
+archive copies, the metadata call `git -C third_party/faiss rev-parse HEAD`
+stalled. A20s subprocess timeout isolated it; direct Git-dir lookup returned
+the pinned20f14b31a6d54e243a3d1de6ae193fc4c3ec18ed. The process was interrupted
+without deleting arrays. Recovery command (same arithmetic/IDs):
+
+```bash
+git --git-dir=third_party/faiss/.git rev-parse HEAD
+/rwproject/kdd-db/kluaq/miniconda3/envs/build_env/bin/python -u scripts/prepare_phase5a.py --finalize-existing /tmp/phase5a-normalization-aifuhbw5
+```
+
+Finalizer must match full scratch/archive hashes and recheck all output
+vectors and all training/base alignment before emitting PASS. No GT or ANN
+result was inspected during either preparation recovery.
+
+Preparation recovery completed PASS: all normalized array archive/scratch
+hashes match; all output vectors finite/unit-norm; all65536 training rows
+match saved base positions exactly. Base SHA-256
+`313519a90d5baf29024167aff7bef53736303bb4ac02436c6709293d2de0b86c`;
+query `968414d2566fafbaefdbe2705e230ab06c09b7c020565f95b17648ccbd7bdb8e`;
+training `176b72ea78a75926add9f8aa915a3de70963f9e3a6f13d9e3f4e0627274a8235`.
+Max normalized norm error2.995396664040584e-08. Source and prepared provenance
+are retained. Primary-only offline execution started after these gates:
+
+```bash
+/rwproject/kdd-db/kluaq/miniconda3/envs/build_env/bin/python -u scripts/run_phase5a.py --stage offline
+```
+
+Expanded exact commands/environment: `execution_logs/offline_commands.json`
+under the Phase5A run. It runs GT, independent GT references/validation, one
+graph, one PQ, sanity, recall, correctness audit and recall analysis in that
+order; any failure stops. Logs are exclusive-create, no overwrite. Source/
+binary/flags/environment hashes: `execution_provenance.json`.
+
+GT completed:10000 queries, primary exhaustive FP32 kernel runtime551.1513s;
+stored top11 (first10 are Recall@10 labels; last is tie diagnostic), ties
+ordered by ascending base ID. GT IDs SHA-256
+`27d79de76e344ab0237dde665d38a0b400e5847e5ef4893823dbfc9f4b5fd495`.
+Independent scalar FP64 L2 and NumPy FP64 cosine scans of100 deterministic
+queries passed with no top10 membership disagreement. Max primary FP32 vs
+FP64 distance error4.811763674e-07 (<2e-5); zero exact FP32 rank10/11 ties
+among all10000 queries. Strict ID recall unchanged. Full details and hashes
+in `gt_validation.json`. The one frozen FP32 graph construction then started.
+
+The single FP32 graph completed: M16, efConstruction80, seed20260907,
+24 construction threads, graph.add time1243.666647s; serialized size
+6225374202 bytes. Fingerprint
+`cd95032163d55937f2d4e90b1ab6e33d5509c938987d10a3c2cacc16d01b8f5d`;
+file SHA-256 `ddc7a331a1a664bf41ae67408b6e7e35321fbb47c62b64ace18c2c8d1eb36a2b`.
+The runner's2752.7s graph-stage elapsed time includes serialization/hash/I/O
+and must not be reported as graph.add time. No graph was rebuilt.
+
+One PQ768x8 model completed: training799.073615s, encoding70.626760s;
+seed95000037,25 iterations,1 redo,65536 frozen training rows,dsub2,768B/code.
+Codebook SHA-256 `78c2dbd08ae1deabd177022609382ff56e1f3928c718419eb2be5d211ae035e0`;
+codes SHA-256 `a50637f62259fb08ed3425868194ef9d42aaeb3dfba73a8b1b5fe7f1fb85f51b`.
+Pre-ANN sanity gate passed10000 deterministic distance/reconstruction samples
+and10000 order pairs, including independent decoded-vector ADC comparison
+and sampled exact code/ID alignment. No alternative PQ was trained.
+
+Primary recall completed340.3s runner elapsed; independent saved-output audit
+PASS for all30000 query/ef rows, no exact-control anomalies, no top16 boundary
+ties, identical graph fingerprint and native/full/bounded reference IDs.
+ef32/64/128 exact recall: .89641/.94202/.96602; PQ: .87758/.91685/.93799;
+candidate oracle: .89657/.94087/.96588; ALL16: .89655/.94084/.96585.
+Signed discovery losses: -.00016/.00115/.00014. The slightly negative ef32
+aggregate is preserved; the two traversals may discover different sets.
+Sanity sampled relative distance MAE .00861728, reconstruction L2 norm
+mean .08872676, random strict pairwise inversion rate .0254. No parameter
+selection or exploratory diagnostics were performed after these outcomes.
+
+After offline completion and source/binary hash verification, primary systems
+execution launched:
+
+```bash
+/rwproject/kdd-db/kluaq/miniconda3/envs/build_env/bin/python -u scripts/run_phase5a.py --stage systems
+```
+
+It runs single-thread six-point benchmark and analysis BEFORE the limited
+ef64 1/8-worker check. Five randomized-order repetitions per cell, four query
+passes per repetition, separate512 training-row warmups/worker; every timed
+return ID checked against the offline reference. CPU0 coordinator, CPU2..9
+distinct physical workers, internal OpenMP/BLAS1. Expanded exact commands in
+`execution_logs/systems_commands.json`; full environment in execution provenance.
+Process listing within the command sandbox does not expose the entire host;
+absence of competing host workloads cannot be guaranteed. Before/after host
+load and CPU/memory counters are preserved per cell for interpretation.
+
+Single-thread primary complete:30 cells,5 repetitions of six points,1200000
+timed queries, every timed output matching its reference. Stage2242.2s includes
+untimed loading/checks/I/O. QPS native/ALL16 at ef32:959.64/928.88;
+ef64:740.08/726.92; ef128:520.09/516.42. Throughput penalties3.206%/1.779%/.706%.
+Observed ALL16 ef64 versus native ef128: Recall difference+.00285 and QPS
+ratio1.39767, no interpolation. Primary single analysis completed before the
+limited ef64 1/8-worker benchmark began. No parameters changed.
+
+Limited concurrency completed830.9s stage elapsed,20 cells,800000 timed queries,
+all outputs identical. ef64 native/ALL16 QPS at1 worker735.43/719.97 and at8
+workers5591.49/5478.56. Throughput penalties2.103%/2.020%;8-worker efficiencies
+95.04%/95.12%;8-worker p99 overhead2.366%. Separate concurrency-block1-worker
+timings drift more than the primary block; repetition3 is slower for both,
+and is retained. Before/after host load2.0–10.5, minimum available memory21.44GiB;
+no exclusive-host or fixed-frequency claim. Governor performance, turbo enabled.
+
+Post-run correctness/reproduction commands (no new ANN experiment):
+
+```bash
+/rwproject/kdd-db/kluaq/miniconda3/envs/build_env/bin/python scripts/verify_phase5a_outputs.py
+/rwproject/kdd-db/kluaq/miniconda3/envs/build_env/bin/python scripts/summarize_phase5a_environment.py
+mktemp -d /tmp/phase5a-regeneration-XXXXXX
+MPLCONFIGDIR=/tmp/phase5a-mpl-cache /tmp/phase3b-plot-env/bin/python scripts/analyze_phase5a.py --stage final --tables /tmp/phase5a-regeneration-eoWhre/tables --figures /tmp/phase5a-regeneration-eoWhre/figures
+/rwproject/kdd-db/kluaq/miniconda3/envs/build_env/bin/python scripts/summarize_phase5a_environment.py --tables /tmp/phase5a-regeneration-eoWhre/tables
+/rwproject/kdd-db/kluaq/miniconda3/envs/build_env/bin/python scripts/verify_phase5a_regeneration.py /tmp/phase5a-regeneration-eoWhre
+```
+
+Independent audit PASS:24 frozen files unchanged, graph/PQ file hashes match,
+all2000000 timed IDs match their reference.29 regenerated tables/figures are
+byte-identical. Audit scripts added after timing are separately hashed in
+`analysis_regeneration.json`; they did not alter timed implementation.
+
+Observations: high-recall ef64/128 candidate-oracle recovery95.43%/99.50%;
+L16 ranking-gap recovery99.875%/99.892%. ef32 recovery100.85% is preserved,
+not clipped. Discovery sign cancellation exists; ef64 positive2.04%, negative
+1.61%, including rare large signed cases. No exact-control anomalies or PQ
+top16 boundary ties. Strict recall definitions and all adverse cases retained.
+
+Interpretation (separate from observations): H1/H2/H3 pass in this frozen
+configuration; Case A supported with single-model/workload/hardware limits.
+The possible H4 larger relative overhead does not occur, despite larger exact
+payload and central absolute latency increment. No causal bandwidth claim.
+Full report: `docs/phase5a_highdim_external_validity.md`.
+
+Smallest next discriminating experiment, recommendation ONLY: freeze a
+PQ384x8/dsub4/16x-compression replication on the identical DBPedia split and
+graph, same training IDs/seed, ef32/64/128 and L16, compared with current
+PQ768x8. Test dependence on fine dsub2 precision, not a broad parameter sweep.
+This next experiment has NOT been run. Phase5A primary execution is complete
+and stopped; no unauthorized exploratory diagnostics were launched.

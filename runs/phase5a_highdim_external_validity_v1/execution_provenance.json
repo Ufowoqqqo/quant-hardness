@@ -1,0 +1,114 @@
+{
+  "amendment_commit": "fbdf4784a505dfbf201be9e78f788e67d31fd4b2",
+  "git_commit": "fbdf4784a505dfbf201be9e78f788e67d31fd4b2",
+  "implementation_dirty": true,
+  "sha256": {
+    "configs/indexes/phase5a_highdim_external_validity.conf": "a6adf89d6ccaeddd8f0f840433eee3b8e818a669f629e2d5d6652d9a742688fd",
+    "/rwproject/kdd-db/kluaq/quant-hardness/scripts/run_phase5a.py": "a5b50056a51aeae96787345b0cd9515e82e48d4792b29b82eea299cffa8c0812",
+    "CMakeLists.txt": "be9c276f65910a13589e6ceba6c1abad2612f657a50a7fbb511d4ab71fa781d6",
+    "tests/phase5a_retention_correctness.cpp": "30b202d2cac4cb243fbe82a9b26e33c3f37037c594d9c17522d92c3efab246e1",
+    "runs/phase5a_highdim_external_validity_v1/implementation_tests.log": "7cd66410aa5776ac5c4a5630815f57f94bad174f65c200f2490e2ca33c8432c3",
+    "src/experiments/phase5a_common.h": "ac3a325bb7d07e01f33b7757371ad8253c131196fc4b2d295f446a1fc07f1d2a",
+    "src/experiments/faiss_phase5a.cpp": "338e5e266fd467ad77cd1d30c5ee43cd3e2db191695e31303386fa6cd4018891",
+    "src/experiments/faiss_phase5a_bench.cpp": "a0798d107eebcf04389d28e88cc9c6837a2b420cfeb234cefacf6a3a73c35bfe",
+    "src/instrumentation/bounded_retention.h": "3fdea8cc8629aba77fba89d1258a13472f006019e9e58d7fd7bf5a5b745053f2",
+    "src/instrumentation/bounded_retention.cpp": "a21f995e41bfc6e00e69543461b92e9d33d38d51c11e4cd2f256fea4c3ae5341",
+    "src/instrumentation/streaming_refinement.h": "9d3a6e6ad3dd3751c52430e01a030f6261ff4a7c572ffb91899601369d6cf8fb",
+    "src/instrumentation/streaming_refinement.cpp": "b55c612672d57510a17dca0a3f4dd6a1c8ae8ddeee609cede4a5421bed9f5122",
+    "scripts/phase5a_inspect_header.py": "17a093db628055e720c91c4914edbc3c1c76626c51aee580a1fbbde95a8d1fe1",
+    "scripts/phase5a_dataset.py": "967c588882082161dd1d7c3296bd919dea4e84adc1b254143e11fcdf3784045f",
+    "scripts/freeze_phase5a_amendment.py": "348db669ebc177cc219213a8a56d36ba95cc6544df3957c93c9e086e5bcb8cd2",
+    "scripts/audit_phase5a_amendment.py": "ac9c818f7848f9efa092fe49bbd19ac9dd0c5af32dc41d0d8fdb7387900ac6aa",
+    "scripts/prepare_phase5a.py": "9aa6ccd766227a6c26f21006f829d39228fcc547aa6deede3dc8c9fc7f2e4639",
+    "scripts/validate_phase5a_gt.py": "4771a4344681a27088c7423811ffe093b87c2fd083fdde9511fe755f923f0765",
+    "scripts/audit_phase5a_recall.py": "1b6ab634598a6f45f9b29780aa9bd57ed496d0d9079c33e09eebdd9a2b8f2339",
+    "scripts/analyze_phase5a.py": "29bb65f1dd064ebef6a1768bafb7b90b9123e00013444032fcdaa0b48bf7a6d5",
+    "scripts/run_phase5a.py": "a5b50056a51aeae96787345b0cd9515e82e48d4792b29b82eea299cffa8c0812",
+    "build/faiss_phase5a_bench": "a49efedcecd331463b1c916d03b92a45100d7b9450b731b4375c3950255d18b5",
+    "build/phase5a_retention_correctness": "c02a5ff4b75e772de91fb1f5320f4198b826935c1a028032e181ac1c8ec4abe0",
+    "build/faiss_phase5a": "399d3d4c5fa0150cde8eee9bf198f5f25101a50960e19e49e4998dcbb7b1c865"
+  },
+  "physical_worker_topology": {
+    "2": {
+      "core_id": "3",
+      "physical_package_id": "0",
+      "thread_siblings_list": "2,14"
+    },
+    "3": {
+      "core_id": "5",
+      "physical_package_id": "0",
+      "thread_siblings_list": "3,15"
+    },
+    "4": {
+      "core_id": "6",
+      "physical_package_id": "0",
+      "thread_siblings_list": "4,16"
+    },
+    "5": {
+      "core_id": "8",
+      "physical_package_id": "0",
+      "thread_siblings_list": "5,17"
+    },
+    "6": {
+      "core_id": "9",
+      "physical_package_id": "0",
+      "thread_siblings_list": "6,18"
+    },
+    "7": {
+      "core_id": "10",
+      "physical_package_id": "0",
+      "thread_siblings_list": "7,19"
+    },
+    "8": {
+      "core_id": "11",
+      "physical_package_id": "0",
+      "thread_siblings_list": "8,20"
+    },
+    "9": {
+      "core_id": "12",
+      "physical_package_id": "0",
+      "thread_siblings_list": "9,21"
+    }
+  },
+  "environment": {
+    "OMP_NUM_THREADS": "1",
+    "OMP_DYNAMIC": "FALSE",
+    "OMP_MAX_ACTIVE_LEVELS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "lscpu": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           46 bits physical, 48 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  24\nOn-line CPU(s) list:                     0-23\nVendor ID:                               GenuineIntel\nModel name:                              Intel(R) Core(TM) i9-10920X CPU @ 3.50GHz\nCPU family:                              6\nModel:                                   85\nThread(s) per core:                      2\nCore(s) per socket:                      12\nSocket(s):                               1\nStepping:                                7\nCPU(s) scaling MHz:                      77%\nCPU max MHz:                             4800.0000\nCPU min MHz:                             1200.0000\nBogoMIPS:                                6999.82\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts hwp hwp_act_window hwp_epp hwp_pkg_req vnmi avx512_vnni md_clear flush_l1d arch_capabilities\nVirtualization:                          VT-x\nL1d cache:                               384 KiB (12 instances)\nL1i cache:                               384 KiB (12 instances)\nL2 cache:                                12 MiB (12 instances)\nL3 cache:                                19.3 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-23\nVulnerability Gather data sampling:      Mitigation; Microcode\nVulnerability Indirect target selection: Mitigation; Aligned branch/return thunks\nVulnerability Itlb multihit:             KVM: Mitigation: Split huge pages\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Mitigation; Clear CPU buffers; SMT vulnerable\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Mitigation; Enhanced IBRS\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Mitigation; TSX disabled\nVulnerability Vmscape:                   Mitigation; IBPB before exit to userspace\n",
+  "memory": "MemTotal:       32273192 kB\nMemFree:          322780 kB\nMemAvailable:   29406228 kB\nBuffers:               0 kB\nCached:         28549776 kB\nSwapCached:        15772 kB\nActive:         14303264 kB\nInactive:       15242168 kB\nActive(anon):     861224 kB\nInactive(anon):   236464 kB\nActive(file):   13442040 kB\nInactive(file): 15005704 kB\nUnevictable:           0 kB\nMlocked:               0 kB\nSwapTotal:      67108860 kB\nSwapFree:       63206140 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:                64 kB\nWriteback:            16 kB\nAnonPages:        953044 kB\nMapped:           256932 kB\nShmem:            102700 kB\nKReclaimable:    1104924 kB\nSlab:            1574904 kB\nSReclaimable:    1104924 kB\nSUnreclaim:       469980 kB\nKernelStack:       33952 kB\nPageTables:        31968 kB\nSecPageTables:      4112 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    83245456 kB\nCommitted_AS:   11319036 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:      229508 kB\nVmallocChunk:          0 kB\nPercpu:            21216 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:    331776 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nCmaTotal:              0 kB\nCmaFree:               0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      389980 kB\nDirectMap2M:     5574656 kB\nDirectMap1G:    27262976 kB\n",
+  "compiler": "c++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-14)\nCopyright (C) 2021 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "flags": {
+    "build/CMakeFiles/qh_bounded.dir/flags.make": "# CMAKE generated file: DO NOT EDIT!\n# Generated by \"Unix Makefiles\" Generator, CMake Version 4.0\n\n# compile CXX with /bin/c++\nCXX_DEFINES = \n\nCXX_INCLUDES = -I/rwproject/kdd-db/kluaq/quant-hardness/src -isystem /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss\n\nCXX_FLAGS = -O3 -DNDEBUG -std=c++20 -Wall -Wextra -Wpedantic -fopenmp\n\n",
+    "build/CMakeFiles/faiss_phase5a.dir/flags.make": "# CMAKE generated file: DO NOT EDIT!\n# Generated by \"Unix Makefiles\" Generator, CMake Version 4.0\n\n# compile CXX with /bin/c++\nCXX_DEFINES = \n\nCXX_INCLUDES = -I/rwproject/kdd-db/kluaq/quant-hardness/src -isystem /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss\n\nCXX_FLAGS = -O3 -DNDEBUG -std=c++20 -Wall -Wextra -Wpedantic -fopenmp\n\n",
+    "build/CMakeFiles/faiss_phase5a_bench.dir/flags.make": "# CMAKE generated file: DO NOT EDIT!\n# Generated by \"Unix Makefiles\" Generator, CMake Version 4.0\n\n# compile CXX with /bin/c++\nCXX_DEFINES = \n\nCXX_INCLUDES = -I/rwproject/kdd-db/kluaq/quant-hardness/src -isystem /rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss\n\nCXX_FLAGS = -O3 -DNDEBUG -std=c++20 -Wall -Wextra -Wpedantic -fopenmp\n\n",
+    "build/faiss-build/faiss/CMakeFiles/faiss.dir/flags.make": "# CMAKE generated file: DO NOT EDIT!\n# Generated by \"Unix Makefiles\" Generator, CMake Version 4.0\n\n# compile CXX with /bin/c++\nCXX_DEFINES = -DFINTEGER=int\n\nCXX_INCLUDES = -I/rwproject/kdd-db/kluaq/quant-hardness/third_party/faiss\n\nCXX_FLAGS = -O3 -DNDEBUG -std=gnu++20 -fPIC -fopenmp\n\n"
+  },
+  "frequency": {
+    "/sys/devices/system/cpu/intel_pstate/no_turbo": "0\n",
+    "/sys/devices/system/cpu/cpu2/cpufreq/scaling_governor": "performance\n"
+  },
+  "cache": {
+    "/sys/devices/system/cpu/cpu2/cache/index2/shared_cpu_list": "2,14\n",
+    "/sys/devices/system/cpu/cpu2/cache/index2/type": "Unified\n",
+    "/sys/devices/system/cpu/cpu2/cache/index2/size": "1024K\n",
+    "/sys/devices/system/cpu/cpu2/cache/index2/level": "2\n",
+    "/sys/devices/system/cpu/cpu2/cache/index0/shared_cpu_list": "2,14\n",
+    "/sys/devices/system/cpu/cpu2/cache/index0/type": "Data\n",
+    "/sys/devices/system/cpu/cpu2/cache/index0/size": "32K\n",
+    "/sys/devices/system/cpu/cpu2/cache/index0/level": "1\n",
+    "/sys/devices/system/cpu/cpu2/cache/index3/shared_cpu_list": "0-23\n",
+    "/sys/devices/system/cpu/cpu2/cache/index3/type": "Unified\n",
+    "/sys/devices/system/cpu/cpu2/cache/index3/size": "19712K\n",
+    "/sys/devices/system/cpu/cpu2/cache/index3/level": "3\n",
+    "/sys/devices/system/cpu/cpu2/cache/index1/shared_cpu_list": "2,14\n",
+    "/sys/devices/system/cpu/cpu2/cache/index1/type": "Instruction\n",
+    "/sys/devices/system/cpu/cpu2/cache/index1/size": "32K\n",
+    "/sys/devices/system/cpu/cpu2/cache/index1/level": "1\n"
+  }
+}

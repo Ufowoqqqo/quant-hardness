@@ -1,0 +1,80 @@
+{
+  "commands": [
+    [
+      "gt",
+      [
+        "build/faiss_phase5a",
+        "gt",
+        "configs/indexes/phase5a_highdim_external_validity.conf"
+      ]
+    ],
+    [
+      "gt_reference",
+      [
+        "build/faiss_phase5a",
+        "gt-reference",
+        "configs/indexes/phase5a_highdim_external_validity.conf"
+      ]
+    ],
+    [
+      "gt_validate",
+      [
+        "/rwproject/kdd-db/kluaq/miniconda3/envs/build_env/bin/python",
+        "scripts/validate_phase5a_gt.py"
+      ]
+    ],
+    [
+      "graph",
+      [
+        "build/faiss_phase5a",
+        "graph",
+        "configs/indexes/phase5a_highdim_external_validity.conf"
+      ]
+    ],
+    [
+      "pq",
+      [
+        "build/faiss_phase5a",
+        "pq",
+        "configs/indexes/phase5a_highdim_external_validity.conf"
+      ]
+    ],
+    [
+      "sanity",
+      [
+        "build/faiss_phase5a",
+        "sanity",
+        "configs/indexes/phase5a_highdim_external_validity.conf"
+      ]
+    ],
+    [
+      "recall",
+      [
+        "build/faiss_phase5a",
+        "recall",
+        "configs/indexes/phase5a_highdim_external_validity.conf"
+      ]
+    ],
+    [
+      "recall_audit",
+      [
+        "/rwproject/kdd-db/kluaq/miniconda3/envs/build_env/bin/python",
+        "scripts/audit_phase5a_recall.py"
+      ]
+    ],
+    [
+      "recall_analysis",
+      [
+        "/tmp/phase3b-plot-env/bin/python",
+        "scripts/analyze_phase5a.py",
+        "--stage",
+        "recall"
+      ]
+    ]
+  ],
+  "environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  }
+}

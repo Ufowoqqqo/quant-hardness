@@ -1,0 +1,8 @@
+hnsw_add_vertices: adding 990000 elements on top of 0 (preset_levels=0)
+  max_level = 4
+Adding 10 elements at level 4
+Adding 243 elements at level 3
+Adding 3591 elements at level 2
+Adding 57892 elements at level 1
+Adding 928264 elements at level 0
+  10001 / 928264  20002 / 928264  30003 / 928264Done in 318410.621 ms

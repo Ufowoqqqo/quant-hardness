@@ -1,0 +1,129 @@
+Start testing: Sep 09 21:19 HKT
+----------------------------------------------------------
+1/7 Testing: faiss_backend_validation
+1/7 Test: faiss_backend_validation
+Command: "/rwproject/kdd-db/kluaq/quant-hardness/build/faiss_backend_validation" "/rwproject/kdd-db/kluaq/quant-hardness/configs/indexes/faiss_hnsw_poc.conf"
+Directory: /rwproject/kdd-db/kluaq/quant-hardness/build
+"faiss_backend_validation" start time: Sep 09 21:19 HKT
+Output:
+----------------------------------------------------------
+faiss_commit=20f14b31a6d54e243a3d1de6ae193fc4c3ec18ed
+graph_fingerprint=f3d781d785ae54b4291b73b026e446ccd455744e58922b5878e8f455201ad270
+base_vectors=4096
+queries=32
+dimension=32
+pq_distance_differences=4096/4096
+pq_mean_absolute_distance_difference=11.5816
+identity_storage_control=PASS
+exact_first_result_id=3551
+pq_first_result_id=4092
+status=PASS
+<end of output>
+Test time =   0.60 sec
+----------------------------------------------------------
+Test Passed.
+"faiss_backend_validation" end time: Sep 09 21:19 HKT
+"faiss_backend_validation" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/7 Testing: phase1_correctness
+2/7 Test: phase1_correctness
+Command: "/rwproject/kdd-db/kluaq/quant-hardness/build/phase1_correctness"
+Directory: /rwproject/kdd-db/kluaq/quant-hardness/build
+"phase1_correctness" start time: Sep 09 21:19 HKT
+Output:
+----------------------------------------------------------
+status=PASS
+<end of output>
+Test time =   0.55 sec
+----------------------------------------------------------
+Test Passed.
+"phase1_correctness" end time: Sep 09 21:19 HKT
+"phase1_correctness" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/7 Testing: decomposition_correctness
+3/7 Test: decomposition_correctness
+Command: "/rwproject/kdd-db/kluaq/quant-hardness/build/decomposition_correctness"
+Directory: /rwproject/kdd-db/kluaq/quant-hardness/build
+"decomposition_correctness" start time: Sep 09 21:19 HKT
+Output:
+----------------------------------------------------------
+WARNING clustering 512 points to 16 centroids: please provide at least 624 training points
+WARNING clustering 512 points to 16 centroids: please provide at least 624 training points
+status=PASS
+<end of output>
+Test time =   0.51 sec
+----------------------------------------------------------
+Test Passed.
+"decomposition_correctness" end time: Sep 09 21:19 HKT
+"decomposition_correctness" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/7 Testing: candidate_semantics_regression
+4/7 Test: candidate_semantics_regression
+Command: "/rwproject/kdd-db/kluaq/quant-hardness/build/candidate_semantics_regression"
+Directory: /rwproject/kdd-db/kluaq/quant-hardness/build
+"candidate_semantics_regression" start time: Sep 09 21:19 HKT
+Output:
+----------------------------------------------------------
+subset=iid mean_delta_discovery=0.0042 rerank_recovery=0.970629
+subset=mean_alpha_1 mean_delta_discovery=-4.44089e-19 rerank_recovery=1
+status=PASS
+<end of output>
+Test time = 236.68 sec
+----------------------------------------------------------
+Test Passed.
+"candidate_semantics_regression" end time: Sep 09 21:23 HKT
+"candidate_semantics_regression" time elapsed: 00:03:56
+----------------------------------------------------------
+
+5/7 Testing: dataset_loader_correctness
+5/7 Test: dataset_loader_correctness
+Command: "/rwproject/kdd-db/kluaq/quant-hardness/build/dataset_loader_correctness"
+Directory: /rwproject/kdd-db/kluaq/quant-hardness/build
+"dataset_loader_correctness" start time: Sep 09 21:25 HKT
+Output:
+----------------------------------------------------------
+status=PASS
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"dataset_loader_correctness" end time: Sep 09 21:25 HKT
+"dataset_loader_correctness" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/7 Testing: bounded_retention_correctness
+6/7 Test: bounded_retention_correctness
+Command: "/rwproject/kdd-db/kluaq/quant-hardness/build/bounded_retention_correctness"
+Directory: /rwproject/kdd-db/kluaq/quant-hardness/build
+"bounded_retention_correctness" start time: Sep 09 21:25 HKT
+Output:
+----------------------------------------------------------
+PASS 200 deterministic duplicate/tie/random stream references; bounded bytes=208
+<end of output>
+Test time = 110.49 sec
+----------------------------------------------------------
+Test Passed.
+"bounded_retention_correctness" end time: Sep 09 21:26 HKT
+"bounded_retention_correctness" time elapsed: 00:01:50
+----------------------------------------------------------
+
+7/7 Testing: phase5a_retention_correctness
+7/7 Test: phase5a_retention_correctness
+Command: "/rwproject/kdd-db/kluaq/quant-hardness/build/phase5a_retention_correctness"
+Directory: /rwproject/kdd-db/kluaq/quant-hardness/build
+"phase5a_retention_correctness" start time: Sep 09 21:26 HKT
+Output:
+----------------------------------------------------------
+PASS d1536/PQ768; ef32/64/128; full-sort, refinement, native identity and graph invariance
+<end of output>
+Test time =   0.88 sec
+----------------------------------------------------------
+Test Passed.
+"phase5a_retention_correctness" end time: Sep 09 21:26 HKT
+"phase5a_retention_correctness" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Sep 09 21:26 HKT

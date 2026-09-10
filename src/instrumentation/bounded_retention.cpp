@@ -37,7 +37,7 @@ template<class Collector,bool Detail> class Capture final:public faiss::Distance
 };
 }
 CandidateAccess::CandidateAccess(faiss::IndexHNSW& g,faiss::IndexPQ& p,const float* b,double t,int ef,bool full):graph_(g),pq_(p),base_(b),threshold_(t),ef_(ef) {
-    if(g.metric_type!=faiss::METRIC_L2 || g.hnsw.is_panorama || g.hnsw.is_similarity || g.ntotal!=p.ntotal || g.d!=p.d || g.ntotal>INT32_MAX || ef!=64) throw std::runtime_error("unsupported frozen search");
+    if(g.metric_type!=faiss::METRIC_L2 || g.hnsw.is_panorama || g.hnsw.is_similarity || g.ntotal!=p.ntotal || g.d!=p.d || g.ntotal>INT32_MAX || (ef!=32 && ef!=64 && ef!=128)) throw std::runtime_error("unsupported frozen search");
     if(full) {tags_.resize(g.ntotal);ids_.reserve(2048);scores_.reserve(2048);order_.reserve(2048);}
 }
 size_t CandidateAccess::full_scratch_bytes() const {return 4*(tags_.capacity()+ids_.capacity()+scores_.capacity()+order_.capacity());}

@@ -7,3 +7,8 @@ __pycache__/
 /runs/phase3f_rotation_stability_v1/rotation_2/base.f32
 /runs/phase3f_rotation_stability_v1/rotation_3/base.f32
 /runs/phase3f_rotation_stability_v1/rotation_4/base.f32
+# Phase 5A: large local vectors/indexes; checksums and per-query outputs tracked.
+/runs/phase5a_highdim_external_validity_v1/graph.index
+/runs/phase5a_highdim_external_validity_v1/pq.index
+/runs/phase5a_highdim_external_validity_v1/prepared/*.f32
+/runs/phase5a_highdim_external_validity_v1/prepared_interrupted_nfs_writes/

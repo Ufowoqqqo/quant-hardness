@@ -31,8 +31,13 @@ endif()
 execute_process(
     COMMAND git -C ${CMAKE_CURRENT_SOURCE_DIR} status --porcelain
     OUTPUT_VARIABLE QH_GIT_STATUS
-    OUTPUT_STRIP_TRAILING_WHITESPACE)
-if(QH_GIT_STATUS STREQUAL "")
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+    RESULT_VARIABLE QH_GIT_STATUS_RESULT
+    TIMEOUT 30)
+if(NOT QH_GIT_STATUS_RESULT STREQUAL "0")
+  message(WARNING "Git worktree status unavailable/timed out; conservatively recording dirty=true")
+  set(QH_GIT_DIRTY true)
+elseif(QH_GIT_STATUS STREQUAL "")
   set(QH_GIT_DIRTY false)
 else()
   set(QH_GIT_DIRTY true)
@@ -272,3 +277,14 @@ find_package(Threads REQUIRED)
 add_executable(faiss_phase4d src/experiments/faiss_phase4d.cpp)
 target_link_libraries(faiss_phase4d PRIVATE qh_bounded Threads::Threads)
 target_compile_options(faiss_phase4d PRIVATE -Wall -Wextra -Wpedantic)
+
+add_executable(faiss_phase5a src/experiments/faiss_phase5a.cpp)
+target_link_libraries(faiss_phase5a PRIVATE qh_bounded qh_instrumentation Threads::Threads)
+target_compile_options(faiss_phase5a PRIVATE -Wall -Wextra -Wpedantic)
+add_executable(phase5a_retention_correctness tests/phase5a_retention_correctness.cpp)
+target_link_libraries(phase5a_retention_correctness PRIVATE qh_bounded)
+target_compile_options(phase5a_retention_correctness PRIVATE -Wall -Wextra -Wpedantic)
+add_test(NAME phase5a_retention_correctness COMMAND phase5a_retention_correctness)
+add_executable(faiss_phase5a_bench src/experiments/faiss_phase5a_bench.cpp)
+target_link_libraries(faiss_phase5a_bench PRIVATE qh_bounded Threads::Threads)
+target_compile_options(faiss_phase5a_bench PRIVATE -Wall -Wextra -Wpedantic)

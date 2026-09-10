@@ -1,0 +1,52 @@
+[
+  {
+    "stage": "concurrent",
+    "ef": 64,
+    "workers": 1,
+    "throughput_penalty": 0.021027719858404792,
+    "mean_latency_overhead": 0.021877996302707148,
+    "p95_latency_overhead": 0.028338265948978814,
+    "p99_latency_overhead": 0.029460689079499724,
+    "additional_vector_payload_bytes_per_query": 98304
+  },
+  {
+    "stage": "concurrent",
+    "ef": 64,
+    "workers": 8,
+    "throughput_penalty": 0.020195146542561382,
+    "mean_latency_overhead": 0.01942784585324131,
+    "p95_latency_overhead": 0.020699390005950224,
+    "p99_latency_overhead": 0.02365608892301352,
+    "additional_vector_payload_bytes_per_query": 98304
+  },
+  {
+    "stage": "single",
+    "ef": 32,
+    "workers": 1,
+    "throughput_penalty": 0.03205620347842064,
+    "mean_latency_overhead": 0.03316672092414841,
+    "p95_latency_overhead": 0.041724484927874395,
+    "p99_latency_overhead": 0.03529142231682769,
+    "additional_vector_payload_bytes_per_query": 98304
+  },
+  {
+    "stage": "single",
+    "ef": 64,
+    "workers": 1,
+    "throughput_penalty": 0.017794517391252707,
+    "mean_latency_overhead": 0.018131667453602285,
+    "p95_latency_overhead": 0.01991152628082271,
+    "p99_latency_overhead": 0.019159531084046,
+    "additional_vector_payload_bytes_per_query": 98304
+  },
+  {
+    "stage": "single",
+    "ef": 128,
+    "workers": 1,
+    "throughput_penalty": 0.007059216733258933,
+    "mean_latency_overhead": 0.007111248390965441,
+    "p95_latency_overhead": 0.00560865056396076,
+    "p99_latency_overhead": 0.005194548345656136,
+    "additional_vector_payload_bytes_per_query": 98304
+  }
+]

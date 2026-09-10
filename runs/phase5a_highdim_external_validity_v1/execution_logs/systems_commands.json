@@ -1,0 +1,43 @@
+{
+  "commands": [
+    [
+      "single",
+      [
+        "build/faiss_phase5a_bench",
+        "single",
+        "configs/indexes/phase5a_highdim_external_validity.conf"
+      ]
+    ],
+    [
+      "single_analysis",
+      [
+        "/tmp/phase3b-plot-env/bin/python",
+        "scripts/analyze_phase5a.py",
+        "--stage",
+        "single"
+      ]
+    ],
+    [
+      "concurrent",
+      [
+        "build/faiss_phase5a_bench",
+        "concurrent",
+        "configs/indexes/phase5a_highdim_external_validity.conf"
+      ]
+    ],
+    [
+      "final_analysis",
+      [
+        "/tmp/phase3b-plot-env/bin/python",
+        "scripts/analyze_phase5a.py",
+        "--stage",
+        "final"
+      ]
+    ]
+  ],
+  "environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  }
+}
